@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Playground | Interiérové ihriská na mieru</title>
+<meta name="description" content="Interiérové ihriská na mieru: návrh, výroba, dodanie a montáž na kľúč. Trnava.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap&subset=latin-ext">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">
+{ "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js" } }
+</script>
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="#" aria-label="Playground"><img src="assets/PLAYGROUND.svg" alt="Playground"></a>
+  <span class="loc">Trnava</span>
+</header>
+
+<main class="track" id="track">
+  <section class="stage">
+    <canvas id="c" aria-hidden="true"></canvas>
+
+    <div class="copy">
+      <article class="phase on" data-phase="0">
+        <p class="eyebrow">Interiérové ihriská na&nbsp;mieru</p>
+        <h1>Ihrisko, ktoré vyrastie z&nbsp;vášho priestoru</h1>
+        <p>Začíname podlahou a nosnou konštrukciou. Každé ihrisko navrhujeme podľa miestnosti, výšky stropu a&nbsp;veku detí.</p>
+      </article>
+      <article class="phase" data-phase="1">
+        <p class="eyebrow">Návrh a&nbsp;výroba</p>
+        <h2>Poschodia, bazén s&nbsp;guľôčkami a&nbsp;šmykľavka</h2>
+        <p>Mäkké obalené stĺpy a&nbsp;rámy, hracie plochy na dvoch úrovniach a&nbsp;prelezy. Všetko vyrábame na&nbsp;mieru.</p>
+      </article>
+      <article class="phase" data-phase="2">
+        <p class="eyebrow">Bezpečnosť a&nbsp;detaily</p>
+        <h2>Siete, strop a&nbsp;mäkké obloženie</h2>
+        <p>Konštrukciu obalíme sieťami zo všetkých strán aj zhora. Hrany sú vypolstrované, plochy z&nbsp;mäkkého vinylu.</p>
+      </article>
+      <article class="phase" data-phase="3">
+        <p class="eyebrow">Dodanie a&nbsp;montáž na&nbsp;kľúč</p>
+        <h2>Hotové ihrisko pre vašu prevádzku</h2>
+        <p>Navrhneme, dodáme a&nbsp;zmontujeme. Ozvite sa nám a&nbsp;povieme vám, čo sa dá spraviť vo&nbsp;vašom priestore.</p>
+        <div class="cta">
+          <a class="btn" href="tel:+421905724437">+421&nbsp;905&nbsp;724&nbsp;437</a>
+          <a class="mail" href="mailto:info@play-ground.sk">info@play-ground.sk</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="progress" aria-hidden="true">
+      <p class="plabel"><span id="pnum">1</span>&nbsp;/&nbsp;12 <span id="pname">Podlaha</span></p>
+      <ol id="pbars"></ol>
+    </div>
+  </section>
+</main>
+
+<noscript><p class="ns">Pre 3D ukážku zapnite JavaScript. Kontakt: +421 905 724 437, info@play-ground.sk</p></noscript>
+<script type="module" src="main.js"></script>
+</body>
+</html>
