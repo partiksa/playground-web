@@ -47,6 +47,12 @@ Mimo v3: zvyšných 8 podstránok z menu, doladený mobil, deploy, nové detaily
 - Pôvodné rozhodnutia: model z jednoduchých tvarov podľa fotiek Šamorín, PBR textúry CC0, žiadne padanie dielov (fade a malý posun), logo biele SVG cez CSS mask, len lokálne.
 
 ## Posledné zmeny
+### 2026-11-01: online na GitHub Pages
+- Web: https://partiksa.github.io/playground-web/ (verejný repozitár partiksa/playground-web, workflow .github/workflows/pages.yml pri pushi na main).
+- Na GitHub ide len lokálna vetva `web` (orphan, len súbory webu, bez KONTEXT.md, screens/, identita.*, .md v assets). Lokálna `main` (commit f20c16b) sa nepushuje.
+- Aktualizácia: skopírovať súbory webu z main do vetvy `web`, commit, `git push origin web:main`.
+- video/: referenčné video 3D modelu (27 s) a prvá a posledná snímka pre Seedance/Veo. Nie je v gite.
+
 ### 2026-11-01: v4 úpravy projektov
 - Projekty: preč text „Scrollujte…“. Detail: fotka 84 % výšky, dole vidno začiatok textu, depth efekt ostáva.
 - scramble.js: prepis cez náhodné písmená na podstránkach (obrovské slovo, nadpisy sekcií raz pri zobrazení, nadpis a miesto v detaile projektu).

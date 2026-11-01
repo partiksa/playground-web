@@ -41,9 +41,10 @@
 .fly { position: fixed; z-index: 40; object-fit: cover; pointer-events: none; }
 
 .slides { margin: 0 0 2rem; }
-.s-view { aspect-ratio: 4 / 3; background: var(--navy); overflow: hidden; }
-.s-view img { display: block; width: 100%; height: 100%; object-fit: cover; transition: opacity .25s var(--ease); }
-.s-view img.fade { opacity: 0; }
+.s-view { position: relative; aspect-ratio: 4 / 3; background: var(--paper-2); overflow: hidden; }
+.s-view img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; }
+.s-view img.in { opacity: 0; transition: opacity .4s var(--ease); }
+.s-view img.in.on { opacity: 1; }
 .s-nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 0.75rem; }
 .s-nav button { min-height: 44px; padding: 0 1.1rem; background: var(--navy); color: #fff; border: 0; border-radius: 4px; cursor: pointer; font: 600 1rem "Kanit", sans-serif; }
 .s-nav button:hover { background: var(--blue); }
