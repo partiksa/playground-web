@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vizuálna identita | Playground</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Archivo:wdth,wght@112,800&family=Familjen+Grotesk:wght@700&display=swap&subset=latin-ext">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pages.css">
+<link rel="stylesheet" href="identita.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="index.html" aria-label="Playground, domov"><span class="logo-mark" role="img" aria-label="Playground"></span></a>
+  <nav class="site-nav" aria-label="Hlavná navigácia">
+    <ul>
+      <li><a href="ihriska.html">Interiérové ihriská</a></li>
+      <li><a href="projekty.html">Realizované projekty</a></li>
+      <li><a href="o-nas.html">O nás</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="page">
+  <div class="mega" aria-hidden="true">Identita</div>
+  <section class="intro">
+    <p class="eyebrow">Vizuálna identita, verzia 1</p>
+    <h1>Červená vedie, navy číta, papier dýcha</h1>
+    <p class="lead">Hravá, ale dospelá značka pre majiteľov prevádzok. Farby, písma, tón a pravidlá na jednej stránke.</p>
+  </section>
+
+  <section class="id-sec" id="farby">
+    <h2>Farby</h2>
+    <p class="lead">Červená je podpis značky. Dáva sa na veľké plochy, obrovské slová a hlavné tlačidlo. Navy je text, papier je pozadie.</p>
+    <div class="swatches">
+      <div class="sw red"><b>Červená</b><span>#FF2712 · hlavná farba<br>Veľké plochy, tlačidlá, obrovské slová, čiary nad nadpismi</span></div>
+      <div class="sw navy"><b>Navy</b><span>#15194A · text a nadpisy<br>Kontrast na papieri asi 15:1</span></div>
+      <div class="sw paper"><b>Papier</b><span>#F6F3EE<br>Pozadie</span></div>
+      <div class="sw rd"><b>Tmavá červená</b><span>#D61C08<br>Malé červené písmo, hover tlačidla</span></div>
+      <div class="sw blue"><b>Modrá</b><span>#2A3290<br>Len malý doplnok, napr. odkazy v tele textu</span></div>
+      <div class="sw p2"><b>Papier 2</b><span>#E6E0D5<br>Čiary, okraje</span></div>
+      <div class="sw mu"><b>Tlmená</b><span>#565B7C<br>Bežný text</span></div>
+    </div>
+    <div class="ratio" aria-hidden="true">
+      <i style="flex:60;background:var(--paper);border:1px solid var(--paper-2)"></i>
+      <i style="flex:25;background:var(--navy)"></i>
+      <i style="flex:15;background:var(--red)"></i>
+    </div>
+    <div class="ratio-t small"><span>Papier asi 60 %</span><span>Navy asi 25 %</span><span>Červená asi 15 % (na stránke), vo vybraných sekciách aj celá plocha</span></div>
+    <div class="extra small">
+      <i style="background:#FECF03" title="#FECF03"></i><i style="background:#FE6738" title="#FE6738"></i>
+      <span>Žltá #FECF03 a oranž #FE6738 ostávajú len v 3D modeli ihriska.</span>
+    </div>
+
+    <div class="ct">
+      <div class="ok"><b>Biela na červenej</b>asi 3,8:1<em>Len veľký alebo tučný text (tlačidlá)</em></div>
+      <div class="ok3"><b>Navy na červenej</b>asi 4,5:1<em>Aj bežný text, ak treba</em></div>
+      <div class="ok2"><b>Biela na tmavej červenej</b>asi 5,2:1<em>Bežný text, malé tlačidlá</em></div>
+      <div class="ok4"><b>Tmavá červená na papieri</b>asi 4,7:1<em>Malé červené písmo</em></div>
+      <div class="ok5"><b>Červená na papieri</b>asi 3,4:1<em>Len obrovské slová a čiary</em></div>
+      <div class="ok6"><b>Červená na navy</b>asi 3,4:1<em>Len veľký text</em></div>
+    </div>
+  </section>
+
+  <section class="id-sec" id="logo">
+    <h2>Logo</h2>
+    <p class="lead">Ostáva bez zmien, ako SVG. Biele na červenej a navy, navy na papieri. Farbu určuje <code>--logo-color</code>.</p>
+    <div class="logos">
+      <div class="lg on-red"><span class="logo-mark" role="img" aria-label="Playground na červenej"></span></div>
+      <div class="lg on-navy"><span class="logo-mark" role="img" aria-label="Playground na navy"></span></div>
+      <div class="lg on-paper"><span class="logo-mark" role="img" aria-label="Playground na papieri"></span></div>
+    </div>
+    <ul class="rules small">
+      <li>Voľné miesto okolo loga je aspoň výška písmena „P“.</li>
+      <li>Minimálna výška v hlavičke je 30 px. Pod túto veľkosť sa švih stráca.</li>
+      <li>Logo sa neťahá, nenakláňa a nedáva na fotky bez rovnomerného pozadia.</li>
+      <li>Iné farby ako biela, navy a papier sa nepoužívajú.</li>
+    </ul>
+  </section>
+
+  <section class="id-sec" id="pismo">
+    <h2>Písmo</h2>
+    <p class="lead">Logo je písaný skript, preto nadpis potrebuje pokojný a výrazný bezpätkový font. Tri kandidáty s rovnakým textom. Vyber jeden, ostatné sa zmažú. Kanit 300 a 400 ostáva na bežný text.</p>
+    <div class="fonts">
+      <article class="fc">
+        <p class="name">A · Bricolage Grotesque</p>
+        <h3 class="f-bri">Ihrisko, ktoré vyrastie z vášho priestoru</h3>
+        <span class="word f-bri" aria-hidden="true">Ihriská</span>
+        <p>Navrhneme, dodáme a zmontujeme. Šmykľavka, guľôčky, žltá sieť č. 12.</p>
+        <small>Živý, mierne nepravidelné tvary. Najbližšie k ručnému logu.</small>
+      </article>
+      <article class="fc">
+        <p class="name">B · Archivo Expanded</p>
+        <h3 class="f-arc">Ihrisko, ktoré vyrastie z vášho priestoru</h3>
+        <span class="word f-arc" aria-hidden="true">Ihriská</span>
+        <p>Navrhneme, dodáme a zmontujeme. Šmykľavka, guľôčky, žltá sieť č. 12.</p>
+        <small>Široký, pevný. Najlepší na obrovské slová, najviac technický.</small>
+      </article>
+      <article class="fc">
+        <p class="name">C · Familjen Grotesk</p>
+        <h3 class="f-fam">Ihrisko, ktoré vyrastie z vášho priestoru</h3>
+        <span class="word f-fam" aria-hidden="true">Ihriská</span>
+        <p>Navrhneme, dodáme a zmontujeme. Šmykľavka, guľôčky, žltá sieť č. 12.</p>
+        <small>Pokojný, úzky. Najviac dospelý, najmenej hravý.</small>
+      </article>
+    </div>
+    <div class="scale" aria-label="Aktuálne písmo Kanit">
+      <div><span>Teraz: Kanit 600</span><b class="f-kan" style="font-size:2.5rem;color:var(--navy);line-height:1.1">Ihrisko, ktoré vyrastie z vášho priestoru</b></div>
+      <div><span>Text: Kanit 300</span><p style="margin:0;max-width:40rem">Každé ihrisko navrhujeme podľa miestnosti, výšky stropu a veku detí. Zostavíme ho krok za krokom a odovzdáme na kľúč.</p></div>
+    </div>
+  </section>
+
+  <section class="id-sec" id="ton">
+    <h2>Tón textov</h2>
+    <p class="lead">Vykanie, krátke vety, konkrétne čísla. Pre majiteľa prevádzky je dôležitý rozmer, materiál, termín a cena.</p>
+    <div class="tone">
+      <div class="yes">
+        <h3>Takto</h3>
+        <p>Strop 3 m, deti od 3 do 10 rokov. Ihrisko zmestíte na 25 m².</p>
+        <p>Navrhneme, dodáme a zmontujeme.</p>
+        <p>Ozvite sa nám a povieme vám, čo sa dá spraviť vo vašom priestore.</p>
+      </div>
+      <div>
+        <h3>Nie takto</h3>
+        <p><s>Najlepšie ihriská na Slovensku!</s></p>
+        <p><s>Vaše deti si zaslúžia to najlepšie. Neváhajte, kapacita je obmedzená.</s></p>
+        <p><s>Revolučné riešenie pre moderné prevádzky.</s></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="id-sec" id="ukazky">
+    <h2>Ukážky komponentov</h2>
+    <p class="lead">Tlačidlo, karta kroku a obrovské slovo. Čo je tu, sa premietne do webu, až keď to schválite.</p>
+    <div class="demo">
+      <div>
+        <h3>Tlačidlo</h3>
+        <p><a class="btn" href="tel:+421905724437">+421&nbsp;905&nbsp;724&nbsp;437</a></p>
+        <p><a class="mail" href="mailto:info@play-ground.sk">info@play-ground.sk</a></p>
+      </div>
+      <div>
+        <h3>Karta kroku</h3>
+        <div class="part"><p class="pn">06.1</p><h3 style="margin:0 0 .25rem;text-transform:none;letter-spacing:0;font-size:1.25rem;color:var(--navy)">Podlaha</h3><p>Červený vinyl vo výške 1,2&nbsp;m.</p></div>
+      </div>
+      <div>
+        <h3>Obrovské slovo</h3>
+        <div class="bigw" aria-hidden="true">Ihriská</div>
+        <div class="bigw nv" aria-hidden="true">Ihriská</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <span class="logo-mark" role="img" aria-label="Playground"></span>
+      <p>Interiérové ihriská na mieru. Návrh, výroba, dodanie a montáž na kľúč.</p>
+    </div>
+    <div>
+      <h3>Kontakt</h3>
+      <p><a href="tel:+421905724437">+421 905 724 437</a></p>
+      <p><a href="mailto:info@play-ground.sk">info@play-ground.sk</a></p>
+    </div>
+    <div>
+      <h3>Adresa</h3>
+      <address>Poštová 6562/20<br>917 01 Trnava</address>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

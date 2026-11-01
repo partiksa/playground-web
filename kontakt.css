@@ -1,0 +1,34 @@
+/* kontakt: formulár vľavo, údaje vpravo */
+.contact { display: grid; grid-template-columns: 3fr 2fr; gap: clamp(2rem, 5vw, 5rem); align-items: start; }
+.form { display: grid; gap: 1.25rem; }
+.services { margin: 0; padding: 0; border: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+.services legend { margin-bottom: 0.75rem; padding: 0; font-family: var(--fh); font-weight: 700; font-size: 1.5rem; line-height: 1; color: var(--navy); }
+.services label { position: relative; cursor: pointer; }
+.services input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.services span {
+  display: flex; align-items: center; min-height: 52px; height: 100%; padding: 0.6rem 1rem;
+  border: 2px solid var(--paper-2); border-radius: 4px; background: #fff; color: var(--navy); line-height: 1.25;
+  transition: border-color .2s, background .2s, color .2s;
+}
+.services label:hover span { border-color: var(--navy); }
+.services input:checked + span { background: var(--red); border-color: var(--red); color: #fff; font-weight: 400; }
+.services input:focus-visible + span { outline: 3px solid var(--navy); outline-offset: 2px; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+.f { display: grid; gap: 0.35rem; }
+.f span { color: var(--navy); font-weight: 400; font-size: 1rem; }
+.f input, .f textarea {
+  width: 100%; min-height: 52px; padding: 0.75rem 0.9rem; border: 2px solid var(--paper-2); border-radius: 4px;
+  background: #fff; color: var(--navy); font: 300 1.0625rem "Kanit", sans-serif;
+}
+.f textarea { resize: vertical; }
+.f input:focus, .f textarea:focus { border-color: var(--navy); outline: none; }
+.f input[aria-invalid="true"], .f textarea[aria-invalid="true"] { border-color: var(--red-dark); }
+.err { margin: 0; min-height: 1.5em; color: var(--red-dark); font-weight: 400; }
+.form .btn { justify-self: start; }
+.hint { margin: 0; font-size: 0.9375rem; }
+.info h2 { font-size: clamp(1.4rem, 1.1rem + 1vw, 2rem); }
+.info p { margin: 0 0 1rem; }
+.info .small { font-size: 0.9375rem; }
+@media (max-width: 760px) {
+  .contact, .two, .services { grid-template-columns: 1fr; }
+}

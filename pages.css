@@ -1,24 +1,16 @@
-/* podstránky v3: tenká mriežka 6 stĺpcov, veľké orezané nadpisy, asymetrické fotky */
-:root { --line: rgb(21 25 74 / .09); --gut: clamp(1rem, 4vw, 3rem); }
+/* podstránky: bez viditeľnej mriežky, veľké orezané slovo, jednoduchý text */
+:root { --gut: clamp(1rem, 4vw, 3rem); }
 body { overflow-x: clip; }
-.page {
-  position: relative; isolation: isolate;
-  padding: calc(var(--bar) + clamp(1.5rem, 4vw, 3rem)) var(--gut) 0; max-width: 80rem; margin: 0 auto;
-}
-.page::before {
-  content: ""; position: absolute; z-index: -1; top: 0; bottom: 0; left: var(--gut); right: var(--gut);
-  background: linear-gradient(to right, var(--line) 1px, transparent 1px) 0 0 / calc(100% / 6) 100%;
-  border-right: 1px solid var(--line); pointer-events: none;
-}
-.page h2 { font-size: clamp(1.4rem, 1.1rem + 1vw, 2rem); }
+.page { padding: calc(var(--bar) + clamp(1.5rem, 4vw, 3rem)) var(--gut) 0; max-width: 80rem; margin: 0 auto; }
+.page h2 { font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.4rem); }
 .page a { color: var(--navy); text-decoration-color: var(--red); text-decoration-thickness: 2px; text-underline-offset: 4px; }
 .page a.btn { color: #fff; text-decoration: none; }
 
-/* obrovské slovo, orezané spodkom a pravým okrajom okna */
+/* obrovské slovo, orezané spodkom */
 .mega {
-  margin: 0 0 0 -0.05em; height: 0.7em; overflow: hidden; white-space: nowrap;
-  font-size: clamp(5.5rem, 21vw, 19rem); font-weight: 600; line-height: 1; letter-spacing: -0.045em;
-  color: var(--navy); user-select: none;
+  margin: 0 0 0 -0.04em; height: 0.74em; overflow: hidden; white-space: nowrap;
+  font-size: clamp(5.5rem, 21vw, 19rem); font-weight: 800; line-height: 0.95; letter-spacing: -0.055em;
+  color: var(--red); user-select: none;
 }
 
 .intro {
@@ -27,56 +19,37 @@ body { overflow-x: clip; }
 }
 .intro > * { grid-column: 1 / span 4; }
 .intro .eyebrow { border-top: 0; padding-top: 0; }
-.intro h1 { font-size: clamp(2rem, 1.2rem + 2.6vw, 3.5rem); }
 .intro .lead { grid-column: 4 / span 3; }
 .lead { font-size: 1.25rem; margin: 0; }
 
-.page img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.wide { margin: 0 0 clamp(2rem, 5vw, 4rem) calc(100% / 6); aspect-ratio: 2 / 1; }
-.row { display: grid; grid-template-columns: 1fr 2fr; gap: 1rem 3rem; padding: 2rem 0; border-top: 1px solid var(--paper-2); }
+/* technický text: číslo, nadpis vľavo, obsah vpravo */
+.row { display: grid; grid-template-columns: 4rem 1fr 2fr; gap: 1rem 2rem; padding: 2.25rem 0; border-top: 1px solid var(--paper-2); }
+.row .no { margin: 0.2rem 0 0; font-weight: 600; letter-spacing: 0.1em; color: var(--red-dark); font-variant-numeric: tabular-nums; }
 .row h2 { margin: 0; }
 .row p { margin: 0 0 1rem; max-width: 40rem; }
-.row ul { margin: 0 0 1rem; padding-left: 1.2rem; }
-.row li::marker { color: var(--red); }
+.row p:last-child { margin-bottom: 0; }
+.row ul, .row ol { margin: 0 0 1rem; padding-left: 1.2rem; max-width: 40rem; }
+.row li { margin-bottom: 0.35rem; }
+.row li::marker { color: var(--red); font-weight: 600; }
+.row li b { color: var(--navy); font-weight: 600; }
+.row dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 0.5rem 1.5rem; max-width: 40rem; }
+.row dt { color: var(--navy); font-weight: 600; }
+.row dd { margin: 0; }
 
-/* dvojica fotiek: veľká + malá posunutá nadol, druhá dvojica zrkadlovo */
-.pair { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.5rem; align-items: start; margin: 1rem 0 clamp(3rem, 7vw, 6rem); }
-.pair img:first-child { grid-column: 1 / span 4; aspect-ratio: 4 / 3; }
-.pair img:last-child { grid-column: 5 / span 2; aspect-ratio: 3 / 4; margin-top: clamp(3rem, 12vw, 10rem); }
-.pair.rev img:first-child { grid-column: 3 / span 4; grid-row: 1; }
-.pair.rev img:last-child { grid-column: 1 / span 2; grid-row: 1; margin-top: 0; }
-
-/* projekty: rôzne veľkosti a výšky, opakuje sa po 6 */
-.grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, 1fr); gap: 3rem 1.5rem; align-items: start; }
-.grid li { grid-column: span 2; }
-.grid li:nth-child(6n+1) { grid-column: 1 / span 4; }
-.grid li:nth-child(6n+2) { margin-top: clamp(4rem, 14vw, 12rem); }
-.grid li:nth-child(6n+4) { margin-top: clamp(2rem, 6vw, 5rem); }
-.grid li:nth-child(6n) { grid-column: 3 / span 4; }
-.grid a { display: block; text-decoration: none; }
-.grid img { aspect-ratio: 4 / 3; height: auto; }
-.grid li:nth-child(6n+2) img { aspect-ratio: 3 / 4; }
-.grid span { display: block; margin-top: 0.75rem; color: var(--navy); font-weight: 400; line-height: 1.3; background: linear-gradient(var(--red), var(--red)) 0 100% / 0 2px no-repeat; width: fit-content; }
-.grid a:hover span { background-size: 100% 2px; }
-
-.split { display: grid; grid-template-columns: 3fr 2fr; gap: 3rem; align-items: start; }
-.split .text p { max-width: 40rem; margin: 0 0 1.25rem; }
-.split .text h2 { margin-bottom: 1rem; }
-.photos { display: grid; gap: 1.5rem; }
-.photos img { height: auto; aspect-ratio: 3 / 4; }
-.photos img + img { aspect-ratio: 4 / 3; width: 82%; margin-left: -30%; }
+/* o nás: jeden stĺpec */
+.stats { list-style: none; margin: 0 0 clamp(3rem, 6vw, 5rem); padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.stats li { border-top: 3px solid var(--red); padding-top: 0.75rem; }
+.stats b { display: block; font-family: var(--fh); font-weight: 800; font-size: clamp(3rem, 2rem + 4vw, 5.5rem); line-height: 0.9; letter-spacing: -0.04em; color: var(--navy); }
+.prose { max-width: 40rem; }
+.prose h2 { margin: 2.5rem 0 0.75rem; }
+.prose p { margin: 0 0 1.25rem; }
 
 .cta { margin-top: clamp(4rem, 9vw, 8rem); padding: 3rem 0 clamp(3rem, 7vw, 6rem); border-top: 3px solid var(--red); }
 .cta p { margin: 0 0 1rem; }
 .cta .mail { font-size: 1.25rem; }
 
 @media (max-width: 760px) {
-  .page::before { background-size: 50% 100%; }
   .intro > *, .intro .lead { grid-column: 1 / -1; }
-  .row, .split { grid-template-columns: 1fr; }
-  .wide { margin-left: 0; aspect-ratio: 4 / 3; }
-  .pair img:first-child, .pair.rev img:first-child { grid-column: 1 / -1; grid-row: auto; }
-  .pair img:last-child, .pair.rev img:last-child { grid-column: 3 / -1; grid-row: auto; margin-top: 0; }
-  .grid li, .grid li:nth-child(n) { grid-column: 1 / -1; margin-top: 0; }
-  .photos img + img { margin-left: 0; width: 70%; justify-self: end; }
+  .row { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: 1fr; }
 }

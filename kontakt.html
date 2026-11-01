@@ -4,12 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kontakt | Playground</title>
-<meta name="description" content="Kontakt na PLAYGROUND, s.r.o., Trnava.">
+<meta name="description" content="Kontakt na PLAYGROUND, s.r.o., Trnava. Dopyt na interiérové ihrisko.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap&subset=latin-ext">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&display=swap&subset=latin-ext">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="pages.css">
+<link rel="stylesheet" href="kontakt.css">
 </head>
 <body>
 <header class="site-header">
@@ -27,18 +28,39 @@
 <main class="page">
 <p class="mega" aria-hidden="true">Kontakt</p>
 <header class="intro"><p class="eyebrow">Kontakt</p>
-<h1>Napíšte nám</h1>
-<p class="lead">V prípade akýchkoľvek otázok alebo cenovej kalkulácie nás neváhajte kontaktovať. Na vaše dotazy radi rýchlo reagujeme.</p></header>
-<div class="split"><div class="text"><h2>PLAYGROUND, s.r.o.</h2>
-<p>Poštová 6562/20<br>917 01 Trnava<br>Slovensko</p>
-<p>Telefón: <a href="tel:+421905724437">+421 905 724 437</a><br>E-mail: <a href="mailto:info@play-ground.sk">info@play-ground.sk</a></p></div>
-<div class="text"><p>IČO: 47051990<br>DIČ: 2023714429<br>IČ DPH: SK2023714429</p>
-<p>Spoločnosť je zapísaná v Obchodnom registri Okresného súdu Trnava, oddiel Sro, vložka číslo 31165/T.</p></div></div>
-<section class="cta">
-  <h2>Povedzte nám o svojom priestore</h2>
-  <p><a class="btn" href="tel:+421905724437">+421 905 724 437</a></p>
-  <p><a class="mail" href="mailto:info@play-ground.sk">info@play-ground.sk</a></p>
-</section>
+<h1>Napíšte nám o&nbsp;svojom priestore</h1>
+<p class="lead">Otázka alebo cenová kalkulácia. Ozveme sa čo najskôr.</p></header>
+<div class="contact">
+<form class="form" id="form" novalidate>
+  <fieldset class="services">
+    <legend>O čo máte záujem?</legend>
+    <label><input type="checkbox" name="sluzba" value="Nové ihrisko na mieru"><span>Nové ihrisko na mieru</span></label>
+    <label><input type="checkbox" name="sluzba" value="Prerábka starého ihriska"><span>Prerábka starého ihriska</span></label>
+    <label><input type="checkbox" name="sluzba" value="Presťahovanie ihriska"><span>Presťahovanie ihriska</span></label>
+    <label><input type="checkbox" name="sluzba" value="Doplnenie prvkov (šmykľavka, tubing, lezecká stena)"><span>Doplnenie prvkov (šmykľavka, tubing, lezecká stena)</span></label>
+    <label><input type="checkbox" name="sluzba" value="Trampolínové centrum"><span>Trampolínové centrum</span></label>
+    <label><input type="checkbox" name="sluzba" value="Servis a ročná kontrola"><span>Servis a ročná kontrola</span></label>
+  </fieldset>
+  <div class="two">
+    <label class="f"><span>Meno *</span><input name="meno" autocomplete="name" required></label>
+    <label class="f"><span>Prevádzka a mesto</span><input name="prevadzka" autocomplete="organization"></label>
+    <label class="f"><span>E-mail *</span><input name="email" type="email" autocomplete="email" required></label>
+    <label class="f"><span>Telefón</span><input name="telefon" type="tel" autocomplete="tel"></label>
+  </div>
+  <label class="f"><span>Správa *</span><textarea name="sprava" rows="6" required placeholder="Rozmer priestoru, výška stropu, vek detí, termín"></textarea></label>
+  <p class="err" id="err" role="alert"></p>
+  <button class="btn" type="submit">Odoslať dopyt</button>
+  <p class="hint">Po odoslaní sa otvorí váš e-mailový program s&nbsp;pripravenou správou na info@play-ground.sk.</p>
+</form>
+<aside class="info">
+  <h2>PLAYGROUND, s.r.o.</h2>
+  <p><a href="tel:+421905724437">+421 905 724 437</a><br><a href="mailto:info@play-ground.sk">info@play-ground.sk</a></p>
+  <p>Poštová 6562/20<br>917 01 Trnava<br>Slovensko</p>
+  <p class="small">IČO: 47051990<br>DIČ: 2023714429<br>IČ DPH: SK2023714429</p>
+  <p class="small">Zapísaná v&nbsp;Obchodnom registri Okresného súdu Trnava, oddiel Sro, vložka číslo 31165/T.</p>
+</aside>
+</div>
+<div style="height:clamp(4rem,9vw,8rem)"></div>
 </main>
 
 <footer class="site-footer">
@@ -58,5 +80,7 @@
     </div>
   </div>
 </footer>
+<script type="module" src="kontakt.js"></script>
+<script type="module" src="scramble.js"></script>
 </body>
 </html>
