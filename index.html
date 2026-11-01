@@ -10,13 +10,20 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap&subset=latin-ext">
 <link rel="stylesheet" href="style.css">
 <script type="importmap">
-{ "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js" } }
+{ "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/" } }
 </script>
 </head>
 <body>
-<header class="top">
-  <a class="logo" href="#" aria-label="Playground"><img src="assets/PLAYGROUND.svg" alt="Playground"></a>
-  <span class="loc">Trnava</span>
+<header class="site-header">
+  <a class="logo" href="index.html" aria-label="Playground, domov"><span class="logo-mark" role="img" aria-label="Playground"></span></a>
+  <nav class="site-nav" aria-label="Hlavná navigácia">
+    <ul>
+      <li><a href="ihriska.html">Interiérové ihriská</a></li>
+      <li><a href="projekty.html">Realizované projekty</a></li>
+      <li><a href="o-nas.html">O nás</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
 </header>
 
 <main class="track" id="track">
@@ -24,22 +31,72 @@
     <canvas id="c" aria-hidden="true"></canvas>
 
     <div class="copy">
-      <article class="phase on" data-phase="0">
+      <article class="card intro on">
         <p class="eyebrow">Interiérové ihriská na&nbsp;mieru</p>
         <h1>Ihrisko, ktoré vyrastie z&nbsp;vášho priestoru</h1>
-        <p>Začíname podlahou a nosnou konštrukciou. Každé ihrisko navrhujeme podľa miestnosti, výšky stropu a&nbsp;veku detí.</p>
+        <p>Pozrite si, ako ihrisko skladáme krok za krokom. Každé navrhujeme podľa miestnosti, výšky stropu a&nbsp;veku detí.</p>
       </article>
-      <article class="phase" data-phase="1">
-        <p class="eyebrow">Návrh a&nbsp;výroba</p>
-        <h2>Poschodia, bazén s&nbsp;guľôčkami a&nbsp;šmykľavka</h2>
-        <p>Mäkké obalené stĺpy a&nbsp;rámy, hracie plochy na dvoch úrovniach a&nbsp;prelezy. Všetko vyrábame na&nbsp;mieru.</p>
+      <article class="card step">
+        <p class="num"><b>01</b> / 12</p>
+        <h2>Podlaha</h2>
+        <p>Liata podlaha miestnosti: oranžová pod ihriskom, žltá pri okne, fialová pri vstupe. Hladký povrch sa dá ľahko čistiť.</p>
       </article>
-      <article class="phase" data-phase="2">
-        <p class="eyebrow">Bezpečnosť a&nbsp;detaily</p>
-        <h2>Siete, strop a&nbsp;mäkké obloženie</h2>
-        <p>Konštrukciu obalíme sieťami zo všetkých strán aj zhora. Hrany sú vypolstrované, plochy z&nbsp;mäkkého vinylu.</p>
+      <article class="card step">
+        <p class="num"><b>02</b> / 12</p>
+        <h2>Mäkké podlahy</h2>
+        <p>Červené mäkké panely v prízemí a žltý mat v jednej bunke. Tlmia pády a držia tvar aj pri záťaži.</p>
       </article>
-      <article class="phase" data-phase="3">
+      <article class="card step">
+        <p class="num"><b>03</b> / 12</p>
+        <h2>Nosné stĺpy</h2>
+        <p>Stĺpy s priemerom okolo 12 cm, obalené mäkkým vinylom v segmentoch. Obal tlmí nárazy.</p>
+      </article>
+      <article class="card step">
+        <p class="num"><b>04</b> / 12</p>
+        <h2>Rámy a spojky</h2>
+        <p>Vodorovné trubky na úrovni poschodia a hore, obalené žltým a oranžovým vinylom. Kovové svorky ich spájajú so stĺpmi.</p>
+      </article>
+      <article class="card step">
+        <p class="num"><b>05</b> / 12</p>
+        <h2>Guľôčkový bazén</h2>
+        <p>Plocha asi 1,2 x 1,5 m s plastovými guľôčkami a tmavým dnom. Vypolstrovaný okraj chráni pri vstupe aj výstupe.</p>
+      </article>
+      <article class="card step">
+        <p class="num"><b>06</b> / 12</p>
+        <h2>Poschodie</h2>
+        <p>Podlaha z červeného vinylu vo výške 1,2 m so žltými pyramídami, nízkou lavicou a valcami. Tvary sú zaoblené, bez ostrých hrán.</p>
+      </article>
+      <article class="card step">
+        <p class="num"><b>07</b> / 12</p>
+        <h2>Šmykľavka</h2>
+        <p>Modrá plastová šmykľavka s bočnými stenami, dlhá asi 2 m. Vedie z poschodia do guľôčkového bazéna, ktorý tlmí dopad.</p>
+      </article>
+      <article class="card step">
+        <p class="num"><b>08</b> / 12</p>
+        <h2>Prístup hore</h2>
+        <p>Sieťový rebrík so stupňami a tunel s malou sieťovou podlahou. Deti sa na poschodie dostanú samy a bezpečne.</p>
+      </article>
+      <article class="card step">
+        <p class="num"><b>09</b> / 12</p>
+        <h2>Okná a veža</h2>
+        <p>Okrúhle otvory s priemerom asi 0,6 m v bielej stene slúžia ako prelez a výhľad. Vedľa stojí menšia veža s tromi úrovňami.</p>
+      </article>
+      <article class="card step">
+        <p class="num"><b>10</b> / 12</p>
+        <h2>Siete</h2>
+        <p>Čierne siete s okami asi 5 x 5 cm obaľujú všetky štyri boky aj strop. Deti zostanú vnútri a rodičia ich vidia.</p>
+      </article>
+      <article class="card step">
+        <p class="num"><b>11</b> / 12</p>
+        <h2>Strop</h2>
+        <p>Strop tvorí čierna sieť so žltými mäkkými ráfikmi a časťou so žltým vinylovým panelom. Uzatvára priestor zhora.</p>
+      </article>
+      <article class="card step">
+        <p class="num"><b>12</b> / 12</p>
+        <h2>Dekor</h2>
+        <p>Potlačená plachta s krokodílom a leknami na prednej stene. Vedľa sú mäkké zvislé stĺpy a čierne kruhové stupne. Potlač sa dá prispôsobiť.</p>
+      </article>
+      <article class="card end">
         <p class="eyebrow">Dodanie a&nbsp;montáž na&nbsp;kľúč</p>
         <h2>Hotové ihrisko pre vašu prevádzku</h2>
         <p>Navrhneme, dodáme a&nbsp;zmontujeme. Ozvite sa nám a&nbsp;povieme vám, čo sa dá spraviť vo&nbsp;vašom priestore.</p>
@@ -51,11 +108,28 @@
     </div>
 
     <div class="progress" aria-hidden="true">
-      <p class="plabel"><span id="pnum">1</span>&nbsp;/&nbsp;12 <span id="pname">Podlaha</span></p>
       <ol id="pbars"></ol>
     </div>
   </section>
 </main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <span class="logo-mark" role="img" aria-label="Playground"></span>
+      <p>Interiérové ihriská na mieru. Návrh, výroba, dodanie a montáž na kľúč.</p>
+    </div>
+    <div>
+      <h3>Kontakt</h3>
+      <p><a href="tel:+421905724437">+421 905 724 437</a></p>
+      <p><a href="mailto:info@play-ground.sk">info@play-ground.sk</a></p>
+    </div>
+    <div>
+      <h3>Adresa</h3>
+      <address>Poštová 6562/20<br>917 01 Trnava</address>
+    </div>
+  </div>
+</footer>
 
 <noscript><p class="ns">Pre 3D ukážku zapnite JavaScript. Kontakt: +421 905 724 437, info@play-ground.sk</p></noscript>
 <script type="module" src="main.js"></script>

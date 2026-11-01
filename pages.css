@@ -1,0 +1,33 @@
+.page { padding: calc(var(--bar) + clamp(2.5rem, 7vw, 6rem)) clamp(1rem, 4vw, 3rem) 0; max-width: 80rem; margin: 0 auto; }
+.page h2 { font-size: clamp(1.4rem, 1.1rem + 1vw, 2rem); }
+.page a { color: var(--navy); text-decoration-color: var(--red); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.page a.btn { color: #fff; text-decoration: none; }
+.intro { max-width: 52rem; margin-bottom: clamp(2.5rem, 6vw, 5rem); }
+.intro h1 { font-size: clamp(2.4rem, 1.2rem + 4.5vw, 5rem); }
+.lead { max-width: 38rem; font-size: 1.25rem; margin: 0; }
+.page img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.wide { margin: 0 0 clamp(2rem, 5vw, 4rem); aspect-ratio: 21 / 9; }
+.row { display: grid; grid-template-columns: 1fr 2fr; gap: 1rem 3rem; padding: 2rem 0; border-top: 1px solid var(--paper-2); }
+.row h2 { margin: 0; }
+.row p { margin: 0 0 1rem; max-width: 40rem; }
+.row ul { margin: 0 0 1rem; padding-left: 1.2rem; }
+.row li::marker { color: var(--red); }
+.pair { display: grid; grid-template-columns: 5fr 4fr; gap: 1.5rem; margin: 1rem 0 clamp(2rem, 5vw, 4rem); aspect-ratio: 5 / 2; }
+.grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem 1.5rem; }
+.grid a { display: block; text-decoration: none; }
+.grid img { aspect-ratio: 4 / 3; height: auto; }
+.grid span { display: block; margin-top: 0.75rem; color: var(--navy); font-weight: 400; line-height: 1.3; background: linear-gradient(var(--red), var(--red)) 0 100% / 0 2px no-repeat; width: fit-content; }
+.grid a:hover span { background-size: 100% 2px; }
+.split { display: grid; grid-template-columns: 3fr 2fr; gap: 3rem; align-items: start; }
+.split .text p { max-width: 40rem; margin: 0 0 1.25rem; }
+.split .text h2 { margin-bottom: 1rem; }
+.photos { display: grid; gap: 1.5rem; }
+.photos img { height: auto; aspect-ratio: 4 / 3; }
+.cta { margin-top: clamp(4rem, 9vw, 8rem); padding: 3rem 0 clamp(3rem, 7vw, 6rem); border-top: 3px solid var(--red); }
+.cta p { margin: 0 0 1rem; }
+.cta .mail { font-size: 1.25rem; }
+@media (max-width: 760px) {
+  .row, .split, .grid { grid-template-columns: 1fr; }
+  .pair { aspect-ratio: auto; grid-template-columns: 1fr; }
+  .wide { aspect-ratio: 4 / 3; }
+}
