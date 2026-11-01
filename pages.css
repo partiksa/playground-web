@@ -1,0 +1,55 @@
+/* podstránky: bez viditeľnej mriežky, veľké orezané slovo, jednoduchý text */
+:root { --gut: clamp(1rem, 4vw, 3rem); }
+body { overflow-x: clip; }
+.page { padding: calc(var(--bar) + clamp(1.5rem, 4vw, 3rem)) var(--gut) 0; max-width: 80rem; margin: 0 auto; }
+.page h2 { font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.4rem); }
+.page a { color: var(--navy); text-decoration-color: var(--red); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.page a.btn { color: #fff; text-decoration: none; }
+
+/* obrovské slovo, orezané spodkom */
+.mega {
+  margin: 0 0 0 -0.04em; height: 0.74em; overflow: hidden; white-space: nowrap;
+  font-size: clamp(5.5rem, 21vw, 19rem); font-weight: 800; line-height: 0.95; letter-spacing: -0.055em;
+  color: var(--red); user-select: none;
+}
+
+.intro {
+  display: grid; grid-template-columns: repeat(6, 1fr); column-gap: 1.5rem;
+  padding-top: 1.25rem; border-top: 3px solid var(--red); margin-bottom: clamp(3rem, 7vw, 6rem);
+}
+.intro > * { grid-column: 1 / span 4; }
+.intro .eyebrow { border-top: 0; padding-top: 0; }
+.intro .lead { grid-column: 4 / span 3; }
+.lead { font-size: 1.25rem; margin: 0; }
+
+/* technický text: číslo, nadpis vľavo, obsah vpravo */
+.row { display: grid; grid-template-columns: 4rem 1fr 2fr; gap: 1rem 2rem; padding: 2.25rem 0; border-top: 1px solid var(--paper-2); }
+.row .no { margin: 0.2rem 0 0; font-weight: 600; letter-spacing: 0.1em; color: var(--red-dark); font-variant-numeric: tabular-nums; }
+.row h2 { margin: 0; }
+.row p { margin: 0 0 1rem; max-width: 40rem; }
+.row p:last-child { margin-bottom: 0; }
+.row ul, .row ol { margin: 0 0 1rem; padding-left: 1.2rem; max-width: 40rem; }
+.row li { margin-bottom: 0.35rem; }
+.row li::marker { color: var(--red); font-weight: 600; }
+.row li b { color: var(--navy); font-weight: 600; }
+.row dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 0.5rem 1.5rem; max-width: 40rem; }
+.row dt { color: var(--navy); font-weight: 600; }
+.row dd { margin: 0; }
+
+/* o nás: jeden stĺpec */
+.stats { list-style: none; margin: 0 0 clamp(3rem, 6vw, 5rem); padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.stats li { border-top: 3px solid var(--red); padding-top: 0.75rem; }
+.stats b { display: block; font-family: var(--fh); font-weight: 800; font-size: clamp(3rem, 2rem + 4vw, 5.5rem); line-height: 0.9; letter-spacing: -0.04em; color: var(--navy); }
+.prose { max-width: 40rem; }
+.prose h2 { margin: 2.5rem 0 0.75rem; }
+.prose p { margin: 0 0 1.25rem; }
+
+.cta { margin-top: clamp(4rem, 9vw, 8rem); padding: 3rem 0 clamp(3rem, 7vw, 6rem); border-top: 3px solid var(--red); }
+.cta p { margin: 0 0 1rem; }
+.cta .mail { font-size: 1.25rem; }
+
+@media (max-width: 760px) {
+  .intro > *, .intro .lead { grid-column: 1 / -1; }
+  .row { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: 1fr; }
+}
