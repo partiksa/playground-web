@@ -48,7 +48,7 @@ size();
 
 // ---------- detail ----------
 const $ = (id) => document.getElementById(id);
-const det = $('detail'), dHero = $('d-hero'), dImg = $('d-img'), sImg = $('s-img'), slides = $('slides');
+const det = $('detail'), dHero = $('d-hero'), dImg = $('d-img'), slides = $('slides');
 let cur = null, depth = null, slide = 0, pushed = false, lastFocus = null;
 
 function fill(p) {
@@ -63,9 +63,21 @@ function fill(p) {
 function showSlide(i, now) {
   const ph = cur.photos; slide = (i + ph.length) % ph.length;
   $('s-count').textContent = `${slide + 1} / ${ph.length}`;
-  const set = () => { sImg.src = ph[slide]; sImg.alt = `${cur.title}, fotka ${slide + 1}`; sImg.classList.remove('fade'); };
-  if (now || reduce) return set();
-  sImg.classList.add('fade'); setTimeout(set, 220);
+  const view = slides.querySelector('.s-view'), src = ph[slide], alt = `${cur.title}, fotka ${slide + 1}`;
+  if (now || reduce) {
+    view.querySelectorAll('img:not(:last-child)').forEach((x) => x.remove());
+    const img = view.lastElementChild; img.src = src; img.alt = alt; img.classList.remove('in');
+    ph.forEach((u) => { new Image().src = u; }); // ostatné fotky projektu vopred
+    return;
+  }
+  // nová fotka sa najprv načíta, potom sa prelinie cez starú
+  const img = new Image(); img.src = src; img.alt = alt; img.className = 'in';
+  img.decode().catch(() => {}).then(() => {
+    if (ph[slide] !== src) return;
+    view.append(img);
+    requestAnimationFrame(() => requestAnimationFrame(() => img.classList.add('on')));
+    setTimeout(() => { while (view.firstElementChild !== img) view.firstElementChild.remove(); }, 450);
+  });
 }
 $('s-prev').onclick = () => showSlide(slide - 1);
 $('s-next').onclick = () => showSlide(slide + 1);
