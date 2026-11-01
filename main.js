@@ -290,8 +290,6 @@ function resize() {
   W = canvas.clientWidth; H = canvas.clientHeight;
   renderer.setSize(W, H, false);
   camera.aspect = W / H;
-  if (W / H > 1.2) camera.setViewOffset(W, H, -W * 0.2, 0, W, H); else camera.clearViewOffset();
-  camera.updateProjectionMatrix();
 }
 addEventListener('resize', resize); resize();
 
@@ -299,18 +297,33 @@ const clamp = (v) => Math.min(1, Math.max(0, v));
 const easeIO = (t) => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 const smooth = (a, b, v) => { const t = clamp((v - a) / (b - a)); return t * t * (3 - 2 * t); };
 
+// úvod a záver: model vpravo a naklonený; počas krokov: veľký, v strede, orezaný spodkom
 function place(s) {
-  const asp = W / H, rad = (13.5 + smooth(0.88, 1, s) * 3) * (asp < 1 ? 1 + (1 / asp - 1) * 0.55 : 1);
+  const asp = W / H, side = 1 - smooth(0.005, 0.1, s) + smooth(0.9, 0.98, s);
+  const rad = (8.8 + side * 3.0) * (asp < 1 ? 1 + (1 / asp - 1) * 0.55 : 1);
   const th = -0.75 + s * 1.3;
-  camera.position.set(home.x + Math.sin(th) * rad, 4.3 - s * 0.5 + (asp < 1 ? 1.5 : 0), home.z + Math.cos(th) * rad);
-  camera.lookAt(look.x, look.y + (asp < 1 ? 1.4 : 0), look.z);
+  camera.position.set(home.x + Math.sin(th) * rad, 3.6 - s * 0.4 + (asp < 1 ? 1.5 : 0), home.z + Math.cos(th) * rad);
+  camera.lookAt(look.x, look.y + 1.05 * (1 - side) + (asp < 1 ? 1.4 : 0), look.z);
+  camera.rotateZ(0.11 * (1 - smooth(0.005, 0.12, s)));
+  if (asp > 1.2) camera.setViewOffset(W, H, -W * 0.2 * side, 0, W, H); else camera.clearViewOffset();
+  camera.updateProjectionMatrix();
 }
 
 // ---------- ukazovateľ a karty ----------
 const bars = [], pbars = document.getElementById('pbars');
 for (let i = 0; i < 12; i++) { const li = document.createElement('li'), f = document.createElement('i'); li.append(f); pbars.append(li); bars.push(f); }
-const cards = [...document.querySelectorAll('.card')]; // úvod, 12 krokov, záver
-let curCard = -1;
+const cards = [document.querySelector('.intro'), ...document.querySelectorAll('.step'), document.querySelector('.end')];
+const bignum = document.getElementById('bignum'), pnum = document.getElementById('pnum');
+let curCard = -1, swapT = 0;
+function showNum(c) {
+  const txt = c >= 1 && c <= 12 ? String(c).padStart(2, '0') : '';
+  pnum.textContent = txt || (c === 13 ? '12' : '00');
+  clearTimeout(swapT);
+  if (!txt) { bignum.classList.remove('on'); return; }
+  if (!bignum.classList.contains('on') || reduce) { bignum.textContent = txt; bignum.classList.add('on'); return; }
+  bignum.classList.add('out');
+  swapT = setTimeout(() => { bignum.textContent = txt; bignum.classList.remove('out'); }, 200);
+}
 const STEP0 = 0.03, STEPD = 0.075; // začiatok prvého kroku a šírka kroku v scrolle
 const cardAt = (s) => s < STEP0 ? 0 : s >= 0.93 ? 13 : 1 + Math.min(11, Math.floor((s - STEP0) / STEPD));
 
@@ -335,7 +348,7 @@ function update(s) {
     });
   });
   const c = cardAt(s);
-  if (c !== curCard) { curCard = c; cards.forEach((el, i) => el.classList.toggle('on', i === c)); }
+  if (c !== curCard) { curCard = c; cards.forEach((el, i) => el.classList.toggle('on', i === c)); showNum(c); }
 }
 
 const track = document.getElementById('track');
@@ -350,7 +363,7 @@ function frame(now) {
   boot = Math.min(1, boot + dt / 2.5);
   update(cur);
   const c = cardAt(cur);
-  if (c === 0 || c === 13) want.copy(home); else want.copy(home).lerp(focus[c - 1], 0.5);
+  if (c === 0 || c === 13) want.copy(home); else want.copy(home).lerp(focus[c - 1], 0.35);
   look.lerp(want, reduce ? 1 : 1 - Math.exp(-dt * 2));
   place(reduce ? 0.55 : cur);
   renderer.render(scene, camera);
