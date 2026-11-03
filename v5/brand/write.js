@@ -28,7 +28,7 @@ export function logo(host) {
     // písmená v poradí, potom pauza a podčiarknutie jedným švihom: rýchly štart, dlhý dobeh
     const tot = v.l.slice(0, n).reduce((a, b) => a + b, 0); let t = 0;
     const run = ps.map((p, i) => { const d = v.l[i] / tot * T, a = p.animate([{ strokeDashoffset: v.l[i] + 1 }, { strokeDashoffset: 0 }], { duration: d, delay: t, fill: 'forwards', easing: 'linear' }); t += d; return a.finished; });
-    run.push(bar.animate([{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }], { duration: T * 0.42, delay: t + 200, fill: 'forwards', easing: 'cubic-bezier(.3,.7,.1,1)' }).finished);
+    run.push(bar.animate([{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }], { duration: T * 0.45, delay: t + 150, fill: 'forwards', easing: 'cubic-bezier(.3,.7,.1,1)' }).finished);
     return Promise.all(run);
   };
 }

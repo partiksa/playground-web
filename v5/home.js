@@ -9,8 +9,8 @@ async function intro() {
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
   scrollTo(0, 0); root.style.overflow = 'hidden';
   const write = logo(splash);
-  await write(1500);
-  await new Promise((r) => setTimeout(r, 250));
+  await write(1000);
+  await new Promise((r) => setTimeout(r, 900));
   const big = splash.querySelector('.logo-svg'), small = document.querySelector('.site-header .logo-mark');
   const a = big.getBoundingClientRect(), b = small.getBoundingClientRect(), bar = document.querySelector('.site-header').offsetHeight;
   const opt = { duration: 900, easing: 'cubic-bezier(.65,0,.35,1)', fill: 'forwards' };
