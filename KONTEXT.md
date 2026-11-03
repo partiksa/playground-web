@@ -55,6 +55,9 @@ Mimo v3: zvyšných 8 podstránok z menu, doladený mobil, deploy, nové detaily
 - Pôvodné rozhodnutia: model z jednoduchých tvarov podľa fotiek Šamorín, PBR textúry CC0, žiadne padanie dielov (fade a malý posun), logo biele SVG cez CSS mask, len lokálne.
 
 ## Posledné zmeny
+### Pravidlo commitov (Patrik, 2026-11-03)
+- Každý commit v tomto projekte má na konci `Co-authored-by: JackClash99 <74911058+JackClash99@users.noreply.github.com>`.
+
 ### 2026-11-03: v5 kolo 6, väčšie video, zarovnanie Slinkee, formulár (štýl fast, nekomitnuté)
 - Hero video: canvas cez celý hero, spodok stavby je za nadpisom. Začína snímkom 26 (pred ním je prázdne pozadie), ten sa prednačíta.
 - Slinkee: výška verzálky Jakarta 745, Slinkee 652, driek 136 a 72 (upm 1000). Veľkosť 1,05 em, obrys 0,0575 em, posun nahor 0,0275 em. Spodok sedí na základnej čiare, vrch na výške verzálky Jakarty. Glyfy bez zmeny.
