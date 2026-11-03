@@ -96,8 +96,8 @@
       'main p:not(.mega), main .cta-row, main .cta, main .more, main .lead, .hero-sub, .depth .say, .ab-stats li, .ab-row, .ab-intro, .site-footer .footer-inner > div'
     ), function (el) { return !el.closest(skip); });
     var set = list.filter(function (el) { return !list.some(function (o) { return o !== el && o.contains(el); }); });
-    heads.forEach(function (h) { if (!h.closest(skip)) { words(h); set.push(h); } });
-    set.forEach(function (el) { if (!el.classList.contains('sw')) el.classList.add('rv'); });
+    heads.forEach(function (h) { if (!h.closest(skip)) set.push(h); });
+    set.forEach(function (el) { el.classList.add('rv'); if (/^H[12]$/.test(el.tagName) || el.classList.contains('hx') || el.classList.contains('mega')) el.classList.add('rh'); });
     var io = new IntersectionObserver(function (es) {
       var k = 0;
       es.forEach(function (e) {
@@ -122,7 +122,9 @@
     // začať až keď sú načítané písma: inak sa slová zalomia podľa náhradného písma a potom preskočia
     var started = false, once = function () { if (!started) { started = true; requestAnimationFrame(start); } };
     if (document.fonts && document.fonts.ready) {
-      Promise.all([document.fonts.ready, document.fonts.load('700 1em "Plus Jakarta Sans"'), document.fonts.load('1em "Slinkee"')]).then(once, once);
+      // písmo sa sťahuje po podmnožinách (latin, latin-ext): načítať s reálnym textom stránky, inak diakritika dotiahne latin-ext až po štarte a slová preskočia
+      var txt = (document.querySelector('main') || document.body).textContent.replace(/\s+/g, ' ') + ' ĽŠČŽŤĎŇĹŔÁÄÉÍÓÔÚÝáäéíóôúýľščžťďňĺŕ';
+      Promise.all([document.fonts.ready].concat(['400', '500', '600', '700'].map(function (w) { return document.fonts.load(w + ' 1em "Plus Jakarta Sans"', txt); }), [document.fonts.load('1em "Slinkee"', 'AEGMNaegmn')])).then(function () { return document.fonts.ready; }).then(once, once);
     } else once();
     setTimeout(once, 3000);
   }

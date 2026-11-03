@@ -13,9 +13,12 @@ h2 { line-height: 1; }
 h3 { font-family: var(--fh); }
 .sl {
   font-family: "Slinkee", sans-serif; font-weight: 400; text-transform: none;
-  font-size: 1.06em; line-height: 0; margin: 0 0.03em;
-  /* drieky: Jakarta Bold 0,136 em, Slinkee 0,072 em. Obrys v rovnakej farbe dorovná rozdiel, tvar písma sa nemení. */
-  -webkit-text-stroke: 0.057em currentColor; paint-order: stroke fill;
+  /* zarovnanie s Jakarta Bold (merané z fontov, upm 1000):
+     výška verzálky Jakarta 745, Slinkee 652; driek Jakarta 136, Slinkee 72.
+     652*s + w = 745 a 72*s + w = 136  =>  s = 1.05, obrys w = 0.0575 em.
+     Obrys pridá pod základnú čiaru polovicu hrúbky, preto posun nahor o w/2: spodok sedí na základnej čiare, vrch na výške verzálky. */
+  font-size: 1.05em; line-height: 0; margin: 0 0.03em; vertical-align: 0.0275em;
+  -webkit-text-stroke: 0.0575em currentColor; paint-order: stroke fill;
 }
 
 /* obrovské slovo: už nie je orezané, celé, so Slinkee písmenom */
@@ -57,14 +60,14 @@ html.booting body::before {
   .lang { margin-left: auto; }
   :root { --bar: 116px; }
 }
+html { scrollbar-gutter: stable; } /* šírka sa nemení, keď sa zjaví posuvník */
 /* jemné animácie pri zobrazení (len ak nie je zapnuté obmedzenie pohybu) */
 /* kým nie sú načítané písma, obsah je skrytý, aby text neskákal */
 .mo:not(.ready) main, .mo:not(.ready) .site-footer { opacity: 0; }
 .mo main, .mo .site-footer { transition: opacity .3s; }
-.mo .sw .w { display: inline-block; vertical-align: top; clip-path: inset(-0.6em -0.3em -0.12em -0.3em); }
-.mo .sw.done .w { clip-path: none; }
-.mo .sw .wi { display: inline-block; transform: translateY(calc(100% + 0.6em)); transition: transform 1.1s var(--out) calc(var(--i) * 70ms); }
-.mo .sw.in .wi { transform: none; }
+/* nadpisy sa zobrazia celé naraz (bez pohybu po slovách, aby nič neskákalo) */
+.mo .rv.rh { transform: translateY(0.18em); transition: opacity 1s var(--out), transform 1.2s var(--out); }
+.mo .rv.rh.in { transform: none; }
 .mo .rv { opacity: 0; transform: translateY(18px); transition: opacity .9s var(--out), transform .9s var(--out); }
 .mo .rv.in { opacity: 1; transform: none; }
 .mo .depth .say.rv { transform: translateY(40px); transition-duration: 1.1s; }

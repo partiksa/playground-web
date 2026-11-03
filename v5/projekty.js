@@ -7,16 +7,16 @@ const I = 'assets/obsah/img/', D = 'assets/depth/', SRC = 'https://play-ground.s
 const samorin = ['5667', '5671', '5677', '5679', '5681', '5684', '5689', '5690'].map((n) => `assets/photos/samorin-${n}.jpg`);
 // texty z pôvodných stránok projektov
 const P = [
-  ['kraluv-dvur', 'Presťahované a obnovené ihrisko', 'Králův Dvůr, CZ', 'Presťahovanie a obnova', 'Presťahované a obnovené interiérové ihrisko v Králově Dvore pri Beroune.', '01', 'prestahovane-a-obnovene-interierove-ihrisko-v-kraluv-dvur-cz'],
-  ['samorin', 'Interiérové ihrisko na mieru', 'Šamorín', 'Nové ihrisko na mieru', 'Interiérové ihrisko na mieru prepojené s existujúcou stenou s otvormi.', '02', 'interierove-ihrisko-na-mieru-samorin', samorin],
-  ['oravice', 'Detská zóna v aquaparku', 'Oravice, Meander', 'Nová detská zóna', 'Montáž kompletnej detskej zóny s panelovým interiérovým ihriskom v aquaparku Meander Oravice.', '03', 'detska-zona-v-aquaparku-meander-oravice'],
-  ['trnava', 'Nové ihrisko Kinder Club', 'Trnava', 'Demontáž a montáž', 'Demontáž pôvodného a montáž nového interiérového ihriska v Kinder Clube Trnava.', '04', 'demontaz-a-montaz-noveho-interieroveho-ihriska-kinder-club-trnava'],
-  ['pezinok', 'Nové ihrisko v Pezinku', 'Pezinok', 'Demontáž a montáž', 'Demontáž, montáž a zmena nového interiérového ihriska v Pezinku.', '05', 'demontaz-a-montaz-noveho-interieroveho-ihriska-v-pezinku'],
+  ['kraluv-dvur', 'Presťahované a obnovené ihrisko', 'Králův Dvůr, CZ', 'Presťahovanie a obnova', 'Presťahované a obnovené interiérové ihrisko v Králově Dvore pri Beroune.', '01', 'prestahovane-a-obnovene-interierove-ihrisko-v-kraluv-dvur-cz'],
+  ['samorin', 'Interiérové ihrisko na mieru', 'Šamorín', 'Nové ihrisko na mieru', 'Interiérové ihrisko na mieru prepojené s existujúcou stenou s otvormi.', '02', 'interierove-ihrisko-na-mieru-samorin', samorin],
+  ['oravice', 'Detská zóna v aquaparku', 'Oravice, Meander', 'Nová detská zóna', 'Montáž kompletnej detskej zóny s panelovým interiérovým ihriskom v aquaparku Meander Oravice.', '03', 'detska-zona-v-aquaparku-meander-oravice'],
+  ['trnava', 'Nové ihrisko Kinder Club', 'Trnava', 'Demontáž a montáž', 'Demontáž pôvodného a montáž nového interiérového ihriska v Kinder Clube Trnava.', '04', 'demontaz-a-montaz-noveho-interieroveho-ihriska-kinder-club-trnava'],
+  ['pezinok', 'Nové ihrisko v Pezinku', 'Pezinok', 'Demontáž a montáž', 'Demontáž, montáž a zmena nového interiérového ihriska v Pezinku.', '05', 'demontaz-a-montaz-noveho-interieroveho-ihriska-v-pezinku'],
   ['klatovy', 'Obnova obalov konštrukcie', 'Klatovy, CZ', 'Obnova', 'Obnova penových obalov konštrukcie interiérového ihriska.', '06', 'obnova-obalov-konstrukcie-interieroveho-ihriska-klatovy'],
-  ['dunajska-luzna', 'Prerábka ihriska', 'Dunajská Lužná', 'Prerábka', 'Vynovenie a prerábka interiérového ihriska v Dunajskej Lužnej.', '07', 'prerabka-interieroveho-ihriska-v-dunajskej-luznej'],
-  ['praha', 'Ihrisko na kúpalisku', 'Praha, CZ', 'Montáž', 'Montáž používaného interiérového ihriska v areáli kúpaliska v Prahe.', '08', 'montaz-interieroveho-ihriska-na-kupalisku-v-prahe'],
-  ['uhersky-brod', 'Dorábka ihriska a tubingovej dráhy', 'Uherský Brod, CZ', 'Dorábka', 'Dorábka interiérového ihriska a tubingovej dráhy k existujúcemu interiérovému ihrisku.', '09', 'dorabka-interieroveho-ihriska-a-tubingovej-drahy-uhersky-brod-cz'],
-  ['hlohovec', 'Presťahovanie a prerobenie ihriska', 'Hlohovec', 'Presťahovanie a prerábka', 'Demontáž trojposchodového interiérového ihriska a úprava na nové ihrisko s dvomi poschodiami na chodbe základnej školy.', '10', 'prestahovanie-a-prerobenie-interieroveho-ihriska-hlohovec'],
+  ['dunajska-luzna', 'Prerábka ihriska', 'Dunajská Lužná', 'Prerábka', 'Vynovenie a prerábka interiérového ihriska v Dunajskej Lužnej.', '07', 'prerabka-interieroveho-ihriska-v-dunajskej-luznej'],
+  ['praha', 'Ihrisko na kúpalisku', 'Praha, CZ', 'Montáž', 'Montáž používaného interiérového ihriska v areáli kúpaliska v Prahe.', '08', 'montaz-interieroveho-ihriska-na-kupalisku-v-prahe'],
+  ['uhersky-brod', 'Dorábka ihriska a tubingovej dráhy', 'Uherský Brod, CZ', 'Dorábka', 'Dorábka interiérového ihriska a tubingovej dráhy k existujúcemu interiérovému ihrisku.', '09', 'dorabka-interieroveho-ihriska-a-tubingovej-drahy-uhersky-brod-cz'],
+  ['hlohovec', 'Presťahovanie a prerobenie ihriska', 'Hlohovec', 'Presťahovanie a prerábka', 'Demontáž trojposchodového interiérového ihriska a úprava na nové ihrisko s dvomi poschodiami na chodbe základnej školy.', '10', 'prestahovanie-a-prerobenie-interieroveho-ihriska-hlohovec'],
   ['karvina-stena', 'Lezecká stena pre deti', 'Karviná, CZ', 'Lezecká stena', 'Lezecká stena je dobrý doplnok do herní.', '11', 'lezecka-stena-pre-deti-karvina'],
   ['karvina-tubing', 'Tubingová dráha', 'Karviná, CZ', 'Tubingová dráha', 'Tubingová dráha postavená ako samostatne stojaci herný prvok. Deti na nej trávia najviac času.', '12', 'tubingova-draha-karvina'],
 ].map(([slug, title, place, type, desc, n, src, photos]) => ({

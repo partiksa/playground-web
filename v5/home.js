@@ -1,6 +1,6 @@
 // úvodná stránka: logo sa napíše, presunie do hlavičky, potom začne stavba
 import { logo } from './brand/write.js';
-import { start } from './hero.js';
+import { start } from './hero-video.js';
 
 const root = document.documentElement, splash = document.getElementById('splash');
 

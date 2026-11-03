@@ -55,6 +55,16 @@ Mimo v3: zvyšných 8 podstránok z menu, doladený mobil, deploy, nové detaily
 - Pôvodné rozhodnutia: model z jednoduchých tvarov podľa fotiek Šamorín, PBR textúry CC0, žiadne padanie dielov (fade a malý posun), logo biele SVG cez CSS mask, len lokálne.
 
 ## Posledné zmeny
+### 2026-11-03: v5 kolo 6, väčšie video, zarovnanie Slinkee, formulár (štýl fast, nekomitnuté)
+- Hero video: canvas cez celý hero, spodok stavby je za nadpisom. Začína snímkom 26 (pred ním je prázdne pozadie), ten sa prednačíta.
+- Slinkee: výška verzálky Jakarta 745, Slinkee 652, driek 136 a 72 (upm 1000). Veľkosť 1,05 em, obrys 0,0575 em, posun nahor 0,0275 em. Spodok sedí na základnej čiare, vrch na výške verzálky Jakarty. Glyfy bez zmeny.
+- Kontakt: formulár v štýle v5 (štítky služieb, polia so spodnou linkou, pri zameraní červená, po odoslaní hláška). Odosiela sa stále cez mailto, backend nie je.
+
+### 2026-11-03: v5 kolo 5, hero z videa, nadpisy bez skákania, jednoznaky (štýl fast, nekomitnuté)
+- Hero: namiesto 3D modelu (Three.js) sa podľa scrollu prehráva 240 snímok z `video/stavba-720p.mp4` (`v5/hero-video.js`, `v5/assets/stavba/f001..f240.webp`, 1024x576, 5,3 MB). Farba pozadia snímok je dorovnaná na paper #F6F3EE, okraje sa plynulo strácajú v canvase. `hero.js` ostal v repozitári, ale úvod ho už nenačítava (importmap odstránený).
+- Skákanie nadpisov: príčinou bolo písmo (podmnožina latin-ext sa dotiahla až po štarte) a pohyb po slovách. Písma sa načítajú s reálnym textom, nadpisy sa zobrazujú celé naraz (`brand.js` reveal, trieda `rh`). `words()` v brand.js sa už nepoužíva.
+- Jednoznaky: pevná medzera (&nbsp;) za k, s, v, z, o, u, a, i vo všetkých HTML a v textoch `projekty.js`.
+
 ### 2026-11-03: v5 kolo 4, podčiarknutie, hrúbka Slinkee, animácie (štýl fast, nekomitnuté)
 - Logo: podčiarknutie je v `assets/PLAYGROUND.svg` samostatný tvar (cesty 0 až 4), písmená sú cesty 5 a 6. `write.js` ich kreslí v dvoch vrstvách. Písmená odkrýva maska po čiare, podčiarknutie maska zľava doprava. Kúsky v slučkách y a g sa už neukazujú skôr. `logo-write.svg` (načítavanie na podstránkach) to ešte nemá.
 - Slinkee: drieky Jakarta Bold 0,136 em, Slinkee 0,072 em. Obrys `-webkit-text-stroke: 0.057em` a veľkosť 1,06 em ich dorovnajú, okraj 0,03 em proti dotyku so susedmi.

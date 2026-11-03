@@ -20,5 +20,6 @@ form.addEventListener('submit', (e) => {
     '', f.get('sprava'),
   ].filter((x, i) => x !== '' || i === 5).join('\n');
   const subj = `Dopyt z webu${sl.length ? ': ' + sl[0] : ''}`;
+  document.getElementById('ok').hidden = false;
   location.href = `mailto:info@play-ground.sk?subject=${encodeURIComponent(subj)}&body=${encodeURIComponent(body)}`;
 });
