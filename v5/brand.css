@@ -1,0 +1,85 @@
+/* identita v5: Plus Jakarta Sans (nadpisy Bold, verzálky) + vymenené písmená zo Slinkee */
+@font-face { font-family: "Slinkee"; src: url(brand/Slinkee.woff) format("woff"); font-display: block; }
+:root { --fh: "Plus Jakarta Sans", sans-serif; }
+body { font-family: "Plus Jakarta Sans", sans-serif; font-weight: 400; }
+
+h1, h2, .mega, .bignum, .stitle, .bigword {
+  font-family: var(--fh); font-weight: 700; text-transform: uppercase;
+  letter-spacing: -0.015em; font-variant-ligatures: normal; font-feature-settings: normal;
+}
+h1 { font-size: clamp(2.4rem, 1.4rem + 4vw, 5.25rem); line-height: 1.06; }
+h2 { line-height: 1.06; }
+h2 { line-height: 1; }
+h3 { font-family: var(--fh); }
+.sl {
+  font-family: "Slinkee", sans-serif; font-weight: 400; text-transform: none;
+  font-size: 1.06em; line-height: 0; margin: 0 0.03em;
+  /* drieky: Jakarta Bold 0,136 em, Slinkee 0,072 em. Obrys v rovnakej farbe dorovná rozdiel, tvar písma sa nemení. */
+  -webkit-text-stroke: 0.057em currentColor; paint-order: stroke fill;
+}
+
+/* obrovské slovo: už nie je orezané, celé, so Slinkee písmenom */
+.mega {
+  height: auto; overflow: visible; white-space: normal; margin: 0 0 clamp(1.5rem, 3vw, 2.5rem) -0.03em;
+  font-size: clamp(3.5rem, 12vw, 12rem); line-height: 1; letter-spacing: -0.03em;
+}
+
+/* jazyky (zatiaľ bez prekladu) */
+.site-header { gap: 1rem 1.75rem; }
+.site-nav { margin-left: auto; }
+.site-nav ul { gap: clamp(0.9rem, 1.8vw, 1.75rem); }
+.site-nav a { font-weight: 500; font-size: 0.9375rem; }
+.site-nav a[aria-current="page"] { font-weight: 700; }
+.lang { display: flex; gap: 0.15rem; flex: none; }
+.lang a {
+  display: inline-grid; place-items: center; min-width: 40px; min-height: 40px;
+  color: #fff; font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.06em; text-decoration: none; opacity: 0.7;
+}
+.lang a:hover { opacity: 1; }
+.lang a[aria-current] { opacity: 1; box-shadow: inset 0 -3px 0 #fff; }
+
+
+/* načítavanie: logo, ktoré sa píše */
+.ld { background: url(brand/logo-write.svg) center / min(9rem, 38%) no-repeat; }
+html.booting body::before {
+  content: ""; position: fixed; inset: 0; z-index: 30;
+  background: var(--paper) url(brand/logo-write.svg) center / min(46vw, 18rem) no-repeat;
+  animation: bootin .2s .3s both;
+}
+@keyframes bootin { from { opacity: 0; } }
+
+.btn { font-family: "Plus Jakarta Sans", sans-serif; font-weight: 700; }
+.f input, .f textarea { font-family: "Plus Jakarta Sans", sans-serif; font-weight: 400; }
+
+@media (max-width: 1100px) {
+  .site-header { flex-wrap: wrap; padding-top: 0.5rem; padding-bottom: 0.25rem; gap: 0 1rem; }
+  .site-nav { order: 3; width: 100%; overflow-x: auto; margin-left: 0; }
+  .lang { margin-left: auto; }
+  :root { --bar: 116px; }
+}
+/* jemné animácie pri zobrazení (len ak nie je zapnuté obmedzenie pohybu) */
+/* kým nie sú načítané písma, obsah je skrytý, aby text neskákal */
+.mo:not(.ready) main, .mo:not(.ready) .site-footer { opacity: 0; }
+.mo main, .mo .site-footer { transition: opacity .3s; }
+.mo .sw .w { display: inline-block; vertical-align: top; clip-path: inset(-0.6em -0.3em -0.12em -0.3em); }
+.mo .sw.done .w { clip-path: none; }
+.mo .sw .wi { display: inline-block; transform: translateY(calc(100% + 0.6em)); transition: transform 1.1s var(--out) calc(var(--i) * 70ms); }
+.mo .sw.in .wi { transform: none; }
+.mo .rv { opacity: 0; transform: translateY(18px); transition: opacity .9s var(--out), transform .9s var(--out); }
+.mo .rv.in { opacity: 1; transform: none; }
+.mo .depth .say.rv { transform: translateY(40px); transition-duration: 1.1s; }
+.mo .depth .say.rv.in { transform: none; }
+/* deliace linky sa nakreslia zľava */
+.mo .ab-row, .mo .ab-intro { border-top-color: transparent; position: relative; }
+.mo .ab-row::before, .mo .ab-intro::before { content: ""; position: absolute; left: 0; right: 0; top: -1px; height: 1px; background: var(--paper-2); transform: scaleX(0); transform-origin: 0 0; transition: transform 1.3s var(--out); }
+.mo .ab-intro::before { background: var(--navy); }
+.mo .ab-row.rv, .mo .ab-intro.rv { opacity: 1; transform: none; }
+.mo .ab-row.in::before, .mo .ab-intro.in::before { transform: none; }
+.mo .ab-row > p, .mo .ab-intro > .lead { opacity: 0; transform: translateY(14px); transition: opacity .9s var(--out) .25s, transform .9s var(--out) .25s; }
+.mo .ab-row.in > p, .mo .ab-intro.in > .lead { opacity: 1; transform: none; }
+/* tlačidlá a odkazy */
+.btn { transition: background .2s, transform .25s var(--out); }
+@media (hover: hover) { .btn:hover { transform: translateY(-2px); } }
+.btn:active { transform: scale(0.97); transition-duration: .1s; }
+.more, .mail { transition: text-underline-offset .25s var(--out), text-decoration-color .25s; }
+@media (hover: hover) { .more:hover, .mail:hover { text-underline-offset: 8px; } }

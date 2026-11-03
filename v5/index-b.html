@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Playground | Hero B</title>
+<meta name="description" content="Interiérové ihriská na mieru: návrh, výroba, dodanie a montáž na kľúč. Trnava.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap&subset=latin-ext">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="brand.css">
+<link rel="stylesheet" href="hero-b.css">
+<script>if(!matchMedia("(prefers-reduced-motion: reduce)").matches){document.documentElement.classList.add("splashing");setTimeout(function(){document.documentElement.classList.remove("splashing")},6000)}</script>
+<script src="brand.js"></script>
+<script type="importmap">
+{ "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/" } }
+</script>
+</head>
+<body data-hero="b">
+<div class="splash" id="splash" aria-hidden="true"><svg class="logo-svg" viewBox="0 0 312.5 134.1"><path pathLength="1" style="--i:0" d="M60,65.8c7.8-2.8,16.1-6.4,23.5-9.9c9.1-4.3,19.6-11.1,27.5-17.1c9.6-7.4,14.1-15.9,11.2-24.9
+		c-2-6.2-9-12.9-25.8-12.5C40.1,2.9,13.3,56.6,6.9,72.7c-7,17.6-9.8,47.4-0.2,57.1c1.4,1.4,3.6,2.9,6.8,2.9c1.5,0,3.2-0.3,5.1-1
+		c9.6-3.7,20.4-18.6,32.3-44.1C54.6,79.5,57.5,72.2,60,65.8L60,65.8z M19.3,125.4c-3.1,1.6-7.6,1.9-10.1-1.3
+		c-4.8-5.9-6.7-28.8,2.1-50.8c6.2-15.5,30.5-63.6,83-66.6c0.6,0,3.1,0,3.6,0c11,0.6,16.6,4.3,18,10.5c1.9,8.2-2.5,14.5-11,21.1
+		c-7.5,5.9-14.4,9.9-23.1,14.3c-6.1,3.2-13.4,6.4-20.1,8.8c1.7-4.4,3.1-8.2,3.7-9.9l0,0c0.5-1.2,0.7-2.1,1-2.8
+		c0.7-2.3-0.3-3.3-2-3.3c-0.6,0-1.1,0.3-1.1,0.3c-0.6,1.6-0.9,2.6-1.3,4c-0.7,1.6-2.7,7.2-5.2,13.7c-8,3.1-13.1,4.7-20.8,7.2l0,0
+		c-1.2,0.4-3.7,1.2-4.7,1.5c-0.1,1.1,0.8,1.5,1.4,1.6c0.8,0.1,1.8,0.1,3.4-0.3l0,0c5.1-1.4,12-3.4,19.3-6.2c-2.3,5.7-4.9,12-8,18.6
+		C36,110.1,27.7,121.1,19.3,125.4L19.3,125.4z"/><path pathLength="1" style="--i:1" d="M309.9,46.2c-0.6,0.1-1.4,0.3-1.4,0.3c-0.7,3.3-1.1,5.1-1.5,6.4l0,0c-1.3,4.3-2.9,8.2-4.4,11.4l-0.6-0.1
+		c-0.9-0.2-2.2-0.4-3.7-0.3c-11,0.9-19.9,11-21.1,21.6c-2.3,3.3-5.2,6.1-7.6,6.3c-1.7,0.1-2.4-0.6-2.3-2.4c0.5-5.2,8.5-12.3,9-18.1
+		c0.3-3-1.1-5.1-4.3-4.8c-8.2,0.7-15.6,11.5-15.6,11.5s1.8-4,2-6.3s-0.5-3.1-2.1-3c-0.6,0.1-1.3,0.3-1.3,0.3
+		c-0.6,6.4-3.7,12.3-5.8,17.6c-2.4,3.8-5.7,7.3-8.4,7.5c-1.8,0.1-2.2-0.8-2.1-2.9c0.6-6.3,6.1-12.4,6.7-18.5c0.2-2.4-1-3.2-2.7-3.1
+		c-0.3,0-0.8,0.1-0.8,0.1c-1.8,10.4-11.8,24.9-18.3,25.4c-1.9,0.2-2.7-0.6-2.5-2.6c0.5-5,7-12.7,7.5-18.8c0.2-2.1-0.7-3.1-2.4-3
+		c-0.6,0.1-1.4,0.3-1.4,0.3c-0.3,2.8-1.1,5.3-2,7.6c-1.8,1.4-4.8,3-9,3c0,0,0,0-0.1,0c0,0,0.2-0.9,0.3-1.8c0.2-1.7,0-3-0.5-4.1l0,0
+		l0,0c-0.1-0.2-0.2-0.4-0.3-0.6c0,0,0,0,0-0.1c-0.1-0.1-0.2-0.2-0.2-0.3c-0.9-1.2-2.5-2.2-4.2-2.5l0,0c-0.6-0.6-1.6-0.9-3-0.8
+		c-7.7,0.6-16.5,9.8-17.5,20.3c-0.1,0.6-0.1,1.2-0.1,1.8c-2.8,3.1-4.1,3.8-5.7,4.7c-1.4,0.8-3.2,0.9-4,0.3c-0.3-0.2-0.7-0.6-0.4-1.6
+		c0.3-1.4,1.6-2.7,3-4.1c1.5-1.5,3.2-3.2,3.9-5.4c1.2-3.6-1.9-5.1-4.9-6.1c1.3-3.5,1.2-6.2-0.3-7.9c-1.5-1.6-3.9-1.9-6.2-0.8
+		c-2.3,1.2-3.8,3.5-3.7,6c0.1,2.9,2.7,4.2,5.5,5.1c-3,5.7-6.4,9.9-13.9,14.1c-1.1,0.6-2.6,1.4-4.1,2.1c0.2-0.9,0.5-1.8,0.7-2.8
+		c0.4-1.4,0.8-2.9,1.2-4.6c1.1-4,2.2-7.2,3.3-10c0,0-0.4-0.1-1-0.1c-1.6,0.1-3.2,1.2-4,3.4c-2.2,5.7-6.4,12.5-11.6,12.9
+		c-3.1,0.3-5.1-0.9-4.8-4.5c0.9-9.2,9.1-13.8,14.7-15c5.9-1.3,7.1,1.8,7.1,1.8s0.4-0.5,0.4-1.3c0.1-2.1-2-4.5-6.4-4
+		c-9.5,0.8-19.1,8.7-20.1,19.1c-0.1,0.6-0.1,1.2,0,1.8c-3.3,4-7.6,6-10.6,7c0.9-3.1,1.9-6.2,3.2-9.8c2.2-5.4,4.2-9.1,4.5-12.6
+		c0.2-2.2-1-2.9-2.6-2.7c-0.3,0-0.8,0.1-0.8,0.1c-1.6,9.4-11.1,22.5-17.3,23c-1.9,0.2-2.6-0.5-2.4-2.3c0.4-4.5,6.5-11.5,7-17
+		c0.2-2-0.8-2.8-2.4-2.7c-0.6,0.1-1.4,0.3-1.4,0.3c-1,8.5-6.8,14.4-7.3,19.9c-2.2,3-4.9,5.4-7.1,5.5c-1.8,0.1-2.4-0.8-2.1-4.4
+		c0.2-2,1.4-6,4.3-13.5c0,0-0.4-0.3-1.1-0.2c-1.9,0.1-3.2,1.3-4.2,3.9c-2.3,6.5-6.2,14.9-12.6,15.4c-2.9,0.2-4.3-1.4-3.9-4.8
+		c1-9.6,8.1-15.8,14.8-17.5c5.9-1.5,7.3,1.8,7.3,1.8s0.4-0.5,0.4-1.3c0.1-2.1-1.8-4.6-6.6-4c-8.8,1.1-18.3,9.4-20.1,19.9
+		c-3.3,3.5-8.2,7.2-13.2,7.6c-3.5,0.3-5.7-1.3-5.5-5.8c7.3-3.8,26.6-21.7,27.8-34c0.3-3.8-1.4-5.9-5.3-5.5
+		c-10.4,0.9-25.2,27.2-26.3,39c-0.6,6.5,2.3,10.4,8.2,9.9c5.4-0.4,10.6-3.7,14-7.1c0.5,3.5,2.9,5.7,7,5.4c7.1-0.6,11.2-7.6,11.2-7.6
+		c-0.3,3.4,0,6.9,4.4,6.5c3.3-0.3,6.6-2.9,8.9-5.8c0.9,1.4,2.7,1.9,5.1,1.7c5.8-0.5,11.1-7,12.8-9.3c-1,2.9-1.8,5.6-2.6,8.3
+		l-0.1,0.3c0,0.1-0.1,0.2-0.1,0.3c-8.8,1.8-23.9,5.2-23.9,16.5c0,3.4,1.7,5.9,4.8,7.1c1.4,0.5,2.9,0.7,4.5,0.6
+		c2.5-0.2,5.1-1.2,7.5-2.9c5.9-4.4,7.8-11,8.6-13.8l0.1-0.5c0.4-1.4,0.8-2.6,1.2-4c3-0.8,8.4-2.9,12.8-7.4c1.2,1.7,3.3,2.6,6.1,2.4
+		c5.8-0.5,9.5-5.2,10.6-6.8c-0.1,0.4-0.2,0.8-0.3,1.1c-0.4,1.6-0.8,3.2-1.2,4.7l-0.1,0.3c-0.8,0.4-1.4,0.7-1.8,0.8
+		c-1.4,0.6-2.9,1.2-4.4,1.9c-8.3,3.4-17.8,7.3-18.6,15.4c-0.3,2.8,0.9,4.9,3.2,6c1.2,0.6,2.8,0.7,4.5,0.6c3.1-0.2,6.5-1.6,9.5-3.8
+		c4.3-3.2,7.4-7.8,9.1-13.6c0.5-1.8,0.9-3.1,1.4-5c1.5-0.7,3.2-1.6,4.6-2.3l0,0c0.7-0.3,1.3-0.7,1.9-1c0,0,0.1,0,0.1-0.1l0,0
+		c8.4-4.7,12.3-9.7,15.6-16c2,0.7,3.4,1.3,3.1,2.2c-0.4,1.2-1.6,2.4-2.8,3.6c-1.7,1.7-3.6,3.6-4.2,6.2c-0.4,2.1,0.1,3.7,1.6,4.7
+		c1,0.7,2.4,1,3.9,0.8c1.2-0.1,2.5-0.5,3.7-1.1c1.8-0.9,3.2-1.9,5.3-3.9c1.2,2.8,3.8,4.1,7.4,3.8c7.6-0.6,14.1-8.4,16.6-16.3
+		c3.4-0.1,6.3-1,8.1-2.3c-1.9,3.9-3.8,7.3-4.1,10.5c-0.4,4.1,1.8,6.1,5.8,5.7c6.6-0.5,12.6-9.3,12.6-9.3c-1.2,4.7-0.2,8.6,4.3,8.2
+		c2.9-0.2,5.6-2.1,7.8-4.5c-0.1,2.1,0.8,3,2.3,2.9c0.3,0,0.8-0.2,0.8-0.2c1.1-10.6,13.1-24.8,19.3-25.3c1.4-0.1,2,0.5,1.9,2
+		c-0.4,4.4-7.9,11.4-8.5,17.8c-0.3,3.2,1.2,5.3,5.1,5c3.3-0.3,6.5-2.8,8.8-5.7c0.6,2.9,2.7,4.6,6.3,4.3c7.4-0.6,11.5-7.2,11.5-7.2
+		c-0.3,3,0.3,6.4,4.6,6c6.3-0.5,12.1-9.1,12.4-12.9c0-0.5-0.3-1.3-1.1-1.3c-2.3,4.8-6.8,10.3-10.2,10.5c-1.8,0.1-2.4-0.8-2.1-4.4
+		c0.4-4.5,2.1-9.3,4.6-14.4l0,0c0.1-0.2,0.1-0.3,0.2-0.5c0.4-0.7,0.7-1.4,1.1-2.2c0.4-0.8,0.8-1.6,1.2-2.3c2-3.6,4.4-9.3,5.6-12.7
+		l0,0c0.5-1.2,0.8-2.5,0.9-3.6C312.5,47.1,311.6,46.1,309.9,46.2L309.9,46.2z M78.9,66.7c1.9-0.1,2.8,0.8,2.6,2.8
+		c-0.7,7.8-14.1,24.2-23.7,29.9C59.9,87.9,73,67.1,78.9,66.7z M120.8,111.2c-0.1,0.2-0.1,0.4-0.2,0.6c-0.8,2.6-2.4,8.1-7,11.5
+		c-2.6,2-5.9,2.7-8.4,1.7c-1.9-0.7-3-2.3-3-4.4c0-2.2,0.7-5.5,7-8.5c3.7-1.7,8-2.8,12.3-3.7C121.3,109.4,121.1,110.3,120.8,111.2
+		L120.8,111.2z M151.3,108.7c-1.5,5-4.1,8.8-7.6,11.4c-3.3,2.5-7.8,3.6-10.2,2.6c-1.2-0.5-1.7-1.5-1.5-3c0.5-5.6,8.3-8.8,15.9-11.9
+		c1.4-0.6,2.9-1.2,4.2-1.8C151.9,107,151.6,107.8,151.3,108.7L151.3,108.7z M176.9,80.4c-1.8-0.6-3.4-1.4-3.4-2.4
+		c0-1.4,1-2.1,1.3-2.2c0.1-0.1,0.5-0.2,0.8-0.2c0.4,0,0.9,0.1,1.3,0.5C177.6,76.9,177.6,78.4,176.9,80.4L176.9,80.4z M206.9,80.4
+		c-1.1-0.8-2-2.1-1.9-3.2c0.1-0.5,0.2-1,0.6-1.5c0.8-0.9,2.3-0.9,2.9-0.7c1.3,0.5,1.9,1.4,2.2,2.2c0.1,0.3,0.2,0.6,0.2,0.9
+		c0.2,1.4,0,2.5-0.2,3.4C209.2,81.4,208,81.1,206.9,80.4L206.9,80.4z M197.3,97.8c-3.7,0.3-5.4-2-5-6.6c0.6-6.7,5-12.8,9.9-15.4
+		c-0.2,0.5-0.3,1-0.4,1.5c-0.3,2.5,1.3,4.7,2.9,5.8c1.4,0.9,2.9,1.5,4.9,1.7C207.3,91.8,202.1,97.4,197.3,97.8L197.3,97.8z
+		 M298.1,75c-1.9,4.3-7.3,15-13.1,15.5c-2.6,0.2-4-1.4-3.7-4.9c0.9-9.3,7.6-18,16.4-18.7c1.2-0.1,2.2-0.1,3.5,0
+		c-0.1,0.2-0.3,0.8-0.6,1.5c-0.1,0.3-0.2,0.6-0.3,0.9C299.7,71,298.9,73.3,298.1,75L298.1,75z"/><path pathLength="1" style="--i:2" d="M48.3,124.4L48.3,124.4c-2.8,0.6-3.2,2.2-2.6,4.1c0.1,0.4,0.5,1.2,0.5,1.2c0.5-0.1,1.4-0.2,2.2-0.4
+		c16.4-2.9,32.8-5.5,49.2-7.9c0-0.1,0-0.1,0-0.2c0-1.7,0.3-3.2,0.8-4.5C81.4,119,64.6,121.6,48.3,124.4L48.3,124.4z"/><path pathLength="1" style="--i:3" d="M103.5,120.6c4.2-0.6,8.5-1.2,12.8-1.8c1.1-1.6,1.8-3.2,2.4-4.6c-4.3,0.5-8.6,1-12.8,1.6
+		C104.5,117,103.5,118.6,103.5,120.6L103.5,120.6z"/><path pathLength="1" style="--i:4" d="M124.9,113.5c-0.4,1.2-0.9,2.7-1.7,4.4c1.6-0.2,3.1-0.4,4.6-0.6c0.6-1.6,1.4-3.1,2.6-4.4
+		C128.6,113.1,126.7,113.3,124.9,113.5L124.9,113.5z"/><path pathLength="1" style="--i:5" d="M134.8,116.4c4.1-0.5,8.2-1,12.3-1.4c0.8-1.2,1.6-2.5,2.2-4c-2.4,0.2-4.8,0.5-7.2,0.7
+		C139,113.1,136.4,114.6,134.8,116.4L134.8,116.4z"/><path pathLength="1" style="--i:6" d="M288.4,105c-1.1,0-2.3,0-3.5,0c-42.7-0.3-86.5,1.6-129.4,5.4c-0.4,1.3-0.9,2.6-1.5,3.8
+		c43.4-4.7,87-7.4,130.8-7.4c1.1,0,2.3,0,3.4,0l0,0c1.4,0,2.9,0.1,2.9,0.1C291.1,105,288.4,105,288.4,105L288.4,105z"/></svg></div>
+<header class="site-header">
+  <a class="logo" href="index.html" aria-label="Playground, domov"><span class="logo-mark" role="img" aria-label="Playground"></span></a>
+  <nav class="site-nav" aria-label="Hlavná navigácia">
+    <ul>
+      <li><a href="ihriska.html">Ihriská na mieru</a></li>
+      <li><a href="prerabka.html">Prerábka</a></li>
+      <li><a href="revizie.html">Revízie</a></li>
+      <li><a href="projekty.html">Realizácie</a></li>
+      <li><a href="o-nas.html">O nás</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+  <div class="lang" aria-label="Jazyk"><a href="#" aria-current="true" lang="sk">SK</a><a href="#" lang="en">EN</a><a href="#" lang="de">DE</a></div>
+</header>
+<script src="intro.js"></script>
+
+<main class="track" id="track">
+  <section class="stage">
+    <div class="bignum bigword" id="bignum" aria-hidden="true"></div>
+    <canvas id="c" aria-hidden="true"></canvas>
+
+    <div class="copy">
+      <article class="card intro on">
+        <p class="eyebrow">Interiérové ihriská na&nbsp;mieru</p>
+        <h1>Ihrisko, ktoré vyrastie z&nbsp;vášho priestoru</h1>
+        <p>Pozrite si, ako ihrisko skladáme krok za krokom. Každé navrhujeme podľa miestnosti, výšky stropu a&nbsp;veku detí.</p>
+      </article>
+      <article class="card end">
+        <p class="eyebrow">Dodanie a&nbsp;montáž na&nbsp;kľúč</p>
+        <h2>Hotové ihrisko pre vašu prevádzku</h2>
+        <p>Navrhneme, dodáme a&nbsp;zmontujeme. Ozvite sa nám a&nbsp;povieme vám, čo sa dá spraviť vo&nbsp;vašom priestore.</p>
+        <div class="cta">
+          <a class="btn" href="tel:+421905724437">+421&nbsp;905&nbsp;724&nbsp;437</a>
+          <a class="mail" href="mailto:info@play-ground.sk">info@play-ground.sk</a>
+        </div>
+      </article>
+    </div>
+
+    <ol class="steps sr" aria-label="12 krokov stavby ihriska">
+      <li class="step" data-n="01"><h2>Podlaha</h2>
+        <div class="part"><p class="pn">01.1</p><h3>Liata podlaha</h3><p>Hladký lesklý povrch miestnosti. Ihrisko stojí priamo na ňom.</p></div>
+        <div class="part"><p class="pn">01.2</p><h3>Farebné zóny</h3><p>Oranžová pod ihriskom, žltá pri okne, fialová pri vstupe.</p></div>
+        <div class="part"><p class="pn">01.3</p><h3>Údržba</h3><p>Povrch bez škár sa ľahko čistí.</p></div>
+      </li>
+      <li class="step" data-n="02"><h2>Mäkké podlahy</h2>
+        <div class="part"><p class="pn">02.1</p><h3>Červené panely</h3><p>Mäkké panely pokrývajú celé prízemie ihriska.</p></div>
+        <div class="part"><p class="pn">02.2</p><h3>Žltý mat</h3><p>Leží v jednej bunke a drží tvar aj pri záťaži.</p></div>
+        <div class="part"><p class="pn">02.3</p><h3>Bezpečnosť</h3><p>Panely tlmia pády detí na prízemí.</p></div>
+      </li>
+      <li class="step" data-n="03"><h2>Nosné stĺpy</h2>
+        <div class="part"><p class="pn">03.1</p><h3>Rošt</h3><p>Šesť hlavných stĺpov a&nbsp;dva ďalšie pod poschodím.</p></div>
+        <div class="part"><p class="pn">03.2</p><h3>Rozmer</h3><p>Priemer okolo 12&nbsp;cm, výška 2,4&nbsp;m.</p></div>
+        <div class="part"><p class="pn">03.3</p><h3>Vinylový obal</h3><p>Mäkké segmenty na stĺpoch tlmia nárazy.</p></div>
+      </li>
+      <li class="step" data-n="04"><h2>Rámy a spojky</h2>
+        <div class="part"><p class="pn">04.1</p><h3>Vodorovné trubky</h3><p>Spájajú stĺpy vo výške poschodia (1,2&nbsp;m) a&nbsp;hore (2,4&nbsp;m).</p></div>
+        <div class="part"><p class="pn">04.2</p><h3>Kovové svorky</h3><p>Pevne spájajú trubky so stĺpmi.</p></div>
+        <div class="part"><p class="pn">04.3</p><h3>Obaly</h3><p>Žltý a&nbsp;oranžový mäkký vinyl kryje všetky trubky.</p></div>
+      </li>
+      <li class="step" data-n="05"><h2>Guľôčkový bazén</h2>
+        <div class="part"><p class="pn">05.1</p><h3>Bazén</h3><p>Plocha asi 1,2 x 1,5&nbsp;m s&nbsp;tmavým dnom.</p></div>
+        <div class="part"><p class="pn">05.2</p><h3>Guľôčky</h3><p>Plastové, v&nbsp;ružovej, žltej a&nbsp;bielej farbe.</p></div>
+        <div class="part"><p class="pn">05.3</p><h3>Okraj</h3><p>Vypolstrovaný, chráni pri vstupe aj výstupe.</p></div>
+      </li>
+      <li class="step" data-n="06"><h2>Poschodie</h2>
+        <div class="part"><p class="pn">06.1</p><h3>Podlaha</h3><p>Červený vinyl vo výške 1,2&nbsp;m.</p></div>
+        <div class="part"><p class="pn">06.2</p><h3>Pyramídy</h3><p>Dve žlté, vysoké asi 0,7&nbsp;m, bez ostrých hrán.</p></div>
+        <div class="part"><p class="pn">06.3</p><h3>Lavica a valce</h3><p>Nízka lavica a&nbsp;mäkké valce na lezenie.</p></div>
+      </li>
+      <li class="step" data-n="07"><h2>Šmykľavka</h2>
+        <div class="part"><p class="pn">07.1</p><h3>Štart</h3><p>Začína na poschodí vo výške 1,2&nbsp;m.</p></div>
+        <div class="part"><p class="pn">07.2</p><h3>Šmykľavka</h3><p>Modrý plast s&nbsp;bočnými stenami, dĺžka asi 2&nbsp;m.</p></div>
+        <div class="part"><p class="pn">07.3</p><h3>Dopad</h3><p>Končí v&nbsp;guľôčkovom bazéne, ktorý tlmí dopad.</p></div>
+      </li>
+      <li class="step" data-n="08"><h2>Prístup hore</h2>
+        <div class="part"><p class="pn">08.1</p><h3>Sieťový rebrík</h3><p>Stupne zo strany vedú z&nbsp;prízemia na poschodie.</p></div>
+        <div class="part"><p class="pn">08.2</p><h3>Tunel</h3><p>Dlhý asi 0,9&nbsp;m, so sieťovou podlahou.</p></div>
+        <div class="part"><p class="pn">08.3</p><h3>Okruh</h3><p>Hore rebríkom, cez tunel, dole šmykľavkou.</p></div>
+      </li>
+      <li class="step" data-n="09"><h2>Okná a veža</h2>
+        <div class="part"><p class="pn">09.1</p><h3>Okrúhle otvory</h3><p>Priemer asi 0,6&nbsp;m, v&nbsp;bielej stene vedľa ihriska.</p></div>
+        <div class="part"><p class="pn">09.2</p><h3>Prelez a výhľad</h3><p>Cez otvory sa dá preliezť aj pozerať von.</p></div>
+        <div class="part"><p class="pn">09.3</p><h3>Veža</h3><p>Menšia samostatná veža s&nbsp;tromi úrovňami.</p></div>
+      </li>
+      <li class="step" data-n="10"><h2>Siete</h2>
+        <div class="part"><p class="pn">10.1</p><h3>Čierna sieť</h3><p>Oká asi 5 x 5&nbsp;cm.</p></div>
+        <div class="part"><p class="pn">10.2</p><h3>Bočné steny</h3><p>Siete obopínajú všetky štyri strany.</p></div>
+        <div class="part"><p class="pn">10.3</p><h3>Prehľad</h3><p>Deti zostanú vnútri a&nbsp;rodičia ich vidia.</p></div>
+      </li>
+      <li class="step" data-n="11"><h2>Strop</h2>
+        <div class="part"><p class="pn">11.1</p><h3>Stropná sieť</h3><p>Čierna sieť uzatvára ihrisko zhora.</p></div>
+        <div class="part"><p class="pn">11.2</p><h3>Ráfiky</h3><p>Žlté mäkké ráfiky lemujú sieť.</p></div>
+        <div class="part"><p class="pn">11.3</p><h3>Vinylový panel</h3><p>Žltý panel prekrýva časť stropu.</p></div>
+      </li>
+      <li class="step" data-n="12"><h2>Dekor</h2>
+        <div class="part"><p class="pn">12.1</p><h3>Plachta</h3><p>Potlač s&nbsp;krokodílom a&nbsp;leknami na prednej stene.</p></div>
+        <div class="part"><p class="pn">12.2</p><h3>Na mieru</h3><p>Motív plachty sa dá prispôsobiť prevádzke.</p></div>
+        <div class="part"><p class="pn">12.3</p><h3>Mäkké stĺpy</h3><p>Zvislé stĺpy a&nbsp;čierne kruhové stupne na pohyb.</p></div>
+      </li>
+    </ol>
+
+    <div class="notes" id="notes" aria-hidden="true">
+      <div class="note"><p class="pn"></p><h3></h3><p></p></div>
+      <div class="note"><p class="pn"></p><h3></h3><p></p></div>
+      <div class="note"><p class="pn"></p><h3></h3><p></p></div>
+    </div>
+    <svg class="leadline" id="leadline" aria-hidden="true"><line x1="0" y1="0" x2="0" y2="0"/><circle r="7"/></svg>
+    <div class="callout" id="callout" aria-hidden="true"><h3></h3><p></p><ul></ul></div>
+    <div class="topbar" aria-hidden="true"><i id="topbar"></i></div>
+    <p class="stitle" id="stitle" aria-hidden="true"><span class="n"></span><span class="t"></span></p>
+
+    <div class="progress" aria-hidden="true">
+      <p class="pcount"><b id="pnum">00</b> / 12</p>
+      <ol id="pbars"></ol>
+    </div>
+  </section>
+</main>
+
+<section class="depth" data-img="assets/photos/samorin-5667.jpg" data-depth="assets/depth/samorin-5667-depth.jpg">
+  <div class="pin">
+    <img src="assets/photos/samorin-5667.jpg" alt="Hotové ihrisko v Šamoríne">
+    <div class="say">
+      <p class="eyebrow">Realizácia Šamorín</p>
+      <h2>Takto vyzerá naozaj</h2>
+      <p>Ihrisko na mieru prepojené s&nbsp;existujúcou stenou s&nbsp;otvormi. Podľa neho sme postavili model vyššie.</p>
+      <a class="more" href="projekty.html#samorin">Pozrieť projekt</a>
+    </div>
+  </div>
+</section>
+<section class="depth" data-img="assets/obsah/img/projekt-03.jpg" data-depth="assets/depth/projekt-03-depth.jpg">
+  <div class="pin">
+    <img src="assets/obsah/img/projekt-03.jpg" alt="Detská zóna v aquaparku Meander Oravice">
+    <div class="say red">
+      <p class="eyebrow">Vyše 180 projektov</p>
+      <h2>Nové ihriská aj prerábky starých</h2>
+      <p>Na Slovensku, v&nbsp;Česku, vo Francúzsku a&nbsp;v&nbsp;Taliansku. Od herne po aquapark.</p>
+      <a class="more" href="projekty.html">Realizované projekty</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <span class="logo-mark" role="img" aria-label="Playground"></span>
+      <p>Interiérové ihriská na mieru. Návrh, výroba, dodanie a montáž na kľúč.</p>
+    </div>
+    <div>
+      <h3>Kontakt</h3>
+      <p><a href="tel:+421905724437">+421 905 724 437</a></p>
+      <p><a href="mailto:info@play-ground.sk">info@play-ground.sk</a></p>
+    </div>
+    <div>
+      <h3>Adresa</h3>
+      <address>Poštová 6562/20<br>917 01 Trnava</address>
+    </div>
+  </div>
+</footer>
+
+<noscript><p class="ns">Pre 3D ukážku zapnite JavaScript. Kontakt: +421 905 724 437, info@play-ground.sk</p></noscript>
+<script type="module" src="main.js"></script>
+<script type="module" src="depth.js"></script>
+</body>
+</html>

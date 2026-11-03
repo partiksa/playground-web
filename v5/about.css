@@ -1,0 +1,23 @@
+/* o nás v5: veľké nadpisy, tenké linky */
+.about { padding-top: var(--bar); }
+.ab-top { padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 4vw, 3rem) 0; max-width: 90rem; margin: 0 auto; }
+.ab-mega { margin: 0 0 clamp(2rem, 5vw, 4rem); font-size: clamp(5rem, 17vw, 16rem); color: var(--red); }
+.ab-intro { display: grid; grid-template-columns: 8fr 4fr; gap: 1.5rem clamp(2rem, 5vw, 5rem); align-items: end; padding-top: 1.5rem; border-top: 1px solid var(--navy); }
+.ab-intro .hx { font-size: clamp(2.6rem, 6vw, 6.25rem); color: var(--navy); }
+.ab-intro .lead { margin: 0; max-width: 26rem; justify-self: end; color: var(--navy); }
+.ab-stats { list-style: none; margin: clamp(4rem, 8vw, 7rem) auto 0; padding: 0 clamp(1rem, 4vw, 3rem); max-width: 90rem; display: grid; grid-template-columns: repeat(3, 1fr); position: relative; }
+.ab-stats li { padding: 1.25rem 1.5rem 0 0; border-top: 1px solid var(--navy); }
+.ab-stats li + li { padding-left: 1.5rem; border-left: 1px solid var(--paper-2); }
+.ab-stats b { display: block; color: var(--navy); font-weight: 700; font-size: clamp(3.5rem, 2rem + 5vw, 7rem); line-height: 0.9; letter-spacing: -0.04em; }
+.ab-stats span { display: block; margin-top: 0.75rem; max-width: 18rem; }
+.ab-rows { max-width: 90rem; margin: clamp(5rem, 9vw, 8rem) auto clamp(4rem, 8vw, 7rem); padding: 0 clamp(1rem, 4vw, 3rem); }
+.ab-row { display: grid; grid-template-columns: 7fr 5fr; gap: 1rem clamp(2rem, 5vw, 5rem); align-items: end; padding: 2.25rem 0; border-top: 1px solid var(--paper-2); }
+.ab-row:last-child { border-bottom: 1px solid var(--paper-2); }
+.ab-row .hx { font-size: clamp(2.2rem, 4.6vw, 4.6rem); color: var(--navy); }
+.ab-row p { margin: 0; max-width: 32rem; }
+.about .home-cta .hx { font-size: clamp(2.6rem, 7.6vw, 8rem); }
+@media (max-width: 767px) {
+  .ab-intro, .ab-row, .ab-stats { grid-template-columns: 1fr; }
+  .ab-intro .lead { justify-self: start; }
+  .ab-stats li + li { padding-left: 0; border-left: 0; }
+}

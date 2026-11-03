@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontakt | Playground</title>
+<meta name="description" content="Kontakt na PLAYGROUND, s.r.o., Trnava. Dopyt na interiérové ihrisko.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap&subset=latin-ext">
+<link rel="stylesheet" href="style.css">
+<script src="brand.js"></script>
+<link rel="stylesheet" href="pages.css">
+<link rel="stylesheet" href="kontakt.css">
+<link rel="stylesheet" href="brand.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="index.html" aria-label="Playground, domov"><span class="logo-mark" role="img" aria-label="Playground"></span></a>
+  <nav class="site-nav" aria-label="Hlavná navigácia">
+    <ul>
+      <li><a href="ihriska.html">Ihriská na mieru</a></li>
+      <li><a href="prerabka.html">Prerábka</a></li>
+      <li><a href="revizie.html">Revízie</a></li>
+      <li><a href="projekty.html">Realizácie</a></li>
+      <li><a href="o-nas.html">O nás</a></li>
+      <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+    </ul>
+  </nav>
+  <div class="lang" aria-label="Jazyk"><a href="#" aria-current="true" lang="sk">SK</a><a href="#" lang="en">EN</a><a href="#" lang="de">DE</a></div>
+</header>
+
+<main class="page">
+<p class="mega" aria-hidden="true">Kontakt</p>
+<header class="intro"><p class="eyebrow">Kontakt</p>
+<h1>Napíšte nám o&nbsp;svojom priestore</h1>
+<p class="lead">Otázka alebo cenová kalkulácia. Ozveme sa čo najskôr.</p></header>
+<div class="contact">
+<form class="form" id="form" novalidate>
+  <fieldset class="services">
+    <legend>O čo máte záujem?</legend>
+    <label><input type="checkbox" name="sluzba" value="Nové ihrisko na mieru"><span>Nové ihrisko na mieru</span></label>
+    <label><input type="checkbox" name="sluzba" value="Prerábka starého ihriska"><span>Prerábka starého ihriska</span></label>
+    <label><input type="checkbox" name="sluzba" value="Presťahovanie ihriska"><span>Presťahovanie ihriska</span></label>
+    <label><input type="checkbox" name="sluzba" value="Doplnenie prvkov (šmykľavka, tubing, lezecká stena)"><span>Doplnenie prvkov (šmykľavka, tubing, lezecká stena)</span></label>
+    <label><input type="checkbox" name="sluzba" value="Trampolínové centrum"><span>Trampolínové centrum</span></label>
+    <label><input type="checkbox" name="sluzba" value="Servis a ročná kontrola"><span>Servis a ročná kontrola</span></label>
+  </fieldset>
+  <div class="two">
+    <label class="f"><span>Meno *</span><input name="meno" autocomplete="name" required></label>
+    <label class="f"><span>Prevádzka a mesto</span><input name="prevadzka" autocomplete="organization"></label>
+    <label class="f"><span>E-mail *</span><input name="email" type="email" autocomplete="email" required></label>
+    <label class="f"><span>Telefón</span><input name="telefon" type="tel" autocomplete="tel"></label>
+  </div>
+  <label class="f"><span>Správa *</span><textarea name="sprava" rows="6" required placeholder="Rozmer priestoru, výška stropu, vek detí, termín"></textarea></label>
+  <p class="err" id="err" role="alert"></p>
+  <button class="btn" type="submit">Odoslať dopyt</button>
+  <p class="hint">Po odoslaní sa otvorí váš e-mailový program s&nbsp;pripravenou správou na info@play-ground.sk.</p>
+</form>
+<aside class="info">
+  <h2>PLAYGROUND, s.r.o.</h2>
+  <p><a href="tel:+421905724437">+421 905 724 437</a><br><a href="mailto:info@play-ground.sk">info@play-ground.sk</a></p>
+  <p>Poštová 6562/20<br>917 01 Trnava<br>Slovensko</p>
+  <p class="small">IČO: 47051990<br>DIČ: 2023714429<br>IČ DPH: SK2023714429</p>
+  <p class="small">Zapísaná v&nbsp;Obchodnom registri Okresného súdu Trnava, oddiel Sro, vložka číslo 31165/T.</p>
+</aside>
+</div>
+<div style="height:clamp(4rem,9vw,8rem)"></div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <span class="logo-mark" role="img" aria-label="Playground"></span>
+      <p>Interiérové ihriská na mieru. Návrh, výroba, dodanie a montáž na kľúč.</p>
+    </div>
+    <div>
+      <h3>Kontakt</h3>
+      <p><a href="tel:+421905724437">+421 905 724 437</a></p>
+      <p><a href="mailto:info@play-ground.sk">info@play-ground.sk</a></p>
+    </div>
+    <div>
+      <h3>Adresa</h3>
+      <address>Poštová 6562/20<br>917 01 Trnava</address>
+    </div>
+  </div>
+</footer>
+<script type="module" src="kontakt.js"></script>
+<script type="module" src="scramble.js"></script>
+</body>
+</html>

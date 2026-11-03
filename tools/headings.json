@@ -1,0 +1,12 @@
+{
+  "hero": { "lines": ["IHRISKÁ", "NA MIERU"], "swap": [[1, 1], [1, 5]] },
+  "real": { "lines": ["REALIZÁCIE"], "swap": [[0, 2]] },
+  "cta": { "lines": ["NAPÍŠTE NÁM"], "swap": [[0, 1]] },
+  "onas": { "lines": ["O NÁS"], "swap": [[0, 2]] },
+  "onas-h1": { "lines": ["KVALITA", "A ZODPOVEDNÝ", "PRÍSTUP"], "swap": [[0, 6], [1, 0]] },
+  "onas-1": { "lines": ["NA KĽÚČ"] },
+  "onas-2": { "lines": ["PRERÁBKA", "STARÉHO IHRISKA"], "swap": [[1, 14]] },
+  "onas-3": { "lines": ["VLASTNÝ SKLAD"], "swap": [[0, 10]] },
+  "onas-4": { "lines": ["PORADÍME AJ", "S PRIESTOROM"], "swap": [[0, 9]] },
+  "onas-cta": { "lines": ["POVEDZTE NÁM", "O SVOJOM PRIESTORE"], "swap": [[0, 9]] }
+}

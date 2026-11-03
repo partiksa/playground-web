@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Realizované projekty | Playground</title>
+<meta name="description" content="Realizované projekty interiérových ihrísk na Slovensku a v Česku.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap&subset=latin-ext">
+<link rel="stylesheet" href="style.css">
+<script src="brand.js"></script>
+<link rel="stylesheet" href="pages.css">
+<link rel="stylesheet" href="projekty.css">
+<link rel="stylesheet" href="brand.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="index.html" aria-label="Playground, domov"><span class="logo-mark" role="img" aria-label="Playground"></span></a>
+  <nav class="site-nav" aria-label="Hlavná navigácia">
+    <ul>
+      <li><a href="ihriska.html">Ihriská na mieru</a></li>
+      <li><a href="prerabka.html">Prerábka</a></li>
+      <li><a href="revizie.html">Revízie</a></li>
+      <li><a href="projekty.html" aria-current="page">Realizácie</a></li>
+      <li><a href="o-nas.html">O nás</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+  <div class="lang" aria-label="Jazyk"><a href="#" aria-current="true" lang="sk">SK</a><a href="#" lang="en">EN</a><a href="#" lang="de">DE</a></div>
+</header>
+
+<main class="projects">
+<h1 class="sr">Realizované projekty</h1>
+<section class="hscroll" id="hscroll" aria-label="Zoznam projektov">
+  <div class="hpin">
+    <ul class="panels" id="panels"></ul>
+  </div>
+</section>
+<section class="more page">
+  <p class="eyebrow">Z ďalších realizácií</p>
+  <ul class="gal">
+    <li><img src="assets/obsah/img/ihriska-02.jpg" alt="Šmykľavka a preliezačky" loading="lazy"></li>
+    <li><img src="assets/obsah/img/ihriska-03.jpg" alt="Herné moduly" loading="lazy"></li>
+    <li><img src="assets/obsah/img/ihriska-05.jpg" alt="Sieťové prvky" loading="lazy"></li>
+    <li><img src="assets/obsah/img/ihriska-06.jpg" alt="Hotové ihrisko" loading="lazy"></li>
+  </ul>
+<section class="cta">
+  <h2>Povedzte nám o&nbsp;svojom priestore</h2>
+  <p><a class="btn" href="kontakt.html">Napísať dopyt</a></p>
+  <p><a class="mail" href="tel:+421905724437">+421 905 724 437</a></p>
+</section>
+</section>
+<div class="detail" id="detail" role="dialog" aria-modal="true" aria-labelledby="d-title" hidden>
+  <button class="close" id="d-close" type="button">Späť na projekty</button>
+  <div class="d-hero" id="d-hero"><img id="d-img" alt=""></div>
+  <div class="d-body">
+    <p class="eyebrow" id="d-type"></p>
+    <h2 id="d-title"></h2>
+    <p class="d-place" id="d-place"></p>
+    <p class="lead" id="d-desc"></p>
+    <div class="slides" id="slides">
+      <div class="s-view"><img id="s-img" alt=""></div>
+      <div class="s-nav"><button type="button" id="s-prev" aria-label="Predchádzajúca fotka">Späť</button><span id="s-count"></span><button type="button" id="s-next" aria-label="Ďalšia fotka">Ďalej</button></div>
+    </div>
+    <p><a id="d-src" href="#" target="_blank" rel="noopener">Projekt na pôvodnom webe</a></p>
+    <p><a class="btn" href="kontakt.html">Chcem podobné ihrisko</a></p>
+  </div>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <span class="logo-mark" role="img" aria-label="Playground"></span>
+      <p>Interiérové ihriská na mieru. Návrh, výroba, dodanie a montáž na kľúč.</p>
+    </div>
+    <div>
+      <h3>Kontakt</h3>
+      <p><a href="tel:+421905724437">+421 905 724 437</a></p>
+      <p><a href="mailto:info@play-ground.sk">info@play-ground.sk</a></p>
+    </div>
+    <div>
+      <h3>Adresa</h3>
+      <address>Poštová 6562/20<br>917 01 Trnava</address>
+    </div>
+  </div>
+</footer>
+<script type="module" src="projekty.js"></script>
+</body>
+</html>
