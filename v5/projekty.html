@@ -31,10 +31,19 @@
 </header>
 
 <main class="projects">
-<h1 class="sr">Realizované projekty</h1>
-<section class="hscroll" id="hscroll" aria-label="Zoznam projektov">
-  <div class="hpin">
-    <ul class="panels" id="panels"></ul>
+<section class="rz" id="rz">
+  <div class="rz-list">
+    <header class="rz-head">
+      <h1>Realizácie</h1>
+      <p class="lead">Vyše 180 projektov na Slovensku, v&nbsp;Česku, vo Francúzsku a&nbsp;v&nbsp;Taliansku. Nové ihriská, prerábky aj sťahovanie.</p>
+    </header>
+    <ul class="cards" id="cards"></ul>
+  </div>
+  <div class="rz-3d" aria-hidden="true">
+    <div class="rz-box">
+      <canvas id="rc"></canvas>
+      <p class="rz-cap"><span>Stavba</span> krok za krokom</p>
+    </div>
   </div>
 </section>
 <section class="more page">
@@ -45,10 +54,10 @@
     <li><img src="assets/obsah/img/ihriska-05.jpg" alt="Sieťové prvky" loading="lazy"></li>
     <li><img src="assets/obsah/img/ihriska-06.jpg" alt="Hotové ihrisko" loading="lazy"></li>
   </ul>
-<section class="cta">
-  <h2>Povedzte nám o&nbsp;svojom priestore</h2>
-  <p><a class="btn" href="kontakt.html">Napísať dopyt</a></p>
-  <p><a class="mail" href="tel:+421905724437">+421 905 724 437</a></p>
+<section class="cta-end">
+  <h2>Napíšte nám</h2>
+  <p>Opíšte nám svoj priestor alebo ihrisko a ozveme sa vám.</p>
+  <p><a class="btn" href="kontakt.html" data-cta>Napísať dopyt</a></p>
 </section>
 </section>
 <div class="detail" id="detail" role="dialog" aria-modal="true" aria-labelledby="d-title" hidden>
@@ -87,5 +96,6 @@
   </div>
 </footer>
 <script type="module" src="projekty.js"></script>
+<script type="module" src="cta.js"></script>
 </body>
 </html>

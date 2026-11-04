@@ -13,7 +13,7 @@
 <script>if(!matchMedia("(prefers-reduced-motion: reduce)").matches){document.documentElement.classList.add("splashing");setTimeout(function(){document.documentElement.classList.remove("splashing")},6500)}</script>
 <script src="brand.js"></script>
 <link rel="stylesheet" href="home.css">
-<link rel="preload" as="image" href="assets/stavba/f026.webp">
+<link rel="preload" as="image" href="frames/stavba/f_001.webp">
 </head>
 <body class="home">
 <div class="splash" id="splash" aria-hidden="true"></div>
@@ -52,7 +52,7 @@
     <div class="say">
       <p class="eyebrow">Realizácia Šamorín</p>
       <h2>Takto vyzerá naozaj</h2>
-      <p>Ihrisko na mieru prepojené s&nbsp;existujúcou stenou s&nbsp;otvormi. Podľa neho sme postavili model vyššie.</p>
+      <p>Ihrisko na mieru prepojené s&nbsp;existujúcou stenou s&nbsp;otvormi.</p>
       <a class="more" href="projekty.html#samorin">Pozrieť projekt</a>
     </div>
   </div>
@@ -73,7 +73,7 @@
   <h2 class="hx">Napíšte nám</h2>
   <p>Povedzte nám o&nbsp;svojom priestore. Ozveme sa čo najskôr.</p>
   <div class="cta-row">
-    <a class="btn" href="kontakt.html">Napísať dopyt</a>
+    <a class="btn" href="kontakt.html" data-cta>Napísať dopyt</a>
     <a class="mail" href="tel:+421905724437">+421&nbsp;905&nbsp;724&nbsp;437</a>
   </div>
 </section>
@@ -98,5 +98,6 @@
 </footer>
 <script type="module" src="home.js"></script>
 <script type="module" src="depth.js"></script>
+<script type="module" src="cta.js"></script>
 </body>
 </html>

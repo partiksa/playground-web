@@ -86,3 +86,12 @@ html { scrollbar-gutter: stable; } /* šírka sa nemení, keď sa zjaví posuvn�
 .btn:active { transform: scale(0.97); transition-duration: .1s; }
 .more, .mail { transition: text-underline-offset .25s var(--out), text-decoration-color .25s; }
 @media (hover: hover) { .more:hover, .mail:hover { text-underline-offset: 8px; } }
+
+/* prechod medzi stránkami (brand.js) */
+.mo main, .mo .site-footer { transition: opacity .32s var(--out), transform .45s var(--out); }
+.mo.leaving main, .mo.leaving .site-footer { opacity: 0; transform: translateY(-10px); transition-duration: .24s, .26s; transition-timing-function: cubic-bezier(.4,0,1,1); }
+.mo:not(.ready) main { transform: translateY(10px); }
+/* Lenis */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }

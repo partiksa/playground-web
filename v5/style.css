@@ -221,3 +221,32 @@ h2 { line-height: 1; }
   .depth { height: auto; }
   .card, .notes, .stitle, .bignum, .site-nav, .site-nav a { transition: none; }
 }
+
+/* záverečný blok s dopytom na podstránkach */
+/* záverečná výzva: „Napíšte nám" sa napíše písmom Slinkee, čiara dobehne k tlačidlu (cta.js) */
+.cta-end, .home-cta { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; column-gap: clamp(2rem, 6vw, 6rem); }
+.cta-end { margin-top: clamp(4rem, 9vw, 8rem); padding: 3rem 0 clamp(4rem, 8vw, 7rem); border-top: 3px solid var(--red); }
+.cta-end > :not(.cw-over), .home-cta > :not(.cw-over) { grid-column: 1; position: relative; z-index: 1; }
+.cta-end > p:last-of-type, .home-cta > .cta-row { grid-column: 2; grid-row: 1 / span 2; align-self: end; margin: 0 0 0.25rem; }
+.cta-end h2, .home-cta h2 { margin: 0 0 1.25rem; color: var(--red); line-height: 1; }
+.home-cta h2 { color: #fff; }
+.cta-end p { margin: 0; max-width: 34rem; }
+.cw-svg { display: block; width: min(100%, 56rem); height: auto; overflow: visible; }
+.cw-over { position: absolute; left: 0; top: 0; z-index: 0; overflow: visible; pointer-events: none; color: var(--red); }
+.home-cta .cw-over { color: #fff; }
+.home-cta .cta-row { flex-direction: column; align-items: flex-start; }
+.cw-wait [data-cta] { opacity: 0; transform: scale(0.92); }
+.cw-wait.cw-on [data-cta] { opacity: 1; transform: none; transition: opacity .5s var(--out), transform .6s cubic-bezier(.34,1.56,.64,1), background .2s; }
+@media (max-width: 760px) {
+  .cta-end, .home-cta { grid-template-columns: 1fr; }
+  .cta-end > p:last-of-type, .home-cta > .cta-row { grid-column: 1; grid-row: auto; order: 2; margin: 1.25rem 0 2.5rem; padding-left: 1.25rem; }
+  .cta-end > p:not(:last-of-type), .home-cta > p { order: 3; }
+  .cta-end h2, .home-cta h2 { margin-bottom: 0; }
+}
+/* písané písmená: každé vyjde zospodu v poradí */
+.cw { font-family: var(--fh); font-weight: 700; font-size: clamp(2.6rem, 1rem + 7vw, 7rem); letter-spacing: -0.03em; text-transform: uppercase; }
+.cw-word { display: inline-block; white-space: nowrap; }
+.cw-l { display: inline-block; }
+.cw-wait .cw-l { opacity: 0; transform: translateY(.35em) rotate(4deg); }
+.cw-wait.cw-go .cw-l { opacity: 1; transform: none; transition: opacity .35s var(--out), transform .55s cubic-bezier(.34,1.4,.64,1); transition-delay: calc(var(--i) * 60ms); }
+.cta-end h2.cw, .home-cta h2.cw { font-size: clamp(2.8rem, 1rem + 8vw, 8.5rem); margin-bottom: 1.5rem; }

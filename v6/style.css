@@ -51,7 +51,7 @@ svg.ar { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: sq
 
 /* ---------- úvod: video s deťmi cez celú obrazovku ---------- */
 .vhero { position: relative; height: calc(100dvh - var(--hh)); min-height: 30rem; overflow: hidden; background: #dcd6ca; color: var(--paper); }
-.vhero video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.vhero video, .vhero .hero-cv { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .vhero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(20, 19, 16, .72), rgba(20, 19, 16, .1) 60%), linear-gradient(to right, rgba(20, 19, 16, .35), transparent 55%); pointer-events: none; }
 .vh-copy { position: absolute; z-index: 1; left: var(--pad); bottom: clamp(2rem, 6vh, 4.5rem); max-width: 46rem; }
 .vh-copy .lab { display: flex; align-items: center; gap: .7rem; margin-bottom: 1.4rem; }
@@ -77,7 +77,7 @@ svg.ar { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: sq
 .copy .btns { display: flex; flex-wrap: wrap; gap: .9rem; }
 .vid { grid-row: 1; grid-column: 5 / span 8; position: relative; height: 100%; display: grid; place-items: center; }
 .vid canvas { width: 100%; height: 100%; }
-.steps { position: absolute; left: 0; right: 0; bottom: 1.3rem; display: grid; grid-template-columns: 1fr auto; align-items: center; column-gap: 1.5rem; row-gap: .8rem; }
+.steps { position: absolute; left: 0; right: 0; bottom: 0; padding: 3.5rem 1.25rem 1.3rem; background: linear-gradient(to top, rgba(247,244,238,.95) 40%, rgba(247,244,238,0)); display: grid; grid-template-columns: 1fr auto; align-items: center; column-gap: 1.5rem; row-gap: .8rem; }
 .steps ol { font-kerning: none; grid-column: 1 / -1; list-style: none; margin: 0; padding: 0; display: flex; justify-content: space-between; gap: 1rem; font: 500 .72rem/1.2 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--grey); }
 .steps li { display: flex; gap: .45rem; transition: color .3s var(--ease), transform .4s var(--spring); }
 .steps li span { font-variant-numeric: tabular-nums; opacity: .7; }
@@ -97,6 +97,7 @@ svg.ar { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: sq
 .cta > :not(.pit) { position: relative; z-index: 1; }
 .cta h2 { grid-column: 1 / span 8; font-size: clamp(2.6rem, 6.2vw, 6.4rem); color: var(--paper); }
 .cta .act { grid-column: 9 / span 4; justify-self: end; }
+.cta .cta-sub { grid-column: 1 / span 8; margin: 1.2rem 0 0; max-width: 40rem; text-wrap: balance; font-size: clamp(1.05rem, .9rem + .5vw, 1.35rem); color: var(--ink); }
 .cta .lab { color: var(--ink); }
 .cta .btn { background: var(--ink); }
 .cta .btn:hover { background: var(--paper); border-color: var(--paper); color: var(--ink); }
@@ -115,7 +116,7 @@ svg.ar { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: sq
 
 /* ---------- podstránky ---------- */
 .page-head { padding: clamp(3rem, 7vw, 6.5rem) var(--pad) clamp(2rem, 4vw, 3.5rem); border-bottom: 1px solid var(--line); display: grid; grid-template-columns: repeat(12, 1fr); column-gap: clamp(1rem, 2vw, 2rem); align-items: end; }
-.page-head h1 { grid-column: 1 / span 9; font-size: clamp(3rem, 8vw, 8rem); }
+.page-head h1 { grid-column: 1 / span 12; font-size: clamp(3rem, 8vw, 8rem); }
 .page-head .lab { grid-column: 10 / span 3; justify-self: end; color: var(--grey); }
 
 /* ---------- kontakt: formulár sa vojde na jednu obrazovku ---------- */
@@ -201,7 +202,7 @@ svg.ar { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: sq
   .vh-copy { bottom: 1.5rem; }
   .copy .lab { margin-bottom: 1rem; }
   .copy .lead { margin-bottom: 1.2rem; font-size: 1.02rem; }
-  .steps { bottom: .4rem; }
+  .steps { padding-bottom: .6rem; }
   .steps li:not(.on) { display: none; }
   .cta { min-height: 0; padding-bottom: 13rem; }
   .cta, .page-head, .site-footer, .contact { display: block; }
@@ -280,6 +281,7 @@ svg.ar { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: sq
 .bento > :nth-child(10) { grid-column: 6 / 13; grid-row: 5; }
 .bento > :nth-child(11) { grid-column: 6 / 13; grid-row: 6; }
 .bento > :nth-child(12) { grid-column: 1 / 13; grid-row: 7; }
+.bento > :nth-child(13) { grid-column: 1 / 13; grid-row: 8 / 10; }
 .bt { perspective: 700px; min-width: 0; }
 .bt-in { position: relative; display: block; width: 100%; height: 100%; overflow: hidden; color: var(--paper); text-decoration: none; background: #dcd6ca; transform-style: preserve-3d; transition: transform .25s var(--ease); }
 .bt .ph { position: absolute; inset: 0; transform: scale(1.08); transition: transform .9s var(--ease); }
@@ -297,6 +299,16 @@ svg.ar { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: sq
 .bt .cap .ico svg { width: 45%; }
 .bt-in:hover .ico, .bt-in:focus-visible .ico { background: var(--paper); color: var(--ink); }
 .bt-in:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+
+/* 360 ihrisko: ťahaním sa otáča */
+.v360 { position: relative; width: 100%; height: 100%; overflow: hidden; background: #8c9099; color: var(--paper); cursor: grab; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+.v360.drag { cursor: grabbing; }
+.v360 canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.v360::before { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(to top, rgba(20, 19, 16, .65), rgba(20, 19, 16, 0) 45%); }
+.v360 .cap { position: absolute; z-index: 3; left: 1.1rem; right: 1.1rem; bottom: 1.1rem; pointer-events: none; }
+.v360 .cap .lab { display: block; margin-bottom: .5rem; opacity: .85; }
+.v360 .cap h3 { font-size: clamp(1.15rem, 1.9vw, 1.8rem); letter-spacing: -.02em; }
+.v360:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
 
 /* ---------- detail realizácie ---------- */
 .modal { position: fixed; inset: 0; z-index: 50; display: grid; grid-template-columns: repeat(12, 1fr); background: var(--paper); opacity: 0; visibility: hidden; transition: opacity .3s var(--ease), visibility 0s .3s; }
@@ -326,6 +338,7 @@ body.lock { overflow: hidden; }
   .pcopy .go-arrow { margin-top: 1.2rem; }
   .bento { grid-template-columns: 1fr; grid-auto-rows: 16rem; }
   .bento > * { grid-column: 1 !important; grid-row: auto !important; }
+  .bento > .bt-360 { grid-row: span 2 !important; }
   .modal { display: block; overflow: auto; }
   .m-img { height: 46dvh; }
   .m-txt { padding-top: 4.5rem; }
@@ -345,3 +358,95 @@ body.lock { overflow: hidden; }
   .f { gap: .55rem; }
 }
 @media (prefers-reduced-motion: reduce) { .panel .pimg, .bt .ph, .mask > span, .m-img { transform: none; opacity: 1; } .pcopy .lab, .dd-menu li { opacity: 1; transform: none; } .bt-in { transform: none !important; } }
+
+/* ---------- podstránky ---------- */
+.sp-lead { padding: clamp(2rem, 5vw, 4rem) var(--pad); border-bottom: 1px solid var(--line); display: grid; grid-template-columns: repeat(12, 1fr); column-gap: clamp(1rem, 2vw, 2rem); }
+.sp-lead p { grid-column: 4 / span 8; font-size: clamp(1.4rem, 1rem + 1.6vw, 2.2rem); line-height: 1.25; letter-spacing: -.015em; text-wrap: pretty; }
+.sp-row { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: clamp(1rem, 2vw, 2rem); padding: clamp(2rem, 4vw, 3.6rem) var(--pad); border-bottom: 1px solid var(--line); }
+.sp-row > .lab { grid-column: 1 / span 2; color: var(--grey); padding-top: .55rem; }
+.sp-row > h2 { grid-column: 3 / span 4; font-size: clamp(1.8rem, 1.2rem + 2vw, 3rem); }
+.sp-body { grid-column: 7 / span 6; display: grid; gap: 1rem; align-content: start; max-width: 40rem; }
+.sp-body p, .sp-body li, .sp-body dd { color: #2b2a25; text-wrap: pretty; }
+.sp-body ul, .sp-body ol { margin: 0; padding: 0; list-style: none; display: grid; gap: 0; }
+.sp-body li { padding: .7rem 0; border-top: 1px solid var(--line); }
+.sp-body li:last-child { border-bottom: 1px solid var(--line); }
+.sp-body ol { counter-reset: s; }
+.sp-body ol li { counter-increment: s; display: grid; grid-template-columns: 3rem 1fr; column-gap: 1rem; align-items: baseline; padding: 1rem 0; }
+.sp-body ol li::before { content: counter(s, decimal-leading-zero); grid-column: 1; grid-row: 1 / span 2; font: 500 .8rem/1.5 var(--lab); letter-spacing: .12em; color: var(--red); }
+.sp-body ol li > b { grid-column: 2; display: block; font-weight: 600; line-height: 1.35; }
+.sp-body ol li > span { grid-column: 2; display: block; margin-top: .2rem; color: var(--grey); }
+.sp-body ul li { display: grid; grid-template-columns: .45rem 1fr; column-gap: .9rem; align-items: baseline; }
+.sp-body ul li::before { content: ""; width: .45rem; height: .45rem; background: var(--red); border-radius: 50%; }
+.sp-body dl { margin: 0; display: grid; }
+.sp-body dt { font-weight: 600; padding-top: .8rem; border-top: 1px solid var(--line); }
+.sp-body dd { margin: 0 0 .8rem; color: var(--grey); }
+.sp-body .more { justify-self: start; }
+.sp-stats { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--line); }
+.sp-stats li { padding: clamp(2rem, 4vw, 3.5rem) var(--pad); border-right: 1px solid var(--line); display: grid; gap: .6rem; align-content: start; }
+.sp-stats li:last-child { border-right: 0; }
+.sp-stats b { font-size: clamp(3.5rem, 8vw, 8rem); line-height: .9; letter-spacing: -.05em; font-weight: 600; }
+.sp-stats span { color: var(--grey); max-width: 16rem; }
+@media (max-width: 860px) {
+  .sp-lead, .sp-row { display: block; }
+  .sp-row > h2 { margin: .6rem 0 1.2rem; }
+  .sp-stats { grid-template-columns: 1fr; }
+  .sp-stats li { border-right: 0; border-bottom: 1px solid var(--line); }
+}
+
+.thanks .t-btns { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.4rem; position: relative; z-index: 2; }
+
+/* animované texty (main.js) */
+.tx .wd { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .08em; margin-bottom: -.08em; }
+.tx .wi { display: inline-block; transform: translateY(105%); transition: transform .95s var(--ease); transition-delay: calc(var(--w) * 55ms + var(--d, 0s)); }
+.tx.in .wi { transform: none; }
+.rv.tx { transform: none; opacity: 1; }
+.tl { clip-path: inset(0 100% 0 0); transition: clip-path .9s var(--ease) .15s; }
+.tl.in { clip-path: inset(0 0 0 0); }
+.tli { opacity: 0; transform: translateX(-12px); transition: opacity .6s var(--ease), transform .7s var(--ease); transition-delay: calc(var(--k) * 70ms + .2s); }
+.tli.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .tx .wi, .tl, .tli { transform: none; clip-path: none; opacity: 1; transition: none; } }
+
+/* realizácie: vľavo malé náhľady, vpravo stavba sa prehráva sama */
+.rz6 { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); column-gap: clamp(1.5rem, 3.5vw, 4rem); padding: 0 var(--pad); border-bottom: 1px solid var(--line); align-items: start; }
+.rz6-l { padding: clamp(3rem, 6vw, 5.5rem) 0 clamp(3rem, 6vw, 6rem); min-width: 0; }
+.rz6-head h1 { font-size: clamp(3rem, 6.4vw, 7rem); line-height: .95; }
+.rz6-head .lead { margin: 1.5rem 0 0; max-width: 30rem; }
+.rz6-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.4rem, 2.4vw, 2.2rem) clamp(.9rem, 1.6vw, 1.4rem); margin-top: clamp(2.2rem, 4vw, 3.5rem); }
+.rc { display: block; color: var(--ink); text-decoration: none; position: relative; transition: transform .5s var(--ease), box-shadow .5s var(--ease); }
+.rc .ph { display: block; aspect-ratio: 4 / 3; overflow: hidden; background: #dcd6ca; }
+.rc .ph img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .9s var(--ease); }
+.rc-t { display: block; padding: .75rem .1rem 0; }
+.rc-l { display: block; font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--red); margin-bottom: .3rem; }
+.rc strong { display: block; font-size: clamp(1rem, 1.35vw, 1.2rem); letter-spacing: -.015em; line-height: 1.15; font-weight: 600; }
+.rc-d { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-top: .35rem; font-size: .85rem; line-height: 1.4; color: var(--grey); }
+.rc:hover, .rc:focus-visible { transform: scale(1.055); z-index: 3; box-shadow: 0 22px 44px -18px rgba(20, 19, 16, .4); }
+.rc:hover .ph img { transform: scale(1.05); }
+.rc:focus-visible { outline: 3px solid var(--red); outline-offset: 4px; }
+@keyframes rcIn { from { opacity: 0; translate: 0 22px; } }
+.rc { opacity: 0; }
+.rc.in { opacity: 1; animation: rcIn .9s var(--ease) calc(var(--k, 0) * .09s) backwards; }
+.rz6-r { position: sticky; top: 64px; height: calc(100vh - 64px); padding: clamp(1rem, 2vw, 1.75rem) 0; box-sizing: border-box; }
+.rz6-box { position: relative; height: 100%; overflow: hidden; background: #cfd0cc; }
+.rz6-box canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.rz6-cap { position: absolute; left: 1rem; bottom: 1rem; margin: 0; padding: .45rem .7rem; background: var(--paper); }
+@media (max-width: 900px) {
+  .rz6 { display: block; padding: 0 var(--pad); }
+  .rz6-r { position: static; height: auto; padding: 1.25rem 0 0; order: -1; }
+  .rz6-box { height: auto; aspect-ratio: 4 / 3; }
+  .rz6-l { padding-top: 2rem; }
+}
+@media (max-width: 520px) { .rz6-grid { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .rc, .rc.in { opacity: 1; animation: none; } .rc:hover { transform: none; } }
+
+/* podstránky: všetko začína na ľavom okraji; číslo je nad nadpisom, text vpravo */
+.sp-lead p { grid-column: 1 / span 9; }
+.sp-row > .lab { grid-column: 1 / span 5; grid-row: 1; padding-top: 0; align-self: start; }
+.sp-row > h2 { grid-column: 1 / span 5; grid-row: 2; margin-top: .9rem; align-self: start; }
+.sp-body { grid-column: 7 / span 6; grid-row: 1 / span 2; }
+@media (max-width: 900px) { .sp-lead p { grid-column: auto; } .sp-row > .lab, .sp-row > h2, .sp-body { grid-row: auto; } }
+.sp-row { grid-template-rows: auto 1fr; }
+@media (max-width: 900px) { .sp-row { grid-template-rows: none; } }
+@media (max-width: 900px) { .rz6 { display: flex; flex-direction: column; } .rz6-r { width: 100%; } }
+/* stavba v realizáciách sa prehráva sama, bez scrollu */
+.track { height: auto; }
+.stage { position: relative; top: 0; }

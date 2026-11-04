@@ -52,3 +52,16 @@
   .contact, .two { grid-template-columns: 1fr; }
   .info { position: static; }
 }
+
+/* druhý blok polí a termín */
+.when { margin-top: -0.5rem; }
+.when legend { font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem); }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.form.sent > :not(.ok) { display: none; }
+.ok { padding: clamp(1.5rem, 3vw, 2.5rem); background: var(--navy); color: #fff; }
+.ok h2 { margin: 0 0 0.75rem; color: #fff; font-size: clamp(1.75rem, 1.2rem + 2vw, 3rem); }
+.ok p { margin: 0 0 1.25rem; }
+.ok-btns { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.5rem; }
+.ok .ghost { font: inherit; font-weight: 700; cursor: pointer; background: transparent; color: #fff; border: 2px solid #fff; padding: 0.85rem 1.4rem; }
+.ok .ghost:hover { background: #fff; color: var(--navy); }
+.ok pre { margin: 0; white-space: pre-wrap; word-break: break-word; font: inherit; font-size: 0.9375rem; opacity: 0.85; }

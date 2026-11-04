@@ -1,9 +1,8 @@
 // stavba ihriska: 240 snímkov videa sa prehráva podľa scrollu
-const N = 240, FIRST = 25, SRC = (i) => `assets/stavba/f${String(i + 1).padStart(3, '0')}.webp`;
+const N = 240, FIRST = 8, SRC = (i) => `frames/stavba/f_${String(i + 1).padStart(3, '0')}.webp`;
 const canvas = document.getElementById('c'), ctx = canvas.getContext('2d'), track = document.getElementById('track'), tc = document.getElementById('tc');
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const frames = new Array(N);
-const ZOOM = innerWidth > 860 ? 1.6 : 1.25; // väčšia animácia: model vyplní celú plochu
 let cur = 0, shown = -1, secShown = -1;
 
 // najprv hrubý náhľad (každý 8. snímok), potom zvyšok
@@ -23,15 +22,9 @@ function draw(force) {
   const i = best(Math.max(0, Math.min(N - 1, Math.round(FIRST + cur * (N - 1 - FIRST)))));
   if (i < 0 || (i === shown && !force)) return;
   const im = frames[i], cw = canvas.width, ch = canvas.height;
-  const k = Math.min(cw / im.naturalWidth, ch / im.naturalHeight) * ZOOM, w = im.naturalWidth * k, h = im.naturalHeight * k, x = (cw - w) / 2, y = (ch - h) / 2;
-  ctx.clearRect(0, 0, cw, ch);
-  ctx.globalCompositeOperation = 'source-over'; ctx.drawImage(im, x, y, w, h);
-  // okraje snímku sa plynulo strácajú do papiera
-  ctx.globalCompositeOperation = 'destination-in';
-  const x0 = Math.max(x, 0), x1 = Math.min(x + w, cw), y0 = Math.max(y, 0), y1 = Math.min(y + h, ch);
-  const gx = ctx.createLinearGradient(x0, 0, x1, 0), gy = ctx.createLinearGradient(0, y0, 0, y1);
-  [gx, gy].forEach((g) => { g.addColorStop(0, 'rgba(0,0,0,0)'); g.addColorStop(0.05, '#000'); g.addColorStop(0.95, '#000'); g.addColorStop(1, 'rgba(0,0,0,0)'); ctx.fillStyle = g; ctx.fillRect(0, 0, cw, ch); });
-  ctx.globalCompositeOperation = 'source-over';
+  // render v hale: snímok vyplní celú plochu (orezaný na stranách)
+  const k = Math.max(cw / im.naturalWidth, ch / im.naturalHeight), w = im.naturalWidth * k, h = im.naturalHeight * k;
+  ctx.drawImage(im, (cw - w) / 2, (ch - h) / 2, w, h);
   shown = i;
 }
 function clock() {
@@ -46,12 +39,12 @@ const bar = document.getElementById('bar'), steps = [...document.querySelectorAl
 let stepShown = -1;
 const clamp = (v) => Math.max(0, Math.min(1, v));
 // progres od chvíle, keď sa scéna prilepí pod hlavičku, po jej odchod
-const target = () => { if (reduce) return 1; const hh = document.querySelector('.site-header').offsetHeight, r = track.getBoundingClientRect(); return clamp((hh - r.top) / Math.max(1, r.height - (innerHeight - hh))); };
+const T0 = performance.now(), PLAY = 10, HOLD = 3;
+const target = () => reduce ? 1 : clamp((((performance.now() - T0) / 1000) % (PLAY + HOLD)) / PLAY);
 cur = target(); let prev = performance.now();
 function tick(now) {
   const dt = Math.min(0.05, (now - prev) / 1000); prev = now;
-  const t = target(); cur += (t - cur) * (1 - Math.exp(-dt * 6));
-  if (Math.abs(t - cur) < 0.0005) cur = t;
+  cur = target();
   const r = track.getBoundingClientRect();
   if (r.top < innerHeight && r.bottom > 0) { draw(false); clock(); }
   requestAnimationFrame(tick);

@@ -91,7 +91,7 @@
 
   function reveal() {
     var heads = document.querySelectorAll('main h1, main h2, main .hx, main .mega');
-    var skip = '.sr, .card, .slides, .notes, .note, .panels, .hscroll, .cards';
+    var skip = '.sr, .cw, .card, .slides, .notes, .note, .panels, .hscroll, .cards';
     var list = Array.prototype.filter.call(document.querySelectorAll(
       'main p:not(.mega), main .cta-row, main .cta, main .more, main .lead, .hero-sub, .depth .say, .ab-stats li, .ab-row, .ab-intro, .site-footer .footer-inner > div'
     ), function (el) { return !el.closest(skip); });
@@ -131,7 +131,7 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('h1, .hx, .mega, .card h2, .depth h2, .cta h2, .info h2, .bigword').forEach(function (el) {
-      if (!el.closest('.sr')) slink(el);
+      if (!el.closest('.sr, .cw')) slink(el);
     });
     if (motion) reveal();
     document.querySelectorAll('img').forEach(watch);
@@ -142,4 +142,36 @@
       }); });
     }).observe(document.body, { childList: true, subtree: true });
   });
+
+  // plynulý scroll kolieskom (Lenis), rovnaký na všetkých stránkach; na úvode až po odchode loga
+  if (motion && matchMedia('(pointer: fine)').matches) {
+    var boot = function () {
+      if (!window.Lenis) return;
+      var lenis = new window.Lenis({ lerp: 0.11, smoothWheel: true, prevent: function (n) { return n.closest && n.closest('.detail, [data-lenis-prevent]'); } });
+      window.lenis = lenis;
+      (function raf(t) { lenis.raf(t); requestAnimationFrame(raf); })(performance.now());
+    };
+    var sc = document.createElement('script');
+    sc.src = 'https://unpkg.com/lenis@1.1.13/dist/lenis.min.js'; sc.async = true;
+    sc.onload = function () {
+      if (!root.classList.contains('splashing')) return boot();
+      new MutationObserver(function (l, mo) { if (!root.classList.contains('splashing')) { mo.disconnect(); boot(); } })
+        .observe(root, { attributes: true, attributeFilter: ['class'] });
+    };
+    document.head.appendChild(sc);
+  }
+
+  // prechod medzi stránkami: obsah jemne zmizne, nová stránka sa objaví (rovnako všade)
+  if (motion) {
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href]');
+      if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || a.target || a.hasAttribute('download')) return;
+      var u = new URL(a.href, location.href);
+      if (u.origin !== location.origin || !/\.html$|\/$/.test(u.pathname) || (u.pathname === location.pathname && u.hash)) return;
+      e.preventDefault();
+      root.classList.add('leaving');
+      setTimeout(function () { location.href = u.href; }, 260);
+    });
+    addEventListener('pageshow', function () { root.classList.remove('leaving'); });
+  }
 })();

@@ -1,10 +1,12 @@
 import { DepthImage } from './depth.js';
 import { scramble } from './scramble.js';
+import { sequence } from './seq.js';
 
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const HERO = 0.84; // výška fotky v detaile, dole ostane kúsok textu
 const I = 'assets/obsah/img/', D = 'assets/depth/', SRC = 'https://play-ground.sk/portfolio/';
 const samorin = ['5667', '5671', '5677', '5679', '5681', '5684', '5689', '5690'].map((n) => `assets/photos/samorin-${n}.jpg`);
+const GAL = { 'dunajska-luzna': 6, 'hlohovec': 9, 'karvina-stena': 2, 'karvina-tubing': 4, 'klatovy': 6, 'kraluv-dvur': 8, 'oravice': 9, 'pezinok': 10, 'praha': 4, 'trnava': 9, 'uhersky-brod': 7 };
 // texty z pôvodných stránok projektov
 const P = [
   ['kraluv-dvur', 'Presťahované a obnovené ihrisko', 'Králův Dvůr, CZ', 'Presťahovanie a obnova', 'Presťahované a obnovené interiérové ihrisko v Králově Dvore pri Beroune.', '01', 'prestahovane-a-obnovene-interierove-ihrisko-v-kraluv-dvur-cz'],
@@ -20,31 +22,31 @@ const P = [
   ['karvina-stena', 'Lezecká stena pre deti', 'Karviná, CZ', 'Lezecká stena', 'Lezecká stena je dobrý doplnok do herní.', '11', 'lezecka-stena-pre-deti-karvina'],
   ['karvina-tubing', 'Tubingová dráha', 'Karviná, CZ', 'Tubingová dráha', 'Tubingová dráha postavená ako samostatne stojaci herný prvok. Deti na nej trávia najviac času.', '12', 'tubingova-draha-karvina'],
 ].map(([slug, title, place, type, desc, n, src, photos]) => ({
+  // fotky z galérií pôvodného webu (assets/obsah/projekty/<slug>/01.jpg ...)
   slug, title, place, type, desc, n,
   img: `${I}projekt-${n}.jpg`, depth: `${D}projekt-${n}-depth.jpg`, src: SRC + src + '/',
-  photos: photos || [`${I}projekt-${n}.jpg`],
+  photos: photos || [`${I}projekt-${n}.jpg`, ...Array.from({ length: GAL[slug] || 0 }, (_, k) => `assets/obsah/projekty/${slug}/${String(k + 1).padStart(2, '0')}.jpg`)],
 }));
 
-// ---------- panely ----------
-const list = document.getElementById('panels'), hs = document.getElementById('hscroll');
-list.innerHTML = P.map((p) => `<li class="panel"><a href="#${p.slug}" data-slug="${p.slug}">
+// ---------- karty ----------
+const list = document.getElementById('cards');
+list.innerHTML = P.map((p, i) => `<li class="card-p" style="--i:${i % 2}"><a href="#${p.slug}" data-slug="${p.slug}">
   <div class="ph"><img src="${p.img}" alt="${p.title}, ${p.place}" loading="lazy"></div>
-  <div class="cap"><p class="no">${p.n}</p><p class="pl">${p.place}</p><p class="ty">${p.type}</p></div></a></li>`).join('');
+  <p class="no">${p.n} <span>${p.type}</span></p><h2 class="pl">${p.place}</h2><p class="ty">${p.title}</p></a></li>`).join('');
 
-// vertikálny scroll posúva panely do strany; výška počíta s jedným rozšíreným panelom
-let maxX = 0;
-function size() {
-  const w = list.firstElementChild.offsetWidth;
-  maxX = Math.max(0, w * (P.length + 1) - innerWidth);
-  hs.style.height = `${innerHeight + maxX}px`;
-  move();
+// karty sa ukážu postupne pri scrolle
+if (!reduce && 'IntersectionObserver' in window) {
+  const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+  list.querySelectorAll('.card-p').forEach((c) => { c.classList.add('rv-c'); io.observe(c); });
 }
-function move() {
-  const x = Math.min(maxX, Math.max(0, scrollY - hs.offsetTop));
-  list.style.transform = `translateX(${-x}px)`;
-}
-addEventListener('resize', size); addEventListener('scroll', move, { passive: true });
-size();
+
+// ---------- stavba ihriska sa prehráva podľa scrollu cez zoznam ----------
+const rz = document.getElementById('rz');
+sequence(document.getElementById('rc'), {
+  n: 240, zoom: 1.3, ax: 0,
+  src: (i) => `frames/stavba/f_${String(i + 1).padStart(3, '0')}.webp`,
+  progress: () => { const r = rz.getBoundingClientRect(); return Math.max(0, Math.min(1, -r.top / Math.max(1, r.height - innerHeight))); },
+});
 
 // ---------- detail ----------
 const $ = (id) => document.getElementById(id);
@@ -81,6 +83,11 @@ function showSlide(i, now) {
 }
 $('s-prev').onclick = () => showSlide(slide - 1);
 $('s-next').onclick = () => showSlide(slide + 1);
+// potiahnutie prstom na fotke: ďalšia alebo predchádzajúca
+let sx = null, swiped = false;
+slides.querySelector('.s-view').addEventListener('pointerdown', (e) => { sx = e.clientX; });
+addEventListener('pointerup', (e) => { if (sx === null) return; const d = e.clientX - sx; sx = null; swiped = Math.abs(d) > 40; if (swiped) showSlide(slide + (d < 0 ? 1 : -1)); });
+slides.querySelector('.s-view').addEventListener('click', () => { if (!swiped) showSlide(slide + 1); swiped = false; });
 
 function open(slug, from) {
   const p = P.find((x) => x.slug === slug);

@@ -52,13 +52,30 @@
     <label class="f"><span>E-mail *</span><input name="email" type="email" autocomplete="email" required></label>
     <label class="f"><span>Telefón</span><input name="telefon" type="tel" autocomplete="tel"></label>
   </div>
-  <label class="f"><span>Správa *</span><textarea name="sprava" rows="6" required placeholder="Rozmer priestoru, výška stropu, vek detí, termín"></textarea></label>
+  <div class="two">
+    <label class="f"><span>Plocha priestoru (m²)</span><input name="plocha" inputmode="decimal" autocomplete="off"></label>
+    <label class="f"><span>Výška stropu (m)</span><input name="strop" inputmode="decimal" autocomplete="off"></label>
+  </div>
+  <fieldset class="services when">
+    <legend>Kedy to chcete mať?</legend>
+    <label><input type="radio" name="kedy" value="Čo najskôr"><span>Čo najskôr</span></label>
+    <label><input type="radio" name="kedy" value="Do troch mesiacov"><span>Do troch mesiacov</span></label>
+    <label><input type="radio" name="kedy" value="Do pol roka"><span>Do pol roka</span></label>
+    <label><input type="radio" name="kedy" value="Zatiaľ sa len pýtam"><span>Zatiaľ sa len pýtam</span></label>
+  </fieldset>
+  <label class="f"><span>Správa *</span><textarea name="sprava" rows="6" required placeholder="Pre koho je ihrisko, vek detí, čo máte teraz, čo by ste chceli"></textarea></label>
+  <input class="hp" name="web" tabindex="-1" autocomplete="off" aria-hidden="true">
   <p class="err" id="err" role="alert"></p>
   <div class="send">
   <button class="btn" type="submit">Odoslať dopyt</button>
   <p class="hint">Po odoslaní sa otvorí váš e-mailový program s&nbsp;pripravenou správou na info@play-ground.sk.</p>
   </div>
-  <p class="ok" id="ok" role="status" hidden>Správa je pripravená vo vašom e-mailovom programe. Stačí ju odoslať.</p>
+  <div class="ok" id="ok" role="status" hidden>
+    <h2>Správa je pripravená</h2>
+    <p>Otvorili sme váš e-mailový program. Ak sa neotvoril, použite jedno z&nbsp;tlačidiel.</p>
+    <div class="ok-btns"><a class="btn" id="ok-mail" href="#">Otvoriť e-mail</a><button class="ghost" type="button" id="ok-copy">Skopírovať text</button></div>
+    <pre id="ok-text"></pre>
+  </div>
 </form>
 <aside class="info">
   <h2>PLAYGROUND, s.r.o.</h2>

@@ -1,5 +1,5 @@
 // hero: stavba ihriska ako snímky videa, ktoré sa prehrávajú podľa scrollu
-const N = 240, SRC = (i) => `assets/stavba/f${String(i + 1).padStart(3, '0')}.webp`;
+const N = 240, SRC = (i) => `frames/stavba/f_${String(i + 1).padStart(3, '0')}.webp`;
 const canvas = document.getElementById('c'), ctx = canvas.getContext('2d');
 const track = document.getElementById('track');
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -7,7 +7,7 @@ const frames = new Array(N);
 let cur = 0, shown = -1, want = 0;
 
 // načítanie: najprv každý 8. snímok (hrubý náhľad hneď), potom zvyšok
-const FIRST = 25; // snímky 0 až 24 sú prázdne pozadie a prelínanie, plná podložka je až tu
+const FIRST = 0; // prvý snímok: prázdna hala
 const order = [FIRST, FIRST + 1];
 for (let s = 8; s >= 1; s >>= 1) for (let i = FIRST; i < N; i += s) if (!order.includes(i)) order.push(i);
 order.push(N - 1);
@@ -36,31 +36,34 @@ function draw(force) {
   fit();
   const i = best(Math.max(0, Math.min(N - 1, Math.round(FIRST + cur * (N - 1 - FIRST)))));
   if (i < 0 || (i === shown && !force)) return;
-  const im = frames[i], cw = canvas.width, ch = canvas.height;
-  const k = Math.min(cw / im.naturalWidth, ch / im.naturalHeight), w = im.naturalWidth * k, h = im.naturalHeight * k;
+  const im = frames[i], cw = canvas.width, ch = canvas.height, iw = im.naturalWidth, ih = im.naturalHeight;
+  // vyplniť celú plochu; na úzkej obrazovke len do 1,9-násobku šírky, aby ihrisko ostalo celé
+  const k = Math.max(cw / iw, Math.min(ch / ih, cw / iw * 1.9)), w = iw * k, h = ih * k;
+  const x = (cw - w) / 2, y = Math.min(0, (ch - h) * 0.8);
+  ctx.globalCompositeOperation = 'source-over';
   ctx.clearRect(0, 0, cw, ch);
-  const x = (cw - w) / 2, y = (ch - h) / 2;
-  ctx.globalCompositeOperation = 'source-over';
   ctx.drawImage(im, x, y, w, h);
-  // okraje snímku sa plynulo strácajú do pozadia stránky
-  ctx.globalCompositeOperation = 'destination-in';
-  const gx = ctx.createLinearGradient(x, 0, x + w, 0), gy = ctx.createLinearGradient(0, y, 0, y + h);
-  [gx, gy].forEach((g) => { g.addColorStop(0, 'rgba(0,0,0,0)'); g.addColorStop(0.1, '#000'); g.addColorStop(0.9, '#000'); g.addColorStop(1, 'rgba(0,0,0,0)'); ctx.fillStyle = g; ctx.fillRect(0, 0, cw, ch); });
-  ctx.globalCompositeOperation = 'source-over';
+  if (y + h < ch) { // snímok nesiaha po spodok: spodný okraj sa stráca do pozadia stránky
+    ctx.globalCompositeOperation = 'destination-in';
+    const g = ctx.createLinearGradient(0, y, 0, y + h);
+    g.addColorStop(0, '#000'); g.addColorStop(0.8, '#000'); g.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = g; ctx.fillRect(0, 0, cw, ch);
+    ctx.globalCompositeOperation = 'source-over';
+  }
   shown = i;
 }
 
 const clamp = (v) => Math.max(0, Math.min(1, v));
-const target = () => reduce ? 1 : clamp(scrollY / Math.max(1, track.offsetHeight - innerHeight));
-cur = target(); let prev = performance.now(), started = reduce;
-export function start() { started = true; }
+const PLAY = 10, HOLD = 3; let T0 = performance.now(), started = reduce;
+const target = () => reduce ? 1 : !started ? 0 : clamp((((performance.now() - T0) / 1000) % (PLAY + HOLD)) / PLAY);
+cur = target(); let prev = performance.now();
+export function start() { started = true; T0 = performance.now(); }
 function tick(now) {
   const dt = Math.min(0.05, (now - prev) / 1000); prev = now;
   const t = target();
   // úvodné samo-prehratie: po odchode loga sa stavba na chvíľu rozbehne sama, potom ju vedie scroll
-  cur += (t - cur) * (1 - Math.exp(-dt * 6));
-  if (Math.abs(t - cur) < 0.0005) cur = t;
-  if (scrollY < track.offsetHeight) draw(false);
+  cur = t;
+  if (scrollY < innerHeight * 1.5) draw(false);
   requestAnimationFrame(tick);
 }
 requestAnimationFrame(tick);

@@ -48,8 +48,8 @@ def dropdown(label, btn_cls="", wrap_cls=""):
 
 
 def page(title, desc, body, cur, extra=""):
-    nav = [("ihriska.html", "Ihriská na mieru", "../v5/"), ("prerabka.html", "Prerábka", "../v5/"), ("revizie.html", "Revízie", "../v5/"),
-           ("projekty.html", "Realizácie", ""), ("o-nas.html", f"O{NB}nás", "../v5/"), ("kontakt.html", "Kontakt", "")]
+    nav = [("ihriska.html", "Ihriská na mieru", ""), ("prerabka.html", "Prerábka", ""), ("revizie.html", "Revízie", ""),
+           ("projekty.html", "Realizácie", ""), ("o-nas.html", f"O{NB}nás", ""), ("kontakt.html", "Kontakt", "")]
     li = "".join(f'<li><a href="{pre}{h}"{" aria-current=page" if h == cur else ""}>{t}</a></li>' for h, t, pre in nav)
     return f'''<!doctype html>
 <html lang="sk">
@@ -78,7 +78,7 @@ def page(title, desc, body, cur, extra=""):
 <footer class="site-footer">
   <div class="brand"><a class="logo" href="index.html" aria-label="Playground, domov"><span class="logo-mark" role="img" aria-label="Playground"></span></a></div>
   <div class="col"><p class="lab">Kontakt</p><address>PLAYGROUND, s.r.o.<br>Poštová 6562/20<br>917{NB}01 Trnava<br><a href="tel:+421905724437">+421{NB}905{NB}724{NB}437</a><br><a href="mailto:info@play-ground.sk">info@play-ground.sk</a></address></div>
-  <div class="col"><p class="lab">Web</p><address><a href="projekty.html">Realizácie</a><br><a href="kontakt.html">Kontakt</a><br><a href="../v5/prerabka.html">Prerábka</a><br><a href="../v5/revizie.html">Revízie</a></address></div>
+  <div class="col"><p class="lab">Web</p><address><a href="projekty.html">Realizácie</a><br><a href="kontakt.html">Kontakt</a><br><a href="prerabka.html">Prerábka</a><br><a href="revizie.html">Revízie</a></address></div>
   <p class="small">IČO 47051990</p>
 </footer>
 {extra}
@@ -88,7 +88,7 @@ def page(title, desc, body, cur, extra=""):
 '''
 
 
-def cta():
+def home_cta():
     return f'''<section class="cta">
   <canvas class="pit" aria-hidden="true"></canvas>
   <h2 class="rv">Povedzte nám, aké ihrisko potrebujete</h2>
@@ -96,9 +96,18 @@ def cta():
 </section>'''
 
 
+def cta():
+    return '''<section class="cta cta-end">
+  <canvas class="pit" aria-hidden="true"></canvas>
+  <h2 class="rv">Napíšte nám</h2>
+  <p class="cta-sub rv" style="--d:.04s">Opíšte nám svoj priestor alebo ihrisko a ozveme sa vám.</p>
+  <div class="act rv" style="--d:.08s"><a class="btn" href="kontakt.html" data-cta>Napíšte nám</a></div>
+</section>'''
+
+
 # ---------- úvod ----------
 # kroky stavby podľa snímok videa (začiatok kroku ako podiel scrollu, overené na snímkach f025 až f240)
-BUILD = [(0, "Podlaha"), (.12, "Stĺpy"), (.32, "Plošiny"), (.5, "Šmykľavka a bazén"), (.66, "Siete"), (.88, "Hotové ihrisko")]
+BUILD = [(0, "Podlaha"), (.08, "Konštrukcia"), (.24, "Plošiny a siete"), (.42, "Guľôčkový bazén"), (.62, "Panely a dekor"), (.86, "Hotové ihrisko")]
 STEPS = "".join(f'<li data-at="{a}"><span>{i + 1:02d}</span>{t}</li>' for i, (a, t) in enumerate(BUILD))
 hero = f'''<section class="vhero">
   <video id="hv" autoplay muted loop playsinline preload="auto" poster="video/hero-deti.jpg" aria-hidden="true"><source src="video/hero-deti.mp4" type="video/mp4"></video>
@@ -116,7 +125,7 @@ build = f'''<section class="track" id="track">
       <p class="lab rv">Ako vzniká ihrisko</p>
       <h2 class="rv">Od podlahy po{NB}siete</h2>
       <p class="lead rv">Nosnú konštrukciu tvoria oceľové trubky a{NB}spojky. Obaľujeme ju penou a{NB}vinylom, priestor uzatvárajú siete.</p>
-      <div class="btns rv"><a class="btn ghost" href="../v5/ihriska.html">Ihriská na mieru{AR}</a></div>
+      <div class="btns rv"><a class="btn ghost" href="ihriska.html">Ihriská na mieru{AR}</a></div>
     </div>
     <div class="vid">
       <canvas id="c" role="img" aria-label="Stavba interiérového ihriska krok za krokom"></canvas>
@@ -130,15 +139,15 @@ build = f'''<section class="track" id="track">
 </section>'''
 
 PANELS = [
-    ("Nové ihriská", "Ihriská na mieru", "../v5/ihriska.html", "02"),
-    ("Prerábka", "Zo starého ihriska nové", "../v5/prerabka.html", "07"),
-    ("Sťahovanie", f"Presťahujeme vaše ihrisko", "../v5/prerabka.html", "10"),
+    ("Nové ihriská", "Ihriská na mieru", "ihriska.html", "02"),
+    ("Prerábka", "Zo starého ihriska nové", "prerabka.html", "07"),
+    ("Sťahovanie", f"Presťahujeme vaše ihrisko", "prerabka.html", "10"),
 ]
 panels = "".join(f'''<a class="panel" href="{h}"><div class="pimg" data-img="assets/obsah/img/projekt-{n}.jpg" data-depth="assets/depth/projekt-{n}-depth.jpg"><img src="assets/obsah/img/projekt-{n}.jpg" alt="" loading="lazy" width="1536" height="1152"></div>
   <div class="pcopy"><p class="lab">{l}</p><h2><span class="mask"><span>{nb(t)}</span></span></h2><span class="go-arrow">{AR}</span></div></a>''' for l, t, h, n in PANELS)
 strip = f'<div class="strip"><p class="lab">Realizované ihriská na Slovensku a v{NB}Česku</p><a class="more" href="projekty.html">Všetkých 12 realizácií{AR}</a></div>'
 
-(OUT / "index.html").write_text(page("Interiérové ihriská na mieru | Playground, Trnava", "Interiérové ihriská na mieru pre rodinné centrá, kaviarne, hotely a škôlky. Navrhujeme, vyrábame a montujeme. Trnava.", hero + f'<section class="panels">{panels}</section>' + strip + cta(), ""), encoding="utf-8")
+(OUT / "index.html").write_text(page("Interiérové ihriská na mieru | Playground, Trnava", "Interiérové ihriská na mieru pre rodinné centrá, kaviarne, hotely a škôlky. Navrhujeme, vyrábame a montujeme. Trnava.", hero + f'<section class="panels">{panels}</section>' + strip + home_cta(), ""), encoding="utf-8")
 
 
 # ---------- realizácie ----------
@@ -161,8 +170,20 @@ modal = f'''<div class="modal" id="modal" role="dialog" aria-modal="true" aria-l
   </div>
 </div>
 <script type="application/json" id="projects-data">{data}</script>'''
+V360 = '''<article class="bt bt-360 rv" style="--d:0.00s"><div class="v360" id="v360" role="img" aria-label="Vesmírne ihrisko, 3D vizualizácia, otáčanie ťahaním myšou alebo prstom" data-frames="frames/render/f_" data-count="360" data-start="1" tabindex="0">
+  <canvas width="1280" height="720"></canvas>
+  <div class="cap"><div><span class="lab">3D vizualizácia</span><h3>Vesmírne ihrisko</h3></div></div>
+</div></article>'''
+def rc(p, i):
+    slug, title, place, typ, desc, n, src = p
+    return f'''<a class="rc rc-in" href="https://play-ground.sk/portfolio/{src}/" data-slug="{slug}">
+  <span class="ph"><img src="assets/obsah/img/projekt-{n}.jpg" alt="{html.escape(title)}, {html.escape(place)}" loading="lazy" width="1536" height="1152"></span>
+  <span class="rc-t"><span class="rc-l">{html.escape(typ)}</span><strong>{nb(html.escape(place))}</strong><span class="rc-d">{html.escape(desc)}</span></span>
+</a>'''
+
+
 head = '<div class="page-head"><h1 class="rv">Realizácie</h1><p class="lab">12 projektov, SK a CZ</p></div>'
-(OUT / "projekty.html").write_text(page("Realizácie interiérových ihrísk | Playground", "Realizované interiérové ihriská na Slovensku a v Česku: nové ihriská, prerábky, presťahovania a obnovy.", head + build + f'<section class="sec"><div class="bento">{"".join(bt(p, i) for i, p in enumerate(P))}</div></section>' + cta(), "projekty.html", modal), encoding="utf-8")
+(OUT / "projekty.html").write_text(page("Realizácie interiérových ihrísk | Playground", "Realizované interiérové ihriská na Slovensku a v Česku: nové ihriská, prerábky, presťahovania a obnovy.", head + build + f'<section class="sec"><div class="bento">{"".join(bt(p, i) for i, p in enumerate(P))}{V360}</div></section>' + cta(), "projekty.html", modal), encoding="utf-8")
 
 
 # ---------- kontakt ----------
@@ -211,8 +232,66 @@ kontakt = f'''<section class="contact">
         <button class="btn" type="submit">Odoslať{AR}</button>
       </div>
     </form>
-    <div class="thanks" role="status"><svg viewBox="0 0 48 48" aria-hidden="true"><path pathLength="1" d="M8 25l11 11L40 11"/></svg><h2>Ďakujeme</h2><p>Otvorili sme e-mail s vaším dopytom. Stačí ho odoslať.</p><canvas class="pit" aria-hidden="true"></canvas></div>
+    <div class="thanks" role="status"><svg viewBox="0 0 48 48" aria-hidden="true"><path pathLength="1" d="M8 25l11 11L40 11"/></svg><h2>Ďakujeme</h2><p>Otvorili sme e-mail s vaším dopytom. Stačí ho odoslať.</p><div class="t-btns"><a class="btn" id="t-mail" href="#">Otvoriť e-mail</a><button class="btn ghost" type="button" id="t-copy">Skopírovať text</button></div><canvas class="pit" aria-hidden="true"></canvas></div>
   </div>
 </section>'''
 (OUT / "kontakt.html").write_text(page("Kontakt a dopyt | Playground, Trnava", "Kontakt na PLAYGROUND, s.r.o., Trnava. Dopyt na interiérové ihrisko.", kontakt, "kontakt.html"), encoding="utf-8")
+
+
+# ---------- podstránky: ihriská na mieru, prerábka, revízie, o nás ----------
+def row(no, h, body):
+    return f'<section class="sp-row rv"><p class="lab">{no}</p><h2>{nb(h)}</h2><div class="sp-body">{body}</div></section>'
+
+
+def ul(items):
+    return "<ul>" + "".join(f"<li>{nb(i)}</li>" for i in items) + "</ul>"
+
+
+def ol(items):
+    return "<ol>" + "".join(f"<li><b>{nb(a)}</b><span>{nb(b)}</span></li>" for a, b in items) + "</ol>"
+
+
+def pp(*t):
+    return "".join(f"<p>{nb(x)}</p>" for x in t)
+
+
+def sub_head(h, lead):
+    return f'<div class="page-head"><h1 class="rv">{nb(h)}</h1></div><section class="sp-lead"><p class="rv">{nb(lead)}</p></section>'
+
+
+def sub_cta(h=None):
+    return cta()
+
+
+ihriska = sub_head("Ihriská na mieru", "Panelové interiérové ihriská pre prevádzky. Od prvej konzultácie po montáž na kľúč.") + "".join([
+    row("01", "Čo sú panelové ihriská", pp("Nosnú konštrukciu tvoria oceľové trubky a spojky. Konštrukciu obaľujeme penou a vinylom, priestor uzatvárajú siete. Na konštrukciu sa pripájajú herné prvky: šmykľavky, tunely, siete a závesné moduly.", "Ihriská spĺňajú normy EN 1176 (vybavenie ihrísk) a EN 1177 (povrchy tlmiace náraz).")),
+    row("02", "Postup", ol([("Konzultácia.", "Zistíme, pre koho je ihrisko a čo od neho čakáte."), ("Zameranie priestoru.", "Presne zameriame plochu, výšku stropu, vstupy a okná."), ("Návrh a 3D vizualizácia.", "Dizajn, ktorý využije dostupný priestor a sedí na cieľovú skupinu."), ("Výroba.", "Konštrukcia, obaly a herné prvky."), ("Dodanie a montáž.", "Ihrisko odovzdáme pripravené na okamžité používanie.")])),
+    row("03", "Herné prvky", ul(["šmykľavky a tobogány", "preliezačky a moduly", "sieťové chodníky a balančné prvky", "trampolíny, tunely a prekážkové dráhy", "tubingové dráhy a lezecké steny", "zóny pre rôzne vekové kategórie"]) + pp("Prvky rozvíjajú motoriku, koordináciu, kreativitu a sociálne zručnosti detí.")),
+    row("04", "Kde sa hodia", "<dl><dt>Rodinné centrá a herne</dt><dd>Zábava pre deti počas nákupov a voľného času.</dd><dt>Kaviarne a cukrárne</dt><dd>Deti sa hrajú, rodičia oddychujú.</dd><dt>Hotely a penzióny</dt><dd>Rodinná atrakcia navyše k ponuke.</dd><dt>Škôlky a vzdelávacie centrá</dt><dd>Bezpečné prostredie na hru a rozvoj.</dd><dt>Aquaparky a kúpaliská</dt><dd>Kompletné detské zóny.</dd></dl>"),
+    row("05", "Materiál a servis", pp("Ihriská vyrábame z kvalitných materiálov s dôrazom na bezpečnosť a dlhú životnosť. Na sklade máme konštrukčné trubky, spojky, siete, peny na obaľovanie konštrukcie a závesné moduly.", "Robíme aj servis a ročné kontroly (revízie) ihrísk.") + f'<p><a class="more" href="projekty.html">Pozrieť realizácie{AR}</a></p>'),
+]) + sub_cta()
+(OUT / "ihriska.html").write_text(page("Ihriská na mieru | Playground, Trnava", "Panelové interiérové ihriská na mieru: návrh, výroba a montáž na kľúč. Rodinné centrá, kaviarne, hotely, škôlky.", ihriska, "ihriska.html"), encoding="utf-8")
+
+prerabka = sub_head("Prerábka a sťahovanie", "Staré ihrisko prerobíme na nové, normované, alebo ho presťahujeme do nového priestoru.") + "".join([
+    row("01", "Prerábka", pp("Staré ihrisko (najčastejšie čínske) prerobíme na nové, normované. Použijeme materiál z pôvodného: železo z konštrukcie, spojky a nepoškodené moduly.") + ul(["výmena opotrebovaných herných prvkov", "úprava dispozície a lepšie využitie priestoru", "nový dizajn a farby", "doplnenie nových atrakcií", "úprava podľa aktuálnych noriem"])),
+    row("02", "Sťahovanie", pp("Ihrisko rozoberieme, prevezieme a postavíme v novom priestore. Pri tom ho môžeme upraviť na nový rozmer.")),
+    row("03", "Prečo prerábka", pp("Prerábka je často rýchlejšia a lacnejšia než nové ihrisko.") + f'<p><a class="more" href="projekty.html">Prerobené ihriská{AR}</a></p>'),
+]) + sub_cta()
+(OUT / "prerabka.html").write_text(page("Prerábka a sťahovanie interiérových ihrísk | Playground", "Prerábka starých interiérových ihrísk na nové, normované. Sťahovanie ihrísk do nového priestoru. Trnava, SK a CZ.", prerabka, "prerabka.html"), encoding="utf-8")
+
+revizie = sub_head("Revízie", "Skontrolujeme ihrisko, opravíme, čo treba, a vymeníme opotrebované diely.") + "".join([
+    row("01", "Ročná kontrola", pp("Robíme servis a ročné kontroly (revízie) ihrísk.", "Ihriská posudzujeme podľa noriem EN 1176 (vybavenie ihrísk) a EN 1177 (povrchy tlmiace náraz).")),
+    row("02", "Servis a diely", pp("Na sklade máme konštrukčné trubky, spojky, siete, peny na obaľovanie konštrukcie a závesné moduly.")),
+]) + sub_cta()
+(OUT / "revizie.html").write_text(page("Revízie a servis interiérových ihrísk | Playground", "Ročné kontroly a servis interiérových ihrísk podľa EN 1176 a EN 1177. Výmena opotrebovaných dielov.", revizie, "revizie.html"), encoding="utf-8")
+
+stats = '<ul class="sp-stats">' + "".join(f'<li class="rv" style="--d:{i * .08:.2f}s"><b>{n}</b><span>{nb(t)}</span></li>' for i, (n, t) in enumerate([("13", "rokov na trhu"), ("180+", "projektov"), ("4", "krajiny: Slovensko, Česko, Francúzsko, Taliansko")])) + "</ul>"
+onas = sub_head("O nás", "Dodávame normované interiérové ihriská a trampolínové centrá. Prevádzkam pomáhajú prilákať rodičov s deťmi.") + stats + "".join([
+    row("01", "Na kľúč", pp("Od konzultácie, zamerania, návrhu a vizualizácie po dodanie a montáž. Vykonali sme aj stovky servisov a ročných kontrol ihrísk.")),
+    row("02", "Prerábka starého ihriska", pp("Naša hlavná odlišnosť. Staré ihrisko prerobíme na nové a normované. Použijeme pôvodnú konštrukciu, spojky a nepoškodené moduly, takže ušetríte.")),
+    row("03", "Vlastný sklad", pp("Konštrukčné trubky, spojky, siete, peny na obaľovanie a závesné moduly máme na sklade.")),
+    row("04", "Poradíme aj s priestorom", pp("Pomôžeme s rozložením ihriska, posedením aj kaviarenskou časťou.")),
+]) + sub_cta()
+(OUT / "o-nas.html").write_text(page("O nás | Playground, Trnava", "PLAYGROUND, s.r.o.: normované interiérové ihriská a trampolínové centrá, prerábka starých ihrísk, vlastný sklad. Trnava.", onas, "o-nas.html"), encoding="utf-8")
+
 print("ok")

@@ -21,3 +21,4 @@
   .ab-intro .lead { justify-self: start; }
   .ab-stats li + li { padding-left: 0; border-left: 0; }
 }
+.about .cta-end { margin-left: var(--gut); margin-right: var(--gut); }

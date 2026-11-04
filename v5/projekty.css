@@ -1,18 +1,42 @@
-/* realizované projekty: vertikálne panely na celú obrazovku, scroll ide do strany */
+/* realizácie: vľavo karty projektov, vpravo prilepený 3D render, ktorý sa otáča pri scrolle */
 .projects { padding: 0; }
-.hscroll { position: relative; }
-.hpin { position: sticky; top: 0; height: 100vh; height: 100dvh; padding-top: var(--bar); overflow: hidden; }
-.panels { list-style: none; margin: 0; padding: 0; display: flex; height: 100%; will-change: transform; }
-.panel { flex: none; width: 20vw; height: 100%; border-right: 1px solid var(--paper); transition: width .65s var(--out); }
-.panel:hover, .panel:focus-within { width: 40vw; }
-.panel a { display: flex; flex-direction: column; height: 100%; color: inherit; text-decoration: none; background: var(--paper); }
-.panel .ph { flex: 1; min-height: 0; overflow: hidden; background: var(--navy); }
-.panel img { display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(1.04); transition: transform .9s var(--out); }
-.panel:hover img { transform: scale(1); }
-.panel .cap { padding: 1rem 1.25rem 1.25rem; border-top: 3px solid var(--red); min-height: 7.5rem; }
-.panel .no { margin: 0; font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.1em; color: var(--red-dark); }
-.panel .pl { margin: 0.15rem 0 0.2rem; font-family: var(--fh); font-weight: 700; font-size: clamp(1.4rem, 1rem + 1vw, 2rem); line-height: 1; letter-spacing: -0.02em; color: var(--navy); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.panel .ty { margin: 0; font-size: 0.9375rem; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.rz { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(1.5rem, 3vw, 3rem); padding: calc(var(--bar) + clamp(1.5rem, 4vw, 3rem)) var(--gut) 0; max-width: 100rem; margin: 0 auto; }
+.rz-head { padding-bottom: clamp(1.5rem, 3vw, 2.5rem); margin-bottom: clamp(1.5rem, 3vw, 2.5rem); border-bottom: 3px solid var(--red); }
+.rz-head h1 { margin: 0 0 1rem; font-size: clamp(2.8rem, 1.6rem + 4.6vw, 6rem); }
+.rz-head .lead { max-width: 32rem; }
+.cards { list-style: none; margin: 0; padding: 0 0 clamp(2rem, 6vw, 5rem); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.75rem, 3vw, 2.75rem) clamp(1rem, 2vw, 1.75rem); }
+.card-p a { display: block; color: inherit; text-decoration: none; }
+.card-p .ph { aspect-ratio: 4 / 3; overflow: hidden; background: var(--paper-2); transition: transform .55s var(--out), box-shadow .55s var(--out); }
+.card-p img { display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(1.06); transition: transform .9s var(--out); }
+.card-p .no { margin: 0.85rem 0 0.2rem; font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.08em; color: var(--red-dark); display: flex; gap: 0.6rem; }
+.card-p .no span { color: var(--muted); font-weight: 500; letter-spacing: 0.02em; }
+.card-p .pl { margin: 0; font-size: clamp(1.25rem, 1rem + 0.7vw, 1.65rem); line-height: 1.05; color: var(--navy); transition: color .3s; }
+.card-p .ty { margin: 0.3rem 0 0; font-size: 0.9375rem; line-height: 1.35; }
+@media (hover: hover) {
+  .card-p a:hover .ph { transform: scale(1.035); box-shadow: 0 18px 40px -18px rgba(21, 25, 74, 0.45); }
+  .card-p a:hover img { transform: scale(1); }
+  .card-p a:hover .pl { color: var(--red); }
+}
+.card-p a:active .ph { transform: scale(0.98); transition-duration: .15s; }
+.mo .rv-c { opacity: 0; transform: translateY(28px); transition: opacity .9s var(--out), transform 1s var(--out); transition-delay: calc(var(--i) * 110ms); }
+.mo .rv-c.in { opacity: 1; transform: none; }
+
+.rz-3d { position: relative; }
+.rz-box { position: sticky; top: calc(var(--bar) + 1.25rem); height: calc(100vh - var(--bar) - 2.5rem); height: calc(100dvh - var(--bar) - 2.5rem); overflow: hidden; background: #d9d9d6; }
+.rz-box canvas { display: block; width: 100%; height: 100%; }
+.rz-cap { position: absolute; left: 1rem; bottom: 1rem; margin: 0; padding: 0.5rem 0.8rem; background: var(--paper); color: var(--navy); font-size: 0.875rem; font-weight: 500; }
+.rz-cap span { color: var(--red-dark); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.75rem; margin-right: 0.4rem; }
+
+@media (max-width: 900px) {
+  .rz { grid-template-columns: 1fr; }
+  .rz-3d { order: -1; margin: 0 calc(var(--gut) * -1); }
+  .rz-head { order: -2; }
+  .rz-list { display: contents; }
+  .rz-box { position: relative; top: auto; height: auto; aspect-ratio: 4 / 3; }
+}
+@media (max-width: 520px) {
+  .cards { grid-template-columns: 1fr; }
+}
 
 /* ďalšie realizácie */
 .projects .more { padding-top: clamp(3rem, 7vw, 6rem); }
@@ -41,7 +65,7 @@
 .fly { position: fixed; z-index: 40; object-fit: cover; pointer-events: none; }
 
 .slides { margin: 0 0 2rem; }
-.s-view { position: relative; aspect-ratio: 4 / 3; background: var(--paper-2); overflow: hidden; }
+.s-view { position: relative; aspect-ratio: 4 / 3; background: var(--paper-2); overflow: hidden; cursor: pointer; touch-action: pan-y; user-select: none; }
 .s-view img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; }
 .s-view img.in { opacity: 0; transition: opacity .4s var(--ease); }
 .s-view img.in.on { opacity: 1; }
@@ -52,11 +76,29 @@
 .slides.one .s-nav { display: none; }
 
 @media (max-width: 760px) {
-  .panel { width: 72vw; }
-  .panel:hover, .panel:focus-within { width: 72vw; }
   .gal { grid-template-columns: 1fr; }
   .gal li:first-child, .gal li:last-child { grid-row: auto; grid-column: auto; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .panel, .panel img, .d-body, .s-view img { transition: none; }
+  .card-p .ph, .card-p img, .d-body, .s-view img { transition: none; }
+}
+/* náhľady v jednom stĺpci, stavba vpravo ide podľa scrollu */
+.cards { grid-template-columns: 1fr; gap: clamp(2rem, 4vw, 3rem); }
+.card-p .ph { aspect-ratio: 16 / 10; }
+.card-p { max-width: 30rem; }
+.card-p .ph { aspect-ratio: 16 / 9; }
+
+/* stavba je pozadie celej šírky za náhľadmi; vľavo sa zlieva s farbou stránky, ihrisko ostáva vpravo */
+.rz { display: block; position: relative; max-width: none; margin: 0; padding: 0; }
+.rz-list { position: relative; z-index: 2; width: min(46%, 36rem); margin-left: max(var(--gut), calc((100vw - 100rem) / 2 + var(--gut))); padding-top: calc(var(--bar) + clamp(1.5rem, 4vw, 3rem)); }
+.rz-3d { position: absolute; z-index: 0; inset: var(--bar) 0 0 0; margin: 0; }
+.rz-box { top: var(--bar); width: 100%; height: calc(100vh - var(--bar)); height: calc(100dvh - var(--bar)); background: var(--paper); }
+.rz-box::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, var(--paper) 0%, var(--paper) 22%, rgba(246, 243, 238, .55) 40%, rgba(246, 243, 238, 0) 58%); }
+.rz-cap { left: auto; right: 1rem; z-index: 1; }
+@media (max-width: 900px) {
+  .rz { display: block; }
+  .rz-list { width: auto; margin: 0 var(--gut); display: block; }
+  .rz-3d { position: sticky; top: var(--bar); inset: auto; height: 38dvh; margin: 0; z-index: 0; order: 0; }
+  .rz-box { height: 38dvh; aspect-ratio: auto; position: relative; top: auto; }
+  .rz-box::after { background: linear-gradient(0deg, var(--paper), rgba(246,243,238,0) 40%); }
 }
