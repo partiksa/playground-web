@@ -1,0 +1,74 @@
+/* rows.css: riadky podstránok s voskovkovými ilustráciami (Postup, Kde sa hodia, Sťahovanie) */
+
+/* ---------- 02 Postup: zoznam krokov vpravo, vľavo lepkavý obraz previazaný so scrollom ---------- */
+.sp-row.st-row { grid-template-rows: auto auto 1fr; }
+.st-row > .sp-body { grid-row: 1 / span 3; }
+.st-side { grid-column: 1 / span 5; grid-row: 3; position: relative; }
+.st-vis { position: sticky; top: calc(var(--hh) + 2.5rem); width: min(100%, calc(100dvh - var(--hh) - 9rem), 32rem); margin-top: clamp(1.5rem, 4vw, 3rem); }
+.st-blob { position: absolute; left: 4%; top: 4%; width: 92%; height: auto; overflow: visible; transform: rotate(var(--br, 0deg)) scale(var(--bs, 1)); }
+.st-blob path { fill: var(--sun); }
+.st-imgs { position: relative; aspect-ratio: 1; }
+.st-imgs img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity .35s var(--ease); }
+.st-imgs img.on { opacity: 1; }
+.st-row.js .st-imgs img { transition: none; will-change: transform, opacity; }
+.st-scr { display: block; width: 62%; height: auto; margin: -.6rem 0 0 19%; clip-path: inset(0 calc(var(--sd, 0) * 100%) 0 0); }
+.st-cap { display: flex; align-items: center; gap: 1rem; margin-top: .8rem; color: var(--grey); }
+.st-n { color: var(--red); min-width: 1.6rem; }
+.st-ticks { display: flex; gap: .35rem; }
+.st-ticks i { width: 1.4rem; height: 2px; background: var(--line); transition: background .3s var(--ease); }
+.st-ticks i.done { background: var(--ink); }
+.st-ticks i.on { background: var(--red); }
+
+.sp-body .st-list li { padding: clamp(2.4rem, 11vh, 6rem) 0; opacity: .25; transition: opacity .45s var(--ease), transform .7s var(--ease); }
+.sp-body .st-list li.on { opacity: 1; }
+.st-list li > b { font-size: clamp(1.25rem, 1rem + .9vw, 1.75rem); letter-spacing: -.01em; }
+.st-list li > span { max-width: 26rem; }
+
+@media (max-width: 860px) {
+  .st-side { position: sticky; top: var(--hh); z-index: 1; margin: 0 calc(var(--pad) * -1); padding: .6rem var(--pad) .2rem; background: var(--paper); border-bottom: 1px solid var(--line); }
+  .st-vis { position: relative; top: 0; margin: 0; width: auto; display: grid; grid-template-columns: 9.5rem 1fr; column-gap: 1rem; align-items: center; }
+  .st-blob { width: 9rem; left: .25rem; top: .25rem; }
+  .st-imgs { grid-column: 1; grid-row: 1 / span 2; }
+  .st-scr { grid-column: 2; grid-row: 1; width: 7rem; margin: 0; align-self: end; }
+  .st-cap { grid-column: 2; grid-row: 2; align-self: start; flex-wrap: wrap; gap: .6rem; }
+  .st-ticks i { width: 1rem; }
+  .sp-body .st-list li { padding: 2.4rem 0; }
+}
+
+
+/* ---------- 04 Kde sa hodia: číslovaný zoznam, jemný posun pri hoveri ---------- */
+.sp-body .fit-list li { padding: 1.15rem 0; }
+.fit-list li > b { font-size: clamp(1.15rem, 1rem + .5vw, 1.45rem); letter-spacing: -.01em; }
+.fit-list li > b, .fit-list li > span { transition: transform .45s var(--ease); }
+.sp-body .fit-list li::before { transition: color .3s var(--ease); }
+@media (hover: hover) {
+  .fit-list li:hover > b, .fit-list li:hover > span { transform: translateX(.45rem); }
+  .sp-body .fit-list li:hover::before { color: var(--ink); }
+}
+
+
+/* ---------- 02 Sťahovanie (prerábka): voskovková scéna, nákladiak prechádza zľava doprava ---------- */
+.sp-row.mv-row { grid-template-rows: auto auto auto; }
+.mv { grid-column: 1 / -1; grid-row: 3; margin: clamp(2rem, 4vw, 3.4rem) 0 0; position: relative; overflow: hidden; aspect-ratio: 1600 / 420; }
+.mv-in { position: absolute; inset: 0; }
+.mv-bg { display: block; width: 100%; height: auto; }
+.mv-road { position: absolute; inset: 0; transform: translateX(-34%); animation: mvDrive 12s cubic-bezier(.45, 0, .4, 1) infinite paused; }
+.mv-truck { position: absolute; left: 0; bottom: 8.6%; width: 32.5%; height: auto; transform-origin: 50% 100%; animation: mvBob .42s ease-in-out infinite alternate paused; }
+.mv-row.in .mv-road, .mv-row.in .mv-truck, .mv-row.in .mv-in { animation-play-state: running; }
+@keyframes mvDrive { 0% { transform: translateX(-34%); } 80%, 100% { transform: translateX(102%); } }
+@keyframes mvBob { to { transform: translateY(-1.2%) rotate(-.4deg); } }
+/* mobil: scéna je širšia než obrazovka a kamera ide za nákladiakom */
+@media (max-width: 860px) {
+  .mv { aspect-ratio: 1000 / 420; margin-left: calc(var(--pad) * -1); margin-right: calc(var(--pad) * -1); }
+  .mv-in { right: auto; width: 160%; animation: mvPan 12s cubic-bezier(.45, 0, .4, 1) infinite paused; }
+  .mv-row > h2 { margin-bottom: 1.2rem; }
+}
+@keyframes mvPan { 0%, 12% { transform: none; } 70%, 82% { transform: translateX(-37.5%); } 100% { transform: none; } }
+
+
+
+/* Kde sa hodia: voskovková ikonka vpravo pri každej položke */
+.fit-list li { position: relative; padding-right: clamp(5.5rem, 12vw, 8.5rem); min-height: clamp(5.5rem, 10vw, 7rem); }
+.fit-ic { position: absolute; right: 0; top: 50%; width: clamp(4.2rem, 9vw, 6.5rem); height: auto; transform: translateY(-50%) rotate(-3deg); transition: transform .5s var(--spring, var(--ease)); pointer-events: none; }
+.fit-list li:nth-child(even) .fit-ic { transform: translateY(-50%) rotate(3deg); }
+@media (hover: hover) { .fit-list li:hover .fit-ic { transform: translateY(-50%) rotate(0) scale(1.12); } }

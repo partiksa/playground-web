@@ -1,7 +1,7 @@
 // Realizácie: stavba ihriska sa prehráva sama (bez scrollu), na konci chvíľu stojí a začne znova
 const N = 240, FPS = 24, HOLD = 3;
 const canvas = document.getElementById('rzc'), ctx = canvas.getContext('2d');
-const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const reduce = false; // prefers-reduced-motion sa zámerne ignoruje
 const frames = new Array(N);
 let shown = -1, visible = true, paused = false, t0 = performance.now(), pt = 0;
 const hb = document.getElementById('hv-btn');

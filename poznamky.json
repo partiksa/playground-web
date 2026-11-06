@@ -1,0 +1,580 @@
+[
+  {
+    "page": "index.html",
+    "selector": "main > figure.ill.ill-pop > img",
+    "tag": "img",
+    "text": "Šmykľavka a loptičky, štyri farebné varianty v štýle pop art",
+    "note": "odveci, aky to ma ucel, na co to je dobre, ako velmi pekne to vyzera ale zbytocne",
+    "viewport": "1454x740",
+    "scroll": 2811,
+    "rect": {
+      "x": 49,
+      "y": 153,
+      "w": 1355,
+      "h": 452
+    },
+    "id": "55dd4083",
+    "time": "2026-11-05 17:36:42"
+  },
+  {
+    "page": "ihriska.html",
+    "selector": "main > div.page-head > h1",
+    "tag": "h1.rv.tx",
+    "text": "Ihriská na mieru",
+    "note": "text ihriska na mieru sa zas divno sprava, najpr bol na dva riadky az po chvile skocil na jeden",
+    "viewport": "1454x740",
+    "scroll": 0,
+    "rect": {
+      "x": 49,
+      "y": 166,
+      "w": 1355,
+      "h": 120
+    },
+    "id": "d728567f",
+    "time": "2026-11-05 17:39:49"
+  },
+  {
+    "page": "ihriska.html",
+    "selector": "main > section.p3d:nth-of-type(2) > div.p3d-stage > div.p3d-view:nth-of-type(2) > canvas",
+    "tag": "canvas",
+    "text": "",
+    "note": "toot je super, viac to preracuj, texty su chybove, zly kernign alebo nieco smyklavka sa prekryva k s l... a dalsie",
+    "viewport": "1454x740",
+    "scroll": 1583,
+    "rect": {
+      "x": 511,
+      "y": 64,
+      "w": 894,
+      "h": 676
+    },
+    "id": "ffab9538",
+    "time": "2026-11-05 17:40:43"
+  },
+  {
+    "page": "ihriska.html",
+    "selector": "main > section.sp-row:nth-of-type(4)",
+    "tag": "section.sp-row.rv",
+    "text": "02\nPostup\nKonzultácia.\nZistíme, pre koho je ihrisko a čo od neho čakáte.\nZameranie priestoru.\nPresne zameriame plochu, výšku stropu, vstupy ",
+    "note": "pridaj nejake pekne zobrazenie postupu, tuto skus pouzit tie ilustracie na male ikonky",
+    "viewport": "1454x740",
+    "scroll": 3116,
+    "rect": {
+      "x": 0,
+      "y": 198,
+      "w": 1454,
+      "h": 543
+    },
+    "id": "7b148834",
+    "time": "2026-11-05 17:41:08"
+  },
+  {
+    "page": "ihriska.html",
+    "selector": "main > section.sp-row:nth-of-type(6)",
+    "tag": "section.sp-row.rv",
+    "text": "04\nKde sa hodia\nRodinné centrá a herne\nZábava pre deti počas nákupov a voľného času.\nKaviarne a cukrárne\nDeti sa hrajú, rodičia oddychujú.\nH",
+    "note": "tiez o nieco zaujimavejsie sprav",
+    "viewport": "1454x740",
+    "scroll": 4203,
+    "rect": {
+      "x": 0,
+      "y": 117,
+      "w": 1454,
+      "h": 519
+    },
+    "id": "a9abf425",
+    "time": "2026-11-05 17:44:54"
+  },
+  {
+    "page": "prerabka.html",
+    "selector": "main > div.page-head",
+    "tag": "div.page-head",
+    "text": "Prerábka a sťahovanie",
+    "note": "text zas skocil najrpv 2 riadk ypotom 1",
+    "viewport": "1454x740",
+    "scroll": 0,
+    "rect": {
+      "x": 0,
+      "y": 64,
+      "w": 1454,
+      "h": 279
+    },
+    "id": "3bc6236b",
+    "time": "2026-11-05 17:45:13"
+  },
+  {
+    "page": "prerabka.html",
+    "selector": "main > section.p3d:nth-of-type(2) > div.p3d-stage > div.p3d-view:nth-of-type(2) > canvas",
+    "tag": "canvas",
+    "text": "",
+    "note": "toto je super",
+    "viewport": "1454x740",
+    "scroll": 1893,
+    "rect": {
+      "x": 511,
+      "y": 64,
+      "w": 894,
+      "h": 676
+    },
+    "id": "24247646",
+    "time": "2026-11-05 17:45:27"
+  },
+  {
+    "page": "prerabka.html",
+    "selector": "main > section.sp-row:nth-of-type(4)",
+    "tag": "section.sp-row.rv",
+    "text": "02\nSťahovanie\nIhrisko rozoberieme, prevezieme a postavíme v novom priestore. Pri tom ho môžeme upraviť na nový rozmer.",
+    "note": "nejaku animaciu mozno aj sem spravit?",
+    "viewport": "1454x740",
+    "scroll": 2999,
+    "rect": {
+      "x": 0,
+      "y": 514,
+      "w": 1454,
+      "h": 198
+    },
+    "id": "6e8b4439",
+    "time": "2026-11-05 17:45:40"
+  },
+  {
+    "page": "o-nas.html",
+    "selector": "main > figure.ill.ill-gouache > img",
+    "tag": "img",
+    "text": "Ilustrácia: guľôčkový bazén so šmykľavkou",
+    "note": "odveci, daj prec",
+    "viewport": "1454x740",
+    "scroll": 810,
+    "rect": {
+      "x": 280,
+      "y": 100,
+      "w": 894,
+      "h": 559
+    },
+    "id": "8e3838f8",
+    "time": "2026-11-05 17:46:40"
+  },
+  {
+    "page": "o-nas.html",
+    "selector": "main > section.sp-row:nth-of-type(2) > h2 > span:nth-of-type(2) > span",
+    "tag": "span.wi",
+    "text": "kľúč",
+    "note": "moc vel apouzivas ten akcent nedavaj ho vsade, sem ho nedavaj vobec",
+    "viewport": "1454x740",
+    "scroll": 1438,
+    "rect": {
+      "x": 116,
+      "y": 194,
+      "w": 90,
+      "h": 49
+    },
+    "id": "bd923e56",
+    "time": "2026-11-05 17:46:58"
+  },
+  {
+    "page": "o-nas.html",
+    "selector": "main > section.cta.cta-end:nth-of-type(6) > canvas.pit",
+    "tag": "canvas.pit",
+    "text": "",
+    "note": "menenie farby v nadpise tiez odveci nedavaj ho sem",
+    "viewport": "1454x740",
+    "scroll": 2260,
+    "rect": {
+      "x": 0,
+      "y": 72,
+      "w": 1454,
+      "h": 562
+    },
+    "id": "aaa8fb3c",
+    "time": "2026-11-05 17:47:12"
+  },
+  {
+    "page": "ihriska.html",
+    "selector": "main > section.p3d:nth-of-type(2) > div.p3d-stage > div.p3d-view:nth-of-type(2) > canvas",
+    "tag": "canvas",
+    "text": "",
+    "note": "mozno rozober aj ihrisko na plochy a tyce...",
+    "viewport": "1454x740",
+    "scroll": 1464,
+    "rect": {
+      "x": 511,
+      "y": 64,
+      "w": 894,
+      "h": 676
+    },
+    "id": "804b6853",
+    "time": "2026-11-05 17:48:08"
+  },
+  {
+    "page": "index.html",
+    "selector": "main > section.cta:nth-of-type(4) > canvas.pit",
+    "tag": "canvas.pit",
+    "text": "",
+    "note": "tieto gulicky dajme prec, je to odveci radsej tam daj ikonku ilustrascie ako pouzivame",
+    "viewport": "1130x736",
+    "scroll": 1963,
+    "rect": {
+      "x": 0,
+      "y": 305,
+      "w": 1120,
+      "h": 559
+    },
+    "id": "d45cc171",
+    "time": "2026-11-06 15:27:50"
+  },
+  {
+    "page": "ihriska.html",
+    "selector": "main > section.p3d:nth-of-type(2) > div.p3d-stage > div.p3d-view:nth-of-type(2) > canvas",
+    "tag": "canvas",
+    "text": "",
+    "note": "nerozdelujme siete tie nechajme v zaklade aj tie male tycky neviem co to je, sprav celel toto jednoducshie..",
+    "viewport": "1130x736",
+    "scroll": 1207,
+    "rect": {
+      "x": 394,
+      "y": 64,
+      "w": 688,
+      "h": 672
+    },
+    "id": "678ad882",
+    "time": "2026-11-06 15:28:27"
+  },
+  {
+    "page": "ihriska.html",
+    "selector": "main > section.sp-row.st-row:nth-of-type(4) > div.st-side:nth-of-type(1) > div.st-vis > div.st-imgs > img.on:nth-of-type(4)",
+    "tag": "img.on",
+    "text": "",
+    "note": "toto sa mi paci",
+    "viewport": "1130x736",
+    "scroll": 3792,
+    "rect": {
+      "x": 34,
+      "y": 102,
+      "w": 422,
+      "h": 422
+    },
+    "id": "47437b54",
+    "time": "2026-11-06 15:28:57"
+  },
+  {
+    "page": "ihriska.html",
+    "selector": "main > section.sp-row:nth-of-type(6)",
+    "tag": "section.sp-row.rv",
+    "text": "04\nKde sa hodia\nRodinné centrá a herne\nZábava pre deti počas nákupov a voľného času.\n\nKaviarne a cukrárne\nDeti sa hrajú, rodičia oddychujú.\n",
+    "note": "toto sa mi paci",
+    "viewport": "1130x736",
+    "scroll": 4981,
+    "rect": {
+      "x": 0,
+      "y": 51,
+      "w": 1120,
+      "h": 651
+    },
+    "id": "ea8f0e29",
+    "time": "2026-11-06 15:29:04"
+  },
+  {
+    "page": "prerabka.html",
+    "selector": "main > section.p3d:nth-of-type(2) > div.p3d-stage > div.p3d-view:nth-of-type(2) > canvas",
+    "tag": "canvas",
+    "text": "",
+    "note": "tiez jednoduchsie to sprav, siet nedavaj prec...",
+    "viewport": "1130x736",
+    "scroll": 1374,
+    "rect": {
+      "x": 394,
+      "y": 64,
+      "w": 688,
+      "h": 672
+    },
+    "id": "42c87776",
+    "time": "2026-11-06 15:29:18"
+  },
+  {
+    "page": "projekty.html",
+    "selector": "main > section.rz:nth-of-type(1)",
+    "tag": "section.rz",
+    "text": "Všetky12\nNové ihriská4\nPrerábka a obnova4\nPresťahovanie3\nHerné prvky a dorábky3\n01\nPresťahované a obnovené ihrisko\nKRÁLŮV DVŮR, CZ\nPRESŤAHOV",
+    "note": "toto sa mi nepaci malo zaujimave, obrazky chcem vacsie..",
+    "viewport": "1130x736",
+    "scroll": 259,
+    "rect": {
+      "x": 0,
+      "y": 38,
+      "w": 1120,
+      "h": 2168
+    },
+    "id": "e0605311",
+    "time": "2026-11-06 15:29:54"
+  },
+  {
+    "page": "projekty.html",
+    "selector": "#track > div.stage",
+    "tag": "div.stage",
+    "text": "AKO VZNIKÁ IHRISKO\n\nOd podlahy po siete\nNosnú konštrukciu tvoria oceľové trubky a spojky. Obaľujeme ju penou a vinylom, priestor uzatvárajú ",
+    "note": "toto chcem na zaciatku",
+    "viewport": "1130x736",
+    "scroll": 3101,
+    "rect": {
+      "x": 0,
+      "y": -67,
+      "w": 1120,
+      "h": 672
+    },
+    "id": "37b4e3be",
+    "time": "2026-11-06 15:30:06"
+  },
+  {
+    "page": "projekty.html",
+    "selector": "main > section.rz3:nth-of-type(2)",
+    "tag": "section.rz3",
+    "text": "3D VIZUALIZÁCIA\n\nVesmírne ihrisko\nPred výrobou pripravíme návrh a 3D vizualizáciu. Ihrisko tak uvidíte zo všetkých strán ešte predtým, než h",
+    "note": "toto nazvy 3d vizualizacie, alebo voalco take a budeme ich. mat asi viac",
+    "viewport": "1130x736",
+    "scroll": 2309,
+    "rect": {
+      "x": 0,
+      "y": 157,
+      "w": 1120,
+      "h": 569
+    },
+    "id": "6b0df329",
+    "time": "2026-11-06 15:30:28"
+  },
+  {
+    "page": "index.html",
+    "selector": "main > section.cta:nth-of-type(4)",
+    "tag": "section.cta",
+    "text": "Povedzte nám, aké ihrisko potrebujete\nNAPÍSAŤ DOPYT",
+    "note": "inak vymysli nech to je zaujiamvejsie a viac call to action",
+    "viewport": "1130x736",
+    "scroll": 2148,
+    "rect": {
+      "x": 0,
+      "y": 120,
+      "w": 1120,
+      "h": 460
+    },
+    "id": "30b06060",
+    "time": "2026-11-06 15:59:52"
+  },
+  {
+    "page": "projekty.html",
+    "selector": "main > section.rz:nth-of-type(2)",
+    "tag": "section.rz",
+    "text": "Všetky12\nNové ihriská4\nPrerábka a obnova4\nPresťahovanie3\nHerné prvky a dorábky3\n01\nPresťahované a obnovené ihrisko\nKRÁLŮV DVŮR, CZ\nPRESŤAHOV",
+    "note": "nie takto layout vpohdoe kategorizovanie nic moc\nty ich skategorizuj podla kvality fotiek a ich pocut",
+    "viewport": "1130x736",
+    "scroll": 903,
+    "rect": {
+      "x": 0,
+      "y": 66,
+      "w": 1120,
+      "h": 5969
+    },
+    "id": "8ee4f093",
+    "time": "2026-11-06 16:02:07"
+  },
+  {
+    "page": "index.html",
+    "selector": "main > section.cta.cta-home:nth-of-type(4)",
+    "tag": "section.cta.cta-home",
+    "text": "DOPYT NA IHRISKO\n\nPostavíme vám ihrisko, ktoré sa deťom bude páčiť\nNapíšte nám rozmery priestoru a čo od ihriska čakáte. Ozveme sa vám s náv",
+    "note": "text vsetok biely, ten cierny je zle vidiet",
+    "viewport": "1130x736",
+    "scroll": 2155,
+    "rect": {
+      "x": 0,
+      "y": 113,
+      "w": 1120,
+      "h": 736
+    },
+    "id": "c64da09c",
+    "time": "2026-11-06 16:06:34"
+  },
+  {
+    "page": "index.html",
+    "selector": "main > section.cta.cta-home:nth-of-type(4) > h2 > span.mk:nth-of-type(6)",
+    "tag": "span.mk",
+    "text": "deťom",
+    "note": "tuto ta ciarka vyzera zle, sem ju nedavaj",
+    "viewport": "1130x736",
+    "scroll": 2199,
+    "rect": {
+      "x": 295,
+      "y": 271,
+      "w": 206,
+      "h": 87
+    },
+    "id": "3d8043e3",
+    "time": "2026-11-06 16:40:49"
+  },
+  {
+    "page": "ihriska.html",
+    "selector": "main > div.page-head",
+    "tag": "div.page-head",
+    "text": "Ihriská na mieru",
+    "note": "na tuto podstranku pridaj ten akcent",
+    "viewport": "1130x736",
+    "scroll": 0,
+    "rect": {
+      "x": 0,
+      "y": 64,
+      "w": 1120,
+      "h": 219
+    },
+    "id": "977caced",
+    "time": "2026-11-06 16:41:09"
+  },
+  {
+    "page": "ihriska.html",
+    "selector": "main > section.p3d:nth-of-type(2) > div.p3d-stage > div.p3d-copy:nth-of-type(1) > p.lab:nth-of-type(1)",
+    "tag": "p.lab.tl",
+    "text": "Z ČOHO JE IHRISKO",
+    "note": "toto je super",
+    "viewport": "1130x736",
+    "scroll": 445,
+    "rect": {
+      "x": 38,
+      "y": 163,
+      "w": 333,
+      "h": 14
+    },
+    "id": "c8093232",
+    "time": "2026-11-06 16:41:13"
+  },
+  {
+    "page": "ihriska.html",
+    "selector": "main > section.sp-row:nth-of-type(3) > p.lab",
+    "tag": "p.lab.tl",
+    "text": "01",
+    "note": "sem ho tiez daj",
+    "viewport": "1130x736",
+    "scroll": 2928,
+    "rect": {
+      "x": 38,
+      "y": 101,
+      "w": 38,
+      "h": 38
+    },
+    "id": "eb0e4597",
+    "time": "2026-11-06 16:41:20"
+  },
+  {
+    "page": "prerabka.html",
+    "selector": "main > section.sp-row:nth-of-type(3) > p.lab",
+    "tag": "p.lab.tl",
+    "text": "01",
+    "note": "aj sem",
+    "viewport": "1130x736",
+    "scroll": 2965,
+    "rect": {
+      "x": 38,
+      "y": 64,
+      "w": 38,
+      "h": 38
+    },
+    "id": "018d4155",
+    "time": "2026-11-06 16:41:28"
+  },
+  {
+    "page": "revizie.html",
+    "selector": "main > section.sp-row:nth-of-type(2) > p.lab",
+    "tag": "p.lab.tl",
+    "text": "01",
+    "note": "aj sem",
+    "viewport": "1130x736",
+    "scroll": 424,
+    "rect": {
+      "x": 38,
+      "y": 102,
+      "w": 38,
+      "h": 38
+    },
+    "id": "3bd1338f",
+    "time": "2026-11-06 16:41:35"
+  },
+  {
+    "page": "projekty.html",
+    "selector": "main > section.rz:nth-of-type(2) > ol.rz-list:nth-of-type(1) > li.rz-it:nth-of-type(1) > a.rz-row.rc-in > span.rz-go:nth-of-type(4) > svg.ar",
+    "tag": "svg",
+    "text": "",
+    "note": "aj sem",
+    "viewport": "1130x736",
+    "scroll": 856,
+    "rect": {
+      "x": 761,
+      "y": 559,
+      "w": 28,
+      "h": 28
+    },
+    "id": "1e12ad31",
+    "time": "2026-11-06 16:41:47"
+  },
+  {
+    "page": "projekty.html",
+    "selector": "main > section.rz:nth-of-type(2) > ol.rz-list:nth-of-type(1) > li.rz-it:nth-of-type(1) > a.rz-row.rc-in > span.rz-no:nth-of-type(1)",
+    "tag": "span.rz-no",
+    "text": "01",
+    "note": "aj sem",
+    "viewport": "1130x736",
+    "scroll": 856,
+    "rect": {
+      "x": 747,
+      "y": 197,
+      "w": 45,
+      "h": 45
+    },
+    "id": "300475ee",
+    "time": "2026-11-06 16:41:50"
+  },
+  {
+    "page": "o-nas.html",
+    "selector": "main > section.sp-row:nth-of-type(2) > p.lab",
+    "tag": "p.lab.tl",
+    "text": "01",
+    "note": "aj sem",
+    "viewport": "1130x736",
+    "scroll": 641,
+    "rect": {
+      "x": 38,
+      "y": 163,
+      "w": 38,
+      "h": 38
+    },
+    "id": "54191f43",
+    "time": "2026-11-06 16:42:00"
+  },
+  {
+    "page": "index.html",
+    "selector": "main > section.svc:nth-of-type(2) > ul.svc-list > li:nth-of-type(1) > a.sv > div.sv-t > span.sv-go:nth-of-type(3)",
+    "tag": "span.sv-go",
+    "text": "",
+    "note": "toto tiez",
+    "viewport": "1130x736",
+    "scroll": 1092,
+    "rect": {
+      "x": 309,
+      "y": 352,
+      "w": 72,
+      "h": 72
+    },
+    "id": "4675fece",
+    "time": "2026-11-06 17:13:35"
+  },
+  {
+    "page": "ihriska.html",
+    "selector": "main > section.sp-row.st-row:nth-of-type(4) > p.lab",
+    "tag": "p.lab.tl",
+    "text": "02",
+    "note": "pozor na farebny kontrast",
+    "viewport": "1130x736",
+    "scroll": 2779,
+    "rect": {
+      "x": 38,
+      "y": 519,
+      "w": 48,
+      "h": 48
+    },
+    "id": "3159a3f0",
+    "time": "2026-11-06 17:13:55"
+  }
+]

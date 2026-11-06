@@ -1,5 +1,5 @@
 // bazén s loptičkami: loptičky padnú na dno, kurzor ich rozhadzuje
-const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const reduce = false; // prefers-reduced-motion sa zámerne ignoruje
 // farby loptičiek z bazéna vo videu stavby, zladené s papierom a tušom
 const COLORS = ['#F7F4EE', '#F7F4EE', '#FECF03', '#FECF03', '#9CC9E3', '#9CC9E3', '#FE9A4A', '#141310'];
 

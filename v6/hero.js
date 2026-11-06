@@ -1,7 +1,7 @@
 // stavba ihriska: 240 snímkov videa sa prehráva podľa scrollu
 const N = 240, FIRST = 8, SRC = (i) => `frames/stavba/f_${String(i + 1).padStart(3, '0')}.webp`;
 const canvas = document.getElementById('c'), ctx = canvas.getContext('2d'), track = document.getElementById('track'), tc = document.getElementById('tc');
-const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const reduce = false; // prefers-reduced-motion sa zámerne ignoruje
 const frames = new Array(N);
 let cur = 0, shown = -1, secShown = -1;
 

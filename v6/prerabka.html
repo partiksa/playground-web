@@ -8,6 +8,13 @@
 <link rel="preload" href="fonts/Switzer-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/CabinetGrotesk-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="rows.css">
+<link rel="stylesheet" href="rz.css">
+<script>setTimeout(function(){if(!window.__ok){document.documentElement.classList.add("fs");document.body.classList.add("go")}},3500)</script>
+<noscript><style>.rv,.tl,.tli{opacity:1!important;transform:none!important;clip-path:none!important}body:not(.go) main :is(h1,h2),body:not(.go) .cta h2{visibility:visible!important}</style></noscript>
+<script type="importmap">{"imports":{"three":"./vendor/build/three.module.js","three/addons/":"./vendor/addons/"}}</script>
+<link rel="modulepreload" href="vendor/build/three.module.js">
 </head>
 <body>
 <header class="site-header">
@@ -20,8 +27,21 @@
   <button class="menu-btn" aria-expanded="false" aria-controls="nav" type="button">Menu</button>
 </header>
 <main>
-<div class="page-head"><h1 class="rv">Prerábka a sťahovanie</h1></div><section class="sp-lead"><p class="rv">Staré ihrisko prerobíme na nové, normované, alebo ho presťahujeme do nového priestoru.</p></section><section class="sp-row rv"><p class="lab">01</p><h2>Prerábka</h2><div class="sp-body"><p>Staré ihrisko (najčastejšie čínske) prerobíme na nové, normované. Použijeme materiál z pôvodného: železo z konštrukcie, spojky a nepoškodené moduly.</p><ul><li>výmena opotrebovaných herných prvkov</li><li>úprava dispozície a lepšie využitie priestoru</li><li>nový dizajn a farby</li><li>doplnenie nových atrakcií</li><li>úprava podľa aktuálnych noriem</li></ul></div></section><section class="sp-row rv"><p class="lab">02</p><h2>Sťahovanie</h2><div class="sp-body"><p>Ihrisko rozoberieme, prevezieme a postavíme v novom priestore. Pri tom ho môžeme upraviť na nový rozmer.</p></div></section><section class="sp-row rv"><p class="lab">03</p><h2>Prečo prerábka</h2><div class="sp-body"><p>Prerábka je často rýchlejšia a lacnejšia než nové ihrisko.</p><p><a class="more" href="projekty.html">Prerobené ihriská<svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></a></p></div></section><section class="cta cta-end">
-  <canvas class="pit" aria-hidden="true"></canvas>
+<div class="page-head"><h1 class="rv">Prerábka a <span class="mk mk-t">sťahovanie</span></h1></div><section class="sp-lead"><p class="rv">Staré ihrisko prerobíme na nové, normované, alebo ho presťahujeme do nového priestoru.</p></section><section class="p3d" data-mode="rebuild">
+  <div class="p3d-stage">
+    <div class="p3d-copy">
+      <p class="lab">Zo starého nové</p>
+      <h2>Prerábka krok za krokom</h2>
+      <p class="lead">Použijeme pôvodnú konštrukciu a nepoškodené diely. Vymeníme obaly, farby a doplníme nové prvky.</p>
+      <ol class="p3d-steps"><li data-at="0"><span>01</span>Staré ihrisko</li><li data-at="0.18"><span>02</span>Demontáž</li><li data-at="0.4"><span>03</span>Nové obaly a farby</li><li data-at="0.62"><span>04</span>Nové prvky</li><li data-at="0.86"><span>05</span>Normované ihrisko</li></ol>
+    </div>
+    <div class="p3d-view" role="img" aria-label="Prerábka krok za krokom, 3D model ihriska, otáčanie ťahaním"><p class="p3d-hint lab">Ťahaním otočíte</p></div>
+  </div>
+</section><section class="sp-row rv"><p class="lab">01</p><h2>Prerábka</h2><div class="sp-body"><p>Staré ihrisko (najčastejšie čínske) prerobíme na nové, normované. Použijeme materiál z pôvodného: železo z konštrukcie, spojky a nepoškodené moduly.</p><ul><li>výmena opotrebovaných herných prvkov</li><li>úprava dispozície a lepšie využitie priestoru</li><li>nový dizajn a farby</li><li>doplnenie nových atrakcií</li><li>úprava podľa aktuálnych noriem</li></ul></div></section><section class="sp-row mv-row rv"><p class="lab">02</p><h2>Sťahovanie</h2><div class="sp-body"><p>Ihrisko rozoberieme, prevezieme a postavíme v novom priestore. Pri tom ho môžeme upraviť na nový rozmer.</p></div><figure class="mv" role="img" aria-label="Nákladiak prevezie rozobraté ihrisko zo starého priestoru do nového, kde ho postavíme"><div class="mv-in">
+  <img class="mv-bg" src="ill/crayon/move-bg.webp" width="1600" height="420" alt="" loading="lazy" decoding="async">
+  <div class="mv-road"><img class="mv-truck" src="ill/crayon/move-truck.webp" width="520" height="300" alt="" loading="lazy" decoding="async"></div>
+</div></figure></section><section class="sp-row rv"><p class="lab">03</p><h2>Prečo prerábka</h2><div class="sp-body"><p>Prerábka je často rýchlejšia a lacnejšia než nové ihrisko.</p><p><a class="more" href="projekty.html">Prerobené ihriská<svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></a></p></div></section><section class="cta cta-end cta-teal">
+  <img class="cta-ill rv" src="ill/crayon/hero-1.webp" width="900" height="900" alt="" loading="lazy" decoding="async" style="--d:.12s">
   <h2 class="rv">Napíšte nám</h2>
   <p class="cta-sub rv" style="--d:.04s">Opíšte nám svoj priestor alebo ihrisko a ozveme sa vám.</p>
   <div class="act rv" style="--d:.08s"><a class="btn" href="kontakt.html" data-cta>Napíšte nám</a></div>
@@ -34,6 +54,7 @@
   <p class="small">IČO 47051990</p>
 </footer>
 
+<script src="intro.js"></script>
 <script type="module" src="main.js"></script>
 </body>
 </html>

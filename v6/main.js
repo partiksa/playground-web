@@ -1,14 +1,17 @@
 import { DepthImage } from './depth.js';
-const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+window.__ok = 1;
+const reduce = false; // prefers-reduced-motion sa zámerne ignoruje
 const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
 const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
 
-// nábeh textu po načítaní písma
-(document.fonts ? document.fonts.ready : Promise.resolve()).then(() => requestAnimationFrame(() => document.body.classList.add('go')));
+// nábeh textu po načítaní písma (nadpisy sú dovtedy skryté, aby sa riadky nezalomili dvakrát)
+// fonts.ready sa môže vyriešiť skôr, než sa písmo začne sťahovať, preto sa načíta výslovne
+const fontsReady = Promise.race([document.fonts ? Promise.all([document.fonts.load('600 1em Switzer'), document.fonts.load('400 1em Switzer'), document.fonts.load('500 1em "Cabinet Grotesk"')]).then(() => document.fonts.ready) : Promise.resolve(), new Promise((r) => setTimeout(r, 2500))]);
+fontsReady.then(() => requestAnimationFrame(() => document.body.classList.add('go')));
 
 // jemné objavenie prvkov
 const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12, rootMargin: '0px 0px -4% 0px' });
-$$('.rv, .panel, .bt, .rc').forEach((el) => io.observe(el));
+$$('.rv').forEach((el) => io.observe(el));
 
 // animované texty: nadpisy vychádzajú po slovách zospodu, štítky sa odkryjú zľava, čísla napočítajú
 if (!reduce) {
@@ -28,7 +31,8 @@ if (!reduce) {
     });
     h.classList.add('tx');
   };
-  $$('main h1, main h2, .cta h2').filter((h) => !h.closest('.vh-copy, .modal, .thanks')).forEach((h) => { words(h); io.observe(h); });
+  // slová sa rozdelia až s finálnym písmom, potom sa riadky už nemenia
+  fontsReady.then(() => $$('main h1, main h2, .cta h2').filter((h) => !h.closest('.vh-copy, .modal, .thanks')).forEach((h) => { words(h); io.observe(h); }));
   // štítky sa odkrývajú clip-pathom, preto sa sleduje ich rodič (clip-path skryje aj priesečník)
   const tlo = new IntersectionObserver((es) => es.forEach((e) => { if (!e.isIntersecting) return; e.target._tl.forEach((x) => x.classList.add('in')); tlo.unobserve(e.target); }), { threshold: 0.05, rootMargin: '0px 0px -4% 0px' });
   $$('main .lab').filter((l) => !l.closest('.vh-copy, .modal, .steps, .bt, .v360, .f, .rz6-cap')).forEach((l) => { l.classList.add('tl'); const h = l.parentElement; (h._tl = h._tl || []).push(l); tlo.observe(h); });
@@ -42,6 +46,19 @@ if (!reduce) {
   }), { threshold: 0.6 });
   $$('.sp-stats b').forEach((b) => count.observe(b));
 }
+
+// prekrytie mriežky na kontrolu: ?grid v adrese alebo kláves G
+{
+  const ov = document.createElement('div'); ov.className = 'grid-ov'; ov.setAttribute('aria-hidden', 'true'); document.body.append(ov);
+  const draw = () => { const n = +getComputedStyle(document.documentElement).getPropertyValue('--cols') || 12; if (ov.children.length !== n) ov.replaceChildren(...Array.from({ length: n }, () => document.createElement('i'))); ov.dataset.info = `${n} stĺpcov, ${innerWidth}px`; };
+  const set = (on) => { document.documentElement.classList.toggle('show-grid', on); if (on) draw(); };
+  set(new URLSearchParams(location.search).has('grid'));
+  addEventListener('resize', () => document.documentElement.classList.contains('show-grid') && draw());
+  addEventListener('keydown', (e) => { if (e.key.toLowerCase() === 'g' && !e.target.closest('input, textarea') && !e.metaKey && !e.ctrlKey) set(!document.documentElement.classList.contains('show-grid')); });
+}
+
+// režim poznámok ku prvkom (?review, server tools/review_server.py)
+if (new URLSearchParams(location.search).has('review')) import('./review.js');
 
 // menu na mobile
 const nav = $('.nav'), mb = $('.menu-btn');
@@ -57,59 +74,21 @@ dds.forEach((d) => {
 addEventListener('click', (e) => { if (!e.target.closest('.dd')) closeAll(); });
 addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAll(); });
 
+// 3D ihrisko z Blendera (Ihriská na mieru, Prerábka)
+if ($('.p3d')) import('./play3d.js');
+
+// úvod (home.js), postup a kde sa hodia (rows.js), realizácie (rz-page.js): moduly sa načítajú len na stránke, ktorá ich má
+if ($('[data-home]')) import('./home.js');
+if ($('[data-rows]')) import('./rows.js');
+if ($('[data-rz]')) import('./rz-page.js');
+
 // hero so stavbou ihriska
 if ($('#c')) import('./hero.js');
 
-// video s deťmi: pri obmedzenom pohybe stojí, tlačidlo ho zastaví a spustí
-const hv = $('#hv'), hb = $('#hv-btn');
-if (hv) {
-  const set = (on) => { on ? hv.play().catch(() => {}) : hv.pause(); hb.textContent = on ? 'Pauza' : 'Prehrať'; hb.setAttribute('aria-pressed', String(!on)); };
-  if (reduce) set(false);
-  hb.addEventListener('click', () => set(hv.paused));
-}
+// video s deťmi: pri obmedzenom pohybe stojí
+const hv = $('#hv');
+if (hv && reduce) hv.pause();
 
-// depth fotky: kamera ide dovnútra podľa scrollu, myš posúva hĺbku
-const items = new Map();
-if (!reduce) {
-  const lazy = new IntersectionObserver((es) => es.forEach((e) => {
-    if (!e.isIntersecting) return;
-    lazy.unobserve(e.target);
-    const host = $('[data-depth]', e.target);
-    items.set(e.target, { d: new DepthImage(host, host.dataset.img, host.dataset.depth), hover: 0, mx: 0, my: 0 });
-  }), { rootMargin: '250px' });
-  $$('.panel, .bt').forEach((c) => {
-    lazy.observe(c);
-    c.addEventListener('pointermove', (ev) => { const it = items.get(c); if (!it) return; const r = c.getBoundingClientRect(); it.hover = 1; it.mx = (ev.clientX - r.left) / r.width * 2 - 1; it.my = (ev.clientY - r.top) / r.height * 2 - 1; });
-    c.addEventListener('pointerleave', () => { const it = items.get(c); if (it) { it.hover = 0; it.mx = it.my = 0; } });
-  });
-  addEventListener('resize', () => items.forEach((i) => i.d.resize()));
-  let prev = performance.now();
-  const loop = (now) => {
-    const dt = Math.min(0.05, (now - prev) / 1000); prev = now;
-    items.forEach((it, c) => {
-      const r = c.getBoundingClientRect();
-      if (r.bottom < 0 || r.top > innerHeight) return;
-      const p = Math.min(1, Math.max(0, (innerHeight - r.top) / (innerHeight + r.height)));
-      it.d.set(p * 0.75 + it.hover * 0.25, it.mx, it.my);
-      it.d.step(dt);
-    });
-    requestAnimationFrame(loop);
-  };
-  requestAnimationFrame(loop);
-}
-
-// bento karty: 3D náklon podľa myši a svetlo pod kurzorom (podľa award-winning-website)
-if (fine && !reduce) {
-  $$('.bt:not(.bt-360)').forEach((c) => {
-    const inn = $('.bt-in', c);
-    c.addEventListener('pointermove', (e) => {
-      const r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
-      inn.style.transform = `perspective(700px) rotateX(${(y - 0.5) * 6}deg) rotateY(${(x - 0.5) * -6}deg) scale3d(.97,.97,.97)`;
-      inn.style.setProperty('--mx', `${x * r.width}px`); inn.style.setProperty('--my', `${y * r.height}px`);
-    });
-    c.addEventListener('pointerleave', () => { inn.style.transform = ''; });
-  });
-}
 
 // 360 ihrisko: snímky sa menia ťahaním (myš aj dotyk), po pustení dobieha zotrvačnosťou
 const v360 = $('#v360');
@@ -176,7 +155,7 @@ if (modal) {
   modal.tabIndex = -1;
   const open = (i, from) => { last = from; show(i); modal.classList.add('open'); document.body.classList.add('lock'); page.forEach((el) => { el.inert = true; }); modal.focus(); requestAnimationFrame(tick); };
   const close = () => { modal.classList.remove('open'); document.body.classList.remove('lock'); page.forEach((el) => { el.inert = false; }); last?.focus(); };
-  $$('.bt-in, .rc-in').forEach((a) => a.addEventListener('click', (e) => { e.preventDefault(); open(data.findIndex((p) => p.slug === a.dataset.slug), a); }));
+  $$('.rc-in').forEach((a) => a.addEventListener('click', (e) => { e.preventDefault(); open(data.findIndex((p) => p.slug === a.dataset.slug), a); }));
   $('#m-close').addEventListener('click', close); $('#m-prev').addEventListener('click', () => show(cur - 1)); $('#m-next').addEventListener('click', () => show(cur + 1));
   addEventListener('keydown', (e) => { if (!modal.classList.contains('open')) return; if (e.key === 'Escape') close(); if (e.key === 'ArrowRight') show(cur + 1); if (e.key === 'ArrowLeft') show(cur - 1); });
   let raf = 0; img.addEventListener('pointermove', (e) => { if (!md || raf) return; raf = requestAnimationFrame(() => { raf = 0; const r = img.getBoundingClientRect(); md.set(0.55, (e.clientX - r.left) / r.width * 2 - 1, (e.clientY - r.top) / r.height * 2 - 1); }); });
@@ -194,7 +173,7 @@ if (form) {
   // ukazovateľ krokov: každý krok sa zafarbí, keď je hotový
   const segs = [...form.querySelectorAll('.prog i')], sets = [...form.querySelectorAll('fieldset')];
   const upd = () => {
-    const ok = [!!form.querySelector('input[name=co]:checked'), !!form.querySelector('input[name=typ]:checked'), form.meno.value.trim() !== '' && form.email.validity.valid && form.email.value !== ''];
+    const ok = [!!form.querySelector('input[name=co]:checked'), !!form.querySelector('input[name=typ]:checked'), !!form.querySelector('input[name=kedy]:checked'), form.meno.value.trim() !== '' && form.email.validity.valid && form.email.value !== ''];
     ok.forEach((v, i) => { segs[i]?.classList.toggle('on', v); sets[i]?.classList.toggle('ok', v); });
   };
   form.addEventListener('input', upd); form.addEventListener('change', upd);
@@ -205,7 +184,7 @@ if (form) {
     e.preventDefault();
     const fd = new FormData(form), v = (n) => (fd.get(n) || '').toString().trim();
     const need = form.querySelector('input[name=co]:checked')?.dataset.label || '-';
-    const body = [`Meno: ${v('meno')}`, `E-mail: ${v('email')}`, `Telefón: ${v('tel')}`, `Typ prevádzky: ${v('typ') || '-'}`, `Mám záujem o: ${need}`, `Mesto a krajina: ${v('mesto')}`, '', v('sprava')].join('\n');
+    const body = [`Meno: ${v('meno')}`, `E-mail: ${v('email')}`, `Telefón: ${v('tel')}`, `Typ prevádzky: ${v('typ') || '-'}`, `Mám záujem o: ${need}`, `Termín: ${v('kedy') || '-'}`, `Mesto a krajina: ${v('mesto')}`, '', v('sprava')].join('\n');
     $('.f-wrap').classList.add('sent');
     const tp = $('.thanks .pit');
     if (tp) import('./balls.js').then(({ BallPit }) => new BallPit(tp, { area: $('.thanks'), density: 0.6 }));

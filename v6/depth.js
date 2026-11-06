@@ -1,5 +1,5 @@
 // fotka s depth mapou: pri scrolle kamera ide dovnútra (bližšie veci rastú rýchlejšie), potom sekcia odíde
-const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const reduce = false; // prefers-reduced-motion sa zámerne ignoruje
 
 const VS = `#version 300 es
 in vec2 p; out vec2 uv;

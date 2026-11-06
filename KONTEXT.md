@@ -3,16 +3,18 @@ stav: rozpracovaný
 ---
 # loso (redizajn play-ground.sk)
 
-Posledná aktualizácia: 2026-11-04 09:22
+Posledná aktualizácia: 2026-11-05 17:50
 
 ## Cieľ
 Moderný web firmy PLAYGROUND (interiérové detské ihriská, Trnava) s 3D ihriskom, ktoré sa pri scrolle postaví. Identita zo starého webu: logo, farby, písmo Kanit.
 
 ## Stav
-- AKTUÁLNE je v6 (priečinok `v6/`, štýl quality, Switzer a Cabinet Grotesk, bez kurzívy, paleta ink #141310, papier #F7F4EE, sivá #6B6659, jediný odvážny prvok červená #FF2712). Na GitHube je vetva `V6-verzia-2` (commit 823aedd, bez zmien na `main` a `web`). Starší obsah nižšie (v1 až v5, identita) je história.
+- NAJNOVŠIE (2026-11-05): v6 má lokálne (nekomitnuté, nenasadené) 3D z Blendera na Ihriská na mieru a Prerábka, mriežku 12/8/4, 3 varianty červeného akcentu (A/B/C, čaká na výber), krok „Dokedy“ vo formulári, bez tlačidla Pauza, opravu sekania slov a ilustrácie (pop silkscreen, gouache). Na kontrolu beží `tools/review_server.py` (port 8914, `?review&grid`), poznámky idú do `poznamky.json`. Podstránky v6 už generuje `tools/build_v6.py` (7 HTML), bod nižšie o odkazoch na v5 je zastaraný. Mobil (2026-11-05, podľa Patrika overené): bez posunu do strany, formulár sa vojde pri 720 px výšky, 3D model zväčšený, popisy na mobile skryté. Všetko lokálne, nič nenasadené ani nekomitnuté.
+- AKTUÁLNE je v6 (priečinok `v6/`, štýl quality, Switzer a Cabinet Grotesk, bez kurzívy, paleta ink #141310, papier #F7F4EE, sivá #6B6659, jediný odvážny prvok červená #FF2712). Na GitHube je vetva `V6-verzia-2` (commit 4220d93 z 2026-11-04 12:58, predtým 823aedd, bez zmien na `main` a `web`). Starší obsah nižšie (v1 až v5, identita) je história.
+- v7 (priečinok `v7/`, nekomitnuté, generuje `tools/build_v7.py`): len lokálne. Nasadenie playground-v3 je od 2026-11-04 zrušené. Živé sú playground-v1 (v5) a playground-v2 (v6), obe so snímkami 1920x1080.
 - v6 stránky: `index.html` (video s deťmi `v6/video/hero-deti.mp4` cez celú obrazovku, 3 panely nové ihriská, prerábka, sťahovanie s depth, červená výzva s bazénom loptičiek), `projekty.html` (stavba ihriska podľa scrollu z 240 snímok `assets/stavba`, bento mriežka 12 realizácií s náklonom, detail s depth a listovaním), `kontakt.html` (karta s 3 krokmi, ikony, vojde sa na jednu obrazovku, mailto). Odkazy Ihriská na mieru, Prerábka, Revízie, O nás vedú na v5.
 - Generovanie: `python3 tools/build_v6.py` zloží 3 HTML zo spoločných častí (texty a dáta projektov sú v ňom). `v6/assets` je odkaz na `../assets`. Lokálny server: `cd v6 && python3 -m http.server 8913 --bind 127.0.0.1` (porty 8766 a 8791 patria iným projektom).
-- Nekomitnuté (2026-11-04): na Realizácie pribudla dlaždica „Vesmírne ihrisko“ (3D vizualizácia, 180 snímok v `assets/ihrisko-360-180/`, otáča sa ťahaním myšou alebo prstom, zotrvačnosť, na celú šírku, `v6/projekty.html` atribúty `data-frames` a `data-count`, `v6/main.js` blok `v360`, štýl `v6/style.css`). Úvod a stavba v tejto zmene nezmenené.
+- Commitnuté v 4220d93 (2026-11-04): na Realizácie pribudla dlaždica „Vesmírne ihrisko“ (3D vizualizácia, 180 snímok v `assets/ihrisko-360-180/`, otáča sa ťahaním myšou alebo prstom, zotrvačnosť, na celú šírku, `v6/projekty.html` atribúty `data-frames` a `data-count`, `v6/main.js` blok `v360`, štýl `v6/style.css`). Úvod a stavba v tejto zmene nezmenené.
 - Neoverené po poslednej úprave (Patrik povedal „fast bez testov“): nový hero s videom a posun stavby na realizácie v prehliadači, dlaždica 360 (ťahanie, výkon, mobil), mobil hero (text nebol vidno), zobrazenie „Ďakujeme“ po odoslaní formulára (v teste ostala pravá strana prázdna).
 - v4 (commit f20c16b, slideshow v 24f7113): červená hlavička, úvod s logom na celej obrazovke, nadpisy Bricolage Grotesque, poznámky v hero stoja a text sa prepisuje, fotky na celú obrazovku s depth mapou, nové podstránky (projekty s panelmi a detailom, technické ihriská, jednoduché o nás, formulár). Screenshoty v screens/v4/.
 - Nová identita (nekomitnutá, čaká na výber fontu a schválenie): `identita.html` + `identita.css` v koreni, screenshot `screens/identita.png`. Web v3 sa nezmenil. Mobil neladený.
@@ -28,15 +30,25 @@ Moderný web firmy PLAYGROUND (interiérové detské ihriská, Trnava) s 3D ihri
 Odpovede klienta z formulára a súhrn z druhého počítača sú v `KLIENT.md`. Riadime sa ním. Hlavné: SEO a prvá strana Google, SK/EN/DE, viac samostatných stránok, jednoduchý admin, zostáva len logo, AI vizuály povolené, bez konfigurátora pre zákazníka.
 
 ## Otvorené úlohy
+- [ ] v6: Patrik vyberie variant červeného akcentu A, B alebo C. Potom nechať jeden, prepínač a ostatné varianty odstrániť.
+- [ ] v6: prečítať `poznamky.json` (Patrikove poznámky z ?review), opraviť. Zmazať testovaciu poznámku id 72eb965f (zmazanie nástrojom bolo zablokované).
+- [ ] v6: overiť opravu sekania slov na živom webe (lokálne sa chyba nedala zopakovať) a 3D v Safari a na telefóne.
+- [ ] v6: Three.js pred deployom stiahnuť lokálne namiesto unpkg.
+- [ ] v6: ilustrácie doladiť podľa poznámok (alebo nahradiť), rozhodnúť o ďalších ilustráciách.
+- [ ] v6: commit kola z 2026-11-04 (vetva V6-verzia-2, s Co-authored-by JackClash99) a deploy na playground-v2, oboje len po súhlase.
 - [ ] v6: overiť v prehliadači úvod (video, panely, bazén loptičiek), stavbu na realizáciách (kroky a časovač), dlaždicu 360 na realizáciách (ťahanie, výkon pri 180 snímkach), mobil (hero text, hlavička, formulár) a „Ďakujeme“ po odoslaní.
-- [ ] v6: dlaždica 360 a jej assets (`assets/ihrisko-360-180/`) sú nesledované a nekomitnuté. Rozhodnúť o commite a o veľkosti assets (180 snímok, 12 MB).
-- [ ] v6: zmazať staré sady `assets/ihrisko-360` (360 snímok, 25 MB) a `assets/ihrisko-360-120` (120 snímok, 8,3 MB). Zmaže Patrik sám: `rm -r assets/ihrisko-360 assets/ihrisko-360-120`.
+- [x] v6: dlaždica 360 a jej assets (`assets/ihrisko-360-180/`) sú commitnuté v 4220d93.
+- [x] v6 mobil (2026-11-05, podľa Patrika): bez posunu do strany, formulár sa vojde pri 720 px výšky (výška stránky vrátane pätičky), 3D model zväčšený, popisy na mobile skryté. Hero text a hlavička na mobile ostávajú v úlohe vyššie.
+- [ ] v6: zmazať staré sady `assets/ihrisko-360` (360 snímok, 25 MB) a `assets/ihrisko-360-120` (120 snímok, 8,3 MB). Zmaže Patrik sám: `rm -r assets/ihrisko-360 assets/ihrisko-360-120`. Obe sady sú už v commite 4220d93, zmazanie bude ďalší commit.
+- [x] v7: nasadenie playground-v3 zrušené (2026-11-04), overovať netreba.
+- [ ] v7: `v7/`, `tools/build_v7.py` sú nesledované. Rozhodnúť o commite.
+- [ ] v7: ďalšie nasadenia (playground-v1, v2) sa nemenia, ak Patrik nepožiada.
 - [ ] v6: video s deťmi má 5 s a kamera sa hýbe, pri slučke je vidno skok. Nahradiť dlhším alebo plynulou slučkou.
-- [ ] v6: podstránky Ihriská na mieru, Prerábka, Revízie, O nás ešte nie sú v štýle v6 (odkazy idú na v5).
+- [x] v6: podstránky Ihriská na mieru, Prerábka, Revízie, O nás sú v štýle v6 (generuje build_v6.py).
 - [ ] v6: zmazať ručne nepoužité fonty `v6/fonts/Comico-Regular.woff2`, `PlusJakartaSans-VariableFont_wght.ttf`, `Switzer-VariableItalic.woff2` a `v6/.DS_Store` (zmazanie cez nástroj bolo zablokované; `.DS_Store` je v commite 823aedd).
 - [ ] v6: ikony vo formulári sú vlastné obrysové SVG. Skill design-taste odporúča Reicon Filled (nenainštalovaný). Rozhodnúť.
 - [ ] v6: Cabinet Grotesk má chybné `Ľ` (mäkčeň na zlom mieste). Zapísať do `font-diacritics.md` v design-taste skille, v labeloch sa `Ľ` vyhnúť.
-- [ ] v6: rozhodnúť, či pustiť v6 ako živú stránku (deploy, vetva `web` alebo Cloudflare/Hostzone, spýtať sa podľa DEPLOY.md).
+- [ ] v6: rozhodnúť, či pustiť v6 ako živú stránku (deploy, vetva `web` alebo Cloudflare/Hostzone, spýtať sa podľa DEPLOY.md). Na playground-v2 je staršia verzia v6 (bez kola z 2026-11-04 večer), playground-v3 zrušená.
 - [ ] v6: backend formulára (Resend) a jazyky SK/EN/DE (prepínač zatiaľ bez prekladu, na mobile skrytý).
 - [ ] Prejsť KLIENT.md a rozhodnúť: viac URL namiesto jedného scrollu, jazyky SK/EN/DE, admin, údržba (paušál).
 - [ ] Patrik overí slideshow projektov na živej stránke (Cmd+Shift+R), aj pri rýchlom klikaní.
@@ -50,6 +62,13 @@ Odpovede klienta z formulára a súhrn z druhého počítača sú v `KLIENT.md`.
 Mimo v3: zvyšných 8 podstránok z menu, doladený mobil, deploy, nové detaily 3D modelu, fotogrametria, CMS.
 
 ## Rozhodnutia
+- v6 mobil (Patrik, 2026-11-05): na mobile sa 3D model zväčší a popisy dielov sa skryjú, lebo sa prekrývali. Kroky pod modelom to vysvetľujú.
+- v6 mobil (Patrik, 2026-11-05): formulár sa overuje na výške 720 px a 1280x720 podľa snímky, výška stránky sa počíta aj s pätičkou.
+- v6 mobil (Patrik, 2026-11-05): mobil nesmie mať posun do strany. Je to záväzná podmienka pri každej ďalšej úprave.
+- v6 kolo 2026-11-04 večer (Patrik, štýl medium, odpovede AACAAA): 3D ako GLB + Three.js rozloženie pri scrolle (Ihriská na mieru), prerábka ako 3D „staré → nové“, akcent 3 varianty na výber, mriežka 12/8/4, poznámky cez lokálny server do súboru, výsledok len na localhoste, deploy až po kontrole. Ilustrácie kreslí skill claude-drawing (kódom, zadarmo), nie Gemini.
+- Snímky stavby a renderu (Patrik, 2026-11-04): 1920x1080, WebP q75 (80 MB spolu), na v5, v6 a oboch nasadeniach.
+- playground-v3 (Patrik, 2026-11-04): subdoména aj priečinok zmazané, lokálne v7 ostáva.
+- Deploy v7 (Patrik, 2026-11-04): Hostzone (cPanel, SFTP), nie Cloudflare. Adresa je nová subdoména `playground-v3.sarkozypatrik.sk` (Patrik napísal „sarkozy.patrik“, doména je `sarkozypatrik.sk`). Priečinok `/home2/hkjdxbcf/playground-v3`, rovnaká štruktúra ako `playground-v2`. Subdoménu založil cez cPanel UAPI až po ÁNO. Ďalšie domény, DNS ani súbory mimo `playground-v3` sa nemenia.
 - v6 (Patrik, 2026-11-03 a 04): žiadny homemade štýl, ide sa len quality podľa skillu design-taste. Font Switzer (hlavný), Cabinet Grotesk len na malé štítky, bez kurzívy. Jediné odvážne rozhodnutie je plná červená #FF2712 (výzva), červená bodka pri štítkoch a časovači. Terakota a krém z homemade sa zahodili (aj preto, že je to štandardná AI kombinácia).
 - v6 úvod: len video s deťmi cez celú obrazovku, 3D stavba z úvodu preč a presunutá na Realizácie (Patrik: „zatiaľ“). Tri panely podľa KLIENT.md (nové ihriská, prerábka a sťahovanie, revízie len okrajovo).
 - v6 realizácie: bento mriežka s 3D náklonom a svetlom pod kurzorom (inšpirácia award-winning-website bez GSAP, clip-path vynechaný, len transform a opacity), detail s depth. Depth mapy pre všetkých 12 projektov už sú v `assets/depth/`.
@@ -78,6 +97,36 @@ Mimo v3: zvyšných 8 podstránok z menu, doladený mobil, deploy, nové detaily
 - Pôvodné rozhodnutia: model z jednoduchých tvarov podľa fotiek Šamorín, PBR textúry CC0, žiadne padanie dielov (fade a malý posun), logo biele SVG cez CSS mask, len lokálne.
 
 ## Posledné zmeny
+### 2026-11-05: v6 mobil (lokálne, nekomitnuté, nenasadené)
+- Mobil nemá posun do strany. Podľa Patrika overené.
+- Formulár: pri 1280x720 sa vojde (výška stránky vrátane pätičky, overené na snímke). Pri 720 px výšky sa vojde tiež.
+- 3D na mobile: model zväčšený, popisy dielov skryté, lebo sa prekrývali. Kroky pod modelom to vysvetľujú.
+- Snímky stavby a renderu, playground-v3 zrušená: bez zmeny oproti záznamu z 2026-11-04.
+- Stav: Patrik overil, zatvoril prehliadač. Zmeny sú len na localhoste.
+
+### 2026-11-04: v6 (playground-v2) kolo medium: 3D, mriežka, akcent, ilustrácie, poznámky (lokálne, nekomitnuté, nenasadené)
+- Sekanie slov: nadpisy sa delia na slová až po načítaní písma (`fontsReady` v main.js), do tej doby sú skryté (`body:not(.go)`), fonty `font-display: block`. Príčina: `text-wrap: balance` + swap písma zalomili riadky dvakrát. Lokálne sa písmo načíta hneď, preto sa pôvodná chyba nedala zopakovať; over na živom webe.
+- Hero: tlačidlo Pauza zrušené (video beží, pri reduced-motion stojí).
+- Formulár: nový krok 3 „Dokedy má byť ihrisko hotové“ (Čo najskôr, Do troch mesiacov, Do pol roka, Zatiaľ sa len pýtam, ako vo v5), 4 kroky v ukazovateli, termín ide do e-mailu. Vojde sa pri 1280x720.
+- Mriežka: premenné `--cols` (12 desktop, 8 pri 861 až 1100 px, 4 mobil) a `--gap` vo všetkých sekciách, bento má rovnakú medzeru. Prekrytie mriežky: `?grid` v adrese alebo kláves G.
+- Červený akcent, 3 varianty, prepínač A/B/C vľavo dole len na localhoste (pamätá sa v localStorage, `?accent=a|b|c`): A kľúčové slovo nadpisu a čísla sekcií červené, B červené loptičky v hlavičke podstránok a pri šípkach, C červené linky, plochy a hover.
+- 3D z `~/Desktop/hrisko/ihrisko-b-realita.blend`: export Blender CLI do `v6/models/ihrisko.glb` (1,9 MB, len ihrisko bez haly) a `models/gulicky.json` (5 210 loptičiek). Modul `v6/play3d.js` (Three.js 0.160 z unpkg, importmap v hlavičke): Ihriská na mieru = rozloženie na časti s popismi pri scrolle, Prerábka = staré žlto-červené ihrisko sa rozoberie, zmení farby, pribudnú prvky, zloží sa. Ťahaním sa otáča. Na mobile bez popisov.
+- Ilustrácie skillom claude-drawing (nainštalovaný do `~/.claude/skills/claude-drawing`, z github.com/cloveric/claude-drawing-skill, bez GIF ukážok): `tools/ill_pop.py` (pop silkscreen, 4 panely šmykľavka a loptičky, na úvode nad výzvou) a `tools/ill_gouache.py` (retro gouache bazén, v O nás). Výstup `v6/ill/*.webp`.
+- Poznámky k prvkom: `python3 tools/review_server.py` (port 8914), adresa `...?review`, klik na prvok, poznámka sa uloží do `poznamky.json` v koreni. Kláves R vypne / zapne. V súbore je 1 testovacia poznámka (zmazanie bolo zablokované), zmaž ju krížikom v zozname.
+- Overené (agent-browser): 1440, 1000, 390 px bez posunu do strany, konzola bez chýb, 3D v oboch režimoch, uloženie poznámky. Neoverené: Safari, výkon 3D na telefóne.
+
+### 2026-11-04: snímky 1920x1080, zrušená playground-v3
+- Stavba (240) a render (360) nanovo z `~/Desktop/hrisko` ako WebP 1920x1080 q75 (stavba 29 MB, render 51 MB, predtým 1600x900 q72, 53 MB). Lokálne v `v5/frames`, `v6/frames` (`v7/frames` je odkaz na v6).
+- Hostzone: nahraté do `playground-v1/frames` (obsah v5) a `playground-v2/frames` (obsah v6). Overené cez HTTP: 200, veľkosti sedia so zdrojom.
+- Subdoména `playground-v3.sarkozypatrik.sk` zrušená (cPanel API2 SubDomain::delsubdomain), priečinok `/home2/hkjdxbcf/playground-v3` zmazaný. Adresa vracia 404. Lokálne `v7/` ostalo.
+
+### 2026-11-04: commit 4220d93, v7 nasadená na playground-v3 (Hostzone)
+- Commit 4220d93 (12:58) na `V6-verzia-2`: stavba ihriska, realizácie, podstránky, výzva. V commite sú aj sady `ihrisko-360-180`, `ihrisko-360-120` a `ihrisko-360`, staré dve treba zmazať.
+- Vznikol priečinok `v7/` (nekomitnutý) a `tools/build_v7.py`.
+- Deploy na Hostzone: nová subdoména `playground-v3.sarkozypatrik.sk`, priečinok `/home2/hkjdxbcf/playground-v3`. Nahraté 8 HTML stránok, CSS, skripty, fonty, assets, frames 240 + 360, video (cca 64 MB, upload 43 s).
+- Pred deployom existovali `playground-v1` a `playground-v2`. Nemenili sa.
+- Overenie: výsledok HTTP kontroly v zápise chýba. Stav „funguje“ zatiaľ neplatí.
+
 ### 2026-11-04: nové rendery, písaná výzva, realizácie v5, texty v6 (Sonnet + Opus, nekomitnuté)
 - Fyzikálne 3D ihrisko je zrušené všade (súbory `playground3d.js`, `pg.css` zmazané). Patrikovi sa nepáčilo.
 - Snímky z Blenderu (`~/Desktop/hrisko/stavba` 240, `render` 360) sú ako WebP 1600x900 v `v5/frames/` a `v6/frames/` (stavba 20 MB, render 33 MB, nie sú v gite).
@@ -214,4 +263,4 @@ Mimo v3: zvyšných 8 podstránok z menu, doladený mobil, deploy, nové detaily
 - Assety z play-ground.sk: logo, fotky, farby, písmo Kanit.
 
 ## Ďalší krok
-Patrik otvorí v5 (http://127.0.0.1:8914/projekty.html a prerabka.html) a v6 (http://127.0.0.1:8913/prerabka.html, ihriska.html, o-nas.html, revizie.html, kontakt.html), vyskúša ťahanie ihriska a formuláre a napíše pripomienky. Potom: texty SK/EN/DE, backend formulára (Resend), commit a deploy.
+Patrik prejde v6 na http://127.0.0.1:8914/index.html?review&grid, vyberie variant akcentu (A/B/C) a zapíše poznámky. Potom ich prečítať z `poznamky.json`, opraviť a po súhlase nasadiť na playground-v2.
