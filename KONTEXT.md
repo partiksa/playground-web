@@ -3,12 +3,14 @@ stav: rozpracovaný
 ---
 # loso (redizajn play-ground.sk)
 
-Posledná aktualizácia: 2026-11-05 17:50
+Posledná aktualizácia: 2026-11-06 18:00
 
 ## Cieľ
 Moderný web firmy PLAYGROUND (interiérové detské ihriská, Trnava) s 3D ihriskom, ktoré sa pri scrolle postaví. Identita zo starého webu: logo, farby, písmo Kanit.
 
 ## Stav
+- NAJNOVŠIE (2026-11-06, commit 9236700 na GitHube, vetva V6-verzia-2): v6 prerobená podľa poznámok Patrika. Nový úvod (hero s videom a voskovkovými kresbami, karty služieb, pás realizácií), loading s čiernym logom na papieri (intro.js, zmenší sa do hlavičky), Postup a Kde sa hodia s voskovkovými ilustráciami (v6/ill/crayon), Realizácie ako veľké riadky (5 najlepších fotiek veľko, 7 menších, filter zrušený), zoznam 3D vizualizácií (`VIZ` v build_v6.py), 3D rozloženie zjednodušené na 5 častí (siete ostávajú), reduced motion sa ignoruje, poistka proti prázdnej stránke (window.__ok, trieda fs). Akcenty: voskovkové podčiarknutia (`.mk`, ul-*.webp) a škvrny (dot-*.webp) v 7 farbách, žltá `--sun` #FFC93A, výzva na podstránkach v inej farbe (modrá, tyrkysová, fialová, oranžová, žltá), úvod červená. Skripty ilustrácií: tools/crayon, tools/crayon2 (strokes.py). Review server: `python3 tools/review_server.py` (8914, `?review`), telefón: tools/phone_server.py (8915).
+- NENASADENÉ: na playground-v1.sarkozypatrik.sk je staršia verzia v6 z 2026-11-06 (bez poslednej série zmien). Nasadenie len po súhlase Patrika: `python3 tools/deploy_v6.py` (dist-v6), záloha je v zaloha-playground-v1/. Príčina, prečo stránka na doméne Patrikovi nefungovala, nie je známa (v Chrome ide), čaká na jeho prehliadač a zariadenie.
 - NAJNOVŠIE (2026-11-05): v6 má lokálne (nekomitnuté, nenasadené) 3D z Blendera na Ihriská na mieru a Prerábka, mriežku 12/8/4, 3 varianty červeného akcentu (A/B/C, čaká na výber), krok „Dokedy“ vo formulári, bez tlačidla Pauza, opravu sekania slov a ilustrácie (pop silkscreen, gouache). Na kontrolu beží `tools/review_server.py` (port 8914, `?review&grid`), poznámky idú do `poznamky.json`. Podstránky v6 už generuje `tools/build_v6.py` (7 HTML), bod nižšie o odkazoch na v5 je zastaraný. Mobil (2026-11-05, podľa Patrika overené): bez posunu do strany, formulár sa vojde pri 720 px výšky, 3D model zväčšený, popisy na mobile skryté. Všetko lokálne, nič nenasadené ani nekomitnuté.
 - AKTUÁLNE je v6 (priečinok `v6/`, štýl quality, Switzer a Cabinet Grotesk, bez kurzívy, paleta ink #141310, papier #F7F4EE, sivá #6B6659, jediný odvážny prvok červená #FF2712). Na GitHube je vetva `V6-verzia-2` (commit 4220d93 z 2026-11-04 12:58, predtým 823aedd, bez zmien na `main` a `web`). Starší obsah nižšie (v1 až v5, identita) je história.
 - v7 (priečinok `v7/`, nekomitnuté, generuje `tools/build_v7.py`): len lokálne. Nasadenie playground-v3 je od 2026-11-04 zrušené. Živé sú playground-v1 (v5) a playground-v2 (v6), obe so snímkami 1920x1080.
