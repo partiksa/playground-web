@@ -12,7 +12,7 @@ const CH: [number, number][] = [[0, 20], [22, 46], [48, 66], [68, 98], [100, 148
 export default async function Home({ params }: P) {
   const s = site(toLang((await params).lang));
   preload("/kav/k000.webp", { as: "image", fetchPriority: "high" });
-  const { m, T, fmt, P, fig, tel, btnDopyt, secHd, pcards, more, faqSec, F, cta, rzItem } = s;
+  const { m, T, fmt, P, fig, tel, btnDopyt, secHd, pcards, more, faqSec, F, cta, rzItem, why } = s;
 
   const svc: [Parameters<typeof P>[0], string, string, string, string][] = [
     ["ihriska", m("common.nav.ihriska"), T("Návrh, 3D vizualizácia, výroba a montáž na kľúč. Podľa noriem EN 1176 a EN 1177.",
@@ -85,6 +85,8 @@ export default async function Home({ params }: P) {
           ))}
         </ul>
       </section>
+
+      {why()}
 
       <section className="sec" aria-labelledby="rz-h">
         {secHd(m("common.nav.realizacie"), T("Postavené, nie {N}akreslené", "Postavená, ne {N}akreslená", "Built, not just {D}rawn", "Gebaut, nicht nur {G}ezeichnet"), "rz-h")}

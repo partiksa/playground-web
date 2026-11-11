@@ -213,10 +213,74 @@ export function site(lang: Lang) {
   const pcards = (slugs: string[], c3 = false) => <div className={`pcards${c3 ? " c3" : ""}`}>{slugs.map((s) => pcard(s))}</div>;
   const more = (to: string, label: string) => <div className="sec-more rv"><a className="more" href={to}>{fmt(label)} {AR}</a></div>;
 
-  return { lang, m, T, fmt, P, AR, fig, tel, btnDopyt, secHd, rows, faqBlock, faqSec, F, cta, rzItem, pcard, pcards, more };
+  /** Prečo PLAYGROUND: 5 výhod s ikonami (úvod a Ihriská na mieru) */
+  function why(n?: string) {
+    const items: [keyof typeof ICONS, string, string][] = [
+      ["design", T("Dizajn na mieru", "Design na míru", "Custom design", "Design nach Maß"),
+        T("Ihrisko navrhneme podľa priestoru a prevádzky. Dbáme na bezpečnosť a na to, aby sa využil každý meter.",
+          "Hřiště navrhneme podle prostoru a provozu. Dbáme na bezpečnost a na to, aby se využil každý metr.",
+          "We design the playground around your space and venue, with safety first and every metre put to use.",
+          "Wir planen den Spielplatz passend zu Raum und Betrieb. Sicherheit steht an erster Stelle, jeder Meter wird genutzt.")],
+      ["warranty", T("24 mesiacov záruky", "24 měsíců záruky", "24-month warranty", "24 Monate Garantie"),
+        T("Na ihriská dávame záruku 24 mesiacov. Servis a náhradné diely máme vo vlastnom sklade.",
+          "Na hřiště dáváme záruku 24 měsíců. Servis a náhradní díly máme ve vlastním skladu.",
+          "Our playgrounds come with a 24-month warranty. Service and spare parts come from our own stock.",
+          "Auf unsere Spielplätze geben wir 24 Monate Garantie. Service und Ersatzteile kommen aus unserem eigenen Lager.")],
+      ["delivery", T("Dodanie za 5\u00a0až\u00a08 týždňov", "Dodání za 5\u00a0až\u00a08 týdnů", "Delivery in 5\u00a0to\u00a08 weeks", "Lieferung in 5\u00a0bis\u00a08 Wochen"),
+        T("Ihrisko na mieru dodáme do 5 až 8 týždňov od schválenia návrhu.",
+          "Hřiště na míru dodáme do 5 až 8 týdnů od schválení návrhu.",
+          "We deliver a custom playground within 5 to 8 weeks of design approval.",
+          "Einen Spielplatz nach Maß liefern wir innerhalb von 5 bis 8 Wochen nach Freigabe des Entwurfs.")],
+      ["parts", T("Kvalitné príslušenstvo", "Kvalitní příslušenství", "Quality accessories", "Hochwertiges Zubehör"),
+        T("Bezpečnostné prvky, siete a obaly sú súčasťou každého ihriska. Nič z toho nie je príplatok.",
+          "Bezpečnostní prvky, sítě a obaly jsou součástí každého hřiště. Nic z toho není příplatek.",
+          "Safety features, nets and padding are part of every playground, never an extra.",
+          "Sicherheitselemente, Netze und Polster gehören zu jedem Spielplatz. Nichts davon kostet extra.")],
+      ["cert", T("Certifikované produkty", "Certifikované produkty", "Certified products", "Zertifizierte Produkte"),
+        T("Ihriská sú certifikované podľa európskej normy EN 1176 pre vybavenie detských ihrísk.",
+          "Hřiště jsou certifikovaná podle evropské normy EN 1176 pro vybavení dětských hřišť.",
+          "Our playgrounds are certified to the European standard EN 1176 for playground equipment.",
+          "Unsere Spielplätze sind nach der europäischen Norm EN 1176 für Spielplatzgeräte zertifiziert.")],
+    ];
+    return (
+      <section className="sec" aria-labelledby="why-h">
+        {secHd(T("Prečo PLAYGROUND", "Proč PLAYGROUND", "Why PLAYGROUND", "Warum PLAYGROUND"),
+          T("Ihrisko bez {S}tarostí", "Hřiště bez {S}tarostí", "A playground without {W}orries", "Ein Spielplatz ohne {S}orgen"), "why-h", n)}
+        <ul className="why stg">
+          {items.map(([ic, t, p]) => (
+            <li key={ic}>
+              <Icon name={ic} />
+              <h3 className="h h3">{fmt(t)}</h3>
+              <p className="p">{fmt(p)}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+    );
+  }
+
+  return { lang, m, T, fmt, P, AR, fig, tel, btnDopyt, secHd, rows, faqBlock, faqSec, F, cta, rzItem, pcard, pcards, more, why };
 }
 
 export type Site = ReturnType<typeof site>;
+
+/* ---------- čiarové ikony pre „Prečo PLAYGROUND“: tmavá čiara, červená bodka ako pri štítkoch ---------- */
+const ICONS = {
+  design: <><rect x="7" y="15" width="26" height="26" rx="1" /><path d="M20 33 L38 15 L42 19 L24 37 L19 38 Z" /><path d="M35 18 L39 22" /></>,
+  warranty: <><path d="M24 6 L38 11 V23 C38 32 31 38 24 42 C17 38 10 32 10 23 V11 Z" /><path d="M18 24 L22.5 28.5 L31 19.5" /></>,
+  delivery: <><rect x="5" y="15" width="23" height="17" rx="1" /><path d="M28 21 H36 L42 28 V32 H28 Z" /><circle cx="13" cy="35" r="3.5" /><circle cx="35" cy="35" r="3.5" /></>,
+  parts: <><rect x="8" y="8" width="32" height="32" rx="2" /><path d="M18.7 8 V40 M29.3 8 V40 M8 18.7 H40 M8 29.3 H40" /></>,
+  cert: <><circle cx="24" cy="19" r="11" /><path d="M19 23 L23 26.5 L29.5 17" /><path d="M17 28 L14 42 L19.5 39 L23 43" /><path d="M31 28 L34 42 L28.5 39 L25 43" /></>,
+};
+
+function Icon({ name }: { name: keyof typeof ICONS }) {
+  return (
+    <svg className="why-ic" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+      <g fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">{ICONS[name]}</g>
+      <circle cx="43" cy="6" r="3.5" fill="var(--red)" />
+    </svg>
+  );
+}
 
 /** text bez Slinkee značiek (titulky, alt, JSON-LD) */
 export function plain(t: string) {

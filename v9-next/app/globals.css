@@ -520,3 +520,13 @@ body:has(#story) .hd.dark:not(.solid) { filter: drop-shadow(0 0 9px rgba(0, 0, 0
 .ft-balls { position: relative; height: clamp(84px, 8vw, 132px); margin-top: clamp(16px, 2vw, 28px); touch-action: pan-y; contain: strict; }
 .ft-balls canvas { position: absolute; inset: 0; width: 100%; height: 100%; cursor: grab; }
 .ft-balls.grab canvas { cursor: grabbing; }
+
+/* Prečo PLAYGROUND: 5 výhod s ikonami */
+.why { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(28px, 3vw, 48px) var(--gap); }
+.why li { border-top: 1px solid var(--ink); padding-top: clamp(18px, 1.8vw, 26px); }
+.why-ic { display: block; width: clamp(40px, 3.4vw, 52px); height: auto; margin-bottom: clamp(16px, 1.6vw, 24px); color: var(--ink); }
+.why .h3 { font-size: clamp(1.0625rem, .9rem + .45vw, 1.375rem); }
+.why .p { margin-top: 10px; font-size: 1rem; line-height: 1.55; color: var(--mute); }
+@media (max-width: 1180px) { .why { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 760px) { .why { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .why { grid-template-columns: 1fr; } }

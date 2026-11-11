@@ -9,7 +9,7 @@ export const generateMetadata = ({ params }: P) => pageMetadata(params, "ihriska
 
 export default async function Ihriska({ params }: P) {
   const s = site(toLang((await params).lang));
-  const { m, T, fmt, P, AR, fig, btnDopyt, secHd, rows, pcards, more, faqSec, F, cta } = s;
+  const { m, T, fmt, P, AR, fig, btnDopyt, secHd, rows, pcards, more, faqSec, F, cta, why } = s;
   preload("/360/r12.webp", { as: "image" });
 
   const steps = [1, 2, 3, 4, 5].map((i) => m(`home.chapters[${i}].eb`) as string);
@@ -90,13 +90,15 @@ export default async function Ihriska({ params }: P) {
         <div className="c-fig">{fig("rz/trnava/07.webp", m("ihriska.material.alt"), "r34")}</div>
       </section>
 
+      {why("06")}
+
       <section className="sec">
-        {secHd(m("common.nav.realizacie"), T("Nové ihriská z {P}raxe", "Nová hřiště z {P}raxe", "New playgrounds in {P}ractice", "Neue Spielplätze aus der {P}raxis"), undefined, "06")}
+        {secHd(m("common.nav.realizacie"), T("Nové ihriská z {P}raxe", "Nová hřiště z {P}raxe", "New playgrounds in {P}ractice", "Neue Spielplätze aus der {P}raxis"), undefined, "07")}
         {pcards(["trnava", "samorin", "oravice"], true)}
         {more(P("realizacie"), m("o-nas.samorin.more"))}
       </section>
 
-      {faqSec(faq, "07")}
+      {faqSec(faq, "08")}
       {cta("nove")}
     </Shell>
   );
