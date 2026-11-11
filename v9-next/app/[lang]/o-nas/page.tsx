@@ -8,7 +8,7 @@ export const generateMetadata = ({ params }: P) => pageMetadata(params, "o-nas")
 
 export default async function ONas({ params }: P) {
   const s = site(toLang((await params).lang));
-  const { m, T, fmt, P, fig, secHd, rows, more, cta } = s;
+  const { m, T, fmt, P, fig, secHd, rows, more, cta, why } = s;
 
   const st = [0, 1, 2].map((i) => m(`o-nas.stats[${i}]`));
   const diff = [0, 1, 2, 3].map((i) => [m(`o-nas.diff.rows[${i}].t`), m(`o-nas.diff.rows[${i}].p`)] as [string, string]);
@@ -41,6 +41,8 @@ export default async function ONas({ params }: P) {
         {secHd(m("o-nas.diff.eb"), m("o-nas.diff.h"))}
         {rows(diff)}
       </section>
+
+      {why()}
 
       <section className="sec">
         {secHd(T("Kde pôsobíme", "Kde působíme", "Where we work", "Wo wir arbeiten"), T("Šesť {K}rajín", "Šest {Z}emí", "Six {C}ountries", "Sechs {L}änder"))}
