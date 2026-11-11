@@ -3,8 +3,8 @@
    kurzor ich rozhadzuje, loptičku možno chytiť a hodiť. Slučka stojí, keď sa nič nehýbe alebo pätička nie je vidieť. */
 import { useEffect, useRef } from "react";
 
-// pätička je červená (#FF2712): loptičky v papierovej, bielej a tmavej (paleta v9, žiadne ďalšie farby)
-const COLORS = ["#DEDDDB", "#DEDDDB", "#ffffff", "#ffffff", "#141310"];
+// pätička je červená: loptičky v papierovej, bielej, tmavej, žltej a oranžovej (Patrik 2026-11-11); padajú za textom od horného okraja pätičky
+const COLORS = ["#DEDDDB", "#FFC93A", "#ffffff", "#FF8A1F", "#141310", "#FFC93A", "#ffffff"];
 type Ball = { x: number; y: number; vx: number; vy: number; r: number; c: string; born: number };
 
 function sprite(color: string, r: number, dpr: number) {
@@ -49,7 +49,7 @@ export default function FooterBalls() {
       const n = Math.round(Math.min(mobile ? 34 : 90, (w / base) * (mobile ? 1.1 : 1.5)));
       for (let i = 0; i < n; i++) {
         const r = Math.round(base * (0.8 + Math.random() * 0.45));
-        balls.push({ x: r + Math.random() * (w - 2 * r), y: -r - Math.random() * h * 0.9 - i * 4, vx: (Math.random() - 0.5) * 120, vy: 0, r, c: COLORS[i % COLORS.length], born: i * 16 });
+        balls.push({ x: r + Math.random() * (w - 2 * r), y: -r - Math.random() * 160 - i * 6, vx: (Math.random() - 0.5) * 120, vy: 0, r, c: COLORS[i % COLORS.length], born: i * 16 });
       }
       t0 = performance.now(); wake();
     };

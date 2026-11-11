@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import "../globals.css";
+import "../extras.css";
+import Cookies from "@/components/Cookies";
+import ImgReady from "@/components/ImgReady";
 import { jakarta, slinkee } from "@/lib/fonts";
 import { HREFLANG, LANGS, SITE, toLang } from "@/lib/i18n";
 
@@ -29,7 +32,7 @@ export default async function LangLayout({ children, params }: { children: React
       <head>
         <script dangerouslySetInnerHTML={{ __html: BOOT }} />
       </head>
-      <body className={`${jakarta.variable} ${slinkee.variable}`} suppressHydrationWarning>{children}</body>
+      <body className={`${jakarta.variable} ${slinkee.variable}`} suppressHydrationWarning>{children}<Cookies lang={lang} /><ImgReady /></body>
     </html>
   );
 }

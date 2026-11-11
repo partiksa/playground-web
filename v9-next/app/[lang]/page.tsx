@@ -61,7 +61,7 @@ export default async function Home({ params }: P) {
 
       <section className="sec" aria-labelledby="svc-h">
         {secHd(T("Čo robíme", "Co děláme", "What we do", "Was wir machen"),
-          T("Nové, prerobené aj {S}kontrolované", "Nová, přestavěná i {Z}kontrolovaná", "New, rebuilt and {C}hecked", "Neu, umgebaut und {G}eprüft"), "svc-h")}
+          T("Nové, prerobené|aj {S}kontrolované", "Nová, přestavěná|i {Z}kontrolovaná", "New, rebuilt|and {C}hecked", "Neu, umgebaut|und {G}eprüft"), "svc-h")}
         <div className="intro"><p className="lead rv">{fmt(T(
           "PLAYGROUND z Trnavy navrhuje, vyrába a montuje interiérové detské ihriská na mieru pre rodinné centrá, kaviarne, hotely, škôlky a aquaparky. Staré ihriská prerábame a sťahujeme, hotové kontrolujeme a servisujeme.",
           "PLAYGROUND z Trnavy navrhuje, vyrábí a montuje interiérová dětská hřiště na míru pro rodinná centra, kavárny, hotely, školky a aquaparky. Stará hřiště přestavujeme a stěhujeme, hotová kontrolujeme a servisujeme.",
@@ -89,7 +89,7 @@ export default async function Home({ params }: P) {
       {why()}
 
       <section className="sec" aria-labelledby="rz-h">
-        {secHd(m("common.nav.realizacie"), T("Postavené, nie {N}akreslené", "Postavená, ne {N}akreslená", "Built, not just {D}rawn", "Gebaut, nicht nur {G}ezeichnet"), "rz-h")}
+        {secHd(m("common.nav.realizacie"), T("Postavené,|nie {N}akreslené", "Postavená,|ne {N}akreslená", "Built,|not just {D}rawn", "Gebaut,|nicht nur {G}ezeichnet"), "rz-h")}
         {pcards(["samorin", "hlohovec", "pezinok", "karvina-tubing"])}
         {more(P("realizacie"), m("o-nas.samorin.more"))}
       </section>

@@ -70,12 +70,18 @@
     var href = "mailto:info@play-ground.sk?subject=" + encodeURIComponent(KT.subject.replace("{name}", v("meno"))) + "&body=" + encodeURIComponent(body);
     document.getElementById("mailGo").href = href;
     box.querySelector(".done .p").textContent = plan ? KT.doneTextPlan : KT.doneText;
-    location.href = href;
-    box.classList.add("sent");
-    var done = box.querySelector(".done");
-    gsap.from(done.children, { autoAlpha: 0, y: 18, duration: .8, ease: "power3.out", stagger: .06 });
-    done.focus({ preventScroll: true });
-    ScrollTrigger.refresh();
+    // odoslanie: šípka vyletí, tlačidlo sa stlačí a rozvlní, potom sa ukáže poďakovanie
+    var sb = form.querySelector('button[type="submit"]');
+    sb.classList.remove("fly"); void sb.offsetWidth; sb.classList.add("fly");
+    setTimeout(function () {
+      location.href = href;
+      box.classList.add("sent");
+      sb.classList.remove("fly");
+      var done = box.querySelector(".done");
+      gsap.from(done.children, { autoAlpha: 0, y: 18, duration: .8, ease: "power3.out", stagger: .06 });
+      done.focus({ preventScroll: true });
+      ScrollTrigger.refresh();
+    }, 750);
   });
   form.addEventListener("input", function (e) { if (e.target.getAttribute("aria-invalid") === "true") e.target.removeAttribute("aria-invalid"); });
   document.getElementById("copy").addEventListener("click", function () {

@@ -305,8 +305,8 @@
     var cols = gsap.utils.toArray(".ft-top > div");
     gsap.from(cols, { autoAlpha: 0, y: 24, duration: .9, ease: "power3.out", stagger: .08,
       scrollTrigger: { trigger: ".ft", start: "top 85%", once: true } });
-    gsap.from(".ft-word", { yPercent: 105, duration: 1.1, ease: "expo.out",
-      scrollTrigger: { trigger: ".ft-big", start: "top 95%", once: true } });
+    gsap.from(".ft-logo i", { yPercent: 105, duration: 1.1, ease: "expo.out",
+      scrollTrigger: { trigger: ".ft-logo", start: "top 95%", once: true } });
   }
 
   /* ---------- prechod medzi stránkami ---------- */

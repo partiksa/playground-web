@@ -30,7 +30,7 @@ export default async function Ihriska({ params }: P) {
 
   return (
     <Shell s={s} page="ihriska" faq={faq} scripts={["/js/ihriska.js"]}>
-      <section className="ph">
+      <section className="ph ph--ih">
         <p className="eb rv" data-now="">{fmt(m("ihriska.eb"))}</p>
         <h1 className="h h1" data-split="now">{fmt(m("ihriska.h1"))}</h1>
         <div className="ih-top">
@@ -38,7 +38,7 @@ export default async function Ihriska({ params }: P) {
             <p className="lead rv" data-now="" data-d=".15">{fmt(m("ihriska.lead"))}</p>
             <div className="acts rv" data-now="" data-d=".25">
               {btnDopyt("nove")}
-              <a className="more" href={P("home")}>{fmt(m("ihriska.more"))}</a>
+              <a className="more" href="#vznik">{fmt(m("ihriska.more"))}</a>
             </div>
           </div>
           <figure className="v3d">
@@ -55,20 +55,20 @@ export default async function Ihriska({ params }: P) {
           <p className="p rv">{fmt(m("ihriska.construction.p[0]"))}</p>
           <p className="p rv">{fmt(m("ihriska.construction.p[1]"))}</p>
         </div>
-        <div className="c-fig">{fig("img/projekt-05.webp", m("ihriska.construction.alt"), "r34")}</div>
+        <div className="c-fig">{fig("img/ihriska-konstrukcia.webp", m("ihriska.construction.alt"), "r34")}</div>
       </section>
 
       <section className="sec">
         {secHd(T("Postup", "Postup", "Process", "Ablauf"), T("Päť krokov po {O}dovzdanie", "Pět kroků k {P}ředání", "Five steps to {H}andover", "Fünf Schritte bis zur Über{G}abe"), undefined, "02")}
         {rows(steps.map((t, i) => [t, sp[i]] as [string, string]))}
-        {more(P("home"), m("ihriska.more"))}
+        {more("#vznik", m("ihriska.more"))}
       </section>
 
       <section className="sec">
         {secHd(m("ihriska.elements.eb"), m("ihriska.elements.h"), undefined, "03")}
-        {rows(els, true)}
+        {rows(els, true, false)}
         <p className="p rv" style={{ marginTop: 24 }}>{fmt(m("ihriska.elements.note"))}</p>
-        <div className="full" style={{ marginTop: "clamp(56px,7vw,112px)" }}>{fig("rz/trnava/02.webp", m("ihriska.elements.alt"), "r21")}</div>
+        <div className="full" style={{ marginTop: "clamp(56px,7vw,112px)" }}>{fig("img/ihriska-prvky.webp", m("ihriska.elements.alt"), "r21")}</div>
       </section>
 
       <section className="sec">
@@ -87,7 +87,7 @@ export default async function Ihriska({ params }: P) {
             <a className="more" href={P("realizacie")}>{fmt(m("ihriska.material.linkRealizacie"))} {AR}</a>
           </div>
         </div>
-        <div className="c-fig">{fig("rz/trnava/07.webp", m("ihriska.material.alt"), "r34")}</div>
+        <div className="c-fig">{fig("img/ihriska-sklad.webp", m("ihriska.material.alt"), "r34")}</div>
       </section>
 
       {why("06")}
@@ -98,7 +98,15 @@ export default async function Ihriska({ params }: P) {
         {more(P("realizacie"), m("o-nas.samorin.more"))}
       </section>
 
-      {faqSec(faq, "08")}
+      <section className="sec" id="vznik" aria-labelledby="vznik-h">
+        {secHd(T("Montáž", "Montáž", "Installation", "Montage"), m("ihriska.more"), "vznik-h", "08")}
+        <div className="full vznik">
+          <video src="/video/montaz.mp4" poster="/video/montaz.webp" muted playsInline loop preload="none" data-autoplay=""
+            aria-label={T("3D render montáže vesmírneho ihriska", "3D render montáže vesmírného hřiště", "3D render of the space playground being assembled", "3D-Render der Montage des Weltraum-Spielplatzes")} />
+        </div>
+      </section>
+
+      {faqSec(faq, "09")}
       {cta("nove")}
     </Shell>
   );

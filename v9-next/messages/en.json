@@ -33,9 +33,18 @@
   "seo": {
     "orgDescription": "Custom indoor playgrounds for children: design, manufacture, installation, rebuilds, relocations and inspections. Trnava, Slovakia.",
     "services": [
-      { "name": "Custom indoor playgrounds", "description": "Design, 3D visualisation, manufacture and installation of indoor playgrounds for family centres, cafés, hotels and nurseries." },
-      { "name": "Playground rebuilds and relocations", "description": "Rebuilding old playgrounds into new, certified ones, dismantling, transport and installation in a new space." },
-      { "name": "Playground inspections and service", "description": "Annual inspections and service of indoor playgrounds according to EN 1176 and EN 1177." }
+      {
+        "name": "Custom indoor playgrounds",
+        "description": "Design, 3D visualisation, manufacture and installation of indoor playgrounds for family centres, cafés, hotels and nurseries."
+      },
+      {
+        "name": "Playground rebuilds and relocations",
+        "description": "Rebuilding old playgrounds into new, certified ones, dismantling, transport and installation in a new space."
+      },
+      {
+        "name": "Playground inspections and service",
+        "description": "Annual inspections and service of indoor playgrounds according to EN 1176 and EN 1177."
+      }
     ]
   },
   "common": {
@@ -99,12 +108,12 @@
     "chapters": [
       {
         "eb": "Playground, Trnava",
-        "h": "Custom {P}layground",
+        "h": "Custom|{P}layground",
         "p": "An indoor playground for a family centre, café, hotel or nursery. We design it, build it and install it. From the first conversation to handover."
       },
       {
         "eb": "Consultation",
-        "h": "The first joint is a {C}onversation",
+        "h": "The first joint\nis a {C}onversation",
         "p": "The joint holds the whole structure together. For a playground, that joint is the first conversation. You tell us who the playground is for, how many children will use it and what it should bring to your business. Everything else follows from that."
       },
       {
@@ -119,8 +128,8 @@
       },
       {
         "eb": "Manufacture",
-        "h": "Safety is in the det{<A}ils",
-        "p": "We wrap the structure in foam and vinyl and enclose the space with nets. The playground meets EN 1176 and EN 1177. We keep tubes, joints, nets and foam in our own stock."
+        "h": "Safety is\nin the det{<A}ils",
+        "p": "We wrap the structure in foam and vinyl and enclose the space with nets. The playground meets EN 1176 and EN 1177. We use certified materials and parts only."
       },
       {
         "eb": "Delivery and installation",
@@ -161,18 +170,33 @@
     },
     "places": {
       "eb": "Where it fits",
-      "h": "For venues where children {A}re",
+      "h": "From café to {W}ater park",
       "items": [
-        { "t": "Family centres and play rooms", "p": "Fun for children during shopping and free time." },
-        { "t": "Cafés and pastry shops", "p": "Children play while parents relax." },
-        { "t": "Hotels and guesthouses", "p": "A family attraction on top of your offer." },
-        { "t": "Nurseries and education centres", "p": "A safe environment for play and development." },
-        { "t": "Water parks and swimming pools", "p": "Complete kids' zones." }
+        {
+          "t": "Family centres and play rooms",
+          "p": "Fun for children during shopping and free time."
+        },
+        {
+          "t": "Cafés and pastry shops",
+          "p": "Children play while parents relax."
+        },
+        {
+          "t": "Hotels and guesthouses",
+          "p": "A family attraction on top of your offer."
+        },
+        {
+          "t": "Nurseries and education centres",
+          "p": "A safe environment for play and development."
+        },
+        {
+          "t": "Water parks and swimming pools",
+          "p": "Complete kids' zones."
+        }
       ]
     },
     "material": {
       "eb": "Materials and service",
-      "h": "Parts in our own st{<O}ck",
+      "h": "Parts in our|own st{<O}ck",
       "p": [
         "We make playgrounds from quality materials with a focus on safety and long service life. In stock we have structural tubes, joints, nets, foam for wrapping the structure and hanging modules.",
         "We also provide service and annual inspections of playgrounds."
@@ -185,7 +209,7 @@
   "prerabka": {
     "eb": "New from old",
     "h1": "Rebuild and {R}elocation",
-    "lead": "We rebuild an old playground into a new, certified one, or relocate it to a new space.",
+    "lead": "We rebuild an old playground into a new, certified one, or relocate it|to a new space.",
     "alt": "Renovated indoor playground with a slide and ball pit, Dunajská Lužná",
     "cap": "Playground rebuild · Dunajská Lužná",
     "process": {
@@ -204,8 +228,8 @@
     },
     "rebuild": {
       "eb": "Rebuild",
-      "h": "From a Chinese import to certified",
-      "p": "We rebuild an old playground (most often a Chinese one) into a new, certified one. We reuse material from the original: steel from the structure, joints and undamaged modules.",
+      "h": "From low quality to certified",
+      "p": "We rebuild an old or low-quality playground into a new, certified one. We reuse material from the original: steel from the structure, joints and undamaged modules.",
       "list": [
         "replacement of worn play elements",
         "layout changes and better use of space",
@@ -236,8 +260,14 @@
     "cap": "Protective net inspection · AI illustration",
     "listLabel": "Inspections and service",
     "rows": [
-      { "t": "Annual inspection", "p": "We service and carry out annual inspections of playgrounds. We assess playgrounds according to EN 1176 (playground equipment) and EN 1177 (impact-absorbing surfaces)." },
-      { "t": "Service and parts", "p": "In stock we have structural tubes, joints, nets, foam for wrapping the structure and hanging modules." }
+      {
+        "t": "Annual inspection",
+        "p": "We service and carry out annual inspections of playgrounds. We assess playgrounds according to EN 1176 (playground equipment) and EN 1177 (impact-absorbing surfaces)."
+      },
+      {
+        "t": "Service and parts",
+        "p": "In stock we have structural tubes, joints, nets, foam for wrapping the structure and hanging modules."
+      }
     ]
   },
   "realizacie": {
@@ -252,18 +282,90 @@
       "photo": "photo"
     },
     "items": [
-      { "t": "New playground Kinder Club", "p": "Trnava", "y": "Dismantling and installation", "d": "Dismantling of the original and installation of a new indoor playground at Kinder Club Trnava.", "alt": "New playground Kinder Club, Trnava" },
-      { "t": "Playground rebuild", "p": "Dunajská Lužná", "y": "Rebuild", "d": "Renovation and rebuild of an indoor playground in Dunajská Lužná.", "alt": "Playground rebuild, Dunajská Lužná" },
-      { "t": "Renewal of structure covers", "p": "Klatovy, CZ", "y": "Renewal", "d": "Renewal of the foam covers on the structure of an indoor playground.", "alt": "Renewal of structure covers, Klatovy, CZ" },
-      { "t": "Custom indoor playground", "p": "Šamorín", "y": "New custom playground", "d": "A custom indoor playground connected to an existing wall with openings.", "alt": "Custom indoor playground, Šamorín" },
-      { "t": "Relocation and rebuild of a playground", "p": "Hlohovec", "y": "Relocation and rebuild", "d": "Dismantling of a three-level indoor playground and rebuilding it as a new two-level playground in a primary school corridor.", "alt": "Relocation and rebuild of a playground, Hlohovec" },
-      { "t": "New playground in Pezinok", "p": "Pezinok", "y": "Dismantling and installation", "d": "Dismantling, installation and modification of a new indoor playground in Pezinok.", "alt": "New playground in Pezinok, Pezinok" },
-      { "t": "Relocated and renewed playground", "p": "Králův Dvůr, CZ", "y": "Relocation and renewal", "d": "A relocated and renewed indoor playground in Králův Dvůr near Beroun.", "alt": "Relocated and renewed playground, Králův Dvůr, CZ" },
-      { "t": "Climbing wall for children", "p": "Karviná, CZ", "y": "Climbing wall", "d": "A climbing wall is a good addition to a play centre.", "alt": "Climbing wall for children, Karviná, CZ" },
-      { "t": "Tubing slide", "p": "Karviná, CZ", "y": "Tubing slide", "d": "A tubing slide built as a free-standing play element. Children spend the most time on it.", "alt": "Tubing slide, Karviná, CZ" },
-      { "t": "Playground at a swimming pool", "p": "Praha, CZ", "y": "Installation", "d": "Installation of a used indoor playground on the grounds of a swimming pool in Prague.", "alt": "Playground at a swimming pool, Praha, CZ" },
-      { "t": "Playground and tubing slide extension", "p": "Uherský Brod, CZ", "y": "Extension", "d": "An extension of an indoor playground and a tubing slide added to an existing indoor playground.", "alt": "Playground and tubing slide extension, Uherský Brod, CZ" },
-      { "t": "Kids' zone in a water park", "p": "Oravice, Meander", "y": "New kids' zone", "d": "Installation of a complete kids' zone with a modular indoor playground in the Meander Oravice water park.", "alt": "Kids' zone in a water park, Oravice, Meander" }
+      {
+        "t": "New playground Kinder Club",
+        "p": "Trnava",
+        "y": "Dismantling and installation",
+        "d": "Dismantling of the original and installation of a new indoor playground at Kinder Club Trnava.",
+        "alt": "New playground Kinder Club, Trnava"
+      },
+      {
+        "t": "Playground rebuild",
+        "p": "Dunajská Lužná",
+        "y": "Rebuild",
+        "d": "Renovation and rebuild of an indoor playground in Dunajská Lužná.",
+        "alt": "Playground rebuild, Dunajská Lužná"
+      },
+      {
+        "t": "Renewal of structure covers",
+        "p": "Klatovy, CZ",
+        "y": "Renewal",
+        "d": "Renewal of the foam covers on the structure of an indoor playground.",
+        "alt": "Renewal of structure covers, Klatovy, CZ"
+      },
+      {
+        "t": "Custom indoor playground",
+        "p": "Šamorín",
+        "y": "New custom playground",
+        "d": "A custom indoor playground connected to an existing wall with openings.",
+        "alt": "Custom indoor playground, Šamorín"
+      },
+      {
+        "t": "Relocation and rebuild of a playground",
+        "p": "Hlohovec",
+        "y": "Relocation and rebuild",
+        "d": "Dismantling of a three-level indoor playground and rebuilding it as a new two-level playground in a primary school corridor.",
+        "alt": "Relocation and rebuild of a playground, Hlohovec"
+      },
+      {
+        "t": "New playground in Pezinok",
+        "p": "Pezinok",
+        "y": "Dismantling and installation",
+        "d": "Dismantling, installation and modification of a new indoor playground in Pezinok.",
+        "alt": "New playground in Pezinok, Pezinok"
+      },
+      {
+        "t": "Relocated and renewed playground",
+        "p": "Králův Dvůr, CZ",
+        "y": "Relocation and renewal",
+        "d": "A relocated and renewed indoor playground in Králův Dvůr near Beroun.",
+        "alt": "Relocated and renewed playground, Králův Dvůr, CZ"
+      },
+      {
+        "t": "Climbing wall for children",
+        "p": "Karviná, CZ",
+        "y": "Climbing wall",
+        "d": "A climbing wall is a good addition to a play centre.",
+        "alt": "Climbing wall for children, Karviná, CZ"
+      },
+      {
+        "t": "Tubing slide",
+        "p": "Karviná, CZ",
+        "y": "Tubing slide",
+        "d": "A tubing slide built as a free-standing play element. Children spend the most time on it.",
+        "alt": "Tubing slide, Karviná, CZ"
+      },
+      {
+        "t": "Playground at a swimming pool",
+        "p": "Praha, CZ",
+        "y": "Installation",
+        "d": "Installation of a used indoor playground on the grounds of a swimming pool in Prague.",
+        "alt": "Playground at a swimming pool, Praha, CZ"
+      },
+      {
+        "t": "Playground and tubing slide extension",
+        "p": "Uherský Brod, CZ",
+        "y": "Extension",
+        "d": "An extension of an indoor playground and a tubing slide added to an existing indoor playground.",
+        "alt": "Playground and tubing slide extension, Uherský Brod, CZ"
+      },
+      {
+        "t": "Kids' zone in a water park",
+        "p": "Oravice, Meander",
+        "y": "New kids' zone",
+        "d": "Installation of a complete kids' zone with a modular indoor playground in the Meander Oravice water park.",
+        "alt": "Kids' zone in a water park, Oravice, Meander"
+      }
     ]
   },
   "o-nas": {
@@ -272,19 +374,43 @@
     "lead": "We supply certified indoor playgrounds and trampoline centres. They help venues attract parents with children.",
     "statsLabel": "PLAYGROUND in numbers",
     "stats": [
-      { "value": 15, "suffix": "", "label": "years on the market" },
-      { "value": 180, "suffix": "+", "label": "projects" },
-      { "value": 6, "suffix": "", "label": "countries: Slovakia, Czech Republic, France, Italy, Estonia, Romania" }
+      {
+        "value": 15,
+        "suffix": "",
+        "label": "years on the market"
+      },
+      {
+        "value": 180,
+        "suffix": "+",
+        "label": "projects"
+      },
+      {
+        "value": 6,
+        "suffix": "",
+        "label": "countries: Slovakia, Czech Republic, France, Italy, Estonia, Romania"
+      }
     ],
     "alt": "Custom indoor playground by an orange wall, Šamorín",
     "diff": {
       "eb": "What sets us apart",
       "h": "From design to s{E}rvice",
       "rows": [
-        { "t": "Turnkey", "p": "From consultation, survey, design and visualisation to delivery and installation. We have also carried out hundreds of services and annual inspections of playgrounds." },
-        { "t": "Rebuilding an old playground", "p": "We rebuild an old playground into a new, certified one. We reuse the original structure, joints and undamaged modules, so you save money." },
-        { "t": "Our own stock", "p": "We keep structural tubes, joints, nets, wrapping foam and hanging modules in stock." },
-        { "t": "Advice on the space too", "p": "We help with the layout of the playground, the seating and the café area." }
+        {
+          "t": "Turnkey",
+          "p": "From consultation, survey, design and visualisation to delivery and installation. We have also carried out hundreds of services and annual inspections of playgrounds."
+        },
+        {
+          "t": "Rebuilding an old playground",
+          "p": "We rebuild an old playground into a new, certified one. We reuse the original structure, joints and undamaged modules, so you save money."
+        },
+        {
+          "t": "Our own stock",
+          "p": "We keep structural tubes, joints, nets, wrapping foam and hanging modules in stock."
+        },
+        {
+          "t": "Advice on the space too",
+          "p": "We help with the layout of the playground, the seating and the café area."
+        }
       ]
     },
     "samorin": {
@@ -328,11 +454,22 @@
       },
       "type": {
         "legend": "Type of venue",
-        "options": ["Family centre", "Café", "Hotel", "Nursery", "Other"]
+        "options": [
+          "Family centre",
+          "Café",
+          "Hotel",
+          "Nursery",
+          "Other"
+        ]
       },
       "when": {
         "legend": "When it should be ready",
-        "options": ["As soon as possible", "Within three months", "Within six months", "I am only asking for now"]
+        "options": [
+          "As soon as possible",
+          "Within three months",
+          "Within six months",
+          "I am only asking for now"
+        ]
       },
       "plan": {
         "legend": "Do you have a floor plan?",

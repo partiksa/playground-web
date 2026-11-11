@@ -41,7 +41,10 @@ export default async function Realizacie({ params }: P) {
       </div>
       <div className="md-in">
         <div className="md-txt"><p className="eb" /><h2 className="h" id="md-t" /><p className="p" /></div>
-        <div className="md-gal" />
+        <div className="md-gw">
+          <div className="md-gal" />
+          <button className="hs-ar" type="button" aria-label={T("Ďalšia fotka", "Další fotka", "Next photo", "Nächstes Foto")}>{"\u2192"}</button>
+        </div>
       </div>
     </div>
   );
@@ -52,14 +55,11 @@ export default async function Realizacie({ params }: P) {
         <p className="eb rv" data-now="">{fmt(m("realizacie.eb"))}</p>
         <h1 className="h h1" data-split="now">{fmt(m("realizacie.h1"))}</h1>
         <p className="lead rv" data-now="" data-d=".15">{fmt(m("realizacie.lead"))}</p>
-        <div className="flt rv" data-now="" data-d=".25" role="group" aria-label={T("Filter realizácií", "Filtr realizací", "Filter projects", "Projekte filtern")}>
-          {flt.map(([k, t]) => <button type="button" data-f={k} aria-pressed={k === "all" ? "true" : "false"} key={k}>{t}</button>)}
-        </div>
       </section>
 
       <section className="sec" aria-label={m("realizacie.listLabel")}>
         <ol className="rz-list">
-          {RZ.map(([slug, img, g], i) => {
+          {RZ.slice(0, 6).map(([slug, img, g], i) => {
             const it = rzItem(i);
             const big = Math.floor(i / 2) % 2 === 0;
             const pos = (i % 2 === 0) === big ? "big" : "small";
@@ -79,6 +79,25 @@ export default async function Realizacie({ params }: P) {
           })}
         </ol>
       </section>
+
+      {flt.slice(1).map(([g, t]) => (
+        <section className="sec rz-cat" aria-label={t} key={g}>
+          <div className="rz-cat-hd"><h2 className="h h3 rv">{t}</h2></div>
+          <div className="hs">
+            <ul className="hs-track">
+              {RZ.map(([slug, img, gg], i) => gg !== g ? null : (
+                <li className="hs-item" id={i >= 6 ? slug : undefined} key={slug}>
+                  <button className="rz-card" type="button" data-i={i} aria-haspopup="dialog">
+                    {fig(img, rzItem(i).alt, "r43", false)}
+                    <span className="pc-m"><span className="pc-pl">{fmt(rzItem(i).p)} · {fmt(rzItem(i).y)}</span><span className="rz-t">{fmt(rzItem(i).t)}</span></span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+            <button className="hs-ar" type="button" aria-label={T("Posunúť", "Posunout", "Scroll", "Weiter")}>{"\u2192"}</button>
+          </div>
+        </section>
+      ))}
 
       {cta()}
     </Shell>

@@ -33,9 +33,18 @@
   "seo": {
     "orgDescription": "Indoor-Spielplätze für Kinder nach Maß: Planung, Fertigung, Montage, Umbau, Umzug und Prüfung. Trnava, Slowakei.",
     "services": [
-      { "name": "Indoor-Spielplätze nach Maß", "description": "Planung, 3D-Visualisierung, Fertigung und Montage von Indoor-Spielplätzen für Familienzentren, Cafés, Hotels und Kindergärten." },
-      { "name": "Umbau und Umzug von Spielplätzen", "description": "Umbau alter Spielplätze zu neuen, normgerechten, Demontage, Transport und Montage in neuen Räumen." },
-      { "name": "Prüfung und Service von Spielplätzen", "description": "Jährliche Prüfungen und Service von Indoor-Spielplätzen nach EN 1176 und EN 1177." }
+      {
+        "name": "Indoor-Spielplätze nach Maß",
+        "description": "Planung, 3D-Visualisierung, Fertigung und Montage von Indoor-Spielplätzen für Familienzentren, Cafés, Hotels und Kindergärten."
+      },
+      {
+        "name": "Umbau und Umzug von Spielplätzen",
+        "description": "Umbau alter Spielplätze zu neuen, normgerechten, Demontage, Transport und Montage in neuen Räumen."
+      },
+      {
+        "name": "Prüfung und Service von Spielplätzen",
+        "description": "Jährliche Prüfungen und Service von Indoor-Spielplätzen nach EN 1176 und EN 1177."
+      }
     ]
   },
   "common": {
@@ -99,12 +108,12 @@
     "chapters": [
       {
         "eb": "Playground, Trnava",
-        "h": "Spielplatz nach {M}aß",
+        "h": "Spielplatz|nach {M}aß",
         "p": "Ein Indoor-Spielplatz für Familienzentrum, Café, Hotel oder Kindergarten. Wir planen ihn, fertigen ihn und bauen ihn auf. Vom ersten Gespräch bis zur Übergabe."
       },
       {
         "eb": "Beratung",
-        "h": "Die erste Verbindung ist das G{E}spräch",
+        "h": "Die erste Verbindung\nist das G{E}spräch",
         "p": "Die Verbindung hält die ganze Konstruktion zusammen. Beim Spielplatz ist es das erste Gespräch. Sie sagen uns, für wen der Spielplatz gedacht ist, wie viele Kinder dort spielen werden und was er Ihrem Betrieb bringen soll. Alles Weitere ergibt sich daraus."
       },
       {
@@ -119,8 +128,8 @@
       },
       {
         "eb": "Fertigung",
-        "h": "Sicherheit steckt im Det{<A}il",
-        "p": "Wir umhüllen die Konstruktion mit Schaumstoff und Vinyl und schließen den Raum mit Netzen ab. Der Spielplatz erfüllt die Normen EN 1176 und EN 1177. Rohre, Verbinder, Netze und Schaumstoffe haben wir im eigenen Lager."
+        "h": "Sicherheit steckt\nim Det{<A}il",
+        "p": "Wir umhüllen die Konstruktion mit Schaumstoff und Vinyl und schließen den Raum mit Netzen ab. Der Spielplatz erfüllt die Normen EN 1176 und EN 1177. Wir verwenden nur zertifizierte Materialien und Teile."
       },
       {
         "eb": "Lieferung und Montage",
@@ -161,18 +170,33 @@
     },
     "places": {
       "eb": "Wo er passt",
-      "h": "Für Betriebe, in denen K{I}nder sind",
+      "h": "Vom Café bis zum {A}quapark",
       "items": [
-        { "t": "Familienzentren und Spielräume", "p": "Unterhaltung für Kinder beim Einkaufen und in der Freizeit." },
-        { "t": "Cafés und Konditoreien", "p": "Die Kinder spielen, die Eltern entspannen." },
-        { "t": "Hotels und Pensionen", "p": "Eine Familienattraktion als Ergänzung zum Angebot." },
-        { "t": "Kindergärten und Bildungszentren", "p": "Eine sichere Umgebung zum Spielen und für die Entwicklung." },
-        { "t": "Erlebnisbäder und Schwimmbäder", "p": "Komplette Kinderbereiche." }
+        {
+          "t": "Familienzentren und Spielräume",
+          "p": "Unterhaltung für Kinder beim Einkaufen und in der Freizeit."
+        },
+        {
+          "t": "Cafés und Konditoreien",
+          "p": "Die Kinder spielen, die Eltern entspannen."
+        },
+        {
+          "t": "Hotels und Pensionen",
+          "p": "Eine Familienattraktion als Ergänzung zum Angebot."
+        },
+        {
+          "t": "Kindergärten und Bildungszentren",
+          "p": "Eine sichere Umgebung zum Spielen und für die Entwicklung."
+        },
+        {
+          "t": "Erlebnisbäder und Schwimmbäder",
+          "p": "Komplette Kinderbereiche."
+        }
       ]
     },
     "material": {
       "eb": "Material und Service",
-      "h": "Teile haben wir am L{<A}ger",
+      "h": "Teile haben wir|am L{<A}ger",
       "p": [
         "Wir fertigen Spielplätze aus hochwertigen Materialien mit Schwerpunkt auf Sicherheit und langer Lebensdauer. Am Lager haben wir Konstruktionsrohre, Verbinder, Netze, Schaumstoffe zur Umhüllung der Konstruktion und Hängemodule.",
         "Wir bieten auch Service und jährliche Prüfungen von Spielplätzen an."
@@ -185,7 +209,7 @@
   "prerabka": {
     "eb": "Aus Alt wird Neu",
     "h1": "Umbau und {U}mzug",
-    "lead": "Wir bauen den alten Spielplatz zu einem neuen, normgerechten um oder versetzen ihn in einen neuen Raum.",
+    "lead": "Wir bauen den alten Spielplatz zu einem neuen, normgerechten um oder versetzen ihn|in einen neuen Raum.",
     "alt": "Erneuerter Indoor-Spielplatz mit Rutsche und Bällebad, Dunajská Lužná",
     "cap": "Umbau eines Spielplatzes · Dunajská Lužná",
     "process": {
@@ -204,8 +228,8 @@
     },
     "rebuild": {
       "eb": "Umbau",
-      "h": "Vom Import zur Norm",
-      "p": "Einen alten Spielplatz (meist aus China) bauen wir zu einem neuen, normgerechten um. Wir verwenden Material des alten weiter: Stahl der Konstruktion, Verbinder und intakte Module.",
+      "h": "Von minderwertig zu normgerecht",
+      "p": "Einen alten oder minderwertigen Spielplatz bauen wir zu einem neuen, normgerechten um. Wir verwenden Material des alten weiter: Stahl der Konstruktion, Verbinder und intakte Module.",
       "list": [
         "Austausch abgenutzter Spielelemente",
         "Anpassung der Raumaufteilung und bessere Raumnutzung",
@@ -236,8 +260,14 @@
     "cap": "Kontrolle eines Schutznetzes · KI-Illustration",
     "listLabel": "Prüfung und Service",
     "rows": [
-      { "t": "Jährliche Kontrolle", "p": "Wir bieten Service und jährliche Kontrollen (Prüfungen) von Spielplätzen an. Die Spielplätze beurteilen wir nach EN 1176 (Spielplatzgeräte) und EN 1177 (stoßdämpfende Beläge)." },
-      { "t": "Service und Teile", "p": "Am Lager haben wir Konstruktionsrohre, Verbinder, Netze, Schaumstoffe zur Umhüllung der Konstruktion und Hängemodule." }
+      {
+        "t": "Jährliche Kontrolle",
+        "p": "Wir bieten Service und jährliche Kontrollen (Prüfungen) von Spielplätzen an. Die Spielplätze beurteilen wir nach EN 1176 (Spielplatzgeräte) und EN 1177 (stoßdämpfende Beläge)."
+      },
+      {
+        "t": "Service und Teile",
+        "p": "Am Lager haben wir Konstruktionsrohre, Verbinder, Netze, Schaumstoffe zur Umhüllung der Konstruktion und Hängemodule."
+      }
     ]
   },
   "realizacie": {
@@ -252,18 +282,90 @@
       "photo": "Foto"
     },
     "items": [
-      { "t": "Neuer Spielplatz Kinder Club", "p": "Trnava", "y": "Demontage und Montage", "d": "Demontage des ursprünglichen und Montage eines neuen Indoor-Spielplatzes im Kinder Club Trnava.", "alt": "Neuer Spielplatz Kinder Club, Trnava" },
-      { "t": "Umbau eines Spielplatzes", "p": "Dunajská Lužná", "y": "Umbau", "d": "Erneuerung und Umbau eines Indoor-Spielplatzes in Dunajská Lužná.", "alt": "Umbau eines Spielplatzes, Dunajská Lužná" },
-      { "t": "Erneuerung der Konstruktionshüllen", "p": "Klatovy, CZ", "y": "Erneuerung", "d": "Erneuerung der Schaumstoffhüllen der Konstruktion eines Indoor-Spielplatzes.", "alt": "Erneuerung der Konstruktionshüllen, Klatovy, CZ" },
-      { "t": "Indoor-Spielplatz nach Maß", "p": "Šamorín", "y": "Neuer Spielplatz nach Maß", "d": "Ein Indoor-Spielplatz nach Maß, verbunden mit einer bestehenden Wand mit Öffnungen.", "alt": "Indoor-Spielplatz nach Maß, Šamorín" },
-      { "t": "Umzug und Umbau eines Spielplatzes", "p": "Hlohovec", "y": "Umzug und Umbau", "d": "Demontage eines dreistöckigen Indoor-Spielplatzes und Umbau zu einem neuen Spielplatz mit zwei Etagen im Flur einer Grundschule.", "alt": "Umzug und Umbau eines Spielplatzes, Hlohovec" },
-      { "t": "Neuer Spielplatz in Pezinok", "p": "Pezinok", "y": "Demontage und Montage", "d": "Demontage, Montage und Anpassung eines neuen Indoor-Spielplatzes in Pezinok.", "alt": "Neuer Spielplatz in Pezinok, Pezinok" },
-      { "t": "Versetzter und erneuerter Spielplatz", "p": "Králův Dvůr, CZ", "y": "Umzug und Erneuerung", "d": "Ein versetzter und erneuerter Indoor-Spielplatz in Králův Dvůr bei Beroun.", "alt": "Versetzter und erneuerter Spielplatz, Králův Dvůr, CZ" },
-      { "t": "Kletterwand für Kinder", "p": "Karviná, CZ", "y": "Kletterwand", "d": "Eine Kletterwand ist eine gute Ergänzung für Spielhallen.", "alt": "Kletterwand für Kinder, Karviná, CZ" },
-      { "t": "Tubing-Bahn", "p": "Karviná, CZ", "y": "Tubing-Bahn", "d": "Eine Tubing-Bahn, gebaut als freistehendes Spielelement. Die Kinder verbringen dort die meiste Zeit.", "alt": "Tubing-Bahn, Karviná, CZ" },
-      { "t": "Spielplatz im Schwimmbad", "p": "Praha, CZ", "y": "Montage", "d": "Montage eines gebrauchten Indoor-Spielplatzes auf dem Gelände eines Schwimmbads in Prag.", "alt": "Spielplatz im Schwimmbad, Praha, CZ" },
-      { "t": "Erweiterung von Spielplatz und Tubing-Bahn", "p": "Uherský Brod, CZ", "y": "Erweiterung", "d": "Erweiterung eines Indoor-Spielplatzes und einer Tubing-Bahn an einen bestehenden Indoor-Spielplatz.", "alt": "Erweiterung von Spielplatz und Tubing-Bahn, Uherský Brod, CZ" },
-      { "t": "Kinderbereich im Erlebnisbad", "p": "Oravice, Meander", "y": "Neuer Kinderbereich", "d": "Montage eines kompletten Kinderbereichs mit modularem Indoor-Spielplatz im Erlebnisbad Meander Oravice.", "alt": "Kinderbereich im Erlebnisbad, Oravice, Meander" }
+      {
+        "t": "Neuer Spielplatz Kinder Club",
+        "p": "Trnava",
+        "y": "Demontage und Montage",
+        "d": "Demontage des ursprünglichen und Montage eines neuen Indoor-Spielplatzes im Kinder Club Trnava.",
+        "alt": "Neuer Spielplatz Kinder Club, Trnava"
+      },
+      {
+        "t": "Umbau eines Spielplatzes",
+        "p": "Dunajská Lužná",
+        "y": "Umbau",
+        "d": "Erneuerung und Umbau eines Indoor-Spielplatzes in Dunajská Lužná.",
+        "alt": "Umbau eines Spielplatzes, Dunajská Lužná"
+      },
+      {
+        "t": "Erneuerung der Konstruktionshüllen",
+        "p": "Klatovy, CZ",
+        "y": "Erneuerung",
+        "d": "Erneuerung der Schaumstoffhüllen der Konstruktion eines Indoor-Spielplatzes.",
+        "alt": "Erneuerung der Konstruktionshüllen, Klatovy, CZ"
+      },
+      {
+        "t": "Indoor-Spielplatz nach Maß",
+        "p": "Šamorín",
+        "y": "Neuer Spielplatz nach Maß",
+        "d": "Ein Indoor-Spielplatz nach Maß, verbunden mit einer bestehenden Wand mit Öffnungen.",
+        "alt": "Indoor-Spielplatz nach Maß, Šamorín"
+      },
+      {
+        "t": "Umzug und Umbau eines Spielplatzes",
+        "p": "Hlohovec",
+        "y": "Umzug und Umbau",
+        "d": "Demontage eines dreistöckigen Indoor-Spielplatzes und Umbau zu einem neuen Spielplatz mit zwei Etagen im Flur einer Grundschule.",
+        "alt": "Umzug und Umbau eines Spielplatzes, Hlohovec"
+      },
+      {
+        "t": "Neuer Spielplatz in Pezinok",
+        "p": "Pezinok",
+        "y": "Demontage und Montage",
+        "d": "Demontage, Montage und Anpassung eines neuen Indoor-Spielplatzes in Pezinok.",
+        "alt": "Neuer Spielplatz in Pezinok, Pezinok"
+      },
+      {
+        "t": "Versetzter und erneuerter Spielplatz",
+        "p": "Králův Dvůr, CZ",
+        "y": "Umzug und Erneuerung",
+        "d": "Ein versetzter und erneuerter Indoor-Spielplatz in Králův Dvůr bei Beroun.",
+        "alt": "Versetzter und erneuerter Spielplatz, Králův Dvůr, CZ"
+      },
+      {
+        "t": "Kletterwand für Kinder",
+        "p": "Karviná, CZ",
+        "y": "Kletterwand",
+        "d": "Eine Kletterwand ist eine gute Ergänzung für Spielhallen.",
+        "alt": "Kletterwand für Kinder, Karviná, CZ"
+      },
+      {
+        "t": "Tubing-Bahn",
+        "p": "Karviná, CZ",
+        "y": "Tubing-Bahn",
+        "d": "Eine Tubing-Bahn, gebaut als freistehendes Spielelement. Die Kinder verbringen dort die meiste Zeit.",
+        "alt": "Tubing-Bahn, Karviná, CZ"
+      },
+      {
+        "t": "Spielplatz im Schwimmbad",
+        "p": "Praha, CZ",
+        "y": "Montage",
+        "d": "Montage eines gebrauchten Indoor-Spielplatzes auf dem Gelände eines Schwimmbads in Prag.",
+        "alt": "Spielplatz im Schwimmbad, Praha, CZ"
+      },
+      {
+        "t": "Erweiterung von Spielplatz und Tubing-Bahn",
+        "p": "Uherský Brod, CZ",
+        "y": "Erweiterung",
+        "d": "Erweiterung eines Indoor-Spielplatzes und einer Tubing-Bahn an einen bestehenden Indoor-Spielplatz.",
+        "alt": "Erweiterung von Spielplatz und Tubing-Bahn, Uherský Brod, CZ"
+      },
+      {
+        "t": "Kinderbereich im Erlebnisbad",
+        "p": "Oravice, Meander",
+        "y": "Neuer Kinderbereich",
+        "d": "Montage eines kompletten Kinderbereichs mit modularem Indoor-Spielplatz im Erlebnisbad Meander Oravice.",
+        "alt": "Kinderbereich im Erlebnisbad, Oravice, Meander"
+      }
     ]
   },
   "o-nas": {
@@ -272,19 +374,43 @@
     "lead": "Wir liefern normgerechte Indoor-Spielplätze und Trampolinzentren. Sie helfen Betrieben, Eltern mit Kindern anzuziehen.",
     "statsLabel": "PLAYGROUND in Zahlen",
     "stats": [
-      { "value": 15, "suffix": "", "label": "Jahre am Markt" },
-      { "value": 180, "suffix": "+", "label": "Projekte" },
-      { "value": 6, "suffix": "", "label": "Länder: Slowakei, Tschechien, Frankreich, Italien, Estland, Rumänien" }
+      {
+        "value": 15,
+        "suffix": "",
+        "label": "Jahre am Markt"
+      },
+      {
+        "value": 180,
+        "suffix": "+",
+        "label": "Projekte"
+      },
+      {
+        "value": 6,
+        "suffix": "",
+        "label": "Länder: Slowakei, Tschechien, Frankreich, Italien, Estland, Rumänien"
+      }
     ],
     "alt": "Indoor-Spielplatz nach Maß an einer orangen Wand, Šamorín",
     "diff": {
       "eb": "Was uns unterscheidet",
       "h": "Von der Planung bis zum S{E}rvice",
       "rows": [
-        { "t": "Schlüsselfertig", "p": "Von Beratung, Aufmaß, Entwurf und Visualisierung bis zu Lieferung und Montage. Wir haben auch Hunderte Services und jährliche Kontrollen von Spielplätzen durchgeführt." },
-        { "t": "Umbau eines alten Spielplatzes", "p": "Einen alten Spielplatz bauen wir zu einem neuen, normgerechten um. Wir verwenden die ursprüngliche Konstruktion, Verbinder und intakte Module weiter, so sparen Sie Kosten." },
-        { "t": "Eigenes Lager", "p": "Konstruktionsrohre, Verbinder, Netze, Schaumstoffe zur Umhüllung und Hängemodule haben wir am Lager." },
-        { "t": "Wir beraten auch zum Raum", "p": "Wir helfen bei der Aufteilung des Spielplatzes, bei den Sitzplätzen und beim Cafébereich." }
+        {
+          "t": "Schlüsselfertig",
+          "p": "Von Beratung, Aufmaß, Entwurf und Visualisierung bis zu Lieferung und Montage. Wir haben auch Hunderte Services und jährliche Kontrollen von Spielplätzen durchgeführt."
+        },
+        {
+          "t": "Umbau eines alten Spielplatzes",
+          "p": "Einen alten Spielplatz bauen wir zu einem neuen, normgerechten um. Wir verwenden die ursprüngliche Konstruktion, Verbinder und intakte Module weiter, so sparen Sie Kosten."
+        },
+        {
+          "t": "Eigenes Lager",
+          "p": "Konstruktionsrohre, Verbinder, Netze, Schaumstoffe zur Umhüllung und Hängemodule haben wir am Lager."
+        },
+        {
+          "t": "Wir beraten auch zum Raum",
+          "p": "Wir helfen bei der Aufteilung des Spielplatzes, bei den Sitzplätzen und beim Cafébereich."
+        }
       ]
     },
     "samorin": {
@@ -328,11 +454,22 @@
       },
       "type": {
         "legend": "Art des Betriebs",
-        "options": ["Familienzentrum", "Café", "Hotel", "Kindergarten", "Sonstiges"]
+        "options": [
+          "Familienzentrum",
+          "Café",
+          "Hotel",
+          "Kindergarten",
+          "Sonstiges"
+        ]
       },
       "when": {
         "legend": "Bis wann soll es fertig sein",
-        "options": ["So schnell wie möglich", "Innerhalb von drei Monaten", "Innerhalb eines halben Jahres", "Ich frage vorerst nur an"]
+        "options": [
+          "So schnell wie möglich",
+          "Innerhalb von drei Monaten",
+          "Innerhalb eines halben Jahres",
+          "Ich frage vorerst nur an"
+        ]
       },
       "plan": {
         "legend": "Liegt ein Grundriss vor?",

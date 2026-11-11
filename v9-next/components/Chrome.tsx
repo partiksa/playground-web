@@ -55,6 +55,8 @@ export function Footer({ s }: { s: Site }) {
   const { m, fmt, P } = s;
   return (
     <footer className="ft" id="ft">
+      <div className="ft-main">
+      <FooterBalls />
       <div className="ft-top">
         <div>
           <a className="logo" href={P("home")} aria-label={m("common.logoLabel")}><i /></a>
@@ -77,8 +79,8 @@ export function Footer({ s }: { s: Site }) {
           <ul>{(m("footer.company") as string[]).map((x) => <li key={x}>{fmt(x)}</li>)}</ul>
         </div>
       </div>
-      <p className="ft-big" aria-hidden="true"><span className="ft-word">Play<span className="sl">G</span>round</span></p>
-      <FooterBalls />
+      <div className="ft-logo" aria-hidden="true"><i /></div>
+      </div>
       <div className="ft-bot">
         <span>{m("footer.copyright")}</span>
         <span>{m("footer.place")}</span>

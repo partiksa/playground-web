@@ -33,9 +33,18 @@
   "seo": {
     "orgDescription": "Interiérová dětská hřiště na míru: návrh, výroba, montáž, přestavba, stěhování a revize. Trnava, Slovensko.",
     "services": [
-      { "name": "Interiérová hřiště na míru", "description": "Návrh, 3D vizualizace, výroba a montáž interiérových hřišť pro rodinná centra, kavárny, hotely a školky." },
-      { "name": "Přestavba a stěhování hřišť", "description": "Přestavba starých hřišť na nová a normovaná, demontáž, přeprava a montáž v novém prostoru." },
-      { "name": "Revize a servis hřišť", "description": "Roční kontroly a servis interiérových hřišť podle norem EN 1176 a EN 1177." }
+      {
+        "name": "Interiérová hřiště na míru",
+        "description": "Návrh, 3D vizualizace, výroba a montáž interiérových hřišť pro rodinná centra, kavárny, hotely a školky."
+      },
+      {
+        "name": "Přestavba a stěhování hřišť",
+        "description": "Přestavba starých hřišť na nová a normovaná, demontáž, přeprava a montáž v novém prostoru."
+      },
+      {
+        "name": "Revize a servis hřišť",
+        "description": "Roční kontroly a servis interiérových hřišť podle norem EN 1176 a EN 1177."
+      }
     ]
   },
   "common": {
@@ -99,12 +108,12 @@
     "chapters": [
       {
         "eb": "Playground, Trnava",
-        "h": "Hřiště na {M}íru",
+        "h": "Hřiště|na {M}íru",
         "p": "Interiérové hřiště pro rodinné centrum, kavárnu, hotel nebo školku. Navrhneme ho, vyrobíme a postavíme. Od prvního rozhovoru po předání."
       },
       {
         "eb": "Konzultace",
-        "h": "První spoj j{E} rozhovor",
+        "h": "První spoj\nj{E} rozhovor",
         "p": "Spoj drží celou konstrukci. U hřiště je jím první rozhovor. Řeknete nám, pro koho hřiště je, kolik dětí si na něm bude hrát a co má provozu přinést. Z toho vychází všechno další."
       },
       {
@@ -119,8 +128,8 @@
       },
       {
         "eb": "Výroba",
-        "h": "Bezpečnost je v det{<A}ilu",
-        "p": "Konstrukci obalíme pěnou a vinylem, prostor uzavřeme sítěmi. Hřiště splňuje normy EN 1176 a EN 1177. Trubky, spojky, sítě a pěny máme na vlastním skladě."
+        "h": "Bezpečnost\nje v det{<A}ilu",
+        "p": "Konstrukci obalíme pěnou a vinylem, prostor uzavřeme sítěmi. Hřiště splňuje normy EN 1176 a EN 1177. Používáme jen certifikované materiály a díly."
       },
       {
         "eb": "Dodání a montáž",
@@ -161,18 +170,33 @@
     },
     "places": {
       "eb": "Kde se hodí",
-      "h": "Pro provozy, kde jsou d{Ě}ti",
+      "h": "Od kavárny po {A}quapark",
       "items": [
-        { "t": "Rodinná centra a herny", "p": "Zábava pro děti při nákupech a ve volném čase." },
-        { "t": "Kavárny a cukrárny", "p": "Děti si hrají, rodiče odpočívají." },
-        { "t": "Hotely a penziony", "p": "Rodinná atrakce navíc k nabídce." },
-        { "t": "Školky a vzdělávací centra", "p": "Bezpečné prostředí pro hru a rozvoj." },
-        { "t": "Aquaparky a koupaliště", "p": "Kompletní dětské zóny." }
+        {
+          "t": "Rodinná centra a herny",
+          "p": "Zábava pro děti při nákupech a ve volném čase."
+        },
+        {
+          "t": "Kavárny a cukrárny",
+          "p": "Děti si hrají, rodiče odpočívají."
+        },
+        {
+          "t": "Hotely a penziony",
+          "p": "Rodinná atrakce navíc k nabídce."
+        },
+        {
+          "t": "Školky a vzdělávací centra",
+          "p": "Bezpečné prostředí pro hru a rozvoj."
+        },
+        {
+          "t": "Aquaparky a koupaliště",
+          "p": "Kompletní dětské zóny."
+        }
       ]
     },
     "material": {
       "eb": "Materiál a servis",
-      "h": "Díly máme na skl{<A}dě",
+      "h": "Díly máme|na skl{<A}dě",
       "p": [
         "Hřiště vyrábíme z kvalitních materiálů s důrazem na bezpečnost a dlouhou životnost. Na skladě máme konstrukční trubky, spojky, sítě, pěny na obalování konstrukce a závěsné moduly.",
         "Děláme také servis a roční kontroly hřišť."
@@ -185,7 +209,7 @@
   "prerabka": {
     "eb": "Ze starého nové",
     "h1": "Přestavba a {S}těhování",
-    "lead": "Staré hřiště přestavíme na nové, normované, nebo ho přestěhujeme do nového prostoru.",
+    "lead": "Staré hřiště přestavíme na nové, normované, nebo ho přestěhujeme|do nového prostoru.",
     "alt": "Obnovené interiérové hřiště se skluzavkou a míčkovým bazénem, Dunajská Lužná",
     "cap": "Přestavba hřiště · Dunajská Lužná",
     "process": {
@@ -204,8 +228,8 @@
     },
     "rebuild": {
       "eb": "Přestavba",
-      "h": "Z čínského normované",
-      "p": "Staré hřiště (nejčastěji čínské) přestavíme na nové, normované. Použijeme materiál z původního: železo z konstrukce, spojky a nepoškozené moduly.",
+      "h": "Z nekvalitního normované",
+      "p": "Staré nebo nekvalitní hřiště přestavíme na nové, normované. Použijeme materiál z původního: železo z konstrukce, spojky a nepoškozené moduly.",
       "list": [
         "výměna opotřebovaných herních prvků",
         "úprava dispozice a lepší využití prostoru",
@@ -236,8 +260,14 @@
     "cap": "Kontrola ochranné sítě · AI ilustrace",
     "listLabel": "Revize a servis",
     "rows": [
-      { "t": "Roční kontrola", "p": "Děláme servis a roční kontroly (revize) hřišť. Hřiště posuzujeme podle norem EN 1176 (vybavení hřišť) a EN 1177 (povrchy tlumící náraz)." },
-      { "t": "Servis a díly", "p": "Na skladě máme konstrukční trubky, spojky, sítě, pěny na obalování konstrukce a závěsné moduly." }
+      {
+        "t": "Roční kontrola",
+        "p": "Děláme servis a roční kontroly (revize) hřišť. Hřiště posuzujeme podle norem EN 1176 (vybavení hřišť) a EN 1177 (povrchy tlumící náraz)."
+      },
+      {
+        "t": "Servis a díly",
+        "p": "Na skladě máme konstrukční trubky, spojky, sítě, pěny na obalování konstrukce a závěsné moduly."
+      }
     ]
   },
   "realizacie": {
@@ -252,18 +282,90 @@
       "photo": "fotka"
     },
     "items": [
-      { "t": "Nové hřiště Kinder Club", "p": "Trnava", "y": "Demontáž a montáž", "d": "Demontáž původního a montáž nového interiérového hřiště v Kinder Clubu Trnava.", "alt": "Nové hřiště Kinder Club, Trnava" },
-      { "t": "Přestavba hřiště", "p": "Dunajská Lužná", "y": "Přestavba", "d": "Obnova a přestavba interiérového hřiště v Dunajské Lužné.", "alt": "Přestavba hřiště, Dunajská Lužná" },
-      { "t": "Obnova obalů konstrukce", "p": "Klatovy, CZ", "y": "Obnova", "d": "Obnova pěnových obalů konstrukce interiérového hřiště.", "alt": "Obnova obalů konstrukce, Klatovy, CZ" },
-      { "t": "Interiérové hřiště na míru", "p": "Šamorín", "y": "Nové hřiště na míru", "d": "Interiérové hřiště na míru propojené s existující stěnou s otvory.", "alt": "Interiérové hřiště na míru, Šamorín" },
-      { "t": "Přestěhování a přestavba hřiště", "p": "Hlohovec", "y": "Přestěhování a přestavba", "d": "Demontáž třípatrového interiérového hřiště a úprava na nové hřiště se dvěma patry na chodbě základní školy.", "alt": "Přestěhování a přestavba hřiště, Hlohovec" },
-      { "t": "Nové hřiště v Pezinku", "p": "Pezinok", "y": "Demontáž a montáž", "d": "Demontáž, montáž a úprava nového interiérového hřiště v Pezinku.", "alt": "Nové hřiště v Pezinku, Pezinok" },
-      { "t": "Přestěhované a obnovené hřiště", "p": "Králův Dvůr, CZ", "y": "Přestěhování a obnova", "d": "Přestěhované a obnovené interiérové hřiště v Králově Dvoře u Berouna.", "alt": "Přestěhované a obnovené hřiště, Králův Dvůr, CZ" },
-      { "t": "Lezecká stěna pro děti", "p": "Karviná, CZ", "y": "Lezecká stěna", "d": "Lezecká stěna je dobrým doplňkem do heren.", "alt": "Lezecká stěna pro děti, Karviná, CZ" },
-      { "t": "Tubingová dráha", "p": "Karviná, CZ", "y": "Tubingová dráha", "d": "Tubingová dráha postavená jako samostatně stojící herní prvek. Děti na ní tráví nejvíce času.", "alt": "Tubingová dráha, Karviná, CZ" },
-      { "t": "Hřiště na koupališti", "p": "Praha, CZ", "y": "Montáž", "d": "Montáž použitého interiérového hřiště v areálu koupaliště v Praze.", "alt": "Hřiště na koupališti, Praha, CZ" },
-      { "t": "Dostavba hřiště a tubingové dráhy", "p": "Uherský Brod, CZ", "y": "Dostavba", "d": "Dostavba interiérového hřiště a tubingové dráhy k existujícímu interiérovému hřišti.", "alt": "Dostavba hřiště a tubingové dráhy, Uherský Brod, CZ" },
-      { "t": "Dětská zóna v aquaparku", "p": "Oravice, Meander", "y": "Nová dětská zóna", "d": "Montáž kompletní dětské zóny s panelovým interiérovým hřištěm v aquaparku Meander Oravice.", "alt": "Dětská zóna v aquaparku, Oravice, Meander" }
+      {
+        "t": "Nové hřiště Kinder Club",
+        "p": "Trnava",
+        "y": "Demontáž a montáž",
+        "d": "Demontáž původního a montáž nového interiérového hřiště v Kinder Clubu Trnava.",
+        "alt": "Nové hřiště Kinder Club, Trnava"
+      },
+      {
+        "t": "Přestavba hřiště",
+        "p": "Dunajská Lužná",
+        "y": "Přestavba",
+        "d": "Obnova a přestavba interiérového hřiště v Dunajské Lužné.",
+        "alt": "Přestavba hřiště, Dunajská Lužná"
+      },
+      {
+        "t": "Obnova obalů konstrukce",
+        "p": "Klatovy, CZ",
+        "y": "Obnova",
+        "d": "Obnova pěnových obalů konstrukce interiérového hřiště.",
+        "alt": "Obnova obalů konstrukce, Klatovy, CZ"
+      },
+      {
+        "t": "Interiérové hřiště na míru",
+        "p": "Šamorín",
+        "y": "Nové hřiště na míru",
+        "d": "Interiérové hřiště na míru propojené s existující stěnou s otvory.",
+        "alt": "Interiérové hřiště na míru, Šamorín"
+      },
+      {
+        "t": "Přestěhování a přestavba hřiště",
+        "p": "Hlohovec",
+        "y": "Přestěhování a přestavba",
+        "d": "Demontáž třípatrového interiérového hřiště a úprava na nové hřiště se dvěma patry na chodbě základní školy.",
+        "alt": "Přestěhování a přestavba hřiště, Hlohovec"
+      },
+      {
+        "t": "Nové hřiště v Pezinku",
+        "p": "Pezinok",
+        "y": "Demontáž a montáž",
+        "d": "Demontáž, montáž a úprava nového interiérového hřiště v Pezinku.",
+        "alt": "Nové hřiště v Pezinku, Pezinok"
+      },
+      {
+        "t": "Přestěhované a obnovené hřiště",
+        "p": "Králův Dvůr, CZ",
+        "y": "Přestěhování a obnova",
+        "d": "Přestěhované a obnovené interiérové hřiště v Králově Dvoře u Berouna.",
+        "alt": "Přestěhované a obnovené hřiště, Králův Dvůr, CZ"
+      },
+      {
+        "t": "Lezecká stěna pro děti",
+        "p": "Karviná, CZ",
+        "y": "Lezecká stěna",
+        "d": "Lezecká stěna je dobrým doplňkem do heren.",
+        "alt": "Lezecká stěna pro děti, Karviná, CZ"
+      },
+      {
+        "t": "Tubingová dráha",
+        "p": "Karviná, CZ",
+        "y": "Tubingová dráha",
+        "d": "Tubingová dráha postavená jako samostatně stojící herní prvek. Děti na ní tráví nejvíce času.",
+        "alt": "Tubingová dráha, Karviná, CZ"
+      },
+      {
+        "t": "Hřiště na koupališti",
+        "p": "Praha, CZ",
+        "y": "Montáž",
+        "d": "Montáž použitého interiérového hřiště v areálu koupaliště v Praze.",
+        "alt": "Hřiště na koupališti, Praha, CZ"
+      },
+      {
+        "t": "Dostavba hřiště a tubingové dráhy",
+        "p": "Uherský Brod, CZ",
+        "y": "Dostavba",
+        "d": "Dostavba interiérového hřiště a tubingové dráhy k existujícímu interiérovému hřišti.",
+        "alt": "Dostavba hřiště a tubingové dráhy, Uherský Brod, CZ"
+      },
+      {
+        "t": "Dětská zóna v aquaparku",
+        "p": "Oravice, Meander",
+        "y": "Nová dětská zóna",
+        "d": "Montáž kompletní dětské zóny s panelovým interiérovým hřištěm v aquaparku Meander Oravice.",
+        "alt": "Dětská zóna v aquaparku, Oravice, Meander"
+      }
     ]
   },
   "o-nas": {
@@ -272,19 +374,43 @@
     "lead": "Dodáváme normovaná interiérová hřiště a trampolínová centra. Provozům pomáhají přilákat rodiče s dětmi.",
     "statsLabel": "PLAYGROUND v číslech",
     "stats": [
-      { "value": 15, "suffix": "", "label": "let na trhu" },
-      { "value": 180, "suffix": "+", "label": "projektů" },
-      { "value": 6, "suffix": "", "label": "zemí: Slovensko, Česko, Francie, Itálie, Estonsko, Rumunsko" }
+      {
+        "value": 15,
+        "suffix": "",
+        "label": "let na trhu"
+      },
+      {
+        "value": 180,
+        "suffix": "+",
+        "label": "projektů"
+      },
+      {
+        "value": 6,
+        "suffix": "",
+        "label": "zemí: Slovensko, Česko, Francie, Itálie, Estonsko, Rumunsko"
+      }
     ],
     "alt": "Interiérové hřiště na míru u oranžové stěny, Šamorín",
     "diff": {
       "eb": "Čím se lišíme",
       "h": "Od návrhu po s{E}rvis",
       "rows": [
-        { "t": "Na klíč", "p": "Od konzultace, zaměření, návrhu a vizualizace po dodání a montáž. Provedli jsme také stovky servisů a ročních kontrol hřišť." },
-        { "t": "Přestavba starého hřiště", "p": "Staré hřiště přestavíme na nové a normované. Použijeme původní konstrukci, spojky a nepoškozené moduly, takže ušetříte." },
-        { "t": "Vlastní sklad", "p": "Konstrukční trubky, spojky, sítě, pěny na obalování a závěsné moduly máme na skladě." },
-        { "t": "Poradíme i s prostorem", "p": "Pomůžeme s rozložením hřiště, posezením i kavárenskou částí." }
+        {
+          "t": "Na klíč",
+          "p": "Od konzultace, zaměření, návrhu a vizualizace po dodání a montáž. Provedli jsme také stovky servisů a ročních kontrol hřišť."
+        },
+        {
+          "t": "Přestavba starého hřiště",
+          "p": "Staré hřiště přestavíme na nové a normované. Použijeme původní konstrukci, spojky a nepoškozené moduly, takže ušetříte."
+        },
+        {
+          "t": "Vlastní sklad",
+          "p": "Konstrukční trubky, spojky, sítě, pěny na obalování a závěsné moduly máme na skladě."
+        },
+        {
+          "t": "Poradíme i s prostorem",
+          "p": "Pomůžeme s rozložením hřiště, posezením i kavárenskou částí."
+        }
       ]
     },
     "samorin": {
@@ -328,11 +454,22 @@
       },
       "type": {
         "legend": "Typ provozu",
-        "options": ["Rodinné centrum", "Kavárna", "Hotel", "Školka", "Jiné"]
+        "options": [
+          "Rodinné centrum",
+          "Kavárna",
+          "Hotel",
+          "Školka",
+          "Jiné"
+        ]
       },
       "when": {
         "legend": "Dokdy má být hotovo",
-        "options": ["Co nejdříve", "Do tří měsíců", "Do půl roku", "Zatím se jen ptám"]
+        "options": [
+          "Co nejdříve",
+          "Do tří měsíců",
+          "Do půl roku",
+          "Zatím se jen ptám"
+        ]
       },
       "plan": {
         "legend": "Máte k dispozici půdorys?",

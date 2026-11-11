@@ -35,4 +35,9 @@
   size();
   var wipe = gsap.fromTo(box, { clipPath: "inset(100% 0% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 1.4, ease: "expo.inOut", paused: true });
   PG.revealed.then(function () { wipe.delay(.2).play(); });
+  // render montáže: hrá len keď je vidieť
+  var vid = document.querySelector(".vznik video");
+  if (vid) new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { vid.preload = "auto"; vid.play().catch(function () {}); } else vid.pause(); });
+  }, { threshold: .35 }).observe(vid);
 })();

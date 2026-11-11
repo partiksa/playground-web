@@ -7,7 +7,9 @@
   --line: #bdbbb6;
   --mute: #5f5c56;
   --red: #FF2712;
-  --red-hover: #ff4a39;
+  --red-hover: #ff5a47;
+  /* plochy s tmavým textom (tlačidlá, pätička): o kúsok bledšia červená kvôli kontrastu (Patrik 2026-11-11) */
+  --red-ui: #FF4632;
   /* na širokom monitore obsah max. 2000 px, okraje rastú; fotky .full ostávajú na celú šírku */
   --pad: max(clamp(20px, 3.4vw, 56px), calc((100vw - 2000px) / 2));
   --hh: 76px;
@@ -46,6 +48,10 @@ body:not(.ready) .js-hide { visibility: hidden; animation: fs-show 0s 5s forward
 /* Optická medzera pri tesných dvojiciach medzi Slinkee a Jakartou. */
 .sl--loose-left { --sl-left: .045em; }
 .sl--loose-right { --sl-right: .045em; }
+/* Slinkee na začiatku slova: o kúsok väčšia medzera pred ním */
+.sl--start { --sl-left: .075em; }
+/* zalomenie len na širokej obrazovke ("|" v texte) */
+@media (max-width: 980px) { br.bw { display: none; } }
 .w { white-space: nowrap; }
 .ln-mask { padding: .18em .12em .08em 0; margin: -.18em -.12em -.08em 0; }
 
@@ -98,7 +104,7 @@ body:not(.ready) .js-hide { visibility: hidden; animation: fs-show 0s 5s forward
 .btn:hover { background: #2b2925; }
 .btn:active { transform: scale(.97); }
 .hd.dark .btn { background: #fff; color: var(--ink); }
-.btn--red { background: var(--red); color: var(--ink); height: 54px; padding: 0 28px; font-size: 1.0625rem; font-weight: 700; }
+.btn--red { background: var(--red-ui); color: var(--ink); height: 54px; padding: 0 28px; font-size: 1.0625rem; font-weight: 700; }
 .btn--red:hover { background: var(--red-hover); }
 .btn--line { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--ink); }
 .btn--line:hover { background: var(--ink); color: var(--paper); }
@@ -194,7 +200,7 @@ body:not(.ready) .js-hide { visibility: hidden; animation: fs-show 0s 5s forward
 .cta .lead { margin-top: clamp(18px, 2vw, 28px); }
 
 /* ---------- pätička ---------- */
-.ft { position: relative; z-index: 2; background: var(--red); color: var(--ink); padding: clamp(56px, 7vw, 112px) var(--pad) 28px; }
+.ft { position: relative; z-index: 2; overflow: hidden; background: var(--red-ui); color: var(--ink); padding: clamp(56px, 7vw, 112px) var(--pad) 28px; }
 .ft-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px 32px; }
 .ft .logo { width: 132px; color: var(--ink); }
 .ft .claim { margin-top: 20px; max-width: 22em; line-height: 1.5; color: rgba(20, 19, 16, .82); }
@@ -523,3 +529,74 @@ body:has(#story) .hd.dark:not(.solid) { filter: drop-shadow(0 0 9px rgba(0, 0, 0
 @media (max-width: 1180px) { .why { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 760px) { .why { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 480px) { .why { grid-template-columns: 1fr; } }
+
+/* ================= zmeny 2026-11-11 (Patrikove pripomienky) ================= */
+/* služby na úvode: výraznejší pohyb šípky */
+.svc a:hover .ar { transform: none; animation: ar-go .9s var(--ease) infinite alternate; }
+@keyframes ar-go { from { transform: translateX(4px); } to { transform: translateX(16px); } }
+.btn:hover .ar { transform: translateX(6px); }
+
+/* riadky bez čísel (Prvky podľa veku) */
+.rows--nonum .row .h3, .rows--nonum .row .p { grid-column: 1 / -1; }
+@media (min-width: 761px) { .rows--short.rows--nonum .row { grid-template-columns: 1fr; } }
+
+/* Ihriská na mieru: menej prázdna úvodná obrazovka */
+.ph--ih { margin-top: calc(clamp(48px, 9vw, 150px) * -.55); }
+.ph--ih .ih-top { margin-top: clamp(16px, 2vw, 32px); align-items: start; }
+.ph--ih .ih-top .txt { padding-top: clamp(4px, 1vw, 16px); }
+.vznik video { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: var(--paper-2); }
+
+/* pätička: veľké logo, loptičky padajú za textom cez celú pätičku */
+.ft-main { position: relative; }
+.ft-balls { position: absolute; inset: 0; height: auto; margin: 0; z-index: 0; }
+.ft-top, .ft-logo, .ft-bot { position: relative; z-index: 1; pointer-events: none; }
+.ft a, .ft button { pointer-events: auto; }
+.ft-logo { margin-top: clamp(32px, 4vw, 56px); overflow: clip; color: var(--ink); }
+.ft-logo i { display: block; width: min(100%, 560px); aspect-ratio: 312.5 / 134.1; background: currentColor;
+  -webkit-mask: url(/logo.svg) center / contain no-repeat; mask: url(/logo.svg) center / contain no-repeat; }
+.ft-bot { border-top-color: rgba(20, 19, 16, .28); }
+
+/* formulár: hover a výber červenou */
+.chips label:hover span { box-shadow: inset 0 0 0 1.5px var(--red); color: var(--ink); }
+.chips input:checked + span { background: var(--red-ui); color: var(--ink); box-shadow: none; }
+.fld input:focus, .fld textarea:focus { border-color: var(--red); }
+/* odoslať: väčší pohyb šípky pri hover, pri kliku šípka vyletí a tlačidlo sa rozvlní */
+.btn--send { position: relative; overflow: visible; }
+.btn--send:hover .ar { transform: translateX(10px) rotate(-8deg); transition-duration: .45s; }
+.btn--send.fly { animation: send-press .75s var(--ease); }
+.btn--send.fly .ar { animation: send-fly .7s cubic-bezier(.5, 0, .2, 1) forwards; }
+.btn--send.fly::after { content: ""; position: absolute; inset: 0; border-radius: inherit; box-shadow: 0 0 0 0 var(--red-ui); animation: send-ring .75s ease-out forwards; pointer-events: none; }
+@keyframes send-press { 0% { transform: scale(1); } 18% { transform: scale(.93); } 45% { transform: scale(1.04); } 100% { transform: scale(1); } }
+@keyframes send-fly { 0% { transform: translateX(0); opacity: 1; } 30% { transform: translateX(-6px); } 100% { transform: translate(140px, -46px) rotate(-22deg); opacity: 0; } }
+@keyframes send-ring { from { box-shadow: 0 0 0 0 rgba(255, 70, 50, .55); } to { box-shadow: 0 0 0 22px rgba(255, 70, 50, 0); } }
+
+/* Realizácie: riadky podľa kategórií, posúvanie do strany */
+.rz-cat-hd { margin-bottom: clamp(18px, 2vw, 28px); }
+.hs { position: relative; }
+.hs-track { display: flex; gap: var(--gap); overflow-x: auto; scrollbar-width: none; margin: 0 calc(var(--pad) * -1); padding: 0 var(--pad); scroll-padding-inline: var(--pad); cursor: grab; }
+.hs-track::-webkit-scrollbar { display: none; }
+.hs-track.drag { cursor: grabbing; user-select: none; }
+.hs-track.drag .rz-card { pointer-events: none; }
+.hs-item { flex: none; width: calc((100% - 2 * var(--pad) - 3 * var(--gap)) / 4); }
+.hs-item .rz-card img { -webkit-user-drag: none; }
+.hs-item .rz-t { font-size: clamp(1rem, .9rem + .4vw, 1.25rem); }
+.hs-item .rz-card:hover .rz-t { background-size: 100% 1.5px; }
+@media (max-width: 980px) { .hs-item { width: calc((100% - 2 * var(--pad) - var(--gap)) / 2.2); } }
+@media (max-width: 560px) { .hs-item { width: 72%; } }
+/* malá šípka: posunie o jednu položku, na konci sa otočí a vráti na začiatok */
+.hs-ar { position: absolute; right: 0; top: 0; z-index: 2; width: 44px; height: 44px; border-radius: 50%; background: var(--ink); color: var(--paper);
+  font-size: 1.1rem; display: grid; place-items: center; transform: translateY(-50%); margin-top: calc((100vw - 2 * var(--pad)) / 4 * .375);
+  transition: transform .35s var(--ease), background-color .3s var(--ease); }
+.hs-ar:hover { background: var(--red-ui); color: var(--ink); transform: translateY(-50%) translateX(3px); }
+.hs-ar.back { transform: translateY(-50%) rotate(180deg); }
+.hs-ar.back:hover { transform: translateY(-50%) rotate(180deg) translateX(3px); }
+.hs-ar[hidden] { display: none; }
+@media (max-width: 980px) { .hs-ar { margin-top: calc((100vw - 2 * var(--pad)) / 2.2 * .375); } }
+/* detail realizácie: galéria s šípkou, ťahaním a kolieskom */
+.md-gw { position: relative; min-height: 0; min-width: 0; }
+.md-gw .md-gal { height: 100%; scroll-snap-type: none; cursor: grab; scrollbar-width: none; }
+.md-gw .md-gal::-webkit-scrollbar { display: none; }
+.md-gw .md-gal.drag { cursor: grabbing; user-select: none; }
+.md-gal img { -webkit-user-drag: none; }
+.md-gw .hs-ar { top: 50%; right: calc(var(--pad) + 12px); margin-top: 0; }
+@media (max-width: 980px) { .md-gw .hs-ar { display: none; } }

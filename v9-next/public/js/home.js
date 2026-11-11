@@ -148,17 +148,18 @@
     gsap.set(c.hx, { scaleX: 1 }); gsap.set(c.vy, { scaleY: 1 });
   }
 
-  function show(c, dir) {
+  // plynulý prechod: stará kapitola celá zmizne, nová sa postaví až po nej (nikdy sa neprekrývajú)
+  function show(c, dir, delay) {
     if (c.tl) c.tl.kill();
     c.on = true;
-    gsap.set(c.el, { autoAlpha: 1 });
-    var tl = c.tl = gsap.timeline();
-    tl.fromTo(c.bg, { clipPath: dir > 0 ? "inset(100% 0% 0% 0%)" : "inset(0% 0% 100% 0%)" }, { clipPath: OPEN, duration: .95, ease: "expo.out" }, 0)
-      // obrys sa nakreslí dookola: hore, vpravo, dole, vľavo
-      .fromTo(c.edges[0], { scaleX: 0 }, { scaleX: 1, duration: .42, ease: "power2.in" }, .02)
-      .fromTo(c.edges[1], { scaleY: 0 }, { scaleY: 1, duration: .3, ease: "none" }, .44)
-      .fromTo(c.edges[2], { scaleX: 0 }, { scaleX: 1, duration: .42, ease: "none" }, .74)
-      .fromTo(c.edges[3], { scaleY: 0 }, { scaleY: 1, duration: .34, ease: "power2.out" }, 1.16)
+    var tl = c.tl = gsap.timeline({ delay: delay || 0 });
+    tl.set(c.el, { autoAlpha: 1, y: 0 }, 0)
+      .fromTo(c.bg, { clipPath: dir > 0 ? "inset(100% 0% 0% 0%)" : "inset(0% 0% 100% 0%)" }, { clipPath: OPEN, duration: .95, ease: "expo.out" }, 0)
+      // obrys sa začne kresliť až keď je podklad rámika celý na mieste (bg končí v .95 s): hore, vpravo, dole, vľavo
+      .fromTo(c.edges[0], { scaleX: 0 }, { scaleX: 1, duration: .42, ease: "power2.in" }, .95)
+      .fromTo(c.edges[1], { scaleY: 0 }, { scaleY: 1, duration: .3, ease: "none" }, 1.37)
+      .fromTo(c.edges[2], { scaleX: 0 }, { scaleX: 1, duration: .42, ease: "none" }, 1.67)
+      .fromTo(c.edges[3], { scaleY: 0 }, { scaleY: 1, duration: .34, ease: "power2.out" }, 2.09)
       .fromTo(c.eb.lines, { yPercent: 105 * dir }, { yPercent: 0, duration: .7, ease: "expo.out" }, .22)
       .fromTo(c.h.lines, { yPercent: 112 * dir }, { yPercent: 0, duration: 1, ease: "expo.out", stagger: .085 }, .28)
       .fromTo(c.p.lines, { autoAlpha: 0, y: 14 * dir }, { autoAlpha: 1, y: 0, duration: .8, ease: "power3.out", stagger: .045 }, .5);
@@ -167,24 +168,20 @@
   function hide(c, dir) {
     if (c.tl) c.tl.kill();
     c.on = false;
-    var tl = c.tl = gsap.timeline({ onComplete: function () { gsap.set(c.el, { autoAlpha: 0 }); } });
-    tl.to(c.h.lines, { yPercent: -112 * dir, duration: .42, ease: "power3.in", stagger: .03 }, 0)
-      .to(c.eb.lines, { yPercent: -105 * dir, duration: .36, ease: "power3.in" }, 0)
-      .to(c.p.lines, { autoAlpha: 0, y: -10 * dir, duration: .3, ease: "power2.in", stagger: .015 }, 0)
-      .to(c.hx, { scaleX: 0, duration: .4, ease: "power2.in" }, 0)
-      .to(c.vy, { scaleY: 0, duration: .4, ease: "power2.in" }, 0)
-      .to(c.bg, { clipPath: dir > 0 ? "inset(0% 0% 100% 0%)" : "inset(100% 0% 0% 0%)", duration: .5, ease: "power3.in" }, .1);
-    if (c.acts.length) tl.to(c.acts, { autoAlpha: 0, y: -8 * dir, duration: .28, ease: "power2.in" }, 0);
+    c.tl = gsap.to(c.el, { autoAlpha: 0, y: -16 * dir, duration: .32, ease: "power2.in" });
   }
 
   var active = -1, lastF = 0;
   function chapter(f) {
     var i = Math.round(f), idx = -1;
     for (var k = 0; k < chs.length; k++) if (i >= chs[k].from && i <= chs[k].to) { idx = k; break; }
+    // medzera medzi kapitolami: ostáva aktuálna, aby sa nová neobjavila bez čakania na zmiznutie starej
+    if (idx < 0 && active >= 0 && i >= chs[0].from && i <= chs[chs.length - 1].to) idx = active;
     if (idx !== active) {
       var dir = f >= lastF ? 1 : -1;
-      if (active >= 0) hide(chs[active], dir);
-      if (idx >= 0) show(chs[idx], dir);
+      var had = active >= 0;
+      if (had) hide(chs[active], dir);
+      if (idx >= 0) show(chs[idx], dir, had ? .3 : 0);
       active = idx;
     }
     lastF = f;

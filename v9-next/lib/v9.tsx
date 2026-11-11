@@ -19,10 +19,9 @@ const FAQ: Record<Lang, { q: string; a: string }[]> = { sk: faqSk, cz: faqCz, en
 
 /* Slinkee nemá písmená s diakritikou a jeho „I“ vyzerá ako J: tieto nadpisy majú iné Slinkee písmeno */
 const OVR: Partial<Record<Lang, Record<string, string>>> = {
-  cz: { "ihriska.places.h": "Pro provozy, kde jsou {D}ěti", "prerabka.why.h": "Často rychlejší a levnější než nové {H}řiště" },
+  cz: { "prerabka.why.h": "Často rychlejší a levnější než nové {H}řiště" },
   de: {
     "home.chapters[2].h": "Ein Gerüst nach Ihren {W}änden",
-    "ihriska.places.h": "Für Betriebe, in denen Kinder {S}ind",
     "prerabka.process.h": "Umbau Schritt für {S}chritt",
     "prerabka.why.h": "Oft schneller und günstiger als ein neuer Spielpl{<A}tz",
   },
@@ -98,8 +97,10 @@ export function site(lang: Lang) {
 
   function word(tok: string): ReactNode {
     const RE = /\{(<?)([^{}<>])(>?)\}/g;
+    // "\n" = zalomenie vždy, "|" = zalomenie len na širokej obrazovke (trieda .bw)
     const lines = (s: string, k: string): ReactNode[] =>
-      s.split("\n").flatMap((p, j) => (j ? [<br key={k + "b" + j} />, p] : [p]));
+      s.split(/(\n|\|)/).flatMap((p, j): ReactNode[] =>
+        p === "\n" ? [<br key={k + "b" + j} />] : p === "|" ? [<br className="bw" key={k + "b" + j} />] : p ? [p] : []);
     if (!RE.test(tok)) return lines(tok, "t");
     RE.lastIndex = 0;
     const parts: ReactNode[] = [];
@@ -107,7 +108,7 @@ export function site(lang: Lang) {
     for (const mo of tok.matchAll(RE)) {
       const i = mo.index ?? 0;
       if (i > last) parts.push(...lines(tok.slice(last, i), "p" + k));
-      const cls = "sl" + (mo[1] ? " sl--loose-left" : "") + (mo[3] ? " sl--loose-right" : "");
+      const cls = "sl" + (i === 0 ? " sl--start" : "") + (mo[1] ? " sl--loose-left" : "") + (mo[3] ? " sl--loose-right" : "");
       parts.push(<span className={cls} key={"s" + k++}>{mo[2]}</span>);
       last = i + mo[0].length;
     }
@@ -142,14 +143,14 @@ export function site(lang: Lang) {
     );
   }
 
-  function rows(items: (string | [string, string])[], short = false) {
+  function rows(items: (string | [string, string])[], short = false, num = true) {
     return (
-      <ol className={`rows${short ? " rows--short" : ""}`}>
+      <ol className={`rows${short ? " rows--short" : ""}${num ? "" : " rows--nonum"}`}>
         {items.map((it, k) => {
           const [t, p] = typeof it === "string" ? [it, null] : it;
           return (
             <li className="row" key={k}>
-              <span className="n">{String(k + 1).padStart(2, "0")}</span>
+              {num && <span className="n">{String(k + 1).padStart(2, "0")}</span>}
               <h3 className="h h3">{fmt(t)}</h3>
               {p && <p className="p">{fmt(p)}</p>}
             </li>

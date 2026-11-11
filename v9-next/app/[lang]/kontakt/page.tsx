@@ -94,7 +94,7 @@ export default async function Kontakt({ params }: P) {
                 </div>
               </fieldset>
               <label className="ok"><input type="checkbox" name="suhlas" required /><span>{fmt(f("consent"))}</span></label>
-              <button className="btn btn--red" type="submit">{f("submit")} {AR}</button>
+              <button className="btn btn--red btn--send" type="submit">{f("submit")} {AR}</button>
               <p className="err" role="alert" />
             </form>
             <div className="done" tabIndex={-1}>

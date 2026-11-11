@@ -17,6 +17,7 @@
         '" width="' + f[1] + '" height="' + f[2] + '"' + (k > 1 ? ' loading="lazy"' : "") + ' decoding="async"></figure>';
     }).join("");
     gal.scrollLeft = 0; md.scrollTop = 0;
+    if (gal._upd) setTimeout(gal._upd, 60);
   }
   function enter() {
     var items = [el.pl, el.t, el.d], figs = gal.querySelectorAll("figure");
@@ -66,11 +67,8 @@
       else if (!e.shiftKey && document.activeElement === z) { e.preventDefault(); a.focus(); }
     }
   });
-  // koliesko myši posúva galériu do strany
-  gal.addEventListener("wheel", function (e) {
-    if (matchMedia("(max-width: 980px)").matches || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
-    e.preventDefault(); gal.scrollLeft += e.deltaY;
-  }, { passive: false });
+  hscroll(gal, md.querySelector(".md-gw .hs-ar"), true);
+  document.querySelectorAll(".hs").forEach(function (h) { hscroll(h.querySelector(".hs-track"), h.querySelector(".hs-ar"), false); });
 
   // odkaz z inej stránky otvorí konkrétnu realizáciu
   var hashIdx = RZ.findIndex(function (p) { return "#" + p.s === location.hash; });
@@ -79,36 +77,59 @@
     setTimeout(function () { show(hashIdx, card); }, 350);
   });
 
-  /* ---------- filter: karty odídu a vrátia sa v novom poradí veľká a malá ---------- */
-  var items = [].slice.call(document.querySelectorAll(".rz-list > .rz"));
-  var btns = [].slice.call(document.querySelectorAll(".flt button"));
-  function layoutPattern(list) {
-    list.forEach(function (li, k) {
-      var big = (Math.floor(k / 2) % 2 === 0) === (k % 2 === 0);
-      li.classList.toggle("big", big); li.classList.toggle("small", !big);
+  /* ---------- posúvanie do strany: šípka, ťahanie myšou, koliesko (len galéria), jemné prichytenie ---------- */
+  function hscroll(tr, ar, wheel) {
+    if (!tr) return;
+    var narrow = function () { return wheel && matchMedia("(max-width: 980px)").matches; };
+    function items() { return [].slice.call(tr.children); }
+    function snapTo() {
+      // jemné prichytenie: k najbližšej položke, len ak je blízko (do 18 % jej šírky)
+      var best = null, bd = Infinity, L = tr.getBoundingClientRect().left;
+      items().forEach(function (it) { var d = it.getBoundingClientRect().left - L; if (Math.abs(d) < Math.abs(bd)) { bd = d; best = it; } });
+      if (best && Math.abs(bd) > 2 && Math.abs(bd) < best.offsetWidth * .18) tr.scrollTo({ left: tr.scrollLeft + bd, behavior: "smooth" });
+    }
+    var st;
+    function settle() { clearTimeout(st); st = setTimeout(function () { if (!down) snapTo(); upd(); }, 140); }
+    function upd() {
+      if (!ar) return;
+      var end = tr.scrollLeft + tr.clientWidth >= tr.scrollWidth - 4;
+      ar.classList.toggle("back", end);
+      ar.hidden = tr.scrollWidth <= tr.clientWidth + 4 || narrow();
+    }
+    if (ar) ar.addEventListener("click", function () {
+      if (ar.classList.contains("back")) { tr.scrollTo({ left: 0, behavior: "smooth" }); return; }
+      var L = tr.getBoundingClientRect().left, nx = items().find(function (it) { return it.getBoundingClientRect().left - L > 8; });
+      tr.scrollTo({ left: nx ? tr.scrollLeft + nx.getBoundingClientRect().left - L : tr.scrollWidth, behavior: "smooth" });
     });
+    // ťahanie myšou (dotyk posúva natívne)
+    var down = false, moved = 0, sx = 0, sl = 0, vx = 0, lx = 0, lt = 0;
+    tr.addEventListener("pointerdown", function (e) {
+      if (e.pointerType !== "mouse" || e.button !== 0 || narrow()) return;
+      down = true; moved = 0; sx = lx = e.clientX; sl = tr.scrollLeft; vx = 0; lt = performance.now();
+      tr.classList.add("drag");
+    });
+    window.addEventListener("pointermove", function (e) {
+      if (!down) return;
+      var now = performance.now(); vx = (e.clientX - lx) / Math.max(8, now - lt); lx = e.clientX; lt = now;
+      moved = Math.max(moved, Math.abs(e.clientX - sx));
+      tr.scrollLeft = sl - (e.clientX - sx);
+    });
+    window.addEventListener("pointerup", function () {
+      if (!down) return; down = false; tr.classList.remove("drag");
+      // dobeh po pustení, potom jemné prichytenie
+      var v = -vx * 16;
+      (function glide() { if (Math.abs(v) < .5) { settle(); return; } tr.scrollLeft += v; v *= .92; requestAnimationFrame(glide); })();
+    });
+    // po ťahaní neotvárať kartu
+    tr.addEventListener("click", function (e) { if (moved > 6) { e.stopPropagation(); e.preventDefault(); moved = 0; } }, true);
+    tr.addEventListener("dragstart", function (e) { e.preventDefault(); });
+    if (wheel) tr.addEventListener("wheel", function (e) {
+      if (narrow() || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+      e.preventDefault(); tr.scrollLeft += e.deltaY;
+    }, { passive: false });
+    tr.addEventListener("scroll", settle, { passive: true });
+    window.addEventListener("resize", upd);
+    upd();
+    tr._upd = upd;
   }
-  btns.forEach(function (b) {
-    b.addEventListener("click", function () {
-      if (b.getAttribute("aria-pressed") === "true") return;
-      btns.forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
-      var f = b.dataset.f, show = items.filter(function (li) { return f === "all" || li.dataset.g === f; });
-      var visible = items.filter(function (li) { return li.style.display !== "none"; });
-      gsap.to(visible, { autoAlpha: 0, y: 16, duration: .25, ease: "power2.in", stagger: .02, overwrite: true, onComplete: done });
-      var finished = false;
-      function done() {
-        if (finished) return; finished = true;
-        items.forEach(function (li) { li.style.display = show.indexOf(li) >= 0 ? "" : "none"; });
-        layoutPattern(show);
-        ScrollTrigger.refresh();
-        // kratší zoznam: vrátiť sa k filtru, aby karty neboli mimo obrazovky
-        var top = document.querySelector(".flt").getBoundingClientRect().top + scrollY - 120;
-        if (scrollY > top) scrollTo({ top: top, behavior: "smooth" });
-        gsap.fromTo(show, { autoAlpha: 0, y: 28 }, { autoAlpha: 1, y: 0, duration: .8, ease: "power3.out", stagger: .06, overwrite: true });
-        var cnt = document.querySelector(".flt-n");
-        if (cnt) cnt.textContent = show.length;
-      }
-      if (!visible.length) done();
-    });
-  });
 })();

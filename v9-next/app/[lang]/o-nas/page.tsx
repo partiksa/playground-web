@@ -34,7 +34,7 @@ export default async function ONas({ params }: P) {
       </section>
 
       <section className="sec">
-        <div className="full">{fig("img/samorin-5667.webp", m("o-nas.alt"), "r21")}</div>
+        <div className="full">{fig("img/onas-hlavna.webp", m("o-nas.alt"), "r169")}</div>
       </section>
 
       <section className="sec">
@@ -59,9 +59,9 @@ export default async function ONas({ params }: P) {
       <section className="sec">
         {secHd(m("o-nas.samorin.eb"), m("o-nas.samorin.h"))}
         <div className="sam">
-          {fig("img/samorin-5671.webp", alts[0], "r34")}
-          {fig("img/samorin-5679.webp", alts[1], "r34")}
-          {fig("img/samorin-5684.webp", alts[2], "r34")}
+          {fig("img/onas-zvnutra-1.webp", alts[0], "r34")}
+          {fig("img/onas-zvnutra-2.webp", alts[1], "r34")}
+          {fig("img/onas-zvnutra-3.webp", alts[2], "r34")}
         </div>
         {more(P("realizacie") + "#samorin", m("o-nas.samorin.more"))}
       </section>

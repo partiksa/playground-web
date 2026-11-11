@@ -18,11 +18,14 @@ const GROUPS = [
   { id: 'prvky', parts: ['kruh', 'panel'], off: [1.4, 3.2, -1.6], isNew: true },
 ];
 
-// Farby štúdie nadväzujú na papier, červený akcent a tmavé tóny v9.
-const NEW = { modra: '#669e9e', tyrkys: '#99ccc3', stlp: '#478383', svetla: '#aed7ce', fialova: '#d989a7', podlaha: '#618b8c', bleda: '#f0dec5', smyk: '#f1bd5e', kruh: '#ed9fb6', pasok: '#49413d', snura: '#827570', cierna: '#3e4041' };
+// Výsledné farby podľa renderu vesmírneho ihriska (v5/frames/render/f_004.webp): modrá, tyrkysová, fialová.
+const NEW = { modra: '#2457c9', tyrkys: '#27a9a2', stlp: '#1d8c89', svetla: '#62c6bd', fialova: '#6a3cc0', podlaha: '#2a4fb0', bleda: '#cfd6ea', smyk: '#2f62d6', kruh: '#8754db', pasok: '#2b2d3a', snura: '#5b6070', cierna: '#22242c' };
+// staré ihrisko je poškodené: pena odpadnutá (diel leží na zemi alebo visí), po prerábke je všetko na mieste a lesklejšie
+const BROKEN = { blok_h: { drop: 1, rot: [1.25, 0, 0.35] }, fialovy_tram: { drop: 0.35, rot: [0, 0, 0.45] }, stupne_f: { drop: 0.6, rot: [0.5, 0.3, 0] } };
 const OLD = { modra: [0.42, 0.3, 0.05], tyrkys: [0.3, 0.06, 0.04], stlp: [0.4, 0.28, 0.05], svetla: [0.1, 0.22, 0.06], fialova: [0.25, 0.05, 0.04], podlaha: [0.18, 0.13, 0.08], bleda: [0.2, 0.17, 0.1], smyk: [0.08, 0.2, 0.05], pasok: [0.08, 0.07, 0.06], snura: [0.12, 0.11, 0.1], cierna: [0.05, 0.05, 0.05] };
-const BALLS_NEW = ['#669e9e', '#99ccc3', '#f0dec5', '#ed9fb6', '#f1bd5e'];
+const BALLS_NEW = ['#2457c9', '#27a9a2', '#f2efe6', '#6a3cc0', '#ffffff'];
 const BALLS_OLD = [[0.35, 0.3, 0.2], [0.3, 0.12, 0.08], [0.25, 0.25, 0.2]];
+// lesk: nový stav má nižšiu drsnosť (MeshStandardMaterial)
 
 class Play3D {
   constructor(root) {
@@ -58,13 +61,23 @@ class Play3D {
       const center = new THREE.Box3().setFromObject(node).getCenter(new THREE.Vector3());
       return { ...g, node, mats: [], off: new THREE.Vector3(...g.off), center };
     });
+    // poškodené diely: pôvodná poloha a poloha „odpadnutej“ peny
+    this.broken = [];
+    Object.entries(BROKEN).forEach(([n, b]) => {
+      const o = byName[n]; if (!o) return;
+      const box = new THREE.Box3().setFromObject(o);
+      const p0 = o.position.clone(), q0 = o.quaternion.clone();
+      const p1 = p0.clone(); p1.y -= Math.max(0, box.min.y) * b.drop;
+      const q1 = q0.clone().multiply(new THREE.Quaternion().setFromEuler(new THREE.Euler(...b.rot)));
+      this.broken.push({ o, p0, p1, q0, q1 });
+    });
     // materiály: farba podľa názvu, staré a nové farby pre prerábku
     this.groups.forEach((g) => g.node.traverse((o) => {
       if (!o.isMesh) return;
       const mats = Array.isArray(o.material) ? o.material : [o.material];
       mats.forEach((m, i) => {
         const key = m.name.split('.')[0];
-        const mm = m.clone(); mm.roughness = 0.62; mm.metalness = 0;
+        const mm = m.clone(); mm.roughness = 0.9; mm.metalness = 0;
         if (key === 'mriezka' || key === 'mriezka_o') { mm.transparent = true; mm.alphaTest = 0.35; mm.side = THREE.DoubleSide; }
         if (NEW[key]) mm.color.set(NEW[key]);
         mm.userData = { nw: NEW[key] && new THREE.Color(NEW[key]), old: OLD[key] && new THREE.Color().setRGB(...OLD[key]) };
@@ -135,8 +148,12 @@ class Play3D {
       }
       g.mats.forEach((m) => {
         if (m.userData.old && m.userData.nw) m.color.copy(m.userData.old).lerp(m.userData.nw, recolor);
+        m.roughness = 0.92 - recolor * 0.62; m.metalness = recolor * 0.08;
       });
     });
+    // odpadnutá pena sa vráti na miesto počas výmeny obalov
+    const fix = seg(p, 0.3, 0.6);
+    this.broken.forEach((b) => { b.o.position.lerpVectors(b.p1, b.p0, fix); b.o.quaternion.slerpQuaternions(b.q1, b.q0, fix); });
     if (this._rc !== recolor) {
       this._rc = recolor;
       const color = new THREE.Color();
