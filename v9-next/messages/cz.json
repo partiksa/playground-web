@@ -1,0 +1,394 @@
+{
+  "meta": {
+    "siteName": "PLAYGROUND",
+    "home": {
+      "title": "Interiérová hřiště na míru | Playground, Trnava",
+      "description": "Interiérová dětská hřiště na míru pro rodinná centra, kavárny, hotely a školky. Navrhujeme, vyrábíme a montujeme. Trnava."
+    },
+    "ihriska": {
+      "title": "Hřiště na míru | Playground, Trnava",
+      "description": "Panelová interiérová hřiště na míru pro rodinná centra, kavárny, hotely a školky. Konstrukce, herní prvky, materiál a servis."
+    },
+    "prerabka": {
+      "title": "Přestavba a stěhování hřiště | Playground, Trnava",
+      "description": "Staré interiérové hřiště přestavíme na nové, normované, nebo ho přestěhujeme. Použijeme původní konstrukci a nepoškozené díly."
+    },
+    "revizie": {
+      "title": "Revize a servis hřišť | Playground, Trnava",
+      "description": "Roční kontroly a servis interiérových hřišť podle norem EN 1176 a EN 1177. Náhradní díly ze skladu."
+    },
+    "realizacie": {
+      "title": "Realizace interiérových hřišť | Playground, Trnava",
+      "description": "12 realizací interiérových hřišť na Slovensku a v Česku: nová hřiště, přestavby, přestěhování, tubingové dráhy a dětské zóny."
+    },
+    "o-nas": {
+      "title": "O nás | Playground, Trnava",
+      "description": "PLAYGROUND, s.r.o. z Trnavy: 15 let na trhu, 180+ projektů v 6 zemích. Interiérová hřiště na klíč, přestavby a vlastní sklad dílů."
+    },
+    "kontakt": {
+      "title": "Kontakt a poptávka | Playground, Trnava",
+      "description": "Napište nám poptávku na interiérové hřiště, přestavbu, přestěhování nebo revizi. +421 905 724 437, info@play-ground.sk, Trnava."
+    }
+  },
+  "seo": {
+    "orgDescription": "Interiérová dětská hřiště na míru: návrh, výroba, montáž, přestavba, stěhování a revize. Trnava, Slovensko.",
+    "services": [
+      { "name": "Interiérová hřiště na míru", "description": "Návrh, 3D vizualizace, výroba a montáž interiérových hřišť pro rodinná centra, kavárny, hotely a školky." },
+      { "name": "Přestavba a stěhování hřišť", "description": "Přestavba starých hřišť na nová a normovaná, demontáž, přeprava a montáž v novém prostoru." },
+      { "name": "Revize a servis hřišť", "description": "Roční kontroly a servis interiérových hřišť podle norem EN 1176 a EN 1177." }
+    ]
+  },
+  "common": {
+    "skip": "Přeskočit na obsah",
+    "logoLabel": "PLAYGROUND, úvod",
+    "navLabel": "Hlavní menu",
+    "nav": {
+      "home": "Úvod",
+      "ihriska": "Hřiště na míru",
+      "prerabka": "Přestavba",
+      "revizie": "Revize",
+      "realizacie": "Realizace",
+      "o-nas": "O nás",
+      "kontakt": "Kontakt"
+    },
+    "cta": "Napsat poptávku",
+    "menu": "Menu",
+    "close": "Zavřít",
+    "phone": "+421 905 724 437",
+    "phoneHref": "+421905724437",
+    "email": "info@play-ground.sk",
+    "langLabel": "Jazyk",
+    "langNames": {
+      "sk": "Slovenčina",
+      "cz": "Čeština",
+      "en": "English",
+      "de": "Deutsch"
+    },
+    "langShort": {
+      "sk": "SK",
+      "cz": "CZ",
+      "en": "EN",
+      "de": "DE"
+    }
+  },
+  "cta": {
+    "label": "Kontakt",
+    "title": "{N}apište nám",
+    "lead": "Popište nám svůj prostor nebo hřiště a ozveme se vám s návrhem.",
+    "button": "Napsat poptávku"
+  },
+  "footer": {
+    "claim": "Interiérová hřiště na míru. Navrhujeme, vyrábíme a montujeme.",
+    "contactTitle": "Kontakt",
+    "address": "Poštová 6562/20\n917 01 Trnava",
+    "menuTitle": "Menu",
+    "companyTitle": "Firma",
+    "company": [
+      "PLAYGROUND, s.r.o.",
+      "IČO 47051990",
+      "DIČ 2023714429",
+      "IČ DPH SK2023714429",
+      "Okresný súd Trnava, oddiel Sro, vložka 31165/T"
+    ],
+    "big": "Play{G}round",
+    "copyright": "© 2026 PLAYGROUND, s.r.o.",
+    "place": "Trnava, Slovensko"
+  },
+  "home": {
+    "storyLabel": "Jak vzniká hřiště na míru",
+    "chapters": [
+      {
+        "eb": "Playground, Trnava",
+        "h": "Hřiště na {M}íru",
+        "p": "Interiérové hřiště pro rodinné centrum, kavárnu, hotel nebo školku. Navrhneme ho, vyrobíme a postavíme. Od prvního rozhovoru po předání."
+      },
+      {
+        "eb": "Konzultace",
+        "h": "První spoj j{E} rozhovor",
+        "p": "Spoj drží celou konstrukci. U hřiště je jím první rozhovor. Řeknete nám, pro koho hřiště je, kolik dětí si na něm bude hrát a co má provozu přinést. Z toho vychází všechno další."
+      },
+      {
+        "eb": "Zaměření prostoru",
+        "h": "Kostra podle v{A}šich stěn",
+        "p": "Prostor zaměříme na místě: rozměry, výšku stropu, vstupy, okna i sloupy. Konstrukce z ocelových trubek a spojek se přizpůsobí místnosti, ne naopak."
+      },
+      {
+        "eb": "Návrh a 3D vizualizace",
+        "h": "Prvky vyb{<E}íráte vy",
+        "p": "Dostanete návrh a 3D vizualizaci. Vidíte, kde bude skluzavka, bazén s míčky, tunel nebo trampolína. Návrh s vámi upravujeme, dokud nesedí prvky, barvy i rozpočet."
+      },
+      {
+        "eb": "Výroba",
+        "h": "Bezpečnost je v det{<A}ilu",
+        "p": "Konstrukci obalíme pěnou a vinylem, prostor uzavřeme sítěmi. Hřiště splňuje normy EN 1176 a EN 1177. Trubky, spojky, sítě a pěny máme na vlastním skladě."
+      },
+      {
+        "eb": "Dodání a montáž",
+        "h": "{M}ontáž na klíč",
+        "p": "Hřiště dovezeme, postavíme a předáme připravené k provozu. Staráme se o ně i potom: servis a roční kontroly. Napište nám rozměry prostoru a co od hřiště očekáváte. Ozveme se s návrhem."
+      }
+    ]
+  },
+  "ihriska": {
+    "eb": "Panelová interiérová hřiště",
+    "h1": "Hřiště na {M}íru",
+    "lead": "Hřiště pro rodinné centrum, kavárnu, hotel nebo školku. Od první konzultace po montáž na klíč.",
+    "more": "Jak vzniká hřiště",
+    "vizLabel": "3D vizualizace interiérového hřiště s vesmírným tématem",
+    "vizCap": "3D vizualizace před výrobou",
+    "construction": {
+      "eb": "Konstrukce",
+      "h": "Ocel, pěna a sí{T}ě",
+      "p": [
+        "Nosnou konstrukci tvoří ocelové trubky a spojky. Obalujeme ji pěnou a vinylem, prostor uzavírají sítě. Na konstrukci se připojují herní prvky: skluzavky, tunely, sítě a závěsné moduly.",
+        "Hřiště splňují normy EN 1176 (vybavení hřišť) a EN 1177 (povrchy tlumící náraz)."
+      ],
+      "alt": "Vícepatrové panelové hřiště se sítěmi, Pezinok"
+    },
+    "elements": {
+      "eb": "Herní prvky",
+      "h": "Prvky podle věku a pro{S}toru",
+      "items": [
+        "Skluzavky a tobogány",
+        "Prolézačky a moduly",
+        "Síťové chodníky a balanční prvky",
+        "Trampolíny, tunely a překážkové dráhy",
+        "Tubingové dráhy a lezecké stěny",
+        "Zóny pro různé věkové kategorie"
+      ],
+      "note": "Prvky rozvíjejí motoriku, koordinaci, kreativitu a sociální dovednosti dětí.",
+      "alt": "Lezecká stěna, skluzavka a tunel v Kinder Clubu, Trnava"
+    },
+    "places": {
+      "eb": "Kde se hodí",
+      "h": "Pro provozy, kde jsou d{Ě}ti",
+      "items": [
+        { "t": "Rodinná centra a herny", "p": "Zábava pro děti při nákupech a ve volném čase." },
+        { "t": "Kavárny a cukrárny", "p": "Děti si hrají, rodiče odpočívají." },
+        { "t": "Hotely a penziony", "p": "Rodinná atrakce navíc k nabídce." },
+        { "t": "Školky a vzdělávací centra", "p": "Bezpečné prostředí pro hru a rozvoj." },
+        { "t": "Aquaparky a koupaliště", "p": "Kompletní dětské zóny." }
+      ]
+    },
+    "material": {
+      "eb": "Materiál a servis",
+      "h": "Díly máme na skl{<A}dě",
+      "p": [
+        "Hřiště vyrábíme z kvalitních materiálů s důrazem na bezpečnost a dlouhou životnost. Na skladě máme konstrukční trubky, spojky, sítě, pěny na obalování konstrukce a závěsné moduly.",
+        "Děláme také servis a roční kontroly hřišť."
+      ],
+      "linkRevizie": "Servis a revize",
+      "linkRealizacie": "Realizace",
+      "alt": "Detail měkkých obalů sloupů a ochranných sítí, Trnava"
+    }
+  },
+  "prerabka": {
+    "eb": "Ze starého nové",
+    "h1": "Přestavba a {S}těhování",
+    "lead": "Staré hřiště přestavíme na nové, normované, nebo ho přestěhujeme do nového prostoru.",
+    "alt": "Obnovené interiérové hřiště se skluzavkou a míčkovým bazénem, Dunajská Lužná",
+    "cap": "Přestavba hřiště · Dunajská Lužná",
+    "process": {
+      "eb": "Postup",
+      "h": "Přestavba krok za kr{<O}kem",
+      "p": "Použijeme původní konstrukci a nepoškozené díly. Vyměníme obaly, barvy a doplníme nové prvky.",
+      "steps": [
+        "Staré hřiště",
+        "Demontáž",
+        "Nové obaly a barvy",
+        "Nové prvky",
+        "Obnovené hřiště"
+      ],
+      "vizLabel": "3D model rozložení, přebarvení a složení hřiště",
+      "vizCap": "3D studie přestavby"
+    },
+    "rebuild": {
+      "eb": "Přestavba",
+      "h": "Z čínského normované",
+      "p": "Staré hřiště (nejčastěji čínské) přestavíme na nové, normované. Použijeme materiál z původního: železo z konstrukce, spojky a nepoškozené moduly.",
+      "list": [
+        "výměna opotřebovaných herních prvků",
+        "úprava dispozice a lepší využití prostoru",
+        "nový design a barvy",
+        "doplnění nových atrakcí",
+        "úprava podle aktuálních norem"
+      ]
+    },
+    "moving": {
+      "eb": "Stěhování",
+      "h": "Rozebereme, převezeme, postavíme",
+      "p": "Hřiště rozebereme, převezeme a postavíme v novém prostoru. Přitom ho můžeme upravit na nový rozměr.",
+      "alt": "Přestěhované hřiště na chodbě základní školy, Hlohovec",
+      "cap": "Přestěhované hřiště · Hlohovec"
+    },
+    "why": {
+      "eb": "Proč přestavba",
+      "h": "Často rychlejší a levnější než nové hř{<I}ště",
+      "more": "Přestavěná hřiště"
+    }
+  },
+  "revizie": {
+    "eb": "Servis a kontroly",
+    "h1": "Re{<V>}ize",
+    "lead": "Zkontrolujeme hřiště, opravíme, co je třeba, a vyměníme opotřebované díly.",
+    "button": "Objednat revizi",
+    "alt": "Ilustrační detail ruky při kontrole ochranné sítě",
+    "cap": "Kontrola ochranné sítě · AI ilustrace",
+    "listLabel": "Revize a servis",
+    "rows": [
+      { "t": "Roční kontrola", "p": "Děláme servis a roční kontroly (revize) hřišť. Hřiště posuzujeme podle norem EN 1176 (vybavení hřišť) a EN 1177 (povrchy tlumící náraz)." },
+      { "t": "Servis a díly", "p": "Na skladě máme konstrukční trubky, spojky, sítě, pěny na obalování konstrukce a závěsné moduly." }
+    ]
+  },
+  "realizacie": {
+    "eb": "12 projektů, Slovensko a Česko",
+    "h1": "Reali{Z}ace",
+    "lead": "Nová hřiště, přestavby, přestěhování a obnovy pro rodinná centra, školy, koupaliště a aquaparky.",
+    "listLabel": "Seznam realizací",
+    "modal": {
+      "prev": "Předchozí",
+      "next": "Další",
+      "close": "Zavřít",
+      "photo": "fotka"
+    },
+    "items": [
+      { "t": "Nové hřiště Kinder Club", "p": "Trnava", "y": "Demontáž a montáž", "d": "Demontáž původního a montáž nového interiérového hřiště v Kinder Clubu Trnava.", "alt": "Nové hřiště Kinder Club, Trnava" },
+      { "t": "Přestavba hřiště", "p": "Dunajská Lužná", "y": "Přestavba", "d": "Obnova a přestavba interiérového hřiště v Dunajské Lužné.", "alt": "Přestavba hřiště, Dunajská Lužná" },
+      { "t": "Obnova obalů konstrukce", "p": "Klatovy, CZ", "y": "Obnova", "d": "Obnova pěnových obalů konstrukce interiérového hřiště.", "alt": "Obnova obalů konstrukce, Klatovy, CZ" },
+      { "t": "Interiérové hřiště na míru", "p": "Šamorín", "y": "Nové hřiště na míru", "d": "Interiérové hřiště na míru propojené s existující stěnou s otvory.", "alt": "Interiérové hřiště na míru, Šamorín" },
+      { "t": "Přestěhování a přestavba hřiště", "p": "Hlohovec", "y": "Přestěhování a přestavba", "d": "Demontáž třípatrového interiérového hřiště a úprava na nové hřiště se dvěma patry na chodbě základní školy.", "alt": "Přestěhování a přestavba hřiště, Hlohovec" },
+      { "t": "Nové hřiště v Pezinku", "p": "Pezinok", "y": "Demontáž a montáž", "d": "Demontáž, montáž a úprava nového interiérového hřiště v Pezinku.", "alt": "Nové hřiště v Pezinku, Pezinok" },
+      { "t": "Přestěhované a obnovené hřiště", "p": "Králův Dvůr, CZ", "y": "Přestěhování a obnova", "d": "Přestěhované a obnovené interiérové hřiště v Králově Dvoře u Berouna.", "alt": "Přestěhované a obnovené hřiště, Králův Dvůr, CZ" },
+      { "t": "Lezecká stěna pro děti", "p": "Karviná, CZ", "y": "Lezecká stěna", "d": "Lezecká stěna je dobrým doplňkem do heren.", "alt": "Lezecká stěna pro děti, Karviná, CZ" },
+      { "t": "Tubingová dráha", "p": "Karviná, CZ", "y": "Tubingová dráha", "d": "Tubingová dráha postavená jako samostatně stojící herní prvek. Děti na ní tráví nejvíce času.", "alt": "Tubingová dráha, Karviná, CZ" },
+      { "t": "Hřiště na koupališti", "p": "Praha, CZ", "y": "Montáž", "d": "Montáž použitého interiérového hřiště v areálu koupaliště v Praze.", "alt": "Hřiště na koupališti, Praha, CZ" },
+      { "t": "Dostavba hřiště a tubingové dráhy", "p": "Uherský Brod, CZ", "y": "Dostavba", "d": "Dostavba interiérového hřiště a tubingové dráhy k existujícímu interiérovému hřišti.", "alt": "Dostavba hřiště a tubingové dráhy, Uherský Brod, CZ" },
+      { "t": "Dětská zóna v aquaparku", "p": "Oravice, Meander", "y": "Nová dětská zóna", "d": "Montáž kompletní dětské zóny s panelovým interiérovým hřištěm v aquaparku Meander Oravice.", "alt": "Dětská zóna v aquaparku, Oravice, Meander" }
+    ]
+  },
+  "o-nas": {
+    "eb": "PLAYGROUND, s.r.o., Trnava",
+    "h1": "O {N}ás",
+    "lead": "Dodáváme normovaná interiérová hřiště a trampolínová centra. Provozům pomáhají přilákat rodiče s dětmi.",
+    "statsLabel": "PLAYGROUND v číslech",
+    "stats": [
+      { "value": 15, "suffix": "", "label": "let na trhu" },
+      { "value": 180, "suffix": "+", "label": "projektů" },
+      { "value": 6, "suffix": "", "label": "zemí: Slovensko, Česko, Francie, Itálie, Estonsko, Rumunsko" }
+    ],
+    "alt": "Interiérové hřiště na míru u oranžové stěny, Šamorín",
+    "diff": {
+      "eb": "Čím se lišíme",
+      "h": "Od návrhu po s{E}rvis",
+      "rows": [
+        { "t": "Na klíč", "p": "Od konzultace, zaměření, návrhu a vizualizace po dodání a montáž. Provedli jsme také stovky servisů a ročních kontrol hřišť." },
+        { "t": "Přestavba starého hřiště", "p": "Staré hřiště přestavíme na nové a normované. Použijeme původní konstrukci, spojky a nepoškozené moduly, takže ušetříte." },
+        { "t": "Vlastní sklad", "p": "Konstrukční trubky, spojky, sítě, pěny na obalování a závěsné moduly máme na skladě." },
+        { "t": "Poradíme i s prostorem", "p": "Pomůžeme s rozložením hřiště, posezením i kavárenskou částí." }
+      ]
+    },
+    "samorin": {
+      "eb": "Šamorín",
+      "h": "P{O}hled zevnitř",
+      "alts": [
+        "Patro hřiště se žlutými pyramidami, Šamorín",
+        "Kulaté okno a skluzavka, Šamorín",
+        "Tunel s kulatým oknem, Šamorín"
+      ],
+      "more": "Všechny realizace"
+    },
+    "faq": {
+      "eb": "Otázky a odpovědi",
+      "h": "Časté {O}tázky"
+    }
+  },
+  "kontakt": {
+    "eb": "Kontakt",
+    "h1": "{N}apište nám",
+    "lead": "Popište nám svůj prostor nebo hřiště. Ozveme se s návrhem.",
+    "addressTitle": "Adresa",
+    "address": "PLAYGROUND, s.r.o.\nPoštová 6562/20\n917 01 Trnava",
+    "companyTitle": "Firma",
+    "company": "IČO 47051990\nDIČ 2023714429\nIČ DPH SK2023714429",
+    "form": {
+      "label": "Poptávkový formulář",
+      "required": "povinné",
+      "service": {
+        "legend": "Co potřebujete",
+        "options": {
+          "nove": "Nové hřiště",
+          "prerabka": "Přestavba",
+          "stahovanie": "Přestěhování",
+          "reviza": "Revize",
+          "nafukovacie": "Nafukovací atrakce",
+          "ine": "Jiné"
+        },
+        "otherLabel": "Popište, co potřebujete",
+        "otherError": "Napište, co potřebujete."
+      },
+      "type": {
+        "legend": "Typ provozu",
+        "options": ["Rodinné centrum", "Kavárna", "Hotel", "Školka", "Jiné"]
+      },
+      "when": {
+        "legend": "Dokdy má být hotovo",
+        "options": ["Co nejdříve", "Do tří měsíců", "Do půl roku", "Zatím se jen ptám"]
+      },
+      "plan": {
+        "legend": "Máte k dispozici půdorys?",
+        "yes": "Ano",
+        "no": "Ne",
+        "fileLabel": "Půdorys",
+        "fileHint": "PDF, PNG, JPG, DWG nebo DXF, nejvýše 10 MB. Formulář soubor neodešle, přiložte ho k e-mailu, který se otevře.",
+        "fileChosen": "Vybraný soubor: {name}. Přiložte ho k e-mailu.",
+        "errType": "Tento typ souboru není podporován. Použijte PDF, PNG, JPG, DWG nebo DXF.",
+        "errSize": "Soubor má více než 10 MB. Použijte menší soubor."
+      },
+      "contact": {
+        "legend": "Vaše údaje",
+        "name": "Jméno",
+        "email": "E-mail",
+        "phone": "Telefon",
+        "city": "Město a země",
+        "message": "Zpráva",
+        "messagePlaceholder": "Rozměry prostoru, výška stropu, pro koho je hřiště"
+      },
+      "consent": "Souhlasím se zpracováním osobních údajů za účelem vyřízení poptávky.",
+      "submit": "Odeslat",
+      "errors": {
+        "summary": "Zkontrolujte označená pole.",
+        "name": "Doplňte jméno.",
+        "email": "Doplňte platný e-mail.",
+        "consent": "Potřebujeme váš souhlas se zpracováním údajů."
+      },
+      "done": {
+        "title": "Děkujeme",
+        "text": "Otevřeli jsme e-mail s vaší poptávkou. Stačí ho odeslat.",
+        "textPlan": "Otevřeli jsme e-mail s vaší poptávkou. Přiložte k němu půdorys a odešlete ho.",
+        "open": "Otevřít e-mail",
+        "copy": "Zkopírovat text",
+        "copied": "Zkopírováno",
+        "to": "Komu"
+      },
+      "mail": {
+        "subject": "Poptávka z webu: {name}",
+        "service": "Co potřebuji",
+        "other": "Popis",
+        "type": "Typ provozu",
+        "when": "Termín",
+        "plan": "Půdorys",
+        "planYes": "ano, pošlu ho v příloze e-mailu",
+        "planNo": "ne",
+        "name": "Jméno",
+        "email": "E-mail",
+        "phone": "Telefon",
+        "city": "Město a země",
+        "none": "neuvedeno"
+      }
+    }
+  },
+  "root": {
+    "title": "PLAYGROUND, interiérová hřiště na míru",
+    "link": "PLAYGROUND, česká verze"
+  }
+}

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /_build/
+Disallow: /index-stavba.html
+
+Sitemap: https://play-ground.sk/sitemap.xml

@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Realizácie interiérových ihrísk | Playground, Trnava</title>
+<meta name="description" content="12 realizácií interiérových ihrísk na Slovensku a v Česku: nové ihriská, prerábky, presťahovania, tubingové dráhy a detské zóny.">
+<meta name="theme-color" content="#DEDDDB">
+<link rel="preload" href="fonts/PlusJakartaSans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Slinkee.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="site.css">
+<script>try{if(!sessionStorage.getItem("pg-ld")&&!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("ld-on")}catch(e){}</script>
+<style>
+.rz-list { display: grid; grid-template-columns: repeat(12, 1fr); gap: clamp(48px, 6vw, 96px) var(--gap); }
+.rz.big { grid-column: span 7; }
+.rz.small { grid-column: span 5; align-self: end; }
+.rz.small .dp { aspect-ratio: 1 / 1; }
+.rz-card { display: block; width: 100%; text-align: left; cursor: pointer; }
+.rz-meta { display: grid; grid-template-columns: 3em 1fr; gap: 4px 0; margin-top: 16px; align-items: baseline; }
+.rz-meta .n { font-size: .875rem; font-weight: 650; color: var(--mute); font-variant-numeric: tabular-nums; }
+.rz-t { font-size: clamp(1.125rem, 1rem + .5vw, 1.5rem); font-weight: 700; text-transform: uppercase; letter-spacing: -.01em; line-height: 1.15;
+  background: linear-gradient(currentColor, currentColor) 0 100% / 0 1.5px no-repeat; transition: background-size .5s var(--ease); width: fit-content; }
+.rz-card:hover .rz-t, .rz-card:focus-visible .rz-t { background-size: 100% 1.5px; }
+.rz-pl { grid-column: 2; color: var(--mute); font-weight: 550; }
+.rz-y::before { content: "  ·  "; white-space: pre; }
+.rz-card .dp img, .rz-card .dp canvas { transition: transform .9s var(--ease), opacity .6s var(--ease); }
+.rz-card:hover .dp img, .rz-card:hover .dp canvas { transform: scale(1.025); }
+
+/* detail realizácie */
+.md { position: fixed; inset: 0; z-index: 40; background: var(--paper); visibility: hidden; display: flex; flex-direction: column; overscroll-behavior: contain; }
+.md-bar { display: flex; align-items: center; gap: 20px; height: var(--hh); padding: 0 var(--pad); flex: none; }
+.md-bar .n { font-weight: 650; font-variant-numeric: tabular-nums; }
+.md-bar .sp { flex: 1; }
+.md-bar button { font-weight: 650; padding: 10px 4px; }
+.md-in { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(280px, 4fr) 8fr; gap: var(--gap); padding: 0 0 clamp(20px, 3vw, 40px) var(--pad); }
+.md-txt { align-self: end; padding-bottom: 8px; }
+.md-txt .eb { margin-bottom: 14px; }
+.md-txt .h { font-size: clamp(1.8rem, 1rem + 2.4vw, 3.4rem); line-height: 1.04; }
+.md-txt .p { margin-top: 18px; }
+.md-gal { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding-right: var(--pad); scrollbar-width: thin; }
+.md-gal figure { flex: none; height: 100%; scroll-snap-align: start; background: var(--paper-2); }
+.md-gal img { height: 100%; width: auto; object-fit: cover; }
+@media (max-width: 980px) {
+  .rz.big, .rz.small { grid-column: 1 / -1; }
+  .rz.small .dp { aspect-ratio: 4 / 3; }
+  .md { overflow-y: auto; }
+  .md-in { display: block; padding: 0 var(--pad) 32px; }
+  .md-txt { padding-bottom: 28px; }
+  .md-gal { display: grid; gap: 10px; overflow: visible; padding: 0; }
+  .md-gal figure { height: auto; }
+  .md-gal img { width: 100%; height: auto; }
+}
+</style>
+</head>
+<body data-page="realizacie">
+
+<div class="ld" id="ld" aria-hidden="true"><div class="ld-bg"></div><div class="ld-logo"><i></i></div></div>
+
+<header class="hd js-hide" id="hd">
+  <a class="logo" href="./" aria-label="PLAYGROUND, úvod"><i></i></a>
+  <nav class="nav" aria-label="Hlavné menu">
+    <ul>
+      <li><a href="ihriska.html">Ihriská na mieru</a></li>
+      <li><a href="prerabka.html">Prerábka</a></li>
+      <li><a href="revizie.html">Revízie</a></li>
+      <li><a href="realizacie.html" aria-current="page">Realizácie</a></li>
+      <li><a href="o-nas.html">O&nbsp;nás</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+  <a class="tel" href="tel:+421905724437">+421 905 724 437</a>
+  <a class="btn" href="kontakt.html">Napísať dopyt</a>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="sheet">Menu</button>
+</header>
+
+<div class="sheet" id="sheet" aria-hidden="true">
+  <ul>
+    <li class="m-ln"><a href="ihriska.html">Ihriská na mieru</a></li>
+    <li class="m-ln"><a href="prerabka.html">Prerábka</a></li>
+    <li class="m-ln"><a href="revizie.html">Revízie</a></li>
+    <li class="m-ln"><a href="realizacie.html" aria-current="page">Realizácie</a></li>
+    <li class="m-ln"><a href="o-nas.html">O&nbsp;nás</a></li>
+    <li class="m-ln"><a href="kontakt.html">Kontakt</a></li>
+  </ul>
+  <div class="meta">
+    <a href="tel:+421905724437">+421 905 724 437</a>
+    <a href="mailto:info@play-ground.sk">info@play-ground.sk</a>
+  </div>
+</div>
+
+<main class="page">
+  <section class="ph">
+    <p class="eb rv" data-now>12 projektov, Slovensko a&nbsp;Česko</p>
+    <h1 class="h h1" data-split="now"><span class="w">Reali<span class="sl">Z</span>ácie</span></h1>
+    <p class="lead rv" data-now data-d=".15">Nové ihriská, prerábky, presťahovania a&nbsp;obnovy pre rodinné centrá, školy, kúpaliská a&nbsp;aquaparky.</p>
+  </section>
+
+  <section class="sec" aria-label="Zoznam realizácií">
+    <ol class="rz-list">
+      <li class="rz big">
+        <button class="rz-card" type="button" data-i="0" aria-haspopup="dialog">
+          <figure class="dp wipe r43" data-depth="img/projekt-04-d.webp"><img src="img/projekt-04.webp" alt="Nové ihrisko Kinder Club, Trnava" width="1536" height="1152" loading="lazy" decoding="async"></figure>
+          <span class="rz-meta"><span class="n">01</span><span class="rz-t">Nové ihrisko Kinder Club</span><span class="rz-pl">Trnava<span class="rz-y">Demontáž a&nbsp;montáž</span></span></span>
+        </button>
+      </li>
+      <li class="rz small">
+        <button class="rz-card" type="button" data-i="1" aria-haspopup="dialog">
+          <figure class="dp wipe r43" data-depth="img/projekt-07-d.webp"><img src="img/projekt-07.webp" alt="Prerábka ihriska, Dunajská Lužná" width="1536" height="1152" loading="lazy" decoding="async"></figure>
+          <span class="rz-meta"><span class="n">02</span><span class="rz-t">Prerábka ihriska</span><span class="rz-pl">Dunajská Lužná<span class="rz-y">Prerábka</span></span></span>
+        </button>
+      </li>
+      <li class="rz small">
+        <button class="rz-card" type="button" data-i="2" aria-haspopup="dialog">
+          <figure class="dp wipe r43" data-depth="img/projekt-06-d.webp"><img src="img/projekt-06.webp" alt="Obnova obalov konštrukcie, Klatovy, CZ" width="1536" height="1152" loading="lazy" decoding="async"></figure>
+          <span class="rz-meta"><span class="n">03</span><span class="rz-t">Obnova obalov konštrukcie</span><span class="rz-pl">Klatovy, CZ<span class="rz-y">Obnova</span></span></span>
+        </button>
+      </li>
+      <li class="rz big">
+        <button class="rz-card" type="button" data-i="3" aria-haspopup="dialog">
+          <figure class="dp wipe r43" data-depth="img/projekt-02-d.webp"><img src="img/projekt-02.webp" alt="Interiérové ihrisko na mieru, Šamorín" width="1536" height="1152" loading="lazy" decoding="async"></figure>
+          <span class="rz-meta"><span class="n">04</span><span class="rz-t">Interiérové ihrisko na mieru</span><span class="rz-pl">Šamorín<span class="rz-y">Nové ihrisko na mieru</span></span></span>
+        </button>
+      </li>
+      <li class="rz big">
+        <button class="rz-card" type="button" data-i="4" aria-haspopup="dialog">
+          <figure class="dp wipe r43" data-depth="img/projekt-10-d.webp"><img src="img/projekt-10.webp" alt="Presťahovanie a prerobenie ihriska, Hlohovec" width="1536" height="1152" loading="lazy" decoding="async"></figure>
+          <span class="rz-meta"><span class="n">05</span><span class="rz-t">Presťahovanie a&nbsp;prerobenie ihriska</span><span class="rz-pl">Hlohovec<span class="rz-y">Presťahovanie a&nbsp;prerábka</span></span></span>
+        </button>
+      </li>
+      <li class="rz small">
+        <button class="rz-card" type="button" data-i="5" aria-haspopup="dialog">
+          <figure class="dp wipe r43" data-depth="img/projekt-05-d.webp"><img src="img/projekt-05.webp" alt="Nové ihrisko v Pezinku, Pezinok" width="1536" height="1152" loading="lazy" decoding="async"></figure>
+          <span class="rz-meta"><span class="n">06</span><span class="rz-t">Nové ihrisko v&nbsp;Pezinku</span><span class="rz-pl">Pezinok<span class="rz-y">Demontáž a&nbsp;montáž</span></span></span>
+        </button>
+      </li>
+      <li class="rz small">
+        <button class="rz-card" type="button" data-i="6" aria-haspopup="dialog">
+          <figure class="dp wipe r43" data-depth="img/projekt-01-d.webp"><img src="img/projekt-01.webp" alt="Presťahované a obnovené ihrisko, Králův Dvůr, CZ" width="1350" height="1800" loading="lazy" decoding="async"></figure>
+          <span class="rz-meta"><span class="n">07</span><span class="rz-t">Presťahované a&nbsp;obnovené ihrisko</span><span class="rz-pl">Králův Dvůr, CZ<span class="rz-y">Presťahovanie a&nbsp;obnova</span></span></span>
+        </button>
+      </li>
+      <li class="rz big">
+        <button class="rz-card" type="button" data-i="7" aria-haspopup="dialog">
+          <figure class="dp wipe r43" data-depth="img/projekt-11-d.webp"><img src="img/projekt-11.webp" alt="Lezecká stena pre deti, Karviná, CZ" width="1536" height="1152" loading="lazy" decoding="async"></figure>
+          <span class="rz-meta"><span class="n">08</span><span class="rz-t">Lezecká stena pre deti</span><span class="rz-pl">Karviná, CZ<span class="rz-y">Lezecká stena</span></span></span>
+        </button>
+      </li>
+      <li class="rz big">
+        <button class="rz-card" type="button" data-i="8" aria-haspopup="dialog">
+          <figure class="dp wipe r43" data-depth="img/projekt-12-d.webp"><img src="img/projekt-12.webp" alt="Tubingová dráha, Karviná, CZ" width="1350" height="1800" loading="lazy" decoding="async"></figure>
+          <span class="rz-meta"><span class="n">09</span><span class="rz-t">Tubingová dráha</span><span class="rz-pl">Karviná, CZ<span class="rz-y">Tubingová dráha</span></span></span>
+        </button>
+      </li>
+      <li class="rz small">
+        <button class="rz-card" type="button" data-i="9" aria-haspopup="dialog">
+          <figure class="dp wipe r43" data-depth="img/projekt-08-d.webp"><img src="img/projekt-08.webp" alt="Ihrisko na kúpalisku, Praha, CZ" width="1536" height="1152" loading="lazy" decoding="async"></figure>
+          <span class="rz-meta"><span class="n">10</span><span class="rz-t">Ihrisko na kúpalisku</span><span class="rz-pl">Praha, CZ<span class="rz-y">Montáž</span></span></span>
+        </button>
+      </li>
+      <li class="rz small">
+        <button class="rz-card" type="button" data-i="10" aria-haspopup="dialog">
+          <figure class="dp wipe r43" data-depth="img/projekt-09-d.webp"><img src="img/projekt-09.webp" alt="Dorábka ihriska a tubingovej dráhy, Uherský Brod, CZ" width="1350" height="1800" loading="lazy" decoding="async"></figure>
+          <span class="rz-meta"><span class="n">11</span><span class="rz-t">Dorábka ihriska a&nbsp;tubingovej dráhy</span><span class="rz-pl">Uherský Brod, CZ<span class="rz-y">Dorábka</span></span></span>
+        </button>
+      </li>
+      <li class="rz big">
+        <button class="rz-card" type="button" data-i="11" aria-haspopup="dialog">
+          <figure class="dp wipe r43" data-depth="img/projekt-03-d.webp"><img src="img/projekt-03.webp" alt="Detská zóna v aquaparku, Oravice, Meander" width="1536" height="1152" loading="lazy" decoding="async"></figure>
+          <span class="rz-meta"><span class="n">12</span><span class="rz-t">Detská zóna v&nbsp;aquaparku</span><span class="rz-pl">Oravice, Meander<span class="rz-y">Nová detská zóna</span></span></span>
+        </button>
+      </li>
+    </ol>
+  </section>
+
+  <section class="cta" aria-label="Kontakt">
+    <h2 class="h" data-split><span class="w"><span class="sl">N</span>apíšte</span> nám</h2>
+    <p class="lead rv">Opíšte nám svoj priestor alebo ihrisko a&nbsp;ozveme sa vám s&nbsp;návrhom.</p>
+    <div class="acts rv" data-d=".1">
+      <a class="btn btn--red" href="kontakt.html">Napísať dopyt <span class="ar" aria-hidden="true">→</span></a>
+      <a class="tel" href="tel:+421905724437">+421 905 724 437</a>
+    </div>
+  </section>
+
+</main>
+
+<div class="md" id="md" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="md-t">
+  <div class="md-bar">
+    <span class="n"></span>
+    <span class="sp"></span>
+    <button class="md-prev" type="button">Predchádzajúca</button>
+    <button class="md-next" type="button">Ďalšia</button>
+    <button class="md-x" type="button">Zavrieť</button>
+  </div>
+  <div class="md-in">
+    <div class="md-txt"><p class="eb"></p><h2 class="h" id="md-t"></h2><p class="p"></p></div>
+    <div class="md-gal"></div>
+  </div>
+</div>
+
+<footer class="ft" id="ft">
+  <div class="ft-top">
+    <div>
+      <a class="logo" href="./" aria-label="PLAYGROUND, úvod"><i></i></a>
+      <p class="claim">Interiérové ihriská na mieru. Navrhujeme, vyrábame a&nbsp;montujeme.</p>
+    </div>
+    <div>
+      <h2>Kontakt</h2>
+      <ul>
+        <li><a href="tel:+421905724437">+421 905 724 437</a></li>
+        <li><a href="mailto:info@play-ground.sk">info@play-ground.sk</a></li>
+        <li>Poštová 6562/20<br>917 01 Trnava</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="ihriska.html">Ihriská na mieru</a></li>
+        <li><a href="prerabka.html">Prerábka</a></li>
+        <li><a href="revizie.html">Revízie</a></li>
+        <li><a href="realizacie.html">Realizácie</a></li>
+        <li><a href="o-nas.html">O&nbsp;nás</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Firma</h2>
+      <ul>
+        <li>PLAYGROUND, s.r.o.</li>
+        <li>IČO 47051990</li>
+        <li>DIČ 2023714429</li>
+        <li>IČ DPH SK2023714429</li>
+        <li>Okresný súd Trnava, oddiel Sro, vložka 31165/T</li>
+      </ul>
+    </div>
+  </div>
+  <p class="ft-big" aria-hidden="true"><span class="ft-word">Play<span class="sl">G</span>round</span></p>
+  <div class="ft-bot">
+    <span>© 2026 PLAYGROUND, s.r.o.</span>
+    <span>Trnava, Slovensko</span>
+  </div>
+</footer>
+
+<script src="js/gsap.min.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script src="js/SplitText.min.js"></script>
+<script src="site.js"></script>
+<script>var RZ = [{"s": "trnava", "t": "Nové ihrisko Kinder Club", "p": "Trnava", "y": "Demontáž a\u00a0montáž", "d": "Demontáž pôvodného a\u00a0montáž nového interiérového ihriska v\u00a0Kinder Clube Trnava.", "f": [["01.webp", 1600, 1200], ["02.webp", 1600, 1200], ["03.webp", 1200, 1600], ["04.webp", 1200, 1600], ["05.webp", 1200, 1600], ["06.webp", 1200, 1600], ["07.webp", 1200, 1600], ["08.webp", 1200, 1600], ["09.webp", 1200, 1600]]}, {"s": "dunajska-luzna", "t": "Prerábka ihriska", "p": "Dunajská Lužná", "y": "Prerábka", "d": "Vynovenie a\u00a0prerábka interiérového ihriska v\u00a0Dunajskej Lužnej.", "f": [["01.webp", 1600, 1200], ["02.webp", 1200, 1600], ["03.webp", 1200, 1600], ["04.webp", 1600, 1200], ["05.webp", 1600, 1200], ["06.webp", 1200, 1600]]}, {"s": "klatovy", "t": "Obnova obalov konštrukcie", "p": "Klatovy, CZ", "y": "Obnova", "d": "Obnova penových obalov konštrukcie interiérového ihriska.", "f": [["01.webp", 1600, 1200], ["02.webp", 1600, 1200], ["03.webp", 1200, 1600], ["04.webp", 1200, 1600], ["05.webp", 1600, 1200], ["06.webp", 1200, 1600]]}, {"s": "samorin", "t": "Interiérové ihrisko na mieru", "p": "Šamorín", "y": "Nové ihrisko na mieru", "d": "Interiérové ihrisko na mieru prepojené s\u00a0existujúcou stenou s\u00a0otvormi.", "f": [["01.webp", 1600, 1200], ["02.webp", 1200, 1600], ["03.webp", 1200, 1600], ["04.webp", 1200, 1600], ["05.webp", 1200, 1600], ["06.webp", 1200, 1600], ["07.webp", 1600, 1200], ["08.webp", 1600, 1200]]}, {"s": "hlohovec", "t": "Presťahovanie a\u00a0prerobenie ihriska", "p": "Hlohovec", "y": "Presťahovanie a\u00a0prerábka", "d": "Demontáž trojposchodového interiérového ihriska a\u00a0úprava na nové ihrisko s\u00a0dvomi poschodiami na chodbe základnej školy.", "f": [["01.webp", 1600, 474], ["02.webp", 1600, 1200], ["03.webp", 1600, 1200], ["04.webp", 1200, 1600], ["05.webp", 1200, 1600], ["06.webp", 1600, 422], ["07.webp", 1600, 1200], ["08.webp", 1600, 1200], ["09.webp", 1200, 1600]]}, {"s": "pezinok", "t": "Nové ihrisko v\u00a0Pezinku", "p": "Pezinok", "y": "Demontáž a\u00a0montáž", "d": "Demontáž, montáž a\u00a0zmena nového interiérového ihriska v\u00a0Pezinku.", "f": [["01.webp", 1200, 1600], ["02.webp", 1600, 1200], ["03.webp", 1600, 1200], ["04.webp", 1600, 1200], ["05.webp", 1200, 1600], ["06.webp", 1600, 1200], ["07.webp", 1200, 1600], ["08.webp", 1200, 1600], ["09.webp", 1600, 1200], ["10.webp", 1600, 1200]]}, {"s": "kraluv-dvur", "t": "Presťahované a\u00a0obnovené ihrisko", "p": "Králův Dvůr, CZ", "y": "Presťahovanie a\u00a0obnova", "d": "Presťahované a\u00a0obnovené interiérové ihrisko v\u00a0Králově Dvore pri Beroune.", "f": [["01.webp", 1600, 1200], ["02.webp", 1600, 1200], ["03.webp", 1200, 1600], ["04.webp", 1200, 1600], ["05.webp", 1200, 1600], ["06.webp", 1200, 1600], ["07.webp", 1200, 1600], ["08.webp", 1200, 1600]]}, {"s": "karvina-stena", "t": "Lezecká stena pre deti", "p": "Karviná, CZ", "y": "Lezecká stena", "d": "Lezecká stena je dobrý doplnok do herní.", "f": [["01.webp", 1600, 1200], ["02.webp", 1600, 1200]]}, {"s": "karvina-tubing", "t": "Tubingová dráha", "p": "Karviná, CZ", "y": "Tubingová dráha", "d": "Tubingová dráha postavená ako samostatne stojaci herný prvok. Deti na nej trávia najviac času.", "f": [["01.webp", 1600, 1200], ["02.webp", 1200, 1600], ["03.webp", 1200, 1600], ["04.webp", 1600, 1200]]}, {"s": "praha", "t": "Ihrisko na kúpalisku", "p": "Praha, CZ", "y": "Montáž", "d": "Montáž používaného interiérového ihriska v\u00a0areáli kúpaliska v\u00a0Prahe.", "f": [["01.webp", 1600, 1200], ["02.webp", 1600, 1200], ["03.webp", 1600, 1200], ["04.webp", 1600, 1200]]}, {"s": "uhersky-brod", "t": "Dorábka ihriska a\u00a0tubingovej dráhy", "p": "Uherský Brod, CZ", "y": "Dorábka", "d": "Dorábka interiérového ihriska a\u00a0tubingovej dráhy k\u00a0existujúcemu interiérovému ihrisku.", "f": [["01.webp", 1600, 607], ["02.webp", 1600, 1200], ["03.webp", 1600, 1200], ["04.webp", 1600, 1200], ["05.webp", 1200, 1600], ["06.webp", 1200, 1600], ["07.webp", 1600, 1200]]}, {"s": "oravice", "t": "Detská zóna v\u00a0aquaparku", "p": "Oravice, Meander", "y": "Nová detská zóna", "d": "Montáž kompletnej detskej zóny s\u00a0panelovým interiérovým ihriskom v\u00a0aquaparku Meander Oravice.", "f": [["01.webp", 1600, 1200], ["02.webp", 1600, 1200], ["03.webp", 1600, 1200], ["04.webp", 1600, 1200], ["05.webp", 1600, 1200], ["06.webp", 1600, 1200], ["07.webp", 1600, 1200], ["08.webp", 1600, 1200], ["09.webp", 1600, 465]]}];
+
+(function () {
+  var md = document.getElementById("md"), gal = md.querySelector(".md-gal"), root = document.documentElement;
+  var el = { n: md.querySelector(".md-bar .n"), pl: md.querySelector(".md-txt .eb"), t: md.querySelector(".md-txt .h"), d: md.querySelector(".md-txt .p") };
+  var cur = -1, opener = null, open = false, tl;
+  function fill(i) {
+    var p = RZ[i]; cur = i;
+    el.n.textContent = String(i + 1).padStart(2, "0") + " / " + RZ.length;
+    el.pl.textContent = p.p + ", " + p.y;
+    el.t.textContent = p.t;
+    el.d.textContent = p.d;
+    gal.innerHTML = p.f.map(function (f, k) {
+      return '<figure style="aspect-ratio:' + f[1] + "/" + f[2] + '"><img src="rz/' + p.s + "/" + f[0] + '" alt="' + p.t + ", " + p.p + ", fotka " + (k + 1) +
+        '" width="' + f[1] + '" height="' + f[2] + '"' + (k > 1 ? ' loading="lazy"' : "") + ' decoding="async"></figure>';
+    }).join("");
+    gal.scrollLeft = 0; md.scrollTop = 0;
+  }
+  function enter() {
+    var items = [el.pl, el.t, el.d], figs = gal.querySelectorAll("figure");
+    gsap.fromTo(items, { autoAlpha: 0, y: 18 }, { autoAlpha: 1, y: 0, duration: .8, ease: "power3.out", stagger: .06, delay: .15 });
+    gsap.fromTo(figs, { autoAlpha: 0, x: 24 }, { autoAlpha: 1, x: 0, duration: .46, ease: "power3.out", stagger: .035 });
+  }
+  function show(i, btn) {
+    opener = btn || opener; fill(i);
+    if (open) { enter(); return; }
+    open = true; root.style.overflow = "hidden";
+    md.setAttribute("aria-hidden", "false");
+    if (tl) tl.kill();
+    gsap.set(md, { visibility: "visible" });
+    tl = gsap.timeline()
+      .fromTo(md, { clipPath: "inset(100% 0% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: .52, ease: "power3.out" });
+    enter();
+    md.querySelector(".md-x").focus({ preventScroll: true });
+  }
+  function hide() {
+    if (!open) return;
+    open = false;
+    md.setAttribute("aria-hidden", "true");
+    if (tl) tl.kill();
+    tl = gsap.timeline({ onComplete: function () { root.style.overflow = ""; } })
+      .to(md, { clipPath: "inset(0% 0% 100% 0%)", duration: .6, ease: "power3.inOut" })
+      .set(md, { visibility: "hidden" });
+    if (opener) opener.focus({ preventScroll: true });
+  }
+  function step(d) { var i = (cur + d + RZ.length) % RZ.length; gsap.to([el.pl, el.t, el.d, gal], { autoAlpha: 0, duration: .2, onComplete: function () { gsap.set(gal, { autoAlpha: 1 }); show(i); } }); }
+  document.querySelectorAll(".rz-card").forEach(function (b) { b.addEventListener("click", function () { show(+b.dataset.i, b); }); });
+  md.querySelector(".md-x").addEventListener("click", hide);
+  md.querySelector(".md-prev").addEventListener("click", function () { step(-1); });
+  md.querySelector(".md-next").addEventListener("click", function () { step(1); });
+  document.addEventListener("keydown", function (e) {
+    if (!open) return;
+    if (e.key === "Escape") { hide(); return; }
+    var inGal = e.target.closest && e.target.closest(".md-gal");
+    if (e.key === "ArrowRight" && !inGal) step(1);
+    else if (e.key === "ArrowLeft" && !inGal) step(-1);
+    else if (e.key === "Tab") {
+      // fokus ostáva v detaile
+      var f = md.querySelectorAll("button, [href]"), a = f[0], z = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === a) { e.preventDefault(); z.focus(); }
+      else if (!e.shiftKey && document.activeElement === z) { e.preventDefault(); a.focus(); }
+    }
+  });
+  // koliesko myši posúva galériu do strany
+  gal.addEventListener("wheel", function (e) {
+    if (matchMedia("(max-width: 980px)").matches || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+    e.preventDefault(); gal.scrollLeft += e.deltaY;
+  }, { passive: false });
+})();
+</script>
+</body>
+</html>

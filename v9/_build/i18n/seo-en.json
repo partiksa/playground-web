@@ -1,0 +1,82 @@
+{
+  "pages": {
+    "index": {
+      "title": "Custom Indoor Playgrounds, Trnava | PLAYGROUND",
+      "description": "We design, manufacture and install custom indoor playgrounds for family centres, cafés, hotels and nurseries. Rebuilds and inspections. Based in Trnava."
+    },
+    "ihriska": {
+      "title": "Custom Indoor Play Areas for Children | PLAYGROUND",
+      "description": "Custom indoor play area for a restaurant, hotel, shopping centre or nursery. Design, 3D visualisation, manufacture and installation to EN 1176 and EN 1177."
+    },
+    "prerabka": {
+      "title": "Indoor Playground Rebuild and Relocation | PLAYGROUND",
+      "description": "We rebuild an old indoor playground into a new, certified one, reusing the original structure. We dismantle, transport and install it in a new space too."
+    },
+    "revizie": {
+      "title": "Playground Inspection and Service | PLAYGROUND",
+      "description": "Annual checks and inspections of indoor playgrounds to EN 1176 and EN 1177. Repairs, replacement of worn parts and spare parts from our stock. Trnava."
+    },
+    "realizacie": {
+      "title": "Indoor Playground Projects | PLAYGROUND",
+      "description": "Finished indoor playgrounds, rebuilds and relocations: Trnava, Šamorín, Hlohovec, Pezinok, Oravice and Czech towns. See photos of our completed projects."
+    },
+    "o-nas": {
+      "title": "About Us: Indoor Playground Manufacturer | PLAYGROUND",
+      "description": "PLAYGROUND from Trnava has supplied certified indoor playgrounds for 15 years. Over 180 projects in Slovakia and abroad, our own parts stock and service."
+    },
+    "kontakt": {
+      "title": "Contact and Playground Enquiry, Trnava | PLAYGROUND",
+      "description": "Send us the dimensions of your space and your idea of the playground, and we will reply with a proposal. PLAYGROUND, s.r.o., Poštová 6562/20, Trnava."
+    }
+  },
+  "organization": {
+    "name": "PLAYGROUND, s.r.o.",
+    "url": "https://play-ground.sk",
+    "logo": "https://play-ground.sk/logo.svg",
+    "email": "info@play-ground.sk",
+    "telephone": "+421905724437",
+    "address": {
+      "streetAddress": "Poštová 6562/20",
+      "addressLocality": "Trnava",
+      "postalCode": "917 01",
+      "addressCountry": "SK"
+    },
+    "foundingYear": 2011,
+    "areaServed": [
+      "Slovensko",
+      "Česko",
+      "Estónsko",
+      "Rumunsko",
+      "Francúzsko",
+      "Taliansko"
+    ],
+    "sameAs": []
+  },
+  "services": [
+    {
+      "id": "nove-ihriska-na-mieru",
+      "name": "Custom indoor playgrounds",
+      "description": "Design, 3D visualisation, manufacture and turnkey installation for family centres, cafés, hotels, nurseries and water parks. Playgrounds meet EN 1176 and EN 1177."
+    },
+    {
+      "id": "prerabka",
+      "name": "Rebuilding old playgrounds",
+      "description": "Rebuilding an old playground into a new, certified one, reusing steel from the original structure, joints and undamaged modules."
+    },
+    {
+      "id": "prestahovanie",
+      "name": "Playground relocation",
+      "description": "Dismantling the playground, transport and installation in a new space, resized as needed."
+    },
+    {
+      "id": "revizie",
+      "name": "Playground inspections and service",
+      "description": "Annual inspections of indoor playgrounds, repairs and replacement of worn parts."
+    },
+    {
+      "id": "nafukovacie-atrakcie",
+      "name": "Inflatable attractions",
+      "description": "Inflatable attractions for children as an addition to playgrounds. Types and prices depend on demand."
+    }
+  ]
+}

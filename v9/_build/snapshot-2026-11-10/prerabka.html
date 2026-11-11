@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prerábka a sťahovanie ihriska | Playground, Trnava</title>
+<meta name="description" content="Staré interiérové ihrisko prerobíme na nové, normované, alebo ho presťahujeme. Použijeme pôvodnú konštrukciu a nepoškodené diely.">
+<meta name="theme-color" content="#DEDDDB">
+<link rel="preload" href="fonts/PlusJakartaSans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Slinkee.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="site.css">
+<script type="importmap">{"imports":{"three":"./vendor/build/three.module.js","three/addons/":"./vendor/addons/"}}</script>
+<script>try{if(!sessionStorage.getItem("pg-ld")&&!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("ld-on")}catch(e){}</script>
+<style>
+.p3d-lead { grid-column: 4 / -1; }
+.p3d.ready { height: 245svh; }
+.p3d-stage { display: grid; grid-template-columns: minmax(200px, 1fr) minmax(0, 3fr); align-items: center; gap: var(--gap); }
+.p3d.ready .p3d-stage { position: sticky; top: var(--hh); height: calc(100svh - var(--hh)); }
+.p3d-steps { border-top: 1px solid var(--line); }
+.p3d-steps li { display: flex; gap: .9em; padding: .8em 0; border-bottom: 1px solid var(--line); font-weight: 650; }
+.p3d-steps .n { font-size: .8em; color: var(--mute); }
+.p3d.ready .p3d-steps li { color: var(--mute); }
+.p3d.ready .p3d-steps li.on { color: var(--ink); }
+.p3d-steps li.on .n { color: var(--red); }
+.p3d-visual { display: none; min-width: 0; }
+.p3d.ready .p3d-visual { display: block; }
+.p3d-view { height: min(68svh, 720px); cursor: grab; touch-action: pan-y; }
+.p3d-view.drag { cursor: grabbing; }
+.p3d-view canvas { width: 100%; height: 100%; }
+.p3d-visual .cap { margin-top: 0; text-align: center; }
+@media (max-width: 980px) { .p3d-lead { grid-column: 1 / -1; } }
+@media (max-width: 760px) {
+  .p3d-stage { grid-template-columns: minmax(0, 1fr); align-content: center; gap: 18px; }
+  .p3d-visual { grid-row: 1; }
+  .p3d-view { height: min(43svh, 108vw); }
+  .p3d-steps li { padding: .48em 0; font-size: .9rem; }
+}
+@media (max-height: 500px) {
+  .p3d-view { height: 43svh; }
+  .p3d-stage { grid-template-columns: minmax(140px, 1fr) minmax(0, 2fr); }
+  .p3d-visual { grid-column: 2; }
+  .p3d-steps { grid-row: 1; }
+  .p3d-steps li { padding: .34em 0; font-size: .85rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .p3d.ready { height: auto; }
+  .p3d.ready .p3d-stage { position: static; height: auto; }
+}
+.two { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gap); }
+.two > div:first-child { grid-column: 1 / span 5; }
+.two > div:last-child { grid-column: 7 / -1; }
+.two .h3 { margin-bottom: 16px; }
+.ul { margin-top: 22px; border-top: 1px solid var(--line); }
+.ul li { padding: 12px 0; border-bottom: 1px solid var(--line); font-weight: 550; }
+.two .dp { margin-top: clamp(28px, 3vw, 44px); }
+.say { max-width: 15em; font-size: clamp(2rem, 1rem + 3.6vw, 5rem); }
+@media (max-width: 980px) { .two > div:first-child, .two > div:last-child { grid-column: 1 / -1; } .two > div:last-child { margin-top: 48px; } }
+</style>
+</head>
+<body data-page="prerabka">
+
+<div class="ld" id="ld" aria-hidden="true"><div class="ld-bg"></div><div class="ld-logo"><i></i></div></div>
+
+<header class="hd js-hide" id="hd">
+  <a class="logo" href="./" aria-label="PLAYGROUND, úvod"><i></i></a>
+  <nav class="nav" aria-label="Hlavné menu">
+    <ul>
+      <li><a href="ihriska.html">Ihriská na mieru</a></li>
+      <li><a href="prerabka.html" aria-current="page">Prerábka</a></li>
+      <li><a href="revizie.html">Revízie</a></li>
+      <li><a href="realizacie.html">Realizácie</a></li>
+      <li><a href="o-nas.html">O&nbsp;nás</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+  <a class="tel" href="tel:+421905724437">+421 905 724 437</a>
+  <a class="btn" href="kontakt.html">Napísať dopyt</a>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="sheet">Menu</button>
+</header>
+
+<div class="sheet" id="sheet" aria-hidden="true">
+  <ul>
+    <li class="m-ln"><a href="ihriska.html">Ihriská na mieru</a></li>
+    <li class="m-ln"><a href="prerabka.html" aria-current="page">Prerábka</a></li>
+    <li class="m-ln"><a href="revizie.html">Revízie</a></li>
+    <li class="m-ln"><a href="realizacie.html">Realizácie</a></li>
+    <li class="m-ln"><a href="o-nas.html">O&nbsp;nás</a></li>
+    <li class="m-ln"><a href="kontakt.html">Kontakt</a></li>
+  </ul>
+  <div class="meta">
+    <a href="tel:+421905724437">+421 905 724 437</a>
+    <a href="mailto:info@play-ground.sk">info@play-ground.sk</a>
+  </div>
+</div>
+
+<main class="page">
+  <section class="ph">
+    <p class="eb rv" data-now>Zo starého nové</p>
+    <h1 class="h h1" data-split="now">Prerábka <span class="w">a&nbsp;<span class="sl">S</span>ťahovanie</span></h1>
+    <p class="lead rv" data-now data-d=".15">Staré ihrisko prerobíme na nové, normované, alebo ho presťahujeme do nového priestoru.</p>
+    <div class="acts rv" data-now data-d=".25">
+      <a class="btn btn--red" href="kontakt.html?co=prerabka">Napísať dopyt <span class="ar" aria-hidden="true">→</span></a>
+      <a class="tel" href="tel:+421905724437">+421 905 724 437</a>
+    </div>
+    <div class="full" style="margin-top:clamp(48px,6vw,96px)"><figure class="dp wipe r21" data-depth="img/projekt-07-d.webp"><img src="img/projekt-07.webp" alt="Obnovené interiérové ihrisko so šmykľavkou a guľôčkovým bazénom, Dunajská Lužná" width="1536" height="1152" loading="lazy" decoding="async"></figure></div>
+    <p class="cap">Prerábka ihriska · Dunajská Lužná</p>
+  </section>
+
+  <section class="sec">
+    <div class="sec-hd">
+      <p class="eb rv"><span class="n">01</span> Postup</p>
+      <h2 class="h h2" data-split>Prerábka krok za <span class="w">kr<span class="sl sl--loose-left">O</span>kom</span></h2>
+      <p class="p rv p3d-lead">Použijeme pôvodnú konštrukciu a&nbsp;nepoškodené diely. Vymeníme obaly, farby a&nbsp;doplníme nové prvky.</p>
+    </div>
+    <div class="p3d">
+      <div class="p3d-stage">
+        <ol class="p3d-steps">
+          <li data-at="0"><span class="n">01</span> Staré ihrisko</li>
+          <li data-at=".16"><span class="n">02</span> Demontáž</li>
+          <li data-at=".40"><span class="n">03</span> Nové obaly a&nbsp;farby</li>
+          <li data-at=".60"><span class="n">04</span> Nové prvky</li>
+          <li data-at=".84"><span class="n">05</span> Obnovené ihrisko</li>
+        </ol>
+        <figure class="p3d-visual">
+          <div class="p3d-view" role="img" aria-label="3D model rozloženia, prefarbenia a zloženia ihriska"></div>
+          <figcaption class="cap">3D štúdia prerábky</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec two">
+    <div>
+      <p class="eb rv"><span class="n">02</span> Prerábka</p>
+      <h2 class="h h3 rv">Z&nbsp;čínskeho normované</h2>
+      <p class="p rv">Staré ihrisko (najčastejšie čínske) prerobíme na nové, normované. Použijeme materiál z&nbsp;pôvodného: železo z&nbsp;konštrukcie, spojky a&nbsp;nepoškodené moduly.</p>
+      <ul class="ul rv">
+        <li>výmena opotrebovaných herných prvkov</li>
+        <li>úprava dispozície a&nbsp;lepšie využitie priestoru</li>
+        <li>nový dizajn a&nbsp;farby</li>
+        <li>doplnenie nových atrakcií</li>
+        <li>úprava podľa aktuálnych noriem</li>
+      </ul>
+    </div>
+    <div>
+      <p class="eb rv"><span class="n">03</span> Sťahovanie</p>
+      <h2 class="h h3 rv">Rozoberieme, prevezieme, postavíme</h2>
+      <p class="p rv">Ihrisko rozoberieme, prevezieme a&nbsp;postavíme v&nbsp;novom priestore. Pri tom ho môžeme upraviť na nový rozmer.</p>
+      <figure class="dp wipe r43" data-depth="img/projekt-10-d.webp"><img src="img/projekt-10.webp" alt="Presťahované ihrisko osadené na chodbe základnej školy, Hlohovec" width="1536" height="1152" loading="lazy" decoding="async"></figure>
+      <p class="cap">Presťahované ihrisko · Hlohovec</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <p class="eb rv"><span class="n">04</span> Prečo prerábka</p>
+    <h2 class="h say" data-split>Často rýchlejšia a&nbsp;lacnejšia než nové <span class="w">ih<span class="sl sl--loose-left">R</span>isko</span></h2>
+    <div class="acts rv"><a class="more" href="realizacie.html">Prerobené ihriská <span class="ar" aria-hidden="true">→</span></a></div>
+  </section>
+
+  <section class="cta" aria-label="Kontakt">
+    <h2 class="h" data-split><span class="w"><span class="sl">N</span>apíšte</span> nám</h2>
+    <p class="lead rv">Opíšte nám svoj priestor alebo ihrisko a&nbsp;ozveme sa vám s&nbsp;návrhom.</p>
+    <div class="acts rv" data-d=".1">
+      <a class="btn btn--red" href="kontakt.html?co=prerabka">Napísať dopyt <span class="ar" aria-hidden="true">→</span></a>
+      <a class="tel" href="tel:+421905724437">+421 905 724 437</a>
+    </div>
+  </section>
+</main>
+
+<footer class="ft" id="ft">
+  <div class="ft-top">
+    <div>
+      <a class="logo" href="./" aria-label="PLAYGROUND, úvod"><i></i></a>
+      <p class="claim">Interiérové ihriská na mieru. Navrhujeme, vyrábame a&nbsp;montujeme.</p>
+    </div>
+    <div>
+      <h2>Kontakt</h2>
+      <ul>
+        <li><a href="tel:+421905724437">+421 905 724 437</a></li>
+        <li><a href="mailto:info@play-ground.sk">info@play-ground.sk</a></li>
+        <li>Poštová 6562/20<br>917 01 Trnava</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="ihriska.html">Ihriská na mieru</a></li>
+        <li><a href="prerabka.html">Prerábka</a></li>
+        <li><a href="revizie.html">Revízie</a></li>
+        <li><a href="realizacie.html">Realizácie</a></li>
+        <li><a href="o-nas.html">O&nbsp;nás</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Firma</h2>
+      <ul>
+        <li>PLAYGROUND, s.r.o.</li>
+        <li>IČO 47051990</li>
+        <li>DIČ 2023714429</li>
+        <li>IČ DPH SK2023714429</li>
+        <li>Okresný súd Trnava, oddiel Sro, vložka 31165/T</li>
+      </ul>
+    </div>
+  </div>
+  <p class="ft-big" aria-hidden="true"><span class="ft-word">Play<span class="sl">G</span>round</span></p>
+  <div class="ft-bot">
+    <span>© 2026 PLAYGROUND, s.r.o.</span>
+    <span>Trnava, Slovensko</span>
+  </div>
+</footer>
+
+<script src="js/gsap.min.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script src="js/SplitText.min.js"></script>
+<script src="site.js"></script>
+<script type="module" src="js/prerabka-3d.js"></script>
+</body>
+</html>

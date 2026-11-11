@@ -1,0 +1,82 @@
+{
+  "pages": {
+    "index": {
+      "title": "Interiérová dětská hřiště na míru, Trnava | PLAYGROUND",
+      "description": "Navrhujeme, vyrábíme a montujeme interiérová dětská hřiště na míru pro rodinná centra, kavárny, hotely a školky. Přestavby a revize. Sídlo v Trnavě."
+    },
+    "ihriska": {
+      "title": "Dětská hřiště na míru do interiéru | PLAYGROUND",
+      "description": "Interiérové dětské hřiště na míru do restaurace, hotelu, obchodního centra nebo školky. Návrh, 3D vizualizace, výroba a montáž podle EN 1176 a EN 1177."
+    },
+    "prerabka": {
+      "title": "Přestavba a stěhování dětského hřiště | PLAYGROUND",
+      "description": "Přestavba starého interiérového hřiště na nové, normované s využitím původní konstrukce. Rozebereme, převezeme a postavíme ho i v novém prostoru."
+    },
+    "revizie": {
+      "title": "Revize dětského hřiště a servis | PLAYGROUND",
+      "description": "Roční kontroly a revize interiérových dětských hřišť podle EN 1176 a EN 1177. Opravy, výměna opotřebovaných dílů a náhradní díly ze skladu. Trnava."
+    },
+    "realizacie": {
+      "title": "Realizace interiérových hřišť | PLAYGROUND",
+      "description": "Hotová interiérová hřiště, přestavby a přestěhování: Trnava, Šamorín, Hlohovec, Pezinok, Oravice a česká města. Prohlédněte si fotky našich realizací."
+    },
+    "o-nas": {
+      "title": "O nás: výrobce interiérových hřišť | PLAYGROUND",
+      "description": "PLAYGROUND z Trnavy dodává normovaná interiérová hřiště už 15 let. Více než 180 projektů na Slovensku i v zahraničí, vlastní sklad dílů a servis."
+    },
+    "kontakt": {
+      "title": "Kontakt a poptávka na hřiště, Trnava | PLAYGROUND",
+      "description": "Napište nám rozměry prostoru a představu o hřišti, ozveme se s návrhem. PLAYGROUND, s.r.o., Poštová 6562/20, Trnava. Tel. +421 905 724 437, info@play-ground.sk."
+    }
+  },
+  "organization": {
+    "name": "PLAYGROUND, s.r.o.",
+    "url": "https://play-ground.sk",
+    "logo": "https://play-ground.sk/logo.svg",
+    "email": "info@play-ground.sk",
+    "telephone": "+421905724437",
+    "address": {
+      "streetAddress": "Poštová 6562/20",
+      "addressLocality": "Trnava",
+      "postalCode": "917 01",
+      "addressCountry": "SK"
+    },
+    "foundingYear": 2011,
+    "areaServed": [
+      "Slovensko",
+      "Česko",
+      "Estónsko",
+      "Rumunsko",
+      "Francúzsko",
+      "Taliansko"
+    ],
+    "sameAs": []
+  },
+  "services": [
+    {
+      "id": "nove-ihriska-na-mieru",
+      "name": "Interiérová hřiště na míru",
+      "description": "Návrh, 3D vizualizace, výroba a montáž na klíč pro rodinná centra, kavárny, hotely, školky a aquaparky. Hřiště splňují normy EN 1176 a EN 1177."
+    },
+    {
+      "id": "prerabka",
+      "name": "Přestavba starých hřišť",
+      "description": "Přestavba starého hřiště na nové, normované s využitím železa z původní konstrukce, spojek a nepoškozených modulů."
+    },
+    {
+      "id": "prestahovanie",
+      "name": "Přestěhování hřiště",
+      "description": "Rozebrání hřiště, odvoz a postavení v novém prostoru, podle potřeby s úpravou na nový rozměr."
+    },
+    {
+      "id": "revizie",
+      "name": "Revize a servis hřišť",
+      "description": "Roční kontroly (revize) interiérových hřišť, opravy a výměna opotřebovaných dílů."
+    },
+    {
+      "id": "nafukovacie-atrakcie",
+      "name": "Nafukovací atrakce",
+      "description": "Nafukovací atrakce pro děti jako doplněk k hřištím. Typy a ceny závisí na poptávce."
+    }
+  ]
+}

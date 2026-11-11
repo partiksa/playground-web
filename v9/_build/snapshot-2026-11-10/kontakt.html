@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontakt a dopyt | Playground, Trnava</title>
+<meta name="description" content="Napíšte nám dopyt na interiérové ihrisko, prerábku, presťahovanie alebo revíziu. +421 905 724 437, info@play-ground.sk, Trnava.">
+<meta name="theme-color" content="#DEDDDB">
+<link rel="preload" href="fonts/PlusJakartaSans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Slinkee.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="site.css">
+<script>try{if(!sessionStorage.getItem("pg-ld")&&!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("ld-on")}catch(e){}</script>
+<style>
+.ko { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gap); margin-top: clamp(48px, 6vw, 96px); }
+.ko-info { grid-column: 1 / span 4; }
+.ko-big { display: grid; gap: 6px; }
+.ko-big a { font-size: clamp(1.5rem, 1rem + 1.6vw, 2.5rem); font-weight: 700; letter-spacing: -.015em; width: fit-content;
+  background: linear-gradient(currentColor, currentColor) 0 100% / 0 2px no-repeat; transition: background-size .5s var(--ease); }
+.ko-big a:hover { background-size: 100% 2px; }
+.ko-dl { margin-top: clamp(28px, 3vw, 44px); display: grid; gap: 18px; }
+.ko-dl dt { font-size: .8125rem; font-weight: 650; letter-spacing: .06em; text-transform: uppercase; color: var(--mute); margin-bottom: 4px; }
+.ko-dl dd { line-height: 1.55; }
+.f { grid-column: 6 / -1; }
+.f fieldset { border: 0; padding: 0 0 clamp(28px, 3vw, 40px); }
+.f legend { display: flex; gap: 14px; align-items: baseline; font-weight: 700; text-transform: uppercase; letter-spacing: -.01em; font-size: 1.125rem; margin-bottom: 14px; }
+.f legend .n { font-size: .875rem; color: var(--mute); font-weight: 650; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips label { position: relative; }
+.chips input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+.chips span { display: inline-flex; align-items: center; height: 42px; padding: 0 18px; border-radius: 999px; box-shadow: inset 0 0 0 1.5px var(--line);
+  font-weight: 550; transition: box-shadow .25s var(--ease), background-color .25s var(--ease), color .25s var(--ease); }
+.chips label:hover span { box-shadow: inset 0 0 0 1.5px var(--ink); }
+.chips input:checked + span { background: var(--ink); color: var(--paper); box-shadow: none; }
+.chips input:focus-visible + span { outline: 2px solid var(--red); outline-offset: 3px; }
+.fields { display: grid; grid-template-columns: 1fr 1fr; gap: 14px var(--gap); }
+.fld { display: grid; gap: 6px; }
+.fld.wide { grid-column: 1 / -1; }
+.fld span { font-size: .875rem; font-weight: 600; }
+.fld input, .fld textarea { width: 100%; border: 0; border-bottom: 1.5px solid var(--line); background: transparent; padding: 10px 0; font-size: 1.0625rem; border-radius: 0; transition: border-color .25s var(--ease); }
+.fld textarea { min-height: 120px; resize: vertical; }
+.fld input:focus, .fld textarea:focus { outline: none; border-color: var(--ink); }
+.fld input[aria-invalid="true"] { border-color: var(--red); }
+.ok { display: flex; gap: 12px; align-items: flex-start; margin: 22px 0 28px; line-height: 1.5; cursor: pointer; }
+.ok input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--red); flex: none; }
+.err { color: var(--red); font-weight: 600; margin-top: 14px; min-height: 1.5em; }
+.done { display: none; }
+.f.sent form { display: none; }
+.f.sent .done { display: block; }
+.done .h { font-size: clamp(2rem, 1rem + 3vw, 4rem); margin-bottom: 18px; }
+@media (max-width: 980px) { .ko-info, .f { grid-column: 1 / -1; } .f { margin-top: 56px; } }
+@media (max-width: 560px) { .fields { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body data-page="kontakt">
+
+<div class="ld" id="ld" aria-hidden="true"><div class="ld-bg"></div><div class="ld-logo"><i></i></div></div>
+
+<header class="hd js-hide" id="hd">
+  <a class="logo" href="./" aria-label="PLAYGROUND, úvod"><i></i></a>
+  <nav class="nav" aria-label="Hlavné menu">
+    <ul>
+      <li><a href="ihriska.html">Ihriská na mieru</a></li>
+      <li><a href="prerabka.html">Prerábka</a></li>
+      <li><a href="revizie.html">Revízie</a></li>
+      <li><a href="realizacie.html">Realizácie</a></li>
+      <li><a href="o-nas.html">O&nbsp;nás</a></li>
+      <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+    </ul>
+  </nav>
+  <a class="tel" href="tel:+421905724437">+421 905 724 437</a>
+  <a class="btn" href="kontakt.html">Napísať dopyt</a>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="sheet">Menu</button>
+</header>
+
+<div class="sheet" id="sheet" aria-hidden="true">
+  <ul>
+    <li class="m-ln"><a href="ihriska.html">Ihriská na mieru</a></li>
+    <li class="m-ln"><a href="prerabka.html">Prerábka</a></li>
+    <li class="m-ln"><a href="revizie.html">Revízie</a></li>
+    <li class="m-ln"><a href="realizacie.html">Realizácie</a></li>
+    <li class="m-ln"><a href="o-nas.html">O&nbsp;nás</a></li>
+    <li class="m-ln"><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+  </ul>
+  <div class="meta">
+    <a href="tel:+421905724437">+421 905 724 437</a>
+    <a href="mailto:info@play-ground.sk">info@play-ground.sk</a>
+  </div>
+</div>
+
+<main class="page">
+  <section class="ph">
+    <p class="eb rv" data-now>Kontakt</p>
+    <h1 class="h h1" data-split="now"><span class="w"><span class="sl">N</span>apíšte</span> nám</h1>
+    <p class="lead rv" data-now data-d=".15">Opíšte nám svoj priestor alebo ihrisko. Ozveme sa s&nbsp;návrhom.</p>
+
+    <div class="ko">
+      <div class="ko-info rv" data-now data-d=".25">
+        <div class="ko-big">
+          <a href="tel:+421905724437">+421 905 724 437</a>
+          <a href="mailto:info@play-ground.sk">info@play-ground.sk</a>
+        </div>
+        <dl class="ko-dl">
+          <div><dt>Adresa</dt><dd>PLAYGROUND, s.r.o.<br>Poštová 6562/20<br>917 01 Trnava</dd></div>
+          <div><dt>Firma</dt><dd>IČO 47051990<br>DIČ 2023714429<br>IČ DPH SK2023714429</dd></div>
+        </dl>
+      </div>
+
+      <div class="f rv" data-now data-d=".35" id="f">
+        <form novalidate>
+          <fieldset>
+            <legend><span class="n">01</span> Čo potrebujete</legend>
+            <div class="chips">
+          <label><input type="radio" name="co" value="nove"><span>Nové ihrisko</span></label>
+          <label><input type="radio" name="co" value="prerabka"><span>Prerábka</span></label>
+          <label><input type="radio" name="co" value="stahovanie"><span>Presťahovanie</span></label>
+          <label><input type="radio" name="co" value="reviza"><span>Revízia</span></label>
+          <label><input type="radio" name="co" value="ine"><span>Iné</span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend><span class="n">02</span> Typ prevádzky</legend>
+            <div class="chips">
+          <label><input type="radio" name="typ" value="Rodinné centrum"><span>Rodinné centrum</span></label>
+          <label><input type="radio" name="typ" value="Kaviareň"><span>Kaviareň</span></label>
+          <label><input type="radio" name="typ" value="Hotel"><span>Hotel</span></label>
+          <label><input type="radio" name="typ" value="Škôlka"><span>Škôlka</span></label>
+          <label><input type="radio" name="typ" value="Iné"><span>Iné</span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend><span class="n">03</span> Dokedy má byť hotové</legend>
+            <div class="chips">
+          <label><input type="radio" name="kedy" value="Čo najskôr"><span>Čo najskôr</span></label>
+          <label><input type="radio" name="kedy" value="Do troch mesiacov"><span>Do troch mesiacov</span></label>
+          <label><input type="radio" name="kedy" value="Do pol roka"><span>Do pol roka</span></label>
+          <label><input type="radio" name="kedy" value="Zatiaľ sa len pýtam"><span>Zatiaľ sa len pýtam</span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend><span class="n">04</span> Vaše údaje</legend>
+            <div class="fields">
+              <label class="fld"><span>Meno</span><input name="meno" autocomplete="name" required></label>
+              <label class="fld"><span>E-mail</span><input name="email" type="email" autocomplete="email" required></label>
+              <label class="fld"><span>Telefón</span><input name="tel" type="tel" autocomplete="tel"></label>
+              <label class="fld"><span>Mesto a&nbsp;krajina</span><input name="mesto" autocomplete="address-level2"></label>
+              <label class="fld wide"><span>Správa</span><textarea name="sprava" placeholder="Rozmery priestoru, výška stropu, pre koho je ihrisko"></textarea></label>
+            </div>
+          </fieldset>
+          <label class="ok"><input type="checkbox" name="suhlas" required><span>Súhlasím so spracovaním osobných údajov na vybavenie dopytu.</span></label>
+          <button class="btn btn--red" type="submit">Odoslať <span class="ar" aria-hidden="true">→</span></button>
+          <p class="err" role="alert"></p>
+        </form>
+        <div class="done" tabindex="-1">
+          <h2 class="h">Ďakujeme</h2>
+          <p class="p">Otvorili sme e-mail s&nbsp;vaším dopytom. Stačí ho odoslať.</p>
+          <div class="acts">
+            <a class="btn btn--red" id="mailGo" href="#">Otvoriť e-mail <span class="ar" aria-hidden="true">→</span></a>
+            <button class="more" type="button" id="copy">Skopírovať text</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="ft" id="ft">
+  <div class="ft-top">
+    <div>
+      <a class="logo" href="./" aria-label="PLAYGROUND, úvod"><i></i></a>
+      <p class="claim">Interiérové ihriská na mieru. Navrhujeme, vyrábame a&nbsp;montujeme.</p>
+    </div>
+    <div>
+      <h2>Kontakt</h2>
+      <ul>
+        <li><a href="tel:+421905724437">+421 905 724 437</a></li>
+        <li><a href="mailto:info@play-ground.sk">info@play-ground.sk</a></li>
+        <li>Poštová 6562/20<br>917 01 Trnava</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="ihriska.html">Ihriská na mieru</a></li>
+        <li><a href="prerabka.html">Prerábka</a></li>
+        <li><a href="revizie.html">Revízie</a></li>
+        <li><a href="realizacie.html">Realizácie</a></li>
+        <li><a href="o-nas.html">O&nbsp;nás</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Firma</h2>
+      <ul>
+        <li>PLAYGROUND, s.r.o.</li>
+        <li>IČO 47051990</li>
+        <li>DIČ 2023714429</li>
+        <li>IČ DPH SK2023714429</li>
+        <li>Okresný súd Trnava, oddiel Sro, vložka 31165/T</li>
+      </ul>
+    </div>
+  </div>
+  <p class="ft-big" aria-hidden="true"><span class="ft-word">Play<span class="sl">G</span>round</span></p>
+  <div class="ft-bot">
+    <span>© 2026 PLAYGROUND, s.r.o.</span>
+    <span>Trnava, Slovensko</span>
+  </div>
+</footer>
+
+<script src="js/gsap.min.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script src="js/SplitText.min.js"></script>
+<script src="site.js"></script>
+<script>
+(function () {
+  var box = document.getElementById("f"), form = box.querySelector("form"), err = box.querySelector(".err"), body = "", href = "";
+  // predvyplnenie z odkazu (kontakt.html?co=prerabka)
+  var co = new URLSearchParams(location.search).get("co");
+  if (co) { var r = form.querySelector('input[name="co"][value="' + co + '"]'); if (r) r.checked = true; }
+  var LAB = { nove: "Nové ihrisko", prerabka: "Prerábka", stahovanie: "Presťahovanie", reviza: "Revízia", ine: "Iné" };
+  function v(n) { var el = form.elements[n]; return el ? (el.value || "").trim() : ""; }
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var bad = [];
+    ["meno", "email"].forEach(function (n) {
+      var el = form.elements[n], ok = n === "email" ? /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim()) : !!el.value.trim();
+      el.setAttribute("aria-invalid", !ok);
+      if (!ok) bad.push(el);
+    });
+    if (bad.length) { err.textContent = "Doplňte meno a platný e-mail."; bad[0].focus(); return; }
+    if (!form.elements.suhlas.checked) { err.textContent = "Potrebujeme váš súhlas so spracovaním údajov."; form.elements.suhlas.focus(); return; }
+    err.textContent = "";
+    var lines = [
+      "Čo potrebujem: " + (LAB[v("co")] || "neuvedené"),
+      "Typ prevádzky: " + (v("typ") || "neuvedené"),
+      "Termín: " + (v("kedy") || "neuvedené"),
+      "", "Meno: " + v("meno"), "E-mail: " + v("email"), "Telefón: " + (v("tel") || "neuvedené"), "Mesto a krajina: " + (v("mesto") || "neuvedené"),
+      "", v("sprava")
+    ];
+    body = lines.join("\n").trim();
+    href = "mailto:info@play-ground.sk?subject=" + encodeURIComponent("Dopyt z webu: " + v("meno")) + "&body=" + encodeURIComponent(body);
+    document.getElementById("mailGo").href = href;
+    location.href = href;
+    box.classList.add("sent");
+    var done = box.querySelector(".done");
+    gsap.from(done.children, { autoAlpha: 0, y: 18, duration: .8, ease: "power3.out", stagger: .06 });
+    done.focus({ preventScroll: true });
+  });
+  form.addEventListener("input", function (e) { if (e.target.getAttribute("aria-invalid") === "true") e.target.removeAttribute("aria-invalid"); });
+  document.getElementById("copy").addEventListener("click", function () {
+    var b = this;
+    navigator.clipboard.writeText("Komu: info@play-ground.sk\n\n" + body).then(function () { b.textContent = "Skopírované"; });
+  });
+})();
+</script>
+</body>
+</html>

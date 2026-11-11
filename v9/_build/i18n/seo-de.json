@@ -1,0 +1,82 @@
+{
+  "pages": {
+    "index": {
+      "title": "Indoor-Spielplätze nach Maß, Trnava | PLAYGROUND",
+      "description": "Wir planen, fertigen und montieren Indoor-Spielplätze nach Maß für Familienzentren, Cafés, Hotels und Kindergärten. Umbau und Prüfung. Sitz in Trnava."
+    },
+    "ihriska": {
+      "title": "Indoorspielplatz nach Maß für Kinder | PLAYGROUND",
+      "description": "Indoorspielplatz nach Maß für Restaurant, Hotel, Einkaufszentrum oder Kindergarten. Planung, 3D-Visualisierung, Fertigung und Montage nach EN 1176 und EN 1177."
+    },
+    "prerabka": {
+      "title": "Umbau und Umzug von Indoor-Spielplätzen | PLAYGROUND",
+      "description": "Umbau eines alten Indoor-Spielplatzes zu einem neuen, normgerechten mit der vorhandenen Konstruktion. Wir bauen ab, transportieren und montieren im neuen Raum."
+    },
+    "revizie": {
+      "title": "Spielplatzprüfung und Service | PLAYGROUND",
+      "description": "Jährliche Kontrollen und Prüfungen von Indoor-Spielplätzen nach EN 1176 und EN 1177. Reparaturen, Austausch abgenutzter Teile und Ersatzteile vom Lager. Trnava."
+    },
+    "realizacie": {
+      "title": "Referenzen Indoor-Spielplätze | PLAYGROUND",
+      "description": "Fertige Indoor-Spielplätze, Umbauten und Umzüge: Trnava, Šamorín, Hlohovec, Pezinok, Oravice und tschechische Städte. Sehen Sie Fotos unserer Referenzprojekte."
+    },
+    "o-nas": {
+      "title": "Über uns: Hersteller von Indoor-Spielplätzen | PLAYGROUND",
+      "description": "PLAYGROUND aus Trnava liefert seit 15 Jahren normgerechte Indoor-Spielplätze. Über 180 Projekte in der Slowakei und im Ausland, eigenes Teilelager und Service."
+    },
+    "kontakt": {
+      "title": "Kontakt und Anfrage Spielplatz, Trnava | PLAYGROUND",
+      "description": "Schreiben Sie uns die Maße Ihres Raums und Ihre Vorstellung vom Spielplatz, wir melden uns mit einem Vorschlag. PLAYGROUND, s.r.o., Poštová 6562/20, Trnava."
+    }
+  },
+  "organization": {
+    "name": "PLAYGROUND, s.r.o.",
+    "url": "https://play-ground.sk",
+    "logo": "https://play-ground.sk/logo.svg",
+    "email": "info@play-ground.sk",
+    "telephone": "+421905724437",
+    "address": {
+      "streetAddress": "Poštová 6562/20",
+      "addressLocality": "Trnava",
+      "postalCode": "917 01",
+      "addressCountry": "SK"
+    },
+    "foundingYear": 2011,
+    "areaServed": [
+      "Slovensko",
+      "Česko",
+      "Estónsko",
+      "Rumunsko",
+      "Francúzsko",
+      "Taliansko"
+    ],
+    "sameAs": []
+  },
+  "services": [
+    {
+      "id": "nove-ihriska-na-mieru",
+      "name": "Indoor-Spielplätze nach Maß",
+      "description": "Planung, 3D-Visualisierung, Fertigung und schlüsselfertige Montage für Familienzentren, Cafés, Hotels, Kindergärten und Erlebnisbäder. Die Spielplätze erfüllen EN 1176 und EN 1177."
+    },
+    {
+      "id": "prerabka",
+      "name": "Umbau alter Spielplätze",
+      "description": "Umbau eines alten Spielplatzes zu einem neuen, normgerechten unter Weiterverwendung von Stahl der Konstruktion, Verbindern und intakten Modulen."
+    },
+    {
+      "id": "prestahovanie",
+      "name": "Umzug des Spielplatzes",
+      "description": "Abbau des Spielplatzes, Abtransport und Aufbau im neuen Raum, bei Bedarf mit Anpassung an neue Maße."
+    },
+    {
+      "id": "revizie",
+      "name": "Prüfung und Service von Spielplätzen",
+      "description": "Jährliche Kontrollen (Prüfungen) von Indoor-Spielplätzen, Reparaturen und Austausch abgenutzter Teile."
+    },
+    {
+      "id": "nafukovacie-atrakcie",
+      "name": "Aufblasbare Attraktionen",
+      "description": "Aufblasbare Attraktionen für Kinder als Ergänzung zu Spielplätzen. Typen und Preise hängen vom Bedarf ab."
+    }
+  ]
+}

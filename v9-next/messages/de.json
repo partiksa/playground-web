@@ -1,0 +1,394 @@
+{
+  "meta": {
+    "siteName": "PLAYGROUND",
+    "home": {
+      "title": "Indoor-Spielplätze nach Maß | Playground, Trnava",
+      "description": "Indoor-Spielplätze nach Maß für Familienzentren, Cafés, Hotels und Kindergärten. Wir planen, fertigen und montieren. Trnava, Slowakei."
+    },
+    "ihriska": {
+      "title": "Spielplätze nach Maß | Playground, Trnava",
+      "description": "Modulare Indoor-Spielplätze nach Maß für Familienzentren, Cafés, Hotels und Kindergärten. Konstruktion, Spielelemente, Material und Service."
+    },
+    "prerabka": {
+      "title": "Umbau und Umzug von Spielplätzen | Playground, Trnava",
+      "description": "Wir bauen einen alten Indoor-Spielplatz zu einem neuen, normgerechten um oder versetzen ihn. Die ursprüngliche Konstruktion und intakte Teile nutzen wir weiter."
+    },
+    "revizie": {
+      "title": "Inspektion und Service für Spielplätze | Playground, Trnava",
+      "description": "Jährliche Prüfungen und Service von Indoor-Spielplätzen nach EN 1176 und EN 1177. Ersatzteile aus dem eigenen Lager."
+    },
+    "realizacie": {
+      "title": "Referenzen Indoor-Spielplätze | Playground, Trnava",
+      "description": "12 Indoor-Spielplatz-Projekte in der Slowakei und in Tschechien: neue Spielplätze, Umbauten, Umzüge, Tubing-Bahnen und Kinderbereiche."
+    },
+    "o-nas": {
+      "title": "Über uns | Playground, Trnava",
+      "description": "PLAYGROUND, s.r.o. aus Trnava: 15 Jahre am Markt, über 180 Projekte in 6 Ländern. Indoor-Spielplätze schlüsselfertig, Umbauten und eigenes Teilelager."
+    },
+    "kontakt": {
+      "title": "Kontakt und Anfrage | Playground, Trnava",
+      "description": "Senden Sie uns Ihre Anfrage zu Indoor-Spielplatz, Umbau, Umzug oder Prüfung. +421 905 724 437, info@play-ground.sk, Trnava."
+    }
+  },
+  "seo": {
+    "orgDescription": "Indoor-Spielplätze für Kinder nach Maß: Planung, Fertigung, Montage, Umbau, Umzug und Prüfung. Trnava, Slowakei.",
+    "services": [
+      { "name": "Indoor-Spielplätze nach Maß", "description": "Planung, 3D-Visualisierung, Fertigung und Montage von Indoor-Spielplätzen für Familienzentren, Cafés, Hotels und Kindergärten." },
+      { "name": "Umbau und Umzug von Spielplätzen", "description": "Umbau alter Spielplätze zu neuen, normgerechten, Demontage, Transport und Montage in neuen Räumen." },
+      { "name": "Prüfung und Service von Spielplätzen", "description": "Jährliche Prüfungen und Service von Indoor-Spielplätzen nach EN 1176 und EN 1177." }
+    ]
+  },
+  "common": {
+    "skip": "Zum Inhalt springen",
+    "logoLabel": "PLAYGROUND, Startseite",
+    "navLabel": "Hauptmenü",
+    "nav": {
+      "home": "Start",
+      "ihriska": "Spielplätze nach Maß",
+      "prerabka": "Umbau",
+      "revizie": "Prüfung",
+      "realizacie": "Referenzen",
+      "o-nas": "Über uns",
+      "kontakt": "Kontakt"
+    },
+    "cta": "Anfrage senden",
+    "menu": "Menü",
+    "close": "Schließen",
+    "phone": "+421 905 724 437",
+    "phoneHref": "+421905724437",
+    "email": "info@play-ground.sk",
+    "langLabel": "Sprache",
+    "langNames": {
+      "sk": "Slovenčina",
+      "cz": "Čeština",
+      "en": "English",
+      "de": "Deutsch"
+    },
+    "langShort": {
+      "sk": "SK",
+      "cz": "CZ",
+      "en": "EN",
+      "de": "DE"
+    }
+  },
+  "cta": {
+    "label": "Kontakt",
+    "title": "{S}chreiben Sie uns",
+    "lead": "Beschreiben Sie uns Ihren Raum oder Ihren Spielplatz, und wir melden uns mit einem Vorschlag.",
+    "button": "Anfrage senden"
+  },
+  "footer": {
+    "claim": "Indoor-Spielplätze nach Maß. Wir planen, fertigen und montieren.",
+    "contactTitle": "Kontakt",
+    "address": "Poštová 6562/20\n917 01 Trnava",
+    "menuTitle": "Menü",
+    "companyTitle": "Firma",
+    "company": [
+      "PLAYGROUND, s.r.o.",
+      "IČO 47051990",
+      "DIČ 2023714429",
+      "IČ DPH SK2023714429",
+      "Bezirksgericht Trnava, Abteilung Sro, Einlage 31165/T"
+    ],
+    "big": "Play{G}round",
+    "copyright": "© 2026 PLAYGROUND, s.r.o.",
+    "place": "Trnava, Slowakei"
+  },
+  "home": {
+    "storyLabel": "So entsteht ein Spielplatz nach Maß",
+    "chapters": [
+      {
+        "eb": "Playground, Trnava",
+        "h": "Spielplatz nach {M}aß",
+        "p": "Ein Indoor-Spielplatz für Familienzentrum, Café, Hotel oder Kindergarten. Wir planen ihn, fertigen ihn und bauen ihn auf. Vom ersten Gespräch bis zur Übergabe."
+      },
+      {
+        "eb": "Beratung",
+        "h": "Die erste Verbindung ist das G{E}spräch",
+        "p": "Die Verbindung hält die ganze Konstruktion zusammen. Beim Spielplatz ist es das erste Gespräch. Sie sagen uns, für wen der Spielplatz gedacht ist, wie viele Kinder dort spielen werden und was er Ihrem Betrieb bringen soll. Alles Weitere ergibt sich daraus."
+      },
+      {
+        "eb": "Aufmaß vor Ort",
+        "h": "Ein Gerüst nach Ihren W{Ä}nden",
+        "p": "Wir messen den Raum vor Ort aus: Maße, Deckenhöhe, Eingänge, Fenster und Säulen. Die Konstruktion aus Stahlrohren und Verbindern passt sich dem Raum an, nicht umgekehrt."
+      },
+      {
+        "eb": "Entwurf und 3D-Visualisierung",
+        "h": "Die Elemente wähl{<E}n Sie",
+        "p": "Sie erhalten einen Entwurf und eine 3D-Visualisierung. Sie sehen, wo Rutsche, Bällebad, Tunnel oder Trampolin stehen werden. Wir passen den Entwurf gemeinsam mit Ihnen an, bis Elemente, Farben und Budget stimmen."
+      },
+      {
+        "eb": "Fertigung",
+        "h": "Sicherheit steckt im Det{<A}il",
+        "p": "Wir umhüllen die Konstruktion mit Schaumstoff und Vinyl und schließen den Raum mit Netzen ab. Der Spielplatz erfüllt die Normen EN 1176 und EN 1177. Rohre, Verbinder, Netze und Schaumstoffe haben wir im eigenen Lager."
+      },
+      {
+        "eb": "Lieferung und Montage",
+        "h": "{M}ontage schlüsselfertig",
+        "p": "Wir liefern den Spielplatz, bauen ihn auf und übergeben ihn betriebsbereit. Auch danach kümmern wir uns um ihn: Service und jährliche Prüfungen. Schreiben Sie uns die Maße Ihres Raums und was Sie vom Spielplatz erwarten. Wir melden uns mit einem Vorschlag."
+      }
+    ]
+  },
+  "ihriska": {
+    "eb": "Modulare Indoor-Spielplätze",
+    "h1": "Spielplätze nach {M}aß",
+    "lead": "Ein Spielplatz für Familienzentrum, Café, Hotel oder Kindergarten. Von der ersten Beratung bis zur schlüsselfertigen Montage.",
+    "more": "So entsteht ein Spielplatz",
+    "vizLabel": "3D-Visualisierung eines Indoor-Spielplatzes mit Weltraumthema",
+    "vizCap": "3D-Visualisierung vor der Fertigung",
+    "construction": {
+      "eb": "Konstruktion",
+      "h": "Stahl, Schaumstoff und N{E}tze",
+      "p": [
+        "Die tragende Konstruktion besteht aus Stahlrohren und Verbindern. Wir umhüllen sie mit Schaumstoff und Vinyl, Netze schließen den Raum ab. An die Konstruktion werden Spielelemente angebunden: Rutschen, Tunnel, Netze und Hängemodule.",
+        "Die Spielplätze erfüllen die Normen EN 1176 (Spielplatzgeräte) und EN 1177 (stoßdämpfende Beläge)."
+      ],
+      "alt": "Mehrstöckiger modularer Spielplatz mit Netzen, Pezinok"
+    },
+    "elements": {
+      "eb": "Spielelemente",
+      "h": "Elemente nach Alter und R{A}um",
+      "items": [
+        "Rutschen und Toboggans",
+        "Klettergerüste und Module",
+        "Netzwege und Balancierelemente",
+        "Trampoline, Tunnel und Hindernisparcours",
+        "Tubing-Bahnen und Kletterwände",
+        "Bereiche für verschiedene Altersgruppen"
+      ],
+      "note": "Die Elemente fördern Motorik, Koordination, Kreativität und soziale Fähigkeiten der Kinder.",
+      "alt": "Kletterwand, Rutsche und Tunnel im Kinder Club, Trnava"
+    },
+    "places": {
+      "eb": "Wo er passt",
+      "h": "Für Betriebe, in denen K{I}nder sind",
+      "items": [
+        { "t": "Familienzentren und Spielräume", "p": "Unterhaltung für Kinder beim Einkaufen und in der Freizeit." },
+        { "t": "Cafés und Konditoreien", "p": "Die Kinder spielen, die Eltern entspannen." },
+        { "t": "Hotels und Pensionen", "p": "Eine Familienattraktion als Ergänzung zum Angebot." },
+        { "t": "Kindergärten und Bildungszentren", "p": "Eine sichere Umgebung zum Spielen und für die Entwicklung." },
+        { "t": "Erlebnisbäder und Schwimmbäder", "p": "Komplette Kinderbereiche." }
+      ]
+    },
+    "material": {
+      "eb": "Material und Service",
+      "h": "Teile haben wir am L{<A}ger",
+      "p": [
+        "Wir fertigen Spielplätze aus hochwertigen Materialien mit Schwerpunkt auf Sicherheit und langer Lebensdauer. Am Lager haben wir Konstruktionsrohre, Verbinder, Netze, Schaumstoffe zur Umhüllung der Konstruktion und Hängemodule.",
+        "Wir bieten auch Service und jährliche Prüfungen von Spielplätzen an."
+      ],
+      "linkRevizie": "Service und Prüfung",
+      "linkRealizacie": "Referenzen",
+      "alt": "Detail weicher Säulenummantelungen und Schutznetze, Trnava"
+    }
+  },
+  "prerabka": {
+    "eb": "Aus Alt wird Neu",
+    "h1": "Umbau und {U}mzug",
+    "lead": "Wir bauen den alten Spielplatz zu einem neuen, normgerechten um oder versetzen ihn in einen neuen Raum.",
+    "alt": "Erneuerter Indoor-Spielplatz mit Rutsche und Bällebad, Dunajská Lužná",
+    "cap": "Umbau eines Spielplatzes · Dunajská Lužná",
+    "process": {
+      "eb": "Ablauf",
+      "h": "Umbau Schritt für Schr{<I}tt",
+      "p": "Wir nutzen die ursprüngliche Konstruktion und intakte Teile weiter. Wir tauschen Hüllen und Farben aus und ergänzen neue Elemente.",
+      "steps": [
+        "Alter Spielplatz",
+        "Demontage",
+        "Neue Hüllen und Farben",
+        "Neue Elemente",
+        "Erneuerter Spielplatz"
+      ],
+      "vizLabel": "3D-Modell von Zerlegung, Neulackierung und Zusammenbau eines Spielplatzes",
+      "vizCap": "3D-Studie eines Umbaus"
+    },
+    "rebuild": {
+      "eb": "Umbau",
+      "h": "Vom Import zur Norm",
+      "p": "Einen alten Spielplatz (meist aus China) bauen wir zu einem neuen, normgerechten um. Wir verwenden Material des alten weiter: Stahl der Konstruktion, Verbinder und intakte Module.",
+      "list": [
+        "Austausch abgenutzter Spielelemente",
+        "Anpassung der Raumaufteilung und bessere Raumnutzung",
+        "neues Design und neue Farben",
+        "Ergänzung neuer Attraktionen",
+        "Anpassung an aktuelle Normen"
+      ]
+    },
+    "moving": {
+      "eb": "Umzug",
+      "h": "Wir bauen ab, transportieren und bauen auf",
+      "p": "Wir bauen den Spielplatz ab, transportieren ihn und bauen ihn im neuen Raum wieder auf. Dabei können wir ihn an neue Maße anpassen.",
+      "alt": "Versetzter Spielplatz im Flur einer Grundschule, Hlohovec",
+      "cap": "Versetzter Spielplatz · Hlohovec"
+    },
+    "why": {
+      "eb": "Warum Umbau",
+      "h": "Oft schneller und günstiger als ein neuer Sp{<I}elplatz",
+      "more": "Umgebaute Spielplätze"
+    }
+  },
+  "revizie": {
+    "eb": "Service und Kontrollen",
+    "h1": "Prü{<F>}ung",
+    "lead": "Wir prüfen den Spielplatz, reparieren, was nötig ist, und tauschen abgenutzte Teile aus.",
+    "button": "Prüfung beauftragen",
+    "alt": "Illustrationsdetail einer Hand bei der Kontrolle eines Schutznetzes",
+    "cap": "Kontrolle eines Schutznetzes · KI-Illustration",
+    "listLabel": "Prüfung und Service",
+    "rows": [
+      { "t": "Jährliche Kontrolle", "p": "Wir bieten Service und jährliche Kontrollen (Prüfungen) von Spielplätzen an. Die Spielplätze beurteilen wir nach EN 1176 (Spielplatzgeräte) und EN 1177 (stoßdämpfende Beläge)." },
+      { "t": "Service und Teile", "p": "Am Lager haben wir Konstruktionsrohre, Verbinder, Netze, Schaumstoffe zur Umhüllung der Konstruktion und Hängemodule." }
+    ]
+  },
+  "realizacie": {
+    "eb": "12 Projekte, Slowakei und Tschechien",
+    "h1": "{R}eferenzen",
+    "lead": "Neue Spielplätze, Umbauten, Umzüge und Erneuerungen für Familienzentren, Schulen, Schwimmbäder und Erlebnisbäder.",
+    "listLabel": "Liste der Referenzen",
+    "modal": {
+      "prev": "Zurück",
+      "next": "Weiter",
+      "close": "Schließen",
+      "photo": "Foto"
+    },
+    "items": [
+      { "t": "Neuer Spielplatz Kinder Club", "p": "Trnava", "y": "Demontage und Montage", "d": "Demontage des ursprünglichen und Montage eines neuen Indoor-Spielplatzes im Kinder Club Trnava.", "alt": "Neuer Spielplatz Kinder Club, Trnava" },
+      { "t": "Umbau eines Spielplatzes", "p": "Dunajská Lužná", "y": "Umbau", "d": "Erneuerung und Umbau eines Indoor-Spielplatzes in Dunajská Lužná.", "alt": "Umbau eines Spielplatzes, Dunajská Lužná" },
+      { "t": "Erneuerung der Konstruktionshüllen", "p": "Klatovy, CZ", "y": "Erneuerung", "d": "Erneuerung der Schaumstoffhüllen der Konstruktion eines Indoor-Spielplatzes.", "alt": "Erneuerung der Konstruktionshüllen, Klatovy, CZ" },
+      { "t": "Indoor-Spielplatz nach Maß", "p": "Šamorín", "y": "Neuer Spielplatz nach Maß", "d": "Ein Indoor-Spielplatz nach Maß, verbunden mit einer bestehenden Wand mit Öffnungen.", "alt": "Indoor-Spielplatz nach Maß, Šamorín" },
+      { "t": "Umzug und Umbau eines Spielplatzes", "p": "Hlohovec", "y": "Umzug und Umbau", "d": "Demontage eines dreistöckigen Indoor-Spielplatzes und Umbau zu einem neuen Spielplatz mit zwei Etagen im Flur einer Grundschule.", "alt": "Umzug und Umbau eines Spielplatzes, Hlohovec" },
+      { "t": "Neuer Spielplatz in Pezinok", "p": "Pezinok", "y": "Demontage und Montage", "d": "Demontage, Montage und Anpassung eines neuen Indoor-Spielplatzes in Pezinok.", "alt": "Neuer Spielplatz in Pezinok, Pezinok" },
+      { "t": "Versetzter und erneuerter Spielplatz", "p": "Králův Dvůr, CZ", "y": "Umzug und Erneuerung", "d": "Ein versetzter und erneuerter Indoor-Spielplatz in Králův Dvůr bei Beroun.", "alt": "Versetzter und erneuerter Spielplatz, Králův Dvůr, CZ" },
+      { "t": "Kletterwand für Kinder", "p": "Karviná, CZ", "y": "Kletterwand", "d": "Eine Kletterwand ist eine gute Ergänzung für Spielhallen.", "alt": "Kletterwand für Kinder, Karviná, CZ" },
+      { "t": "Tubing-Bahn", "p": "Karviná, CZ", "y": "Tubing-Bahn", "d": "Eine Tubing-Bahn, gebaut als freistehendes Spielelement. Die Kinder verbringen dort die meiste Zeit.", "alt": "Tubing-Bahn, Karviná, CZ" },
+      { "t": "Spielplatz im Schwimmbad", "p": "Praha, CZ", "y": "Montage", "d": "Montage eines gebrauchten Indoor-Spielplatzes auf dem Gelände eines Schwimmbads in Prag.", "alt": "Spielplatz im Schwimmbad, Praha, CZ" },
+      { "t": "Erweiterung von Spielplatz und Tubing-Bahn", "p": "Uherský Brod, CZ", "y": "Erweiterung", "d": "Erweiterung eines Indoor-Spielplatzes und einer Tubing-Bahn an einen bestehenden Indoor-Spielplatz.", "alt": "Erweiterung von Spielplatz und Tubing-Bahn, Uherský Brod, CZ" },
+      { "t": "Kinderbereich im Erlebnisbad", "p": "Oravice, Meander", "y": "Neuer Kinderbereich", "d": "Montage eines kompletten Kinderbereichs mit modularem Indoor-Spielplatz im Erlebnisbad Meander Oravice.", "alt": "Kinderbereich im Erlebnisbad, Oravice, Meander" }
+    ]
+  },
+  "o-nas": {
+    "eb": "PLAYGROUND, s.r.o., Trnava",
+    "h1": "Über {U}ns",
+    "lead": "Wir liefern normgerechte Indoor-Spielplätze und Trampolinzentren. Sie helfen Betrieben, Eltern mit Kindern anzuziehen.",
+    "statsLabel": "PLAYGROUND in Zahlen",
+    "stats": [
+      { "value": 15, "suffix": "", "label": "Jahre am Markt" },
+      { "value": 180, "suffix": "+", "label": "Projekte" },
+      { "value": 6, "suffix": "", "label": "Länder: Slowakei, Tschechien, Frankreich, Italien, Estland, Rumänien" }
+    ],
+    "alt": "Indoor-Spielplatz nach Maß an einer orangen Wand, Šamorín",
+    "diff": {
+      "eb": "Was uns unterscheidet",
+      "h": "Von der Planung bis zum S{E}rvice",
+      "rows": [
+        { "t": "Schlüsselfertig", "p": "Von Beratung, Aufmaß, Entwurf und Visualisierung bis zu Lieferung und Montage. Wir haben auch Hunderte Services und jährliche Kontrollen von Spielplätzen durchgeführt." },
+        { "t": "Umbau eines alten Spielplatzes", "p": "Einen alten Spielplatz bauen wir zu einem neuen, normgerechten um. Wir verwenden die ursprüngliche Konstruktion, Verbinder und intakte Module weiter, so sparen Sie Kosten." },
+        { "t": "Eigenes Lager", "p": "Konstruktionsrohre, Verbinder, Netze, Schaumstoffe zur Umhüllung und Hängemodule haben wir am Lager." },
+        { "t": "Wir beraten auch zum Raum", "p": "Wir helfen bei der Aufteilung des Spielplatzes, bei den Sitzplätzen und beim Cafébereich." }
+      ]
+    },
+    "samorin": {
+      "eb": "Šamorín",
+      "h": "Ein B{L}ick ins Innere",
+      "alts": [
+        "Etage des Spielplatzes mit gelben Pyramiden, Šamorín",
+        "Rundes Fenster und Rutsche, Šamorín",
+        "Tunnel mit rundem Fenster, Šamorín"
+      ],
+      "more": "Alle Referenzen"
+    },
+    "faq": {
+      "eb": "Fragen und Antworten",
+      "h": "Häufige {F}ragen"
+    }
+  },
+  "kontakt": {
+    "eb": "Kontakt",
+    "h1": "{S}chreiben Sie uns",
+    "lead": "Beschreiben Sie uns Ihren Raum oder Ihren Spielplatz. Wir melden uns mit einem Vorschlag.",
+    "addressTitle": "Adresse",
+    "address": "PLAYGROUND, s.r.o.\nPoštová 6562/20\n917 01 Trnava",
+    "companyTitle": "Firma",
+    "company": "IČO 47051990\nDIČ 2023714429\nIČ DPH SK2023714429",
+    "form": {
+      "label": "Anfrageformular",
+      "required": "Pflichtfeld",
+      "service": {
+        "legend": "Was Sie benötigen",
+        "options": {
+          "nove": "Neuer Spielplatz",
+          "prerabka": "Umbau",
+          "stahovanie": "Umzug",
+          "reviza": "Prüfung",
+          "nafukovacie": "Aufblasbare Attraktionen",
+          "ine": "Sonstiges"
+        },
+        "otherLabel": "Beschreiben Sie, was Sie benötigen",
+        "otherError": "Schreiben Sie, was Sie benötigen."
+      },
+      "type": {
+        "legend": "Art des Betriebs",
+        "options": ["Familienzentrum", "Café", "Hotel", "Kindergarten", "Sonstiges"]
+      },
+      "when": {
+        "legend": "Bis wann soll es fertig sein",
+        "options": ["So schnell wie möglich", "Innerhalb von drei Monaten", "Innerhalb eines halben Jahres", "Ich frage vorerst nur an"]
+      },
+      "plan": {
+        "legend": "Liegt ein Grundriss vor?",
+        "yes": "Ja",
+        "no": "Nein",
+        "fileLabel": "Grundriss",
+        "fileHint": "PDF, PNG, JPG, DWG oder DXF, höchstens 10 MB. Das Formular sendet die Datei nicht. Fügen Sie sie der E-Mail an, die sich öffnet.",
+        "fileChosen": "Ausgewählte Datei: {name}. Fügen Sie sie der E-Mail an.",
+        "errType": "Dieser Dateityp wird nicht unterstützt. Verwenden Sie PDF, PNG, JPG, DWG oder DXF.",
+        "errSize": "Die Datei ist größer als 10 MB. Verwenden Sie eine kleinere Datei."
+      },
+      "contact": {
+        "legend": "Ihre Angaben",
+        "name": "Name",
+        "email": "E-Mail",
+        "phone": "Telefon",
+        "city": "Stadt und Land",
+        "message": "Nachricht",
+        "messagePlaceholder": "Maße des Raums, Deckenhöhe, für wen der Spielplatz gedacht ist"
+      },
+      "consent": "Ich stimme der Verarbeitung meiner personenbezogenen Daten zur Bearbeitung der Anfrage zu.",
+      "submit": "Senden",
+      "errors": {
+        "summary": "Prüfen Sie die markierten Felder.",
+        "name": "Ergänzen Sie den Namen.",
+        "email": "Ergänzen Sie eine gültige E-Mail-Adresse.",
+        "consent": "Wir benötigen Ihre Einwilligung zur Datenverarbeitung."
+      },
+      "done": {
+        "title": "Vielen Dank",
+        "text": "Wir haben eine E-Mail mit Ihrer Anfrage geöffnet. Sie müssen sie nur noch absenden.",
+        "textPlan": "Wir haben eine E-Mail mit Ihrer Anfrage geöffnet. Fügen Sie den Grundriss an und senden Sie sie ab.",
+        "open": "E-Mail öffnen",
+        "copy": "Text kopieren",
+        "copied": "Kopiert",
+        "to": "An"
+      },
+      "mail": {
+        "subject": "Anfrage von der Website: {name}",
+        "service": "Was ich benötige",
+        "other": "Beschreibung",
+        "type": "Art des Betriebs",
+        "when": "Termin",
+        "plan": "Grundriss",
+        "planYes": "ja, ich sende ihn als Anhang der E-Mail",
+        "planNo": "nein",
+        "name": "Name",
+        "email": "E-Mail",
+        "phone": "Telefon",
+        "city": "Stadt und Land",
+        "none": "nicht angegeben"
+      }
+    }
+  },
+  "root": {
+    "title": "PLAYGROUND, Indoor-Spielplätze nach Maß",
+    "link": "PLAYGROUND, deutsche Version"
+  }
+}

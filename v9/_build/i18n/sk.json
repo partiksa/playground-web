@@ -1,0 +1,394 @@
+{
+  "meta": {
+    "siteName": "PLAYGROUND",
+    "home": {
+      "title": "Interiérové ihriská na mieru | Playground, Trnava",
+      "description": "Interiérové ihriská na mieru pre rodinné centrá, kaviarne, hotely a škôlky. Navrhujeme, vyrábame a montujeme. Trnava."
+    },
+    "ihriska": {
+      "title": "Ihriská na mieru | Playground, Trnava",
+      "description": "Panelové interiérové ihriská na mieru pre rodinné centrá, kaviarne, hotely a škôlky. Konštrukcia, herné prvky, materiál a servis."
+    },
+    "prerabka": {
+      "title": "Prerábka a sťahovanie ihriska | Playground, Trnava",
+      "description": "Staré interiérové ihrisko prerobíme na nové, normované, alebo ho presťahujeme. Použijeme pôvodnú konštrukciu a nepoškodené diely."
+    },
+    "revizie": {
+      "title": "Revízie a servis ihrísk | Playground, Trnava",
+      "description": "Ročné kontroly a servis interiérových ihrísk podľa noriem EN 1176 a EN 1177. Náhradné diely zo skladu."
+    },
+    "realizacie": {
+      "title": "Realizácie interiérových ihrísk | Playground, Trnava",
+      "description": "12 realizácií interiérových ihrísk na Slovensku a v Česku: nové ihriská, prerábky, presťahovania, tubingové dráhy a detské zóny."
+    },
+    "o-nas": {
+      "title": "O nás | Playground, Trnava",
+      "description": "PLAYGROUND, s.r.o. z Trnavy: 15 rokov na trhu, 180+ projektov v 6 krajinách. Interiérové ihriská na kľúč, prerábky a vlastný sklad dielov."
+    },
+    "kontakt": {
+      "title": "Kontakt a dopyt | Playground, Trnava",
+      "description": "Napíšte nám dopyt na interiérové ihrisko, prerábku, presťahovanie alebo revíziu. +421 905 724 437, info@play-ground.sk, Trnava."
+    }
+  },
+  "seo": {
+    "orgDescription": "Interiérové detské ihriská na mieru: návrh, výroba, montáž, prerábka, sťahovanie a revízie. Trnava, Slovensko.",
+    "services": [
+      { "name": "Interiérové ihriská na mieru", "description": "Návrh, 3D vizualizácia, výroba a montáž interiérových ihrísk pre rodinné centrá, kaviarne, hotely a škôlky." },
+      { "name": "Prerábka a sťahovanie ihrísk", "description": "Prerábka starých ihrísk na nové a normované, demontáž, prevoz a montáž v novom priestore." },
+      { "name": "Revízie a servis ihrísk", "description": "Ročné kontroly a servis interiérových ihrísk podľa noriem EN 1176 a EN 1177." }
+    ]
+  },
+  "common": {
+    "skip": "Preskočiť na obsah",
+    "logoLabel": "PLAYGROUND, úvod",
+    "navLabel": "Hlavné menu",
+    "nav": {
+      "home": "Úvod",
+      "ihriska": "Ihriská na mieru",
+      "prerabka": "Prerábka",
+      "revizie": "Revízie",
+      "realizacie": "Realizácie",
+      "o-nas": "O nás",
+      "kontakt": "Kontakt"
+    },
+    "cta": "Napísať dopyt",
+    "menu": "Menu",
+    "close": "Zavrieť",
+    "phone": "+421 905 724 437",
+    "phoneHref": "+421905724437",
+    "email": "info@play-ground.sk",
+    "langLabel": "Jazyk",
+    "langNames": {
+      "sk": "Slovenčina",
+      "cz": "Čeština",
+      "en": "English",
+      "de": "Deutsch"
+    },
+    "langShort": {
+      "sk": "SK",
+      "cz": "CZ",
+      "en": "EN",
+      "de": "DE"
+    }
+  },
+  "cta": {
+    "label": "Kontakt",
+    "title": "{N}apíšte nám",
+    "lead": "Opíšte nám svoj priestor alebo ihrisko a ozveme sa vám s návrhom.",
+    "button": "Napísať dopyt"
+  },
+  "footer": {
+    "claim": "Interiérové ihriská na mieru. Navrhujeme, vyrábame a montujeme.",
+    "contactTitle": "Kontakt",
+    "address": "Poštová 6562/20\n917 01 Trnava",
+    "menuTitle": "Menu",
+    "companyTitle": "Firma",
+    "company": [
+      "PLAYGROUND, s.r.o.",
+      "IČO 47051990",
+      "DIČ 2023714429",
+      "IČ DPH SK2023714429",
+      "Okresný súd Trnava, oddiel Sro, vložka 31165/T"
+    ],
+    "big": "Play{G}round",
+    "copyright": "© 2026 PLAYGROUND, s.r.o.",
+    "place": "Trnava, Slovensko"
+  },
+  "home": {
+    "storyLabel": "Ako vzniká ihrisko na mieru",
+    "chapters": [
+      {
+        "eb": "Playground, Trnava",
+        "h": "Ihrisko na {M}ieru",
+        "p": "Interiérové ihrisko pre rodinné centrum, kaviareň, hotel alebo škôlku. Navrhneme ho, vyrobíme a postavíme. Od prvého rozhovoru po odovzdanie."
+      },
+      {
+        "eb": "Konzultácia",
+        "h": "Prvý spoj j{E} rozhovor",
+        "p": "Spoj drží celú konštrukciu. Pri ihrisku je ním prvý rozhovor. Poviete nám, pre koho ihrisko je, koľko detí sa na ňom bude hrať a čo má prevádzke priniesť. Z toho vychádza všetko ďalšie."
+      },
+      {
+        "eb": "Zameranie priestoru",
+        "h": "Kostra podľa v{A}šich stien",
+        "p": "Priestor zameriame na mieste: rozmery, výšku stropu, vstupy, okná aj stĺpy. Konštrukcia z oceľových trubiek a spojok sa prispôsobí miestnosti, nie naopak."
+      },
+      {
+        "eb": "Návrh a 3D vizualizácia",
+        "h": "Prvky vyb{<E}ráte vy",
+        "p": "Dostanete návrh a 3D vizualizáciu. Vidíte, kde bude šmykľavka, bazén s loptičkami, tunel alebo trampolína. Návrh upravujeme s vami, kým nesedia prvky, farby aj rozpočet."
+      },
+      {
+        "eb": "Výroba",
+        "h": "Bezpečnosť je v det{<A}ile",
+        "p": "Konštrukciu obalíme penou a vinylom, priestor uzatvoríme sieťami. Ihrisko spĺňa normy EN 1176 a EN 1177. Trubky, spojky, siete a peny máme na vlastnom sklade."
+      },
+      {
+        "eb": "Dodanie a montáž",
+        "h": "{M}ontáž na kľúč",
+        "p": "Ihrisko dovezieme, postavíme a odovzdáme pripravené na prevádzku. Staráme sa oň aj potom: servis a ročné kontroly. Napíšte nám rozmery priestoru a čo od ihriska čakáte. Ozveme sa s návrhom."
+      }
+    ]
+  },
+  "ihriska": {
+    "eb": "Panelové interiérové ihriská",
+    "h1": "Ihriská na {M}ieru",
+    "lead": "Ihrisko pre rodinné centrum, kaviareň, hotel alebo škôlku. Od prvej konzultácie po montáž na kľúč.",
+    "more": "Ako vzniká ihrisko",
+    "vizLabel": "3D vizualizácia interiérového ihriska s vesmírnou témou",
+    "vizCap": "3D vizualizácia pred výrobou",
+    "construction": {
+      "eb": "Konštrukcia",
+      "h": "Oceľ, pena a si{E}te",
+      "p": [
+        "Nosnú konštrukciu tvoria oceľové trubky a spojky. Obaľujeme ju penou a vinylom, priestor uzatvárajú siete. Na konštrukciu sa pripájajú herné prvky: šmykľavky, tunely, siete a závesné moduly.",
+        "Ihriská spĺňajú normy EN 1176 (vybavenie ihrísk) a EN 1177 (povrchy tlmiace náraz)."
+      ],
+      "alt": "Viacposchodové panelové ihrisko so sieťami, Pezinok"
+    },
+    "elements": {
+      "eb": "Herné prvky",
+      "h": "Prvky podľa veku a pri{E}storu",
+      "items": [
+        "Šmykľavky a tobogány",
+        "Preliezačky a moduly",
+        "Sieťové chodníky a balančné prvky",
+        "Trampolíny, tunely a prekážkové dráhy",
+        "Tubingové dráhy a lezecké steny",
+        "Zóny pre rôzne vekové kategórie"
+      ],
+      "note": "Prvky rozvíjajú motoriku, koordináciu, kreativitu a sociálne zručnosti detí.",
+      "alt": "Lezecká stena, šmykľavka a tunel v Kinder Clube, Trnava"
+    },
+    "places": {
+      "eb": "Kde sa hodia",
+      "h": "Pre prevádzky, kde sú d{E}ti",
+      "items": [
+        { "t": "Rodinné centrá a herne", "p": "Zábava pre deti počas nákupov a voľného času." },
+        { "t": "Kaviarne a cukrárne", "p": "Deti sa hrajú, rodičia oddychujú." },
+        { "t": "Hotely a penzióny", "p": "Rodinná atrakcia navyše k ponuke." },
+        { "t": "Škôlky a vzdelávacie centrá", "p": "Bezpečné prostredie na hru a rozvoj." },
+        { "t": "Aquaparky a kúpaliská", "p": "Kompletné detské zóny." }
+      ]
+    },
+    "material": {
+      "eb": "Materiál a servis",
+      "h": "Diely máme na skl{<A}de",
+      "p": [
+        "Ihriská vyrábame z kvalitných materiálov s dôrazom na bezpečnosť a dlhú životnosť. Na sklade máme konštrukčné trubky, spojky, siete, peny na obaľovanie konštrukcie a závesné moduly.",
+        "Robíme aj servis a ročné kontroly ihrísk."
+      ],
+      "linkRevizie": "Servis a revízie",
+      "linkRealizacie": "Realizácie",
+      "alt": "Detail mäkkých obalov stĺpov a ochranných sietí, Trnava"
+    }
+  },
+  "prerabka": {
+    "eb": "Zo starého nové",
+    "h1": "Prerábka a {S}ťahovanie",
+    "lead": "Staré ihrisko prerobíme na nové, normované, alebo ho presťahujeme do nového priestoru.",
+    "alt": "Obnovené interiérové ihrisko so šmykľavkou a guľôčkovým bazénom, Dunajská Lužná",
+    "cap": "Prerábka ihriska · Dunajská Lužná",
+    "process": {
+      "eb": "Postup",
+      "h": "Prerábka krok za kr{<O}kom",
+      "p": "Použijeme pôvodnú konštrukciu a nepoškodené diely. Vymeníme obaly, farby a doplníme nové prvky.",
+      "steps": [
+        "Staré ihrisko",
+        "Demontáž",
+        "Nové obaly a farby",
+        "Nové prvky",
+        "Obnovené ihrisko"
+      ],
+      "vizLabel": "3D model rozloženia, prefarbenia a zloženia ihriska",
+      "vizCap": "3D štúdia prerábky"
+    },
+    "rebuild": {
+      "eb": "Prerábka",
+      "h": "Z čínskeho normované",
+      "p": "Staré ihrisko (najčastejšie čínske) prerobíme na nové, normované. Použijeme materiál z pôvodného: železo z konštrukcie, spojky a nepoškodené moduly.",
+      "list": [
+        "výmena opotrebovaných herných prvkov",
+        "úprava dispozície a lepšie využitie priestoru",
+        "nový dizajn a farby",
+        "doplnenie nových atrakcií",
+        "úprava podľa aktuálnych noriem"
+      ]
+    },
+    "moving": {
+      "eb": "Sťahovanie",
+      "h": "Rozoberieme, prevezieme, postavíme",
+      "p": "Ihrisko rozoberieme, prevezieme a postavíme v novom priestore. Pri tom ho môžeme upraviť na nový rozmer.",
+      "alt": "Presťahované ihrisko osadené na chodbe základnej školy, Hlohovec",
+      "cap": "Presťahované ihrisko · Hlohovec"
+    },
+    "why": {
+      "eb": "Prečo prerábka",
+      "h": "Často rýchlejšia a lacnejšia než nové ih{<R}isko",
+      "more": "Prerobené ihriská"
+    }
+  },
+  "revizie": {
+    "eb": "Servis a kontroly",
+    "h1": "Re{<V>}ízie",
+    "lead": "Skontrolujeme ihrisko, opravíme, čo treba, a vymeníme opotrebované diely.",
+    "button": "Objednať revíziu",
+    "alt": "Ilustračný detail ruky pri kontrole ochrannej siete",
+    "cap": "Kontrola ochrannej siete · AI ilustrácia",
+    "listLabel": "Revízie a servis",
+    "rows": [
+      { "t": "Ročná kontrola", "p": "Robíme servis a ročné kontroly (revízie) ihrísk. Ihriská posudzujeme podľa noriem EN 1176 (vybavenie ihrísk) a EN 1177 (povrchy tlmiace náraz)." },
+      { "t": "Servis a diely", "p": "Na sklade máme konštrukčné trubky, spojky, siete, peny na obaľovanie konštrukcie a závesné moduly." }
+    ]
+  },
+  "realizacie": {
+    "eb": "12 projektov, Slovensko a Česko",
+    "h1": "Reali{Z}ácie",
+    "lead": "Nové ihriská, prerábky, presťahovania a obnovy pre rodinné centrá, školy, kúpaliská a aquaparky.",
+    "listLabel": "Zoznam realizácií",
+    "modal": {
+      "prev": "Predchádzajúca",
+      "next": "Ďalšia",
+      "close": "Zavrieť",
+      "photo": "fotka"
+    },
+    "items": [
+      { "t": "Nové ihrisko Kinder Club", "p": "Trnava", "y": "Demontáž a montáž", "d": "Demontáž pôvodného a montáž nového interiérového ihriska v Kinder Clube Trnava.", "alt": "Nové ihrisko Kinder Club, Trnava" },
+      { "t": "Prerábka ihriska", "p": "Dunajská Lužná", "y": "Prerábka", "d": "Vynovenie a prerábka interiérového ihriska v Dunajskej Lužnej.", "alt": "Prerábka ihriska, Dunajská Lužná" },
+      { "t": "Obnova obalov konštrukcie", "p": "Klatovy, CZ", "y": "Obnova", "d": "Obnova penových obalov konštrukcie interiérového ihriska.", "alt": "Obnova obalov konštrukcie, Klatovy, CZ" },
+      { "t": "Interiérové ihrisko na mieru", "p": "Šamorín", "y": "Nové ihrisko na mieru", "d": "Interiérové ihrisko na mieru prepojené s existujúcou stenou s otvormi.", "alt": "Interiérové ihrisko na mieru, Šamorín" },
+      { "t": "Presťahovanie a prerobenie ihriska", "p": "Hlohovec", "y": "Presťahovanie a prerábka", "d": "Demontáž trojposchodového interiérového ihriska a úprava na nové ihrisko s dvomi poschodiami na chodbe základnej školy.", "alt": "Presťahovanie a prerobenie ihriska, Hlohovec" },
+      { "t": "Nové ihrisko v Pezinku", "p": "Pezinok", "y": "Demontáž a montáž", "d": "Demontáž, montáž a zmena nového interiérového ihriska v Pezinku.", "alt": "Nové ihrisko v Pezinku, Pezinok" },
+      { "t": "Presťahované a obnovené ihrisko", "p": "Králův Dvůr, CZ", "y": "Presťahovanie a obnova", "d": "Presťahované a obnovené interiérové ihrisko v Králově Dvore pri Beroune.", "alt": "Presťahované a obnovené ihrisko, Králův Dvůr, CZ" },
+      { "t": "Lezecká stena pre deti", "p": "Karviná, CZ", "y": "Lezecká stena", "d": "Lezecká stena je dobrý doplnok do herní.", "alt": "Lezecká stena pre deti, Karviná, CZ" },
+      { "t": "Tubingová dráha", "p": "Karviná, CZ", "y": "Tubingová dráha", "d": "Tubingová dráha postavená ako samostatne stojaci herný prvok. Deti na nej trávia najviac času.", "alt": "Tubingová dráha, Karviná, CZ" },
+      { "t": "Ihrisko na kúpalisku", "p": "Praha, CZ", "y": "Montáž", "d": "Montáž používaného interiérového ihriska v areáli kúpaliska v Prahe.", "alt": "Ihrisko na kúpalisku, Praha, CZ" },
+      { "t": "Dorábka ihriska a tubingovej dráhy", "p": "Uherský Brod, CZ", "y": "Dorábka", "d": "Dorábka interiérového ihriska a tubingovej dráhy k existujúcemu interiérovému ihrisku.", "alt": "Dorábka ihriska a tubingovej dráhy, Uherský Brod, CZ" },
+      { "t": "Detská zóna v aquaparku", "p": "Oravice, Meander", "y": "Nová detská zóna", "d": "Montáž kompletnej detskej zóny s panelovým interiérovým ihriskom v aquaparku Meander Oravice.", "alt": "Detská zóna v aquaparku, Oravice, Meander" }
+    ]
+  },
+  "o-nas": {
+    "eb": "PLAYGROUND, s.r.o., Trnava",
+    "h1": "O {N}ás",
+    "lead": "Dodávame normované interiérové ihriská a trampolínové centrá. Prevádzkam pomáhajú prilákať rodičov s deťmi.",
+    "statsLabel": "PLAYGROUND v číslach",
+    "stats": [
+      { "value": 15, "suffix": "", "label": "rokov na trhu" },
+      { "value": 180, "suffix": "+", "label": "projektov" },
+      { "value": 6, "suffix": "", "label": "krajín: Slovensko, Česko, Francúzsko, Taliansko, Estónsko, Rumunsko" }
+    ],
+    "alt": "Interiérové ihrisko na mieru pri oranžovej stene, Šamorín",
+    "diff": {
+      "eb": "Čím sa líšime",
+      "h": "Od návrhu po s{E}rvis",
+      "rows": [
+        { "t": "Na kľúč", "p": "Od konzultácie, zamerania, návrhu a vizualizácie po dodanie a montáž. Vykonali sme aj stovky servisov a ročných kontrol ihrísk." },
+        { "t": "Prerábka starého ihriska", "p": "Staré ihrisko prerobíme na nové a normované. Použijeme pôvodnú konštrukciu, spojky a nepoškodené moduly, takže ušetríte." },
+        { "t": "Vlastný sklad", "p": "Konštrukčné trubky, spojky, siete, peny na obaľovanie a závesné moduly máme na sklade." },
+        { "t": "Poradíme aj s priestorom", "p": "Pomôžeme s rozložením ihriska, posedením aj kaviarenskou časťou." }
+      ]
+    },
+    "samorin": {
+      "eb": "Šamorín",
+      "h": "P{O}hľad zvnútra",
+      "alts": [
+        "Poschodie ihriska so žltými pyramídami, Šamorín",
+        "Okrúhle okno a šmykľavka, Šamorín",
+        "Tunel s okrúhlym oknom, Šamorín"
+      ],
+      "more": "Všetky realizácie"
+    },
+    "faq": {
+      "eb": "Otázky a odpovede",
+      "h": "Časté {O}tázky"
+    }
+  },
+  "kontakt": {
+    "eb": "Kontakt",
+    "h1": "{N}apíšte nám",
+    "lead": "Opíšte nám svoj priestor alebo ihrisko. Ozveme sa s návrhom.",
+    "addressTitle": "Adresa",
+    "address": "PLAYGROUND, s.r.o.\nPoštová 6562/20\n917 01 Trnava",
+    "companyTitle": "Firma",
+    "company": "IČO 47051990\nDIČ 2023714429\nIČ DPH SK2023714429",
+    "form": {
+      "label": "Dopytový formulár",
+      "required": "povinné",
+      "service": {
+        "legend": "Čo potrebujete",
+        "options": {
+          "nove": "Nové ihrisko",
+          "prerabka": "Prerábka",
+          "stahovanie": "Presťahovanie",
+          "reviza": "Revízia",
+          "nafukovacie": "Nafukovacie atrakcie",
+          "ine": "Iné"
+        },
+        "otherLabel": "Opíšte, čo potrebujete",
+        "otherError": "Napíšte, čo potrebujete."
+      },
+      "type": {
+        "legend": "Typ prevádzky",
+        "options": ["Rodinné centrum", "Kaviareň", "Hotel", "Škôlka", "Iné"]
+      },
+      "when": {
+        "legend": "Dokedy má byť hotové",
+        "options": ["Čo najskôr", "Do troch mesiacov", "Do pol roka", "Zatiaľ sa len pýtam"]
+      },
+      "plan": {
+        "legend": "Máte k dispozícii pôdorys?",
+        "yes": "Áno",
+        "no": "Nie",
+        "fileLabel": "Pôdorys",
+        "fileHint": "PDF, PNG, JPG, DWG alebo DXF, najviac 10 MB. Formulár súbor neodošle, priložte ho k e-mailu, ktorý sa otvorí.",
+        "fileChosen": "Vybraný súbor: {name}. Priložte ho k e-mailu.",
+        "errType": "Tento typ súboru nie je podporovaný. Použite PDF, PNG, JPG, DWG alebo DXF.",
+        "errSize": "Súbor má viac ako 10 MB. Použite menší súbor."
+      },
+      "contact": {
+        "legend": "Vaše údaje",
+        "name": "Meno",
+        "email": "E-mail",
+        "phone": "Telefón",
+        "city": "Mesto a krajina",
+        "message": "Správa",
+        "messagePlaceholder": "Rozmery priestoru, výška stropu, pre koho je ihrisko"
+      },
+      "consent": "Súhlasím so spracovaním osobných údajov na vybavenie dopytu.",
+      "submit": "Odoslať",
+      "errors": {
+        "summary": "Skontrolujte označené polia.",
+        "name": "Doplňte meno.",
+        "email": "Doplňte platný e-mail.",
+        "consent": "Potrebujeme váš súhlas so spracovaním údajov."
+      },
+      "done": {
+        "title": "Ďakujeme",
+        "text": "Otvorili sme e-mail s vaším dopytom. Stačí ho odoslať.",
+        "textPlan": "Otvorili sme e-mail s vaším dopytom. Priložte k nemu pôdorys a odošlite ho.",
+        "open": "Otvoriť e-mail",
+        "copy": "Skopírovať text",
+        "copied": "Skopírované",
+        "to": "Komu"
+      },
+      "mail": {
+        "subject": "Dopyt z webu: {name}",
+        "service": "Čo potrebujem",
+        "other": "Popis",
+        "type": "Typ prevádzky",
+        "when": "Termín",
+        "plan": "Pôdorys",
+        "planYes": "áno, pošlem ho v prílohe e-mailu",
+        "planNo": "nie",
+        "name": "Meno",
+        "email": "E-mail",
+        "phone": "Telefón",
+        "city": "Mesto a krajina",
+        "none": "neuvedené"
+      }
+    }
+  },
+  "root": {
+    "title": "PLAYGROUND, interiérové ihriská na mieru",
+    "link": "PLAYGROUND, slovenská verzia"
+  }
+}

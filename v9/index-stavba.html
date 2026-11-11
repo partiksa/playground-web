@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interiérové ihriská na mieru | Playground, Trnava</title>
+<meta name="description" content="Interiérové ihriská na mieru pre rodinné centrá, kaviarne, hotely a škôlky. Navrhujeme, vyrábame a montujeme. Trnava.">
+<meta name="theme-color" content="#DEDDDB">
+<link rel="preload" href="fonts/PlusJakartaSans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Slinkee.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="frames/f000.webp" as="image" fetchpriority="high">
+<link rel="stylesheet" href="site.css">
+<script>try{if(!sessionStorage.getItem("pg-ld")&&!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("ld-on")}catch(e){}</script>
+<style>
+:root { --colw: 440px; --ttop: 0px; --th: 100%; }
+/* príbeh: plátno na celú obrazovku, texty vľavo */
+.story { position: relative; height: 100svh; }
+.stage { position: absolute; inset: 0; overflow: hidden; }
+#cv { position: absolute; inset: 0; width: 100%; height: 100%; display: block; opacity: 0; }
+.chapters {
+  position: absolute; left: var(--pad); top: var(--ttop); height: var(--th); width: var(--colw);
+  display: grid; align-items: end; padding: var(--hh) 0 clamp(48px, 13vh, 140px);
+}
+.ch { grid-area: 1 / 1; visibility: hidden; }
+.story .h { font-size: clamp(2rem, calc(var(--colw) * .108), 4.6rem); }
+.story h1.h { font-size: clamp(2.6rem, calc(var(--colw) * .158), 6.6rem); line-height: 1.02; }
+.story .p { margin-top: clamp(16px, 1.8vw, 26px); font-size: clamp(1rem, .55rem + .55vw, 1.1875rem); line-height: 1.55; max-width: 32em; }
+.portrait .chapters { padding-bottom: 20px; }
+</style>
+</head>
+<body data-page="home">
+
+<div class="ld" id="ld" aria-hidden="true"><div class="ld-bg"></div><div class="ld-logo"><i></i></div></div>
+
+<header class="hd js-hide" id="hd">
+  <a class="logo" href="./" aria-label="PLAYGROUND, úvod"><i></i></a>
+  <nav class="nav" aria-label="Hlavné menu">
+    <ul>
+      <li><a href="ihriska.html">Ihriská na mieru</a></li>
+      <li><a href="prerabka.html">Prerábka</a></li>
+      <li><a href="revizie.html">Revízie</a></li>
+      <li><a href="realizacie.html">Realizácie</a></li>
+      <li><a href="o-nas.html">O&nbsp;nás</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+  <a class="tel" href="tel:+421905724437">+421 905 724 437</a>
+  <a class="btn" href="kontakt.html">Napísať dopyt</a>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="sheet">Menu</button>
+</header>
+
+<div class="sheet" id="sheet" aria-hidden="true">
+  <ul>
+    <li class="m-ln"><a href="ihriska.html">Ihriská na mieru</a></li>
+    <li class="m-ln"><a href="prerabka.html">Prerábka</a></li>
+    <li class="m-ln"><a href="revizie.html">Revízie</a></li>
+    <li class="m-ln"><a href="realizacie.html">Realizácie</a></li>
+    <li class="m-ln"><a href="o-nas.html">O&nbsp;nás</a></li>
+    <li class="m-ln"><a href="kontakt.html">Kontakt</a></li>
+  </ul>
+  <div class="meta">
+    <a href="tel:+421905724437">+421 905 724 437</a>
+    <a href="mailto:info@play-ground.sk">info@play-ground.sk</a>
+  </div>
+</div>
+
+<main>
+  <section class="story" id="story" aria-label="Ako vzniká ihrisko na mieru">
+    <div class="stage">
+      <canvas id="cv" aria-hidden="true"></canvas>
+      <div class="chapters">
+
+        <article class="ch" data-from="0" data-to="15">
+          <p class="eb">Playground, Trnava</p>
+          <h1 class="h">Ihrisko na <span class="w"><span class="sl">M</span>ieru</span></h1>
+          <p class="p">Interiérové ihrisko pre rodinné centrum, kaviareň, hotel alebo škôlku. Navrhneme ho, vyrobíme a&nbsp;postavíme. Od prvého rozhovoru po odovzdanie.</p>
+          <div class="acts">
+            <a class="btn btn--red" href="kontakt.html?co=nove">Napísať dopyt <span class="ar" aria-hidden="true">→</span></a>
+            <a class="tel" href="tel:+421905724437">+421 905 724 437</a>
+          </div>
+        </article>
+
+        <article class="ch" data-from="21" data-to="41">
+          <p class="eb"><span class="n">01</span> Konzultácia</p>
+          <h2 class="h">Prvý spoj <span class="w">j<span class="sl">E</span></span> rozhovor</h2>
+          <p class="p">Spoj drží celú konštrukciu. Pri ihrisku je ním prvý rozhovor. Poviete nám, pre koho ihrisko je, koľko detí sa na ňom bude hrať a&nbsp;čo má prevádzke priniesť. Z&nbsp;toho vychádza všetko ďalšie.</p>
+        </article>
+
+        <article class="ch" data-from="50" data-to="63">
+          <p class="eb"><span class="n">02</span> Zameranie priestoru</p>
+          <h2 class="h">Kostra podľa <span class="w">v<span class="sl">A</span>šich</span> stien</h2>
+          <p class="p">Priestor zameriame na mieste: rozmery, výšku stropu, vstupy, okná aj stĺpy. Konštrukcia z&nbsp;oceľových trubiek a&nbsp;spojok sa prispôsobí miestnosti, nie naopak.</p>
+        </article>
+
+        <article class="ch" data-from="70" data-to="98">
+          <p class="eb"><span class="n">03</span> Návrh a&nbsp;3D vizualizácia</p>
+          <h2 class="h">Prvky <span class="w">vyb<span class="sl sl--loose-left">E</span>ráte</span> vy</h2>
+          <p class="p">Dostanete návrh a&nbsp;3D vizualizáciu. Vidíte, kde bude šmykľavka, bazén s&nbsp;loptičkami, tunel alebo trampolína. Návrh upravujeme s&nbsp;vami, kým nesedia prvky, farby aj rozpočet.</p>
+        </article>
+
+        <article class="ch" data-from="105" data-to="120">
+          <p class="eb"><span class="n">04</span> Výroba</p>
+          <h2 class="h">Bezpečnosť je <span class="w">v&nbsp;det<span class="sl sl--loose-left">A</span>ile</span></h2>
+          <p class="p">Konštrukciu obalíme penou a&nbsp;vinylom, priestor uzatvoríme sieťami. Ihrisko spĺňa normy EN&nbsp;1176 a&nbsp;EN&nbsp;1177. Trubky, spojky, siete a&nbsp;peny máme na vlastnom sklade.</p>
+        </article>
+
+        <article class="ch" data-from="129" data-to="143">
+          <p class="eb"><span class="n">05</span> Dodanie a&nbsp;montáž</p>
+          <h2 class="h"><span class="w"><span class="sl">M</span>ontáž</span> na kľúč</h2>
+          <p class="p">Ihrisko dovezieme, postavíme a&nbsp;odovzdáme pripravené na prevádzku. Staráme sa oň aj potom: servis a&nbsp;ročné kontroly. Napíšte nám rozmery priestoru a&nbsp;čo od ihriska čakáte. Ozveme sa s&nbsp;návrhom.</p>
+          <div class="acts">
+            <a class="btn btn--red" href="kontakt.html?co=nove">Napísať dopyt <span class="ar" aria-hidden="true">→</span></a>
+            <a class="tel" href="tel:+421905724437">+421 905 724 437</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="ft" id="ft">
+  <div class="ft-top">
+    <div>
+      <a class="logo" href="./" aria-label="PLAYGROUND, úvod"><i></i></a>
+      <p class="claim">Interiérové ihriská na mieru. Navrhujeme, vyrábame a&nbsp;montujeme.</p>
+    </div>
+    <div>
+      <h2>Kontakt</h2>
+      <ul>
+        <li><a href="tel:+421905724437">+421 905 724 437</a></li>
+        <li><a href="mailto:info@play-ground.sk">info@play-ground.sk</a></li>
+        <li>Poštová 6562/20<br>917 01 Trnava</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="ihriska.html">Ihriská na mieru</a></li>
+        <li><a href="prerabka.html">Prerábka</a></li>
+        <li><a href="revizie.html">Revízie</a></li>
+        <li><a href="realizacie.html">Realizácie</a></li>
+        <li><a href="o-nas.html">O&nbsp;nás</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Firma</h2>
+      <ul>
+        <li>PLAYGROUND, s.r.o.</li>
+        <li>IČO 47051990</li>
+        <li>DIČ 2023714429</li>
+        <li>IČ DPH SK2023714429</li>
+        <li>Okresný súd Trnava, oddiel Sro, vložka 31165/T</li>
+      </ul>
+    </div>
+  </div>
+  <p class="ft-big" aria-hidden="true"><span class="ft-word">Play<span class="sl">G</span>round</span></p>
+  <div class="ft-bot">
+    <span>© 2026 PLAYGROUND, s.r.o.</span>
+    <span>Trnava, Slovensko</span>
+  </div>
+</footer>
+
+<script src="js/gsap.min.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script src="js/SplitText.min.js"></script>
+<script src="site.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  // Pôvodné snímky sú na párnych pozíciách, medzisnímky na nepárnych.
+  var N = 288, IW = 1536, IH = 864;
+  var BOX = { l: 600, r: 1480, cx: 1040 };      // ihrisko v hotových snímkach (px obrázka)
+  var PAPER = [222, 221, 219];
+  // priemerný jas hornej lišty snímky (0 až 255), meraný z frames/*.webp; pod 140 je hlavička svetlá (oba makro zábery)
+  var TOP = [202,202,202,203,203,204,203,204,204,205,204,205,205,206,206,207,206,207,207,208,208,209,209,210,209,210,210,211,211,212,212,215,218,222,225,226,226,222,210,189,174,167,131,112,105,108,108,108,108,108,108,107,107,106,106,106,106,106,106,106,106,106,106,106,106,106,106,106,106,106,106,106,106,106,106,107,108,109,109,110,110,110,110,111,112,126,147,160,162,165,169,174,179,180,178,177,175,174,173,172,172,172,172,172,172,172,172,172,173,173,173,175,175,176,177,178,178,180,180,181,182,183,184,186,186,187,187,188,187,188,187,187,187,187,186,187,186,186,186,186,186,186,185,186,185,185,185,185,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,184,185,185,182,179,176,170,165,174,170,170,168,146,129,130,126,120,122,123,123,125,128,129,130,130,130,131,131,132,132,133,133,133,132,132,133,132,131,131,131,132,132,132,132,132,131,132,133,133,132,140,162,162,155,157,169,165,167,172,175,178,179,179,179,179,179,179,179,179,178,179,178,178,178,178,178,178,178,178,178,178,177,177,177,177,177,177,176,176,176,176,176,176];
+
+  var root = document.documentElement, body = document.body;
+  var hd = document.getElementById("hd"), cv = document.getElementById("cv"), ctx = cv.getContext("2d");
+  var stage = cv.parentElement;
+  var frames = new Array(N), cur = -1, L = null, shown = false, first = function () {};
+
+  /* ---------- snímky ---------- */
+  var pending = new Set(), missing = new Set(), playhead = -1;
+  var radius = 18, parallel = 6;
+  function src(i) {
+    return "frames/" + (i % 2 ? "m" : "f") + String(i >> 1).padStart(3, "0") + ".webp";
+  }
+  function load(i) {
+    pending.add(i);
+    var im = new Image();
+    im.decoding = "async";
+    function done(ready) {
+      pending.delete(i);
+      if (!ready) missing.add(i);
+      if (ready && Math.abs(i - playhead) <= radius * 2) {
+        frames[i] = im;
+        if (nearest(playhead) === i) draw(playhead, true);
+      }
+      if (i === 0) first();
+      pump();
+    }
+    im.onload = function () { done(true); };
+    im.onerror = function () { done(false); };
+    im.src = src(i);
+  }
+  function pump() {
+    for (var distance = 0; distance <= radius && pending.size < parallel; distance++) {
+      var right = playhead + distance, left = playhead - distance;
+      if (right < N && !frames[right] && !pending.has(right) && !missing.has(right)) load(right);
+      if (distance && left >= 0 && pending.size < parallel && !frames[left] && !pending.has(left) && !missing.has(left)) load(left);
+    }
+  }
+  function seek(i) {
+    if (playhead === i) return;
+    playhead = i;
+    for (var n = 0; n < N; n++) if (frames[n] && Math.abs(n - i) > radius * 2) delete frames[n];
+    draw(i);
+    pump();
+  }
+  function nearest(i) {
+    if (frames[i]) return i;
+    for (var d = 1; d < N; d++) {
+      if (i - d >= 0 && frames[i - d]) return i - d;
+      if (i + d < N && frames[i + d]) return i + d;
+    }
+    return -1;
+  }
+
+  /* ---------- rozloženie ---------- */
+  function layout() {
+    var vw = stage.clientWidth, vh = stage.clientHeight, dpr = Math.min(window.devicePixelRatio || 1, 2);
+    cv.width = Math.round(vw * dpr); cv.height = Math.round(vh * dpr);
+    var pad = Math.min(56, Math.max(20, vw * .034)), hh = vw <= 560 ? 64 : 76;
+    var portrait = vw / vh < 1.05, s, dx, dy, colw, ttop = 0, th = vh;
+    if (!portrait) {
+      // celá obrazovka; ihrisko vpravo, ľavý stĺpec textu musí ostať voľný
+      var cover = Math.max(vw / IW, vh / IH);
+      var minLeft = Math.max(330, Math.min(540, vw * .33)) + pad * 2;
+      var fit = (vw - pad * .5 - minLeft) / (BOX.r - BOX.l);
+      s = Math.min(cover, fit, vh * 1.12 / IH);
+      dx = Math.max(vw - pad * .5 - BOX.r * s, vw - IW * s);
+      dy = (vh - IH * s) / 2;
+      colw = Math.min(560, dx + BOX.l * s - pad - Math.max(24, vw * .025));
+    } else {
+      // na výšku: ihrisko dole na celú šírku, text nad ním
+      s = Math.min(vw / 920, vh * .46 / IH);
+      dx = vw / 2 - BOX.cx * s;
+      dy = vh - IH * s - Math.max(8, vh * .02);
+      colw = vw - pad * 2;
+      th = dy + IH * s * .1;
+    }
+    L = { vw: vw, vh: vh, dpr: dpr, s: s, dx: dx, dy: dy, portrait: portrait };
+    root.style.setProperty("--colw", Math.round(colw) + "px");
+    root.style.setProperty("--ttop", ttop + "px");
+    root.style.setProperty("--th", Math.round(th) + "px");
+    root.classList.toggle("portrait", portrait);
+    draw(cur < 0 ? 0 : cur, true);
+  }
+
+  /* ---------- kreslenie ---------- */
+  var grainPat = null;
+  function grain() {
+    if (grainPat) return grainPat;
+    var g = document.createElement("canvas"), n = 160;
+    g.width = g.height = n;
+    var gx = g.getContext("2d"), d = gx.createImageData(n, n), a = d.data;
+    for (var k = 0; k < a.length; k += 4) {
+      var v = 128 + Math.round((Math.random() + Math.random() - 1) * 34);
+      a[k] = a[k + 1] = a[k + 2] = v; a[k + 3] = 255;
+    }
+    gx.putImageData(d, 0, 0);
+    return (grainPat = ctx.createPattern(g, "repeat"));
+  }
+  function draw(i, force) {
+    if (!L) return;
+    i = Math.max(0, Math.min(N - 1, i));
+    if (i === cur && !force) return;
+    var index = nearest(i);
+    if (index < 0) return;
+    var im = frames[index];
+    cur = i;
+    var dpr = L.dpr, vw = L.vw, vh = L.vh, s = L.s, dx = L.dx, dy = L.dy, w = IW * s, h = IH * s;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = "high";
+    ctx.drawImage(im, dx, dy, w, h);
+    // okraje mimo renderu: predĺžený krajný stĺpec / riadok tej istej snímky, bez pridanej farby
+    if (dx > 0) ctx.drawImage(im, 1, 0, 1, IH, 0, dy, dx + 1, h);
+    if (dx + w < vw) ctx.drawImage(im, IW - 2, 0, 1, IH, dx + w - 1, dy, vw - dx - w + 1, h);
+    if (L.portrait) {
+      // na výšku: nad renderom papier, prechod do renderu kvôli čitateľnosti textu
+      var c = PAPER.join(","), fade = h * .32;
+      ctx.fillStyle = "rgb(" + c + ")"; ctx.fillRect(0, 0, vw, dy + 1);
+      var g = ctx.createLinearGradient(0, dy, 0, dy + fade);
+      g.addColorStop(0, "rgba(" + c + ",1)"); g.addColorStop(1, "rgba(" + c + ",0)");
+      ctx.fillStyle = g; ctx.fillRect(0, dy, vw, fade);
+    } else if (dy > 0) {
+      var ty = Math.ceil((dy + 1) * dpr);
+      ctx.drawImage(cv, 0, ty, cv.width, 1, 0, 0, vw, dy + 1);
+    }
+    var by = dy + h;
+    if (by < vh) ctx.drawImage(cv, 0, Math.floor((by - 2) * dpr), cv.width, 1, 0, by - 1, vw, vh - by + 1);
+    // zrno: WebP zahodí šum renderu a na sivých prechodoch vzniknú bloky; jemné zrno ich rozbije
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.globalCompositeOperation = "soft-light";
+    ctx.fillStyle = grain(); ctx.fillRect(0, 0, cv.width, cv.height);
+    ctx.globalCompositeOperation = "source-over";
+    hd.classList.toggle("dark", !L.portrait && !PG.sheetOpen && !hd.classList.contains("solid") && TOP[index] < 140);
+    if (!shown) { shown = true; gsap.to(cv, { opacity: 1, duration: .8, ease: "power2.out" }); }
+  }
+
+  /* ---------- kapitoly ---------- */
+  var chs = gsap.utils.toArray(".ch").map(function (el) {
+    return { el: el, from: +el.dataset.from, to: +el.dataset.to, tl: null, on: false };
+  });
+
+  function split(c) {
+    var opts = { type: "lines", linesClass: "ln", mask: "lines", autoSplit: true, ignore: ".w",
+      onSplit: function () { if (c.on) settle(c); } };
+    c.eb = SplitText.create(c.el.querySelector(".eb"), opts);
+    c.h = SplitText.create(c.el.querySelector(".h"), opts);
+    c.p = SplitText.create(c.el.querySelector(".p"), { type: "lines", linesClass: "pl", autoSplit: true,
+      onSplit: function () { if (c.on) settle(c); } });
+    c.acts = c.el.querySelectorAll(".acts > *");
+  }
+  // po novom rozdelení riadkov (zmena šírky) ukáže aktívnu kapitolu v konečnom stave
+  function settle(c) {
+    if (c.tl) c.tl.progress(1);
+    gsap.set([].concat(c.eb.lines, c.h.lines), { yPercent: 0 });
+    gsap.set(c.p.lines, { autoAlpha: 1, y: 0 });
+  }
+
+  function show(c, dir) {
+    if (c.tl) c.tl.kill();
+    c.on = true;
+    gsap.set(c.el, { autoAlpha: 1 });
+    var tl = c.tl = gsap.timeline();
+    tl.fromTo(c.eb.lines, { yPercent: 105 * dir }, { yPercent: 0, duration: .7, ease: "expo.out" }, 0)
+      .fromTo(c.h.lines, { yPercent: 112 * dir }, { yPercent: 0, duration: 1, ease: "expo.out", stagger: .085 }, .06)
+      .fromTo(c.p.lines, { autoAlpha: 0, y: 14 * dir }, { autoAlpha: 1, y: 0, duration: .8, ease: "power3.out", stagger: .045 }, .3);
+    if (c.acts.length) tl.fromTo(c.acts, { autoAlpha: 0, y: 12 }, { autoAlpha: 1, y: 0, duration: .7, ease: "power3.out", stagger: .07 }, .5);
+  }
+  function hide(c, dir) {
+    if (c.tl) c.tl.kill();
+    c.on = false;
+    var tl = c.tl = gsap.timeline({ onComplete: function () { gsap.set(c.el, { autoAlpha: 0 }); } });
+    tl.to(c.h.lines, { yPercent: -112 * dir, duration: .42, ease: "power3.in", stagger: .03 }, 0)
+      .to(c.eb.lines, { yPercent: -105 * dir, duration: .36, ease: "power3.in" }, 0)
+      .to(c.p.lines, { autoAlpha: 0, y: -10 * dir, duration: .3, ease: "power2.in", stagger: .015 }, 0);
+    if (c.acts.length) tl.to(c.acts, { autoAlpha: 0, y: -8 * dir, duration: .28, ease: "power2.in" }, 0);
+  }
+
+  var active = -1, lastF = 0;
+  function chapter(f) {
+    var i = Math.round(f), idx = -1;
+    for (var k = 0; k < chs.length; k++) if (i >= chs[k].from && i <= chs[k].to) { idx = k; break; }
+    if (idx !== active) {
+      var dir = f >= lastF ? 1 : -1;
+      if (active >= 0) hide(chs[active], dir);
+      if (idx >= 0) show(chs[idx], dir);
+      active = idx;
+    }
+    lastF = f;
+  }
+
+  /* ---------- scroll ---------- */
+  var state = { f: 0 };
+  function build() {
+    var finalStart = chs[chs.length - 1].from * 2;
+    // V závere už kamera len jemne dobieha. Záber dohrá na kratšej dráhe a pin sa hneď uvoľní.
+    var finalTravel = (N - 1 - finalStart) * .52;
+    var scrollScreens = 6.7 * (finalStart + finalTravel) / (N - 1);
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: "#story", start: "top top", pin: true, scrub: .28, anticipatePin: 1,
+        end: function () { return "+=" + Math.round(stage.clientHeight * scrollScreens); },
+        invalidateOnRefresh: true
+      }
+    })
+    .to(state, { f: finalStart, ease: "none", duration: finalStart })
+    .to(state, { f: N - 1, ease: "none", duration: finalTravel });
+    // kreslenie a kapitoly mimo onUpdate: počas ScrollTrigger.refresh by GSAP nové tweeny kapitol vrátil späť
+    gsap.ticker.add(function () {
+      if (ScrollTrigger.isRefreshing) return;
+      seek(Math.round(state.f));
+      if (revealed) chapter(Math.min(state.f, N - 2) / 2);
+    });
+  }
+
+  /* ---------- štart ---------- */
+  var lastW = 0, lastH = 0, revealed = false;
+  window.addEventListener("resize", function () {
+    var w = stage.clientWidth, h = stage.clientHeight;
+    if (w === lastW && Math.abs(h - lastH) < 2) return;
+    lastW = w; lastH = h; layout();
+  });
+  // menu (site.js): po zatvorení znova vyhodnotiť farbu hlavičky
+  PG.onMenuClose = function () { draw(cur, true); };
+  // načítanie s logom počká na prvú snímku
+  PG.hold = new Promise(function (r) { first = r; });
+  PG.revealed.then(function () { revealed = true; });
+
+  layout(); lastW = stage.clientWidth; lastH = stage.clientHeight;
+  seek(0);
+  document.fonts.ready.then(function () {
+    chs.forEach(split);
+    build();
+  });
+})();
+</script>
+</body>
+</html>
