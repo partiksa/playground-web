@@ -4,7 +4,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 // koreň webu (jazykové verzie sú v podpriečinkoch)
 const ROOT = document.documentElement.dataset.root || '';
 
-const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const reduce = false; /* Obmedziť pohyb sa ignoruje: animácie bežia vždy (rozhodnutie Patrika 2026-11-11) */
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
 const seg = (p, a, b) => ease(clamp((p - a) / (b - a)));

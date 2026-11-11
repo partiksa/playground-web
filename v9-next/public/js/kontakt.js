@@ -3,7 +3,7 @@
   var box = document.getElementById("f"), form = box.querySelector("form"), err = box.querySelector(".err");
   var other = document.getElementById("other"), planBox = document.getElementById("planFile"), file = form.elements.plan_file, fileMsg = box.querySelector(".file-msg");
   var body = "", fileBad = false;
-  var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var reduce = false; /* Obmedziť pohyb sa ignoruje: animácie bežia vždy (rozhodnutie Patrika 2026-11-11) */
 
   // predvyplnenie z odkazu (kontakt.html?co=prerabka)
   var co = new URLSearchParams(location.search).get("co");

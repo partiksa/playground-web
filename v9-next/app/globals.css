@@ -234,9 +234,6 @@ body:not(.ready) .js-hide { visibility: hidden; animation: fs-show 0s 5s forward
   .row .h3, .row .p, .rows--short .row .h3 { grid-column: 1 / -1; }
   .row { gap: 6px var(--gap); }
 }
-@media (prefers-reduced-motion: reduce) {
-  .leaving main, .leaving .ft { transition: none; }
-}
 
 /* ================= úvod: príbeh a rámik ================= */
 /* príbeh: video na celú obrazovku, text v rámiku */
@@ -312,10 +309,6 @@ body:has(#story) .hd.dark:not(.solid) { filter: drop-shadow(0 0 9px rgba(0, 0, 0
   .p3d-visual { grid-column: 2; }
   .p3d-steps { grid-row: 1; }
   .p3d-steps li { padding: .34em 0; font-size: .85rem; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .p3d.ready { height: auto; }
-  .p3d.ready .p3d-stage { position: static; height: auto; }
 }
 .two { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gap); }
 .two > div:first-child { grid-column: 1 / span 6; }

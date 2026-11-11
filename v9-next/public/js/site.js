@@ -5,7 +5,7 @@
   ScrollTrigger.config({ ignoreMobileResize: true });
 
   var root = document.documentElement, body = document.body, hd = document.getElementById("hd");
-  var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var reduce = false; /* Obmedziť pohyb sa ignoruje: animácie bežia vždy (rozhodnutie Patrika 2026-11-11) */
   var fine = matchMedia("(hover: hover) and (pointer: fine)").matches;
   var home = !!document.getElementById("story");
   var revealDone;
