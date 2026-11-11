@@ -18,8 +18,9 @@ export const metadata: Metadata = {
 };
 export const viewport: Viewport = { themeColor: "#DEDDDB", width: "device-width", initialScale: 1 };
 
-/* Pred prvým vykreslením: načítanie s logom len pri prvej návšteve v relácii (ako v9). */
-const BOOT = `try{if(!sessionStorage.getItem("pg-ld")&&!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("ld-on")}catch(e){}`;
+/* Pred prvým vykreslením: načítanie s logom len pri prvej návšteve v relácii.
+   Ukáže sa aj pri zapnutom „Obmedziť pohyb“ (rozhodnutie Patrika 2026-11-11). */
+const BOOT = `try{if(!sessionStorage.getItem("pg-ld"))document.documentElement.classList.add("ld-on")}catch(e){}`;
 
 export default async function LangLayout({ children, params }: { children: ReactNode; params: Promise<{ lang: string }> }) {
   const lang = toLang((await params).lang);
