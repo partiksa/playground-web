@@ -1,20 +1,20 @@
 {
   "pages": {
     "index": {
-      "title": "Custom Indoor Playgrounds, Trnava | PLAYGROUND",
-      "description": "We design, manufacture and install custom indoor playgrounds for family centres, cafés, hotels and nurseries. Rebuilds and inspections. Based in Trnava."
+      "title": "Commercial Indoor Playground Equipment | PLAYGROUND",
+      "description": "We design, manufacture and install custom commercial indoor playground equipment for shopping malls, play centers, cafés and hotels. Renovation, relocation, repairs."
     },
     "ihriska": {
-      "title": "Custom Indoor Play Areas for Children | PLAYGROUND",
-      "description": "Custom indoor play area for a restaurant, hotel, shopping centre or nursery. Design, 3D visualisation, manufacture and installation to EN 1176 and EN 1177."
+      "title": "Custom Commercial Indoor Playground Equipment | PLAYGROUND",
+      "description": "Indoor playground design and installation for shopping malls, play centers, cafés, restaurants and hotels. Design, 3D visualization and turnkey installation to EN 1176."
     },
     "prerabka": {
-      "title": "Indoor Playground Rebuild and Relocation | PLAYGROUND",
-      "description": "We rebuild an old indoor playground into a new, certified one, reusing the original structure. We dismantle, transport and install it in a new space too."
+      "title": "Indoor Playground Renovation and Relocation | PLAYGROUND",
+      "description": "Indoor playground renovation and upgrades using the original frame. Indoor playground equipment relocation: dismantling and reinstallation in a new space."
     },
     "revizie": {
-      "title": "Playground Inspection and Service | PLAYGROUND",
-      "description": "Annual checks and inspections of indoor playgrounds to EN 1176 and EN 1177. Repairs, replacement of worn parts and spare parts from our stock. Trnava."
+      "title": "Indoor Playground Repairs and Maintenance | PLAYGROUND",
+      "description": "Indoor playground repairs and maintenance: annual inspections to EN 1176 and EN 1177, padding replacement and spare parts from our stock. Trnava."
     },
     "realizacie": {
       "title": "Indoor Playground Projects | PLAYGROUND",
@@ -25,7 +25,7 @@
       "description": "PLAYGROUND from Trnava has supplied certified indoor playgrounds for 15 years. Over 180 projects in Slovakia and abroad, our own parts stock and service."
     },
     "kontakt": {
-      "title": "Contact and Playground Enquiry, Trnava | PLAYGROUND",
+      "title": "Contact and Playground Inquiry, Trnava | PLAYGROUND",
       "description": "Send us the dimensions of your space and your idea of the playground, and we will reply with a proposal. PLAYGROUND, s.r.o., Poštová 6562/20, Trnava."
     }
   },
@@ -55,23 +55,23 @@
   "services": [
     {
       "id": "nove-ihriska-na-mieru",
-      "name": "Custom indoor playgrounds",
-      "description": "Design, 3D visualisation, manufacture and turnkey installation for family centres, cafés, hotels, nurseries and water parks. Playgrounds meet EN 1176 and EN 1177."
+      "name": "Custom commercial indoor playground equipment",
+      "description": "Design, 3D visualization, manufacture and turnkey installation for family centers, cafés, hotels, preschools and water parks. Playgrounds meet EN 1176 and EN 1177."
     },
     {
       "id": "prerabka",
-      "name": "Rebuilding old playgrounds",
+      "name": "Indoor playground renovation",
       "description": "Rebuilding an old playground into a new, certified one, reusing steel from the original structure, joints and undamaged modules."
     },
     {
       "id": "prestahovanie",
-      "name": "Playground relocation",
-      "description": "Dismantling the playground, transport and installation in a new space, resized as needed."
+      "name": "Indoor playground equipment relocation",
+      "description": "Dismantling and reinstallation of the indoor playground in a new space, resized if needed."
     },
     {
       "id": "revizie",
-      "name": "Playground inspections and service",
-      "description": "Annual inspections of indoor playgrounds, repairs and replacement of worn parts."
+      "name": "Indoor playground repairs and maintenance",
+      "description": "Annual inspections, repairs, frame padding replacement and replacement of worn parts."
     },
     {
       "id": "nafukovacie-atrakcie",

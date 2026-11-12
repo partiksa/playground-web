@@ -10,7 +10,7 @@ export const DEFAULT_LANG: Lang = "sk";
 
 /** Kód jazyka pre hreflang a <html lang>; URL pre češtinu ostáva /cz/. */
 export const HREFLANG: Record<Lang, string> = { sk: "sk", cz: "cs", en: "en", de: "de" };
-export const OG_LOCALE: Record<Lang, string> = { sk: "sk_SK", cz: "cs_CZ", en: "en_GB", de: "de_DE" };
+export const OG_LOCALE: Record<Lang, string> = { sk: "sk_SK", cz: "cs_CZ", en: "en_US", de: "de_DE" };
 
 export const PAGES = ["home", "ihriska", "prerabka", "revizie", "realizacie", "o-nas", "kontakt"] as const;
 export type PageKey = (typeof PAGES)[number];

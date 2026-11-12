@@ -56,8 +56,11 @@ export default async function Revizie({ params }: P) {
   return (
     <Shell s={s} page="revizie" faq={faq}>
       <section className="ph">
-        <p className="eb rv" data-now="">{fmt(m("revizie.eb"))}</p>
-        <h1 className="h h1" data-split="now">{fmt(m("revizie.h1"))}</h1>
+        <h1 className="ph-h1">
+          <span className="eb rv" data-now="">{fmt(m("revizie.eb"))}</span>
+          {" "}
+          <span className="h h1" data-split="now">{fmt(m("revizie.h1"))}</span>
+        </h1>
         <p className="lead rv" data-now="" data-d=".15">{fmt(m("revizie.lead"))}</p>
         <div className="acts rv" data-now="" data-d=".25">
           <a className="btn btn--red" href={P("kontakt", "?co=reviza")}>{fmt(m("revizie.button"))} {AR}</a>

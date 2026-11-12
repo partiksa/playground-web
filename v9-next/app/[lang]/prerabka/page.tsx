@@ -28,7 +28,7 @@ export default async function Prerabka({ params }: P) {
     [T("Chcete nový vzhľad", "Chcete nový vzhled", "You want a new look", "Sie wünschen ein neues Aussehen"),
       T("Nové farby, dizajn, lepšie využitie priestoru a nové atrakcie bez kúpy celého ihriska.",
         "Nové barvy, design, lepší využití prostoru a nové atrakce bez koupě celého hřiště.",
-        "New colours, design, better use of space and new attractions without buying a whole new playground.",
+        "New colors, design, better use of space and new attractions without buying a whole new playground.",
         "Neue Farben, neues Design, bessere Raumnutzung und neue Attraktionen, ohne einen ganzen Spielplatz zu kaufen.")],
     [T("Sťahujete prevádzku", "Stěhujete provoz", "You are moving your venue", "Sie ziehen mit Ihrem Betrieb um"),
       T("Ihrisko rozoberieme, prevezieme a postavíme v novom priestore, aj s úpravou na nový rozmer.",
@@ -45,7 +45,7 @@ export default async function Prerabka({ params }: P) {
     [T("Kedy sa oplatí prerobiť a nie kúpiť nové?", "Kdy se vyplatí přestavět a ne koupit nové?", "When is a rebuild better than buying new?", "Wann ist ein Umbau besser als ein Neukauf?"),
       T("Keď je nosná konštrukcia v dobrom stave a opotrebované sú len obaly, siete alebo prvky. Vtedy vymeníme, čo treba, zmeníme farby a doplníme nové atrakcie.",
         "Když je nosná konstrukce v dobrém stavu a opotřebované jsou jen obaly, sítě nebo prvky. Pak vyměníme, co je potřeba, změníme barvy a doplníme nové atrakce.",
-        "When the load-bearing structure is in good condition and only the padding, nets or elements are worn. We then replace what is needed, change the colours and add new attractions.",
+        "When the load-bearing structure is in good condition and only the padding, nets or elements are worn. We then replace what is needed, change the colors and add new attractions.",
         "Wenn die Tragkonstruktion in gutem Zustand ist und nur Polster, Netze oder Elemente abgenutzt sind. Dann tauschen wir aus, was nötig ist, ändern die Farben und ergänzen neue Attraktionen.")],
     [T("Ako dlho trvá presťahovanie ihriska?", "Jak dlouho trvá přestěhování hřiště?", "How long does relocating a playground take?", "Wie lange dauert der Umzug eines Spielplatzes?"),
       T("Závisí od veľkosti ihriska. Menšie ihrisko presťahujeme za niekoľko dní, väčšie viacposchodové približne za jeden až dva týždne vrátane demontáže, prevozu a montáže. Presný termín uvedieme v ponuke.",
@@ -63,8 +63,11 @@ export default async function Prerabka({ params }: P) {
     <Shell s={s} page="prerabka" faq={faq} module="/js/prerabka-3d.js">
       <script type="importmap" dangerouslySetInnerHTML={{ __html: IMAP }} />
       <section className="ph">
-        <p className="eb rv" data-now="">{fmt(m("prerabka.eb"))}</p>
-        <h1 className="h h1" data-split="now">{fmt(m("prerabka.h1"))}</h1>
+        <h1 className="ph-h1">
+          <span className="eb rv" data-now="">{fmt(m("prerabka.eb"))}</span>
+          {" "}
+          <span className="h h1" data-split="now">{fmt(m("prerabka.h1"))}</span>
+        </h1>
         <p className="lead rv" data-now="" data-d=".15">{fmt(m("prerabka.lead"))}</p>
         <div className="acts rv" data-now="" data-d=".25">
           {btnDopyt("prerabka")}

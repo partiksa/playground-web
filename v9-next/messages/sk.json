@@ -139,9 +139,9 @@
     ]
   },
   "ihriska": {
-    "eb": "Panelové interiérové ihriská",
+    "eb": "Výroba interiérových ihrísk",
     "h1": "Ihriská na {M}ieru",
-    "lead": "Ihrisko pre rodinné centrum, kaviareň, hotel alebo škôlku. Od prvej konzultácie po montáž na kľúč.",
+    "lead": "Interiérové detské ihriská pre obchodné centrá, herne, kaviarne, hotely a škôlky. Ihrisko na kľúč, od prvej konzultácie po montáž.",
     "more": "Ako vzniká ihrisko",
     "vizLabel": "3D vizualizácia interiérového ihriska s vesmírnou témou",
     "vizCap": "3D vizualizácia pred výrobou",
@@ -169,20 +169,20 @@
       "alt": "Lezecká stena, šmykľavka a tunel v Kinder Clube, Trnava"
     },
     "places": {
-      "eb": "Kde sa hodia",
+      "eb": "Detský kútik na mieru",
       "h": "Od kaviarne po {A}quapark",
       "items": [
         {
-          "t": "Rodinné centrá a herne",
-          "p": "Zábava pre deti počas nákupov a voľného času."
+          "t": "Obchodné centrá a herne",
+          "p": "Ihrisko do obchodného centra: zábava pre deti počas nákupov."
         },
         {
-          "t": "Kaviarne a cukrárne",
-          "p": "Deti sa hrajú, rodičia oddychujú."
+          "t": "Kaviarne a reštaurácie",
+          "p": "Detský kútik do kaviarne: deti sa hrajú, rodičia oddychujú."
         },
         {
-          "t": "Hotely a penzióny",
-          "p": "Rodinná atrakcia navyše k ponuke."
+          "t": "Hotely a penzióny",
+          "p": "Detský kútik do hotela ako rodinná atrakcia navyše."
         },
         {
           "t": "Škôlky a vzdelávacie centrá",
@@ -207,9 +207,9 @@
     }
   },
   "prerabka": {
-    "eb": "Zo starého nové",
+    "eb": "Rekonštrukcia interiérového ihriska",
     "h1": "Prerábka a {S}ťahovanie",
-    "lead": "Staré ihrisko prerobíme na nové, normované, alebo ho presťahujeme|do nového priestoru.",
+    "lead": "Staré interiérové ihrisko prerobíme na nové, normované, alebo ho presťahujeme do nového priestoru.",
     "alt": "Obnovené interiérové ihrisko so šmykľavkou a guľôčkovým bazénom, Dunajská Lužná",
     "cap": "Prerábka ihriska · Dunajská Lužná",
     "process": {
@@ -229,7 +229,7 @@
     "rebuild": {
       "eb": "Prerábka",
       "h": "Z nekvalitného normované",
-      "p": "Staré alebo nekvalitné ihrisko prerobíme na nové, normované. Použijeme materiál z pôvodného: železo z konštrukcie, spojky a nepoškodené moduly.",
+      "p": "Staré alebo nekvalitné ihrisko prerobíme na nové, normované. Použijeme materiál z pôvodného: železo z konštrukcie, spojky a nepoškodené moduly. Robíme aj renováciu detskej herne: nové obaly, farby a prvky na pôvodnej konštrukcii.",
       "list": [
         "výmena opotrebovaných herných prvkov",
         "úprava dispozície a lepšie využitie priestoru",
@@ -239,9 +239,9 @@
       ]
     },
     "moving": {
-      "eb": "Sťahovanie",
+      "eb": "Presťahovanie ihriska",
       "h": "Rozoberieme, prevezieme, postavíme",
-      "p": "Ihrisko rozoberieme, prevezieme a postavíme v novom priestore. Pri tom ho môžeme upraviť na nový rozmer.",
+      "p": "Demontáž a opätovná montáž interiérového ihriska: rozoberieme ho, prevezieme a postavíme v novom priestore. Pri tom ho môžeme upraviť na nový rozmer. Takto sme sťahovali ihriská v Hlohovci a v Králově Dvore.",
       "alt": "Presťahované ihrisko osadené na chodbe základnej školy, Hlohovec",
       "cap": "Presťahované ihrisko · Hlohovec"
     },
@@ -252,9 +252,9 @@
     }
   },
   "revizie": {
-    "eb": "Servis a kontroly",
+    "eb": "Servis interiérových ihrísk",
     "h1": "Re{<V>}ízie",
-    "lead": "Skontrolujeme ihrisko, opravíme, čo treba, a vymeníme opotrebované diely.",
+    "lead": "Ročná kontrola detského ihriska, opravy a výmena opotrebovaných dielov aj ochranných návlekov.",
     "button": "Objednať revíziu",
     "alt": "Ilustračný detail ruky pri kontrole ochrannej siete",
     "cap": "Kontrola ochrannej siete · AI ilustrácia",
@@ -266,7 +266,7 @@
       },
       {
         "t": "Servis a diely",
-        "p": "Na sklade máme konštrukčné trubky, spojky, siete, peny na obaľovanie konštrukcie a závesné moduly."
+        "p": "Na sklade máme konštrukčné trubky, spojky, siete, peny na obaľovanie konštrukcie a závesné moduly. Vymieňame aj ochranné návleky (obaly) konštrukcie."
       }
     ]
   },

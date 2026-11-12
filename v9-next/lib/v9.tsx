@@ -220,7 +220,7 @@ export function site(lang: Lang) {
       ["design", T("Dizajn na mieru", "Design na míru", "Custom design", "Design nach Maß"),
         T("Ihrisko navrhneme podľa priestoru a prevádzky. Dbáme na bezpečnosť a na to, aby sa využil každý meter.",
           "Hřiště navrhneme podle prostoru a provozu. Dbáme na bezpečnost a na to, aby se využil každý metr.",
-          "We design the playground around your space and venue, with safety first and every metre put to use.",
+          "We design the playground around your space and venue, with safety first and every meter put to use.",
           "Wir planen den Spielplatz passend zu Raum und Betrieb. Sicherheit steht an erster Stelle, jeder Meter wird genutzt.")],
       ["warranty", T("24 mesiacov záruky", "24 měsíců záruky", "24-month warranty", "24 Monate Garantie"),
         T("Na ihriská dávame záruku 24 mesiacov. Servis a náhradné diely máme vo vlastnom sklade.",

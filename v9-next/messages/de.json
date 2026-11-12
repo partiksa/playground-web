@@ -139,9 +139,9 @@
     ]
   },
   "ihriska": {
-    "eb": "Modulare Indoor-Spielplätze",
+    "eb": "Planung und Bau von Indoor-Spielanlagen",
     "h1": "Spielplätze nach {M}aß",
-    "lead": "Ein Spielplatz für Familienzentrum, Café, Hotel oder Kindergarten. Von der ersten Beratung bis zur schlüsselfertigen Montage.",
+    "lead": "Indoorspielplätze für Einkaufszentren, Spielhallen, Cafés, Hotels und Kindergärten. Schlüsselfertig, von der ersten Beratung bis zur Montage.",
     "more": "So entsteht ein Spielplatz",
     "vizLabel": "3D-Visualisierung eines Indoor-Spielplatzes mit Weltraumthema",
     "vizCap": "3D-Visualisierung vor der Fertigung",
@@ -169,20 +169,20 @@
       "alt": "Kletterwand, Rutsche und Tunnel im Kinder Club, Trnava"
     },
     "places": {
-      "eb": "Wo er passt",
+      "eb": "Spielbereiche nach Branche",
       "h": "Vom Café bis zum {A}quapark",
       "items": [
         {
-          "t": "Familienzentren und Spielräume",
-          "p": "Unterhaltung für Kinder beim Einkaufen und in der Freizeit."
+          "t": "Einkaufszentren und Spielhallen",
+          "p": "Kinderspielbereiche für Einkaufszentren: Spaß für Kinder beim Einkaufen."
         },
         {
-          "t": "Cafés und Konditoreien",
-          "p": "Die Kinder spielen, die Eltern entspannen."
+          "t": "Cafés und Restaurants",
+          "p": "Spielecken für die Gastronomie: Kinder spielen, Eltern entspannen."
         },
         {
           "t": "Hotels und Pensionen",
-          "p": "Eine Familienattraktion als Ergänzung zum Angebot."
+          "p": "Eine Spielecke als zusätzliche Familienattraktion."
         },
         {
           "t": "Kindergärten und Bildungszentren",
@@ -207,9 +207,9 @@
     }
   },
   "prerabka": {
-    "eb": "Aus Alt wird Neu",
+    "eb": "Modernisierung von Indoor-Spielanlagen",
     "h1": "Umbau und {U}mzug",
-    "lead": "Wir bauen den alten Spielplatz zu einem neuen, normgerechten um oder versetzen ihn|in einen neuen Raum.",
+    "lead": "Wir bauen den alten Indoorspielplatz zu einem neuen, normgerechten um oder versetzen ihn in einen neuen Raum.",
     "alt": "Erneuerter Indoor-Spielplatz mit Rutsche und Bällebad, Dunajská Lužná",
     "cap": "Umbau eines Spielplatzes · Dunajská Lužná",
     "process": {
@@ -229,7 +229,7 @@
     "rebuild": {
       "eb": "Umbau",
       "h": "Von minderwertig zu normgerecht",
-      "p": "Einen alten oder minderwertigen Spielplatz bauen wir zu einem neuen, normgerechten um. Wir verwenden Material des alten weiter: Stahl der Konstruktion, Verbinder und intakte Module.",
+      "p": "Einen alten oder minderwertigen Spielplatz bauen wir zu einem neuen, normgerechten um. Wir verwenden Material des alten weiter: Stahl der Konstruktion, Verbinder und intakte Module. Wir übernehmen auch die Sanierung einer Indoor-Spielanlage: neue Polster, Farben und Elemente auf der vorhandenen Konstruktion.",
       "list": [
         "Austausch abgenutzter Spielelemente",
         "Anpassung der Raumaufteilung und bessere Raumnutzung",
@@ -239,9 +239,9 @@
       ]
     },
     "moving": {
-      "eb": "Umzug",
+      "eb": "Umzug von Indoor-Spielanlagen",
       "h": "Wir bauen ab, transportieren und bauen auf",
-      "p": "Wir bauen den Spielplatz ab, transportieren ihn und bauen ihn im neuen Raum wieder auf. Dabei können wir ihn an neue Maße anpassen.",
+      "p": "Demontage und Wiederaufbau von Indoor-Spielanlagen: Wir bauen den Spielplatz ab, transportieren ihn und bauen ihn im neuen Raum wieder auf. Dabei können wir ihn an neue Maße anpassen. So haben wir Spielplätze in Hlohovec und Králův Dvůr versetzt.",
       "alt": "Versetzter Spielplatz im Flur einer Grundschule, Hlohovec",
       "cap": "Versetzter Spielplatz · Hlohovec"
     },
@@ -252,9 +252,9 @@
     }
   },
   "revizie": {
-    "eb": "Service und Kontrollen",
+    "eb": "Wartung und Reparatur",
     "h1": "Prü{<F>}ung",
-    "lead": "Wir prüfen den Spielplatz, reparieren, was nötig ist, und tauschen abgenutzte Teile aus.",
+    "lead": "Jährliche Prüfung, Reparatur und Austausch abgenutzter Teile und Schutzpolster.",
     "button": "Prüfung beauftragen",
     "alt": "Illustrationsdetail einer Hand bei der Kontrolle eines Schutznetzes",
     "cap": "Kontrolle eines Schutznetzes · KI-Illustration",
@@ -266,7 +266,7 @@
       },
       {
         "t": "Service und Teile",
-        "p": "Am Lager haben wir Konstruktionsrohre, Verbinder, Netze, Schaumstoffe zur Umhüllung der Konstruktion und Hängemodule."
+        "p": "Am Lager haben wir Konstruktionsrohre, Verbinder, Netze, Schaumstoffe zur Umhüllung der Konstruktion und Hängemodule. Wir tauschen auch Schutzpolster der Konstruktion aus."
       }
     ]
   },

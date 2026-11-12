@@ -139,9 +139,9 @@
     ]
   },
   "ihriska": {
-    "eb": "Panelová interiérová hřiště",
+    "eb": "Výroba indoor hřišť",
     "h1": "Hřiště na {M}íru",
-    "lead": "Hřiště pro rodinné centrum, kavárnu, hotel nebo školku. Od první konzultace po montáž na klíč.",
+    "lead": "Vnitřní dětská hřiště pro obchodní centra, herny, kavárny, hotely a školky. Hřiště na klíč, od první konzultace po montáž.",
     "more": "Jak vzniká hřiště",
     "vizLabel": "3D vizualizace interiérového hřiště s vesmírným tématem",
     "vizCap": "3D vizualizace před výrobou",
@@ -169,20 +169,20 @@
       "alt": "Lezecká stěna, skluzavka a tunel v Kinder Clubu, Trnava"
     },
     "places": {
-      "eb": "Kde se hodí",
+      "eb": "Dětský koutek na míru",
       "h": "Od kavárny po {A}quapark",
       "items": [
         {
-          "t": "Rodinná centra a herny",
-          "p": "Zábava pro děti při nákupech a ve volném čase."
+          "t": "Obchodní centra a herny",
+          "p": "Dětská herna pro obchodní centrum: zábava pro děti při nákupech."
         },
         {
-          "t": "Kavárny a cukrárny",
-          "p": "Děti si hrají, rodiče odpočívají."
+          "t": "Kavárny a restaurace",
+          "p": "Dětský koutek do kavárny: děti si hrají, rodiče odpočívají."
         },
         {
           "t": "Hotely a penziony",
-          "p": "Rodinná atrakce navíc k nabídce."
+          "p": "Dětský koutek do hotelu jako rodinná atrakce navíc."
         },
         {
           "t": "Školky a vzdělávací centra",
@@ -207,9 +207,9 @@
     }
   },
   "prerabka": {
-    "eb": "Ze starého nové",
+    "eb": "Rekonstrukce vnitřního dětského hřiště",
     "h1": "Přestavba a {S}těhování",
-    "lead": "Staré hřiště přestavíme na nové, normované, nebo ho přestěhujeme|do nového prostoru.",
+    "lead": "Staré vnitřní hřiště přestavíme na nové, normované, nebo ho přestěhujeme do nového prostoru.",
     "alt": "Obnovené interiérové hřiště se skluzavkou a míčkovým bazénem, Dunajská Lužná",
     "cap": "Přestavba hřiště · Dunajská Lužná",
     "process": {
@@ -229,7 +229,7 @@
     "rebuild": {
       "eb": "Přestavba",
       "h": "Z nekvalitního normované",
-      "p": "Staré nebo nekvalitní hřiště přestavíme na nové, normované. Použijeme materiál z původního: železo z konstrukce, spojky a nepoškozené moduly.",
+      "p": "Staré nebo nekvalitní hřiště přestavíme na nové, normované. Použijeme materiál z původního: železo z konstrukce, spojky a nepoškozené moduly. Děláme i modernizaci dětské herny: nové obaly, barvy a prvky na původní konstrukci.",
       "list": [
         "výměna opotřebovaných herních prvků",
         "úprava dispozice a lepší využití prostoru",
@@ -239,9 +239,9 @@
       ]
     },
     "moving": {
-      "eb": "Stěhování",
+      "eb": "Stěhování hřiště",
       "h": "Rozebereme, převezeme, postavíme",
-      "p": "Hřiště rozebereme, převezeme a postavíme v novém prostoru. Přitom ho můžeme upravit na nový rozměr.",
+      "p": "Demontáž a opětovná montáž indoor hřiště: rozebereme ho, převezeme a postavíme v novém prostoru. Přitom ho můžeme upravit na nový rozměr. Takto jsme stěhovali hřiště v Hlohovci a v Králově Dvoře.",
       "alt": "Přestěhované hřiště na chodbě základní školy, Hlohovec",
       "cap": "Přestěhované hřiště · Hlohovec"
     },
@@ -252,9 +252,9 @@
     }
   },
   "revizie": {
-    "eb": "Servis a kontroly",
+    "eb": "Servis vnitřních dětských hřišť",
     "h1": "Re{<V>}ize",
-    "lead": "Zkontrolujeme hřiště, opravíme, co je třeba, a vyměníme opotřebované díly.",
+    "lead": "Roční kontrola, oprava indoor hřiště a výměna opotřebovaných dílů i ochranných návleků.",
     "button": "Objednat revizi",
     "alt": "Ilustrační detail ruky při kontrole ochranné sítě",
     "cap": "Kontrola ochranné sítě · AI ilustrace",
@@ -266,7 +266,7 @@
       },
       {
         "t": "Servis a díly",
-        "p": "Na skladě máme konstrukční trubky, spojky, sítě, pěny na obalování konstrukce a závěsné moduly."
+        "p": "Na skladě máme konstrukční trubky, spojky, sítě, pěny na obalování konstrukce a závěsné moduly. Vyměňujeme i ochranné návleky (obaly) konstrukce."
       }
     ]
   },

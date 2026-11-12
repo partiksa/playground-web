@@ -2,19 +2,19 @@
   "pages": {
     "index": {
       "title": "Interiérové ihriská na mieru, Trnava | PLAYGROUND",
-      "description": "Navrhujeme, vyrábame a montujeme interiérové detské ihriská na mieru pre rodinné centrá, kaviarne, hotely a škôlky. Prerábka a revízie. Sídlo v Trnave."
+      "description": "Navrhujeme, vyrábame a montujeme interiérové detské ihriská na mieru pre obchodné centrá, herne, kaviarne a hotely. Rekonštrukcia, presťahovanie a servis."
     },
     "ihriska": {
-      "title": "Detské ihriská na mieru do interiéru | PLAYGROUND",
-      "description": "Interiérové detské ihrisko na mieru do reštaurácie, hotela, nákupného centra alebo škôlky. Návrh, 3D vizualizácia, výroba a montáž podľa EN 1176 a EN 1177."
+      "title": "Interiérové ihriská na mieru, výroba a montáž | PLAYGROUND",
+      "description": "Výroba interiérových ihrísk na kľúč pre obchodné centrá, detské herne, kaviarne, reštaurácie a hotely. Návrh, 3D vizualizácia a montáž podľa EN 1176."
     },
     "prerabka": {
-      "title": "Prerábka a sťahovanie detského ihriska | PLAYGROUND",
-      "description": "Prerábka starého interiérového ihriska na nové, normované s využitím pôvodnej konštrukcie. Rozoberieme, prevezieme a postavíme ho aj v novom priestore."
+      "title": "Rekonštrukcia a presťahovanie interiérového ihriska | PLAYGROUND",
+      "description": "Prerábka interiérového ihriska a renovácia detskej herne s využitím pôvodnej konštrukcie. Demontáž a opätovná montáž ihriska v novom priestore."
     },
     "revizie": {
-      "title": "Revízia detského ihriska a servis | PLAYGROUND",
-      "description": "Ročné kontroly a revízie interiérových detských ihrísk podľa EN 1176 a EN 1177. Opravy, výmena opotrebovaných dielov a náhradné diely zo skladu. Trnava."
+      "title": "Servis interiérových ihrísk a ročné kontroly | PLAYGROUND",
+      "description": "Servis interiérových ihrísk: ročná kontrola detského ihriska podľa EN 1176 a EN 1177, opravy, výmena ochranných návlekov a dielov zo skladu. Trnava."
     },
     "realizacie": {
       "title": "Realizácie interiérových ihrísk | PLAYGROUND",
@@ -42,7 +42,14 @@
       "addressCountry": "SK"
     },
     "foundingYear": 2011,
-    "areaServed": ["Slovensko", "Česko", "Estónsko", "Rumunsko", "Francúzsko", "Taliansko"],
+    "areaServed": [
+      "Slovensko",
+      "Česko",
+      "Estónsko",
+      "Rumunsko",
+      "Francúzsko",
+      "Taliansko"
+    ],
     "sameAs": []
   },
   "services": [
@@ -53,18 +60,18 @@
     },
     {
       "id": "prerabka",
-      "name": "Prerábka starých ihrísk",
+      "name": "Rekonštrukcia interiérového ihriska",
       "description": "Prerobenie starého ihriska na nové, normované s využitím železa z pôvodnej konštrukcie, spojok a nepoškodených modulov."
     },
     {
       "id": "prestahovanie",
-      "name": "Presťahovanie ihriska",
-      "description": "Rozobratie ihriska, odvoz a postavenie v novom priestore, podľa potreby s úpravou na nový rozmer."
+      "name": "Presťahovanie interiérového ihriska",
+      "description": "Demontáž a opätovná montáž interiérového ihriska v novom priestore, podľa potreby s úpravou na nový rozmer."
     },
     {
       "id": "revizie",
-      "name": "Revízie a servis ihrísk",
-      "description": "Ročné kontroly (revízie) interiérových ihrísk, opravy a výmena opotrebovaných dielov."
+      "name": "Servis interiérových ihrísk",
+      "description": "Ročná kontrola detského ihriska, opravy, výmena ochranných návlekov a opotrebovaných dielov."
     },
     {
       "id": "nafukovacie-atrakcie",

@@ -1,20 +1,20 @@
 {
   "pages": {
     "index": {
-      "title": "Indoor-Spielplätze nach Maß, Trnava | PLAYGROUND",
-      "description": "Wir planen, fertigen und montieren Indoor-Spielplätze nach Maß für Familienzentren, Cafés, Hotels und Kindergärten. Umbau und Prüfung. Sitz in Trnava."
+      "title": "Hersteller für Indoorspielplätze, Trnava | PLAYGROUND",
+      "description": "Wir planen, fertigen und montieren Indoorspielplätze nach Maß für Einkaufszentren, Spielhallen, Gastronomie und Hotels. Modernisierung, Umzug und Wartung."
     },
     "ihriska": {
-      "title": "Indoorspielplatz nach Maß für Kinder | PLAYGROUND",
-      "description": "Indoorspielplatz nach Maß für Restaurant, Hotel, Einkaufszentrum oder Kindergarten. Planung, 3D-Visualisierung, Fertigung und Montage nach EN 1176 und EN 1177."
+      "title": "Hersteller für Indoorspielplätze nach Maß | PLAYGROUND",
+      "description": "Planung und Bau von Indoor-Spielanlagen für Einkaufszentren, Spielhallen, Cafés, Restaurants und Hotels. 3D-Visualisierung und Montage nach EN 1176."
     },
     "prerabka": {
-      "title": "Umbau und Umzug von Indoor-Spielplätzen | PLAYGROUND",
-      "description": "Umbau eines alten Indoor-Spielplatzes zu einem neuen, normgerechten mit der vorhandenen Konstruktion. Wir bauen ab, transportieren und montieren im neuen Raum."
+      "title": "Modernisierung und Umzug von Indoor-Spielanlagen | PLAYGROUND",
+      "description": "Umbau eines Indoorspielplatzes und Sanierung einer Indoor-Spielanlage mit der vorhandenen Konstruktion. Demontage und Wiederaufbau im neuen Raum."
     },
     "revizie": {
-      "title": "Spielplatzprüfung und Service | PLAYGROUND",
-      "description": "Jährliche Kontrollen und Prüfungen von Indoor-Spielplätzen nach EN 1176 und EN 1177. Reparaturen, Austausch abgenutzter Teile und Ersatzteile vom Lager. Trnava."
+      "title": "Wartung und Reparatur von Indoor-Spielanlagen | PLAYGROUND",
+      "description": "Wartung und Reparatur von Indoor-Spielanlagen: jährliche Prüfung nach EN 1176 und EN 1177, Austausch von Schutzpolstern, Ersatzteile vom Lager."
     },
     "realizacie": {
       "title": "Referenzen Indoor-Spielplätze | PLAYGROUND",
@@ -55,23 +55,23 @@
   "services": [
     {
       "id": "nove-ihriska-na-mieru",
-      "name": "Indoor-Spielplätze nach Maß",
+      "name": "Indoorspielplätze nach Maß",
       "description": "Planung, 3D-Visualisierung, Fertigung und schlüsselfertige Montage für Familienzentren, Cafés, Hotels, Kindergärten und Erlebnisbäder. Die Spielplätze erfüllen EN 1176 und EN 1177."
     },
     {
       "id": "prerabka",
-      "name": "Umbau alter Spielplätze",
+      "name": "Modernisierung von Indoor-Spielanlagen",
       "description": "Umbau eines alten Spielplatzes zu einem neuen, normgerechten unter Weiterverwendung von Stahl der Konstruktion, Verbindern und intakten Modulen."
     },
     {
       "id": "prestahovanie",
-      "name": "Umzug des Spielplatzes",
-      "description": "Abbau des Spielplatzes, Abtransport und Aufbau im neuen Raum, bei Bedarf mit Anpassung an neue Maße."
+      "name": "Umzug von Indoor-Spielanlagen",
+      "description": "Demontage und Wiederaufbau von Indoor-Spielanlagen im neuen Raum, bei Bedarf mit Anpassung an neue Maße."
     },
     {
       "id": "revizie",
-      "name": "Prüfung und Service von Spielplätzen",
-      "description": "Jährliche Kontrollen (Prüfungen) von Indoor-Spielplätzen, Reparaturen und Austausch abgenutzter Teile."
+      "name": "Wartung und Reparatur von Indoor-Spielanlagen",
+      "description": "Jährliche Prüfung, Reparaturen, Austausch von Schutzpolstern und abgenutzten Teilen."
     },
     {
       "id": "nafukovacie-atrakcie",

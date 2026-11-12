@@ -17,7 +17,7 @@ export default async function Home({ params }: P) {
   const svc: [Parameters<typeof P>[0], string, string, string, string][] = [
     ["ihriska", m("common.nav.ihriska"), T("Návrh, 3D vizualizácia, výroba a montáž na kľúč. Podľa noriem EN 1176 a EN 1177.",
       "Návrh, 3D vizualizace, výroba a montáž na klíč. Podle norem EN 1176 a EN 1177.",
-      "Design, 3D visualisation, manufacture and turnkey installation. To EN 1176 and EN 1177.",
+      "Design, 3D visualization, manufacture and turnkey installation. To EN 1176 and EN 1177.",
       "Planung, 3D-Visualisierung, Fertigung und schlüsselfertige Montage. Nach EN 1176 und EN 1177."),
       "img/projekt-04.webp", rzItem(0).alt],
     ["prerabka", T("Prerábka a sťahovanie", "Přestavba a stěhování", "Rebuild and relocation", "Umbau und Umzug"), m("prerabka.lead"),
@@ -65,7 +65,7 @@ export default async function Home({ params }: P) {
         <div className="intro"><p className="lead rv">{fmt(T(
           "PLAYGROUND z Trnavy navrhuje, vyrába a montuje interiérové detské ihriská na mieru pre rodinné centrá, kaviarne, hotely, škôlky a aquaparky. Staré ihriská prerábame a sťahujeme, hotové kontrolujeme a servisujeme.",
           "PLAYGROUND z Trnavy navrhuje, vyrábí a montuje interiérová dětská hřiště na míru pro rodinná centra, kavárny, hotely, školky a aquaparky. Stará hřiště přestavujeme a stěhujeme, hotová kontrolujeme a servisujeme.",
-          "PLAYGROUND from Trnava, Slovakia, designs, manufactures and installs custom indoor playgrounds for family centres, cafés, hotels, nurseries and water parks. We rebuild and relocate old playgrounds and inspect and service existing ones.",
+          "PLAYGROUND from Trnava, Slovakia, designs, manufactures and installs custom indoor playgrounds for family centers, cafés, hotels, preschools and water parks. We rebuild and relocate old playgrounds and inspect and service existing ones.",
           "PLAYGROUND aus Trnava (Slowakei) plant, fertigt und montiert Indoor-Spielplätze nach Maß für Familienzentren, Cafés, Hotels, Kindergärten und Aquaparks. Alte Spielplätze bauen wir um oder ziehen sie um, bestehende prüfen und warten wir."))}</p></div>
         <div className="svc">
           {svc.map(([p, t, d, img, alt], k) => (

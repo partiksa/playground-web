@@ -1,20 +1,20 @@
 {
   "pages": {
     "index": {
-      "title": "Interiérová dětská hřiště na míru, Trnava | PLAYGROUND",
-      "description": "Navrhujeme, vyrábíme a montujeme interiérová dětská hřiště na míru pro rodinná centra, kavárny, hotely a školky. Přestavby a revize. Sídlo v Trnavě."
+      "title": "Vnitřní dětská hřiště na míru, Trnava | PLAYGROUND",
+      "description": "Navrhujeme, vyrábíme a montujeme vnitřní dětská hřiště na míru pro obchodní centra, herny, kavárny a hotely. Rekonstrukce, stěhování a servis."
     },
     "ihriska": {
-      "title": "Dětská hřiště na míru do interiéru | PLAYGROUND",
-      "description": "Interiérové dětské hřiště na míru do restaurace, hotelu, obchodního centra nebo školky. Návrh, 3D vizualizace, výroba a montáž podle EN 1176 a EN 1177."
+      "title": "Vnitřní dětská hřiště na míru, výroba a montáž | PLAYGROUND",
+      "description": "Výroba indoor hřišť na klíč pro obchodní centra, dětské herny, kavárny, restaurace a hotely. Návrh, 3D vizualizace a montáž podle EN 1176."
     },
     "prerabka": {
-      "title": "Přestavba a stěhování dětského hřiště | PLAYGROUND",
-      "description": "Přestavba starého interiérového hřiště na nové, normované s využitím původní konstrukce. Rozebereme, převezeme a postavíme ho i v novém prostoru."
+      "title": "Rekonstrukce a stěhování vnitřního dětského hřiště | PLAYGROUND",
+      "description": "Renovace indoor hřiště a modernizace dětské herny s využitím původní konstrukce. Demontáž a opětovná montáž indoor hřiště v novém prostoru."
     },
     "revizie": {
-      "title": "Revize dětského hřiště a servis | PLAYGROUND",
-      "description": "Roční kontroly a revize interiérových dětských hřišť podle EN 1176 a EN 1177. Opravy, výměna opotřebovaných dílů a náhradní díly ze skladu. Trnava."
+      "title": "Servis vnitřních dětských hřišť a revize | PLAYGROUND",
+      "description": "Servis vnitřních dětských hřišť: roční kontroly podle EN 1176 a EN 1177, oprava indoor hřiště, výměna ochranných návleků a dílů ze skladu. Trnava."
     },
     "realizacie": {
       "title": "Realizace interiérových hřišť | PLAYGROUND",
@@ -55,23 +55,23 @@
   "services": [
     {
       "id": "nove-ihriska-na-mieru",
-      "name": "Interiérová hřiště na míru",
+      "name": "Vnitřní dětská hřiště na míru",
       "description": "Návrh, 3D vizualizace, výroba a montáž na klíč pro rodinná centra, kavárny, hotely, školky a aquaparky. Hřiště splňují normy EN 1176 a EN 1177."
     },
     {
       "id": "prerabka",
-      "name": "Přestavba starých hřišť",
+      "name": "Rekonstrukce vnitřního dětského hřiště",
       "description": "Přestavba starého hřiště na nové, normované s využitím železa z původní konstrukce, spojek a nepoškozených modulů."
     },
     {
       "id": "prestahovanie",
-      "name": "Přestěhování hřiště",
-      "description": "Rozebrání hřiště, odvoz a postavení v novém prostoru, podle potřeby s úpravou na nový rozměr."
+      "name": "Stěhování vnitřního dětského hřiště",
+      "description": "Demontáž a opětovná montáž indoor hřiště v novém prostoru, podle potřeby s úpravou na nový rozměr."
     },
     {
       "id": "revizie",
-      "name": "Revize a servis hřišť",
-      "description": "Roční kontroly (revize) interiérových hřišť, opravy a výměna opotřebovaných dílů."
+      "name": "Servis vnitřních dětských hřišť",
+      "description": "Roční kontroly, oprava indoor hřiště, výměna ochranných návleků a opotřebovaných dílů."
     },
     {
       "id": "nafukovacie-atrakcie",

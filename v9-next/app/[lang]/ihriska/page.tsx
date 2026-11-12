@@ -31,8 +31,11 @@ export default async function Ihriska({ params }: P) {
   return (
     <Shell s={s} page="ihriska" faq={faq} scripts={["/js/ihriska.js"]}>
       <section className="ph ph--ih">
-        <p className="eb rv" data-now="">{fmt(m("ihriska.eb"))}</p>
-        <h1 className="h h1" data-split="now">{fmt(m("ihriska.h1"))}</h1>
+        <h1 className="ph-h1">
+          <span className="eb rv" data-now="">{fmt(m("ihriska.eb"))}</span>
+          {" "}
+          <span className="h h1" data-split="now">{fmt(m("ihriska.h1"))}</span>
+        </h1>
         <div className="ih-top">
           <div className="txt">
             <p className="lead rv" data-now="" data-d=".15">{fmt(m("ihriska.lead"))}</p>

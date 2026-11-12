@@ -3,11 +3,11 @@
     "siteName": "PLAYGROUND",
     "home": {
       "title": "Custom Indoor Playgrounds | Playground, Trnava",
-      "description": "Custom indoor playgrounds for family centres, cafés, hotels and nurseries. We design, manufacture and install. Trnava, Slovakia."
+      "description": "Custom indoor playgrounds for family centers, cafés, hotels and preschools. We design, manufacture and install. Trnava, Slovakia."
     },
     "ihriska": {
       "title": "Custom Playgrounds | Playground, Trnava",
-      "description": "Modular custom indoor playgrounds for family centres, cafés, hotels and nurseries. Structure, play elements, materials and service."
+      "description": "Modular custom indoor playgrounds for family centers, cafés, hotels and preschools. Structure, play elements, materials and service."
     },
     "prerabka": {
       "title": "Playground Rebuild and Relocation | Playground, Trnava",
@@ -26,8 +26,8 @@
       "description": "PLAYGROUND, s.r.o. from Trnava: 15 years on the market, 180+ projects in 6 countries. Turnkey indoor playgrounds, rebuilds and our own parts stock."
     },
     "kontakt": {
-      "title": "Contact and Enquiry | Playground, Trnava",
-      "description": "Send us an enquiry about an indoor playground, rebuild, relocation or inspection. +421 905 724 437, info@play-ground.sk, Trnava."
+      "title": "Contact and Inquiry | Playground, Trnava",
+      "description": "Send us an inquiry about an indoor playground, rebuild, relocation or inspection. +421 905 724 437, info@play-ground.sk, Trnava."
     }
   },
   "seo": {
@@ -35,7 +35,7 @@
     "services": [
       {
         "name": "Custom indoor playgrounds",
-        "description": "Design, 3D visualisation, manufacture and installation of indoor playgrounds for family centres, cafés, hotels and nurseries."
+        "description": "Design, 3D visualization, manufacture and installation of indoor playgrounds for family centers, cafés, hotels and preschools."
       },
       {
         "name": "Playground rebuilds and relocations",
@@ -60,7 +60,7 @@
       "o-nas": "About us",
       "kontakt": "Contact"
     },
-    "cta": "Send an enquiry",
+    "cta": "Send an inquiry",
     "menu": "Menu",
     "close": "Close",
     "phone": "+421 905 724 437",
@@ -84,7 +84,7 @@
     "label": "Contact",
     "title": "{W}rite to us",
     "lead": "Describe your space or playground and we will get back to you with a proposal.",
-    "button": "Send an enquiry"
+    "button": "Send an inquiry"
   },
   "footer": {
     "claim": "Custom indoor playgrounds. We design, manufacture and install.",
@@ -109,7 +109,7 @@
       {
         "eb": "Playground, Trnava",
         "h": "Custom|{P}layground",
-        "p": "An indoor playground for a family centre, café, hotel or nursery. We design it, build it and install it. From the first conversation to handover."
+        "p": "An indoor playground for a family center, café, hotel or preschool. We design it, build it and install it. From the first conversation to handover."
       },
       {
         "eb": "Consultation",
@@ -122,9 +122,9 @@
         "p": "We measure the space on site: dimensions, ceiling height, entrances, windows and columns. The structure of steel tubes and joints adapts to the room, not the other way round."
       },
       {
-        "eb": "Design and 3D visualisation",
+        "eb": "Design and 3D visualization",
         "h": "You choos{<E} the elements",
-        "p": "You receive a design and a 3D visualisation. You can see where the slide, ball pit, tunnel or trampoline will be. We adjust the design with you until the elements, colours and budget all fit."
+        "p": "You receive a design and a 3D visualization. You can see where the slide, ball pit, tunnel or trampoline will be. We adjust the design with you until the elements, colors and budget all fit."
       },
       {
         "eb": "Manufacture",
@@ -139,12 +139,12 @@
     ]
   },
   "ihriska": {
-    "eb": "Modular indoor playgrounds",
+    "eb": "Commercial indoor playground equipment",
     "h1": "Custom {P}laygrounds",
-    "lead": "A playground for a family centre, café, hotel or nursery. From the first consultation to turnkey installation.",
+    "lead": "Indoor playgrounds for shopping malls, play centers, cafés, hotels and preschools. Turnkey, from the first consultation to installation.",
     "more": "How a playground is made",
-    "vizLabel": "3D visualisation of an indoor playground with a space theme",
-    "vizCap": "3D visualisation before manufacture",
+    "vizLabel": "3D visualization of an indoor playground with a space theme",
+    "vizCap": "3D visualization before manufacture",
     "construction": {
       "eb": "Structure",
       "h": "Steel, foam and n{E}ts",
@@ -169,23 +169,23 @@
       "alt": "Climbing wall, slide and tunnel at Kinder Club, Trnava"
     },
     "places": {
-      "eb": "Where it fits",
+      "eb": "Play areas by venue",
       "h": "From café to {W}ater park",
       "items": [
         {
-          "t": "Family centres and play rooms",
-          "p": "Fun for children during shopping and free time."
+          "t": "Shopping malls and play centers",
+          "p": "Shopping mall play area equipment: fun for kids while parents shop."
         },
         {
-          "t": "Cafés and pastry shops",
-          "p": "Children play while parents relax."
+          "t": "Cafés and restaurants",
+          "p": "Indoor playground equipment for cafés: kids play, parents relax."
         },
         {
           "t": "Hotels and guesthouses",
-          "p": "A family attraction on top of your offer."
+          "p": "A kids' play area as an extra family attraction."
         },
         {
-          "t": "Nurseries and education centres",
+          "t": "Preschools and education centers",
           "p": "A safe environment for play and development."
         },
         {
@@ -207,41 +207,41 @@
     }
   },
   "prerabka": {
-    "eb": "New from old",
+    "eb": "Indoor playground renovation",
     "h1": "Rebuild and {R}elocation",
-    "lead": "We rebuild an old playground into a new, certified one, or relocate it|to a new space.",
+    "lead": "We renovate an old indoor playground into a new, certified one, or relocate it to a new space.",
     "alt": "Renovated indoor playground with a slide and ball pit, Dunajská Lužná",
     "cap": "Playground rebuild · Dunajská Lužná",
     "process": {
       "eb": "Process",
       "h": "Rebuild step by st{<E}p",
-      "p": "We reuse the original structure and undamaged parts. We replace covers and colours and add new elements.",
+      "p": "We reuse the original structure and undamaged parts. We replace covers and colors and add new elements.",
       "steps": [
         "Old playground",
         "Dismantling",
-        "New covers and colours",
+        "New covers and colors",
         "New elements",
         "Renovated playground"
       ],
-      "vizLabel": "3D model of dismantling, recolouring and reassembling a playground",
+      "vizLabel": "3D model of dismantling, recoloring and reassembling a playground",
       "vizCap": "3D rebuild study"
     },
     "rebuild": {
       "eb": "Rebuild",
       "h": "From low quality to certified",
-      "p": "We rebuild an old or low-quality playground into a new, certified one. We reuse material from the original: steel from the structure, joints and undamaged modules.",
+      "p": "We rebuild an old or low-quality playground into a new, certified one. We reuse material from the original: steel from the structure, joints and undamaged modules. We also do play area upgrades: new padding, colors and features on the original frame.",
       "list": [
         "replacement of worn play elements",
         "layout changes and better use of space",
-        "new design and colours",
+        "new design and colors",
         "addition of new attractions",
         "adjustment to current standards"
       ]
     },
     "moving": {
-      "eb": "Relocation",
+      "eb": "Indoor playground relocation",
       "h": "We dismantle, transport and rebuild",
-      "p": "We dismantle the playground, transport it and rebuild it in a new space. We can also resize it along the way.",
+      "p": "Dismantling and reinstallation of indoor playground equipment: we take it apart, transport it and rebuild it in a new space. We can also resize it along the way. We relocated playgrounds this way in Hlohovec and Králův Dvůr.",
       "alt": "Relocated playground in a primary school corridor, Hlohovec",
       "cap": "Relocated playground · Hlohovec"
     },
@@ -252,9 +252,9 @@
     }
   },
   "revizie": {
-    "eb": "Service and inspections",
+    "eb": "Repairs and maintenance",
     "h1": "In{<S>}pections",
-    "lead": "We inspect the playground, repair what is needed and replace worn parts.",
+    "lead": "Annual inspection, repairs and replacement of worn parts and frame padding.",
     "button": "Order an inspection",
     "alt": "Illustrative detail of a hand inspecting a protective net",
     "cap": "Protective net inspection · AI illustration",
@@ -266,14 +266,14 @@
       },
       {
         "t": "Service and parts",
-        "p": "In stock we have structural tubes, joints, nets, foam for wrapping the structure and hanging modules."
+        "p": "In stock we have structural tubes, joints, nets, foam for wrapping the structure and hanging modules. We also replace the protective padding on the frame."
       }
     ]
   },
   "realizacie": {
     "eb": "12 projects, Slovakia and the Czech Republic",
     "h1": "{P}rojects",
-    "lead": "New playgrounds, rebuilds, relocations and renovations for family centres, schools, swimming pools and water parks.",
+    "lead": "New playgrounds, rebuilds, relocations and renovations for family centers, schools, swimming pools and water parks.",
     "listLabel": "List of projects",
     "modal": {
       "prev": "Previous",
@@ -335,7 +335,7 @@
         "t": "Climbing wall for children",
         "p": "Karviná, CZ",
         "y": "Climbing wall",
-        "d": "A climbing wall is a good addition to a play centre.",
+        "d": "A climbing wall is a good addition to a play center.",
         "alt": "Climbing wall for children, Karviná, CZ"
       },
       {
@@ -371,7 +371,7 @@
   "o-nas": {
     "eb": "PLAYGROUND, s.r.o., Trnava",
     "h1": "About {U}s",
-    "lead": "We supply certified indoor playgrounds and trampoline centres. They help venues attract parents with children.",
+    "lead": "We supply certified indoor playgrounds and trampoline centers. They help venues attract parents with children.",
     "statsLabel": "PLAYGROUND in numbers",
     "stats": [
       {
@@ -397,7 +397,7 @@
       "rows": [
         {
           "t": "Turnkey",
-          "p": "From consultation, survey, design and visualisation to delivery and installation. We have also carried out hundreds of services and annual inspections of playgrounds."
+          "p": "From consultation, survey, design and visualization to delivery and installation. We have also carried out hundreds of services and annual inspections of playgrounds."
         },
         {
           "t": "Rebuilding an old playground",
@@ -437,7 +437,7 @@
     "companyTitle": "Company",
     "company": "Company ID 47051990\nTax ID 2023714429\nVAT ID SK2023714429",
     "form": {
-      "label": "Enquiry form",
+      "label": "Inquiry form",
       "required": "required",
       "service": {
         "legend": "What you need",
@@ -455,10 +455,10 @@
       "type": {
         "legend": "Type of venue",
         "options": [
-          "Family centre",
+          "Family center",
           "Café",
           "Hotel",
-          "Nursery",
+          "Preschool",
           "Other"
         ]
       },
@@ -490,7 +490,7 @@
         "message": "Message",
         "messagePlaceholder": "Dimensions of the space, ceiling height, who the playground is for"
       },
-      "consent": "I agree to the processing of my personal data in order to handle my enquiry.",
+      "consent": "I agree to the processing of my personal data in order to handle my inquiry.",
       "submit": "Send",
       "errors": {
         "summary": "Check the marked fields.",
@@ -500,15 +500,15 @@
       },
       "done": {
         "title": "Thank you",
-        "text": "We opened an email with your enquiry. You only need to send it.",
-        "textPlan": "We opened an email with your enquiry. Attach the floor plan to it and send it.",
+        "text": "We opened an email with your inquiry. You only need to send it.",
+        "textPlan": "We opened an email with your inquiry. Attach the floor plan to it and send it.",
         "open": "Open email",
         "copy": "Copy text",
         "copied": "Copied",
         "to": "To"
       },
       "mail": {
-        "subject": "Enquiry from the website: {name}",
+        "subject": "Inquiry from the website: {name}",
         "service": "What I need",
         "other": "Description",
         "type": "Type of venue",
