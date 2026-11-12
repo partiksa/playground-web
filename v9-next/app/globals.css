@@ -200,7 +200,7 @@ body:not(.ready) .js-hide { visibility: hidden; animation: fs-show 0s 5s forward
 .cta .lead { margin-top: clamp(18px, 2vw, 28px); }
 
 /* ---------- pätička ---------- */
-.ft { position: relative; z-index: 2; overflow: hidden; background: var(--red-ui); color: var(--ink); padding: clamp(56px, 7vw, 112px) var(--pad) 28px; }
+.ft { position: relative; z-index: 2; overflow: hidden; background: var(--red); color: var(--ink); padding: clamp(56px, 7vw, 112px) var(--pad) 28px; }
 .ft-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px 32px; }
 .ft .logo { width: 132px; color: var(--ink); }
 .ft .claim { margin-top: 20px; max-width: 22em; line-height: 1.5; color: rgba(20, 19, 16, .82); }
