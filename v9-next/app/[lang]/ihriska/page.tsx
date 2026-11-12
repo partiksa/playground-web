@@ -104,8 +104,8 @@ export default async function Ihriska({ params }: P) {
       <section className="sec" id="vznik" aria-labelledby="vznik-h">
         {secHd(T("Montáž", "Montáž", "Installation", "Montage"), m("ihriska.more"), "vznik-h", "08")}
         <div className="full vznik">
-          <video src="/video/montaz.mp4" poster="/video/montaz.webp" muted playsInline loop preload="none" data-autoplay=""
-            aria-label={T("3D render montáže vesmírneho ihriska", "3D render montáže vesmírného hřiště", "3D render of the space playground being assembled", "3D-Render der Montage des Weltraum-Spielplatzes")} />
+          <video src="/video/stavba.mp4" poster="/video/stavba.webp" muted playsInline loop preload="none" data-autoplay=""
+            aria-label={T("3D render stavby vesmírneho ihriska v prázdnej hale", "3D render stavby vesmírného hřiště v prázdné hale", "3D render of the space playground being built in an empty hall", "3D-Render: Aufbau des Weltraum-Spielplatzes in einer leeren Halle")} />
         </div>
       </section>
 
