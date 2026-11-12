@@ -15,8 +15,12 @@ export function generateStaticParams() {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   icons: {
-    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }, { url: "/favicon.png", type: "image/png", sizes: "32x32" }],
-    apple: "/apple-touch-icon.png",
+    icon: [
+      { url: "/favicon.ico?v=2", sizes: "48x48" },
+      { url: "/favicon.svg?v=2", type: "image/svg+xml" },
+      { url: "/favicon.png?v=2", type: "image/png", sizes: "32x32" },
+    ],
+    apple: "/apple-touch-icon.png?v=2",
   },
 };
 export const viewport: Viewport = { themeColor: "#DEDDDB", width: "device-width", initialScale: 1 };
