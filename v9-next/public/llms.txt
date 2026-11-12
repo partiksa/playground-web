@@ -12,13 +12,13 @@
 
 ## Stránky
 
-- [Úvod](https://play-ground.sk/sk/): prehľad služieb firmy a postup od konzultácie po montáž.
-- [Ihriská na mieru](https://play-ground.sk/sk/ihriska/): návrh, 3D vizualizácia, výroba a montáž interiérových ihrísk podľa EN 1176 a EN 1177.
-- [Prerábka a sťahovanie](https://play-ground.sk/sk/prerabka/): prerobenie starého ihriska na nové, normované a jeho presťahovanie do nového priestoru.
-- [Revízie](https://play-ground.sk/sk/revizie/): ročné kontroly, servis a výmena opotrebovaných dielov.
-- [Realizácie](https://play-ground.sk/sk/realizacie/): fotky hotových ihrísk, prerábok a presťahovaní na Slovensku a v Česku.
-- [O nás](https://play-ground.sk/sk/o-nas/): kto sme, čím sa líšime a koľko projektov sme dodali.
+- [Úvod](https://playground.sarkozypatrik.sk/sk/): prehľad služieb firmy a postup od konzultácie po montáž.
+- [Ihriská na mieru](https://playground.sarkozypatrik.sk/sk/ihriska/): návrh, 3D vizualizácia, výroba a montáž interiérových ihrísk podľa EN 1176 a EN 1177.
+- [Prerábka a sťahovanie](https://playground.sarkozypatrik.sk/sk/prerabka/): prerobenie starého ihriska na nové, normované a jeho presťahovanie do nového priestoru.
+- [Revízie](https://playground.sarkozypatrik.sk/sk/revizie/): ročné kontroly, servis a výmena opotrebovaných dielov.
+- [Realizácie](https://playground.sarkozypatrik.sk/sk/realizacie/): fotky hotových ihrísk, prerábok a presťahovaní na Slovensku a v Česku.
+- [O nás](https://playground.sarkozypatrik.sk/sk/o-nas/): kto sme, čím sa líšime a koľko projektov sme dodali.
 
 ## Kontakt
 
-- [Kontakt a dopyt](https://play-ground.sk/sk/kontakt/): formulár na dopyt, adresa, telefón a e-mail.
+- [Kontakt a dopyt](https://playground.sarkozypatrik.sk/sk/kontakt/): formulár na dopyt, adresa, telefón a e-mail.

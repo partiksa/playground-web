@@ -3,7 +3,7 @@ import cz from "@/messages/cz.json";
 import en from "@/messages/en.json";
 import de from "@/messages/de.json";
 
-export const SITE = "https://play-ground.sk";
+export const SITE = "https://playground.sarkozypatrik.sk";
 export const LANGS = ["sk", "cz", "en", "de"] as const;
 export type Lang = (typeof LANGS)[number];
 export const DEFAULT_LANG: Lang = "sk";
