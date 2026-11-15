@@ -17,7 +17,7 @@ export default async function Kontakt({ params }: P) {
     </div>
   );
   const svc = ["nove", "prerabka", "stahovanie", "reviza", "nafukovacie", "ine"].map((k) => [k, f(`service.options.${k}`)] as [string, string]);
-  const typ = [0, 1, 2, 3, 4].map((i) => [f(`type.options[${i}]`), f(`type.options[${i}]`)] as [string, string]);
+  const typ = [0, 1, 2, 3, 4].map((i) => [i === 4 ? "ine" : f(`type.options[${i}]`), f(`type.options[${i}]`)] as [string, string]);
   const kedy = [0, 1, 2, 3].map((i) => [f(`when.options[${i}]`), f(`when.options[${i}]`)] as [string, string]);
   const send = T(["rozmery priestoru a výšku stropu", "pôdorys alebo fotky priestoru", "pre aký vek detí je ihrisko", "typ prevádzky a termín"],
     ["rozměry prostoru a výšku stropu", "půdorys nebo fotky prostoru", "pro jaký věk dětí je hřiště", "typ provozu a termín"],
@@ -69,6 +69,9 @@ export default async function Kontakt({ params }: P) {
               <fieldset>
                 <legend><span className="n">02</span> {fmt(f("type.legend"))}</legend>
                 {chips("typ", typ)}
+                <div className="sub" id="otherTyp" hidden>
+                  <label className="fld wide"><span>{fmt(T("Aká je to prevádzka", "Jaký je to provoz", "What kind of venue", "Welche Art von Betrieb"))}</span><input name="typ_ine" /></label>
+                </div>
               </fieldset>
               <fieldset>
                 <legend><span className="n">03</span> {fmt(f("when.legend"))}</legend>

@@ -19,8 +19,9 @@
   function wait(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
   function loader() {
     var ld = document.getElementById("ld");
-    // po 5 s by poistka v CSS načítanie už skryla, preto sa vtedy nespúšťa
-    if (!ld || !root.classList.contains("ld-on") || !window.PGwriteLogo || performance.now() > 5000) {
+    // po 9 s by poistka v CSS (10 s) načítanie už skryla, preto sa vtedy nespúšťa; na mobilnej sieti skripty prídu aj po 5 s
+    if (!ld || !root.classList.contains("ld-on") || !window.PGwriteLogo || performance.now() > 9000) {
+      window.__pgLd = 0;
       if (ld) ld.remove(); root.classList.remove("ld-on"); revealDone(); return;
     }
     root.classList.add("ld-run");
@@ -29,6 +30,7 @@
     function finish() {
       if (finished) return;
       finished = true;
+      window.__pgLd = 0;
       root.classList.remove("ld-on", "ld-run");
       root.style.overflow = "";
       ld.remove();
@@ -211,16 +213,18 @@
     "  gl_FragColor = texture2D(img, clamp(st, .001, .999));",
     "}"].join("\n");
 
-  var mouse = [0, 0], depths = [], live = 0, MAXGL = 10;
+  var mouse = [0, 0], depths = [], live = 0, MAXGL = 6;
   function Depth(el) { this.el = el; this.m = [0, 0]; this.t = -1; this.gl = null; this.on = false; }
   Depth.prototype.start = function () {
-    if (this.on || live >= MAXGL) return;
+    if (this.on || this.dead || live >= MAXGL) return;
     this.on = true; live++;
     var self = this, el = this.el, im = el.querySelector("img");
     var cv = this.cv = document.createElement("canvas");
     cv.setAttribute("aria-hidden", "true");
     var gl = this.gl = cv.getContext("webgl", { alpha: false, antialias: false, preserveDrawingBuffer: false });
     if (!gl) { this.stop(); return; }
+    // keď prehliadač zahodí WebGL (veľa plátien, GPU), plátno by ukázalo pruhy: odstrániť ho, ostane obyčajná fotka
+    cv.addEventListener("webglcontextlost", function (e) { e.preventDefault(); if (self.cv === cv && !self.stopping) { self.dead = true; self.stop(); } });
     function sh(type, src) { var s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); return s; }
     var pr = gl.createProgram();
     gl.attachShader(pr, sh(gl.VERTEX_SHADER, VS)); gl.attachShader(pr, sh(gl.FRAGMENT_SHADER, FS));
@@ -260,12 +264,14 @@
     if (!this.on) return;
     this.on = false; this.ready = false; live--; this.token = null;
     this.el.classList.remove("gl");
-    if (this.gl) { var ext = this.gl.getExtension("WEBGL_lose_context"); if (ext) ext.loseContext(); }
+    this.stopping = true;
+    if (this.gl && !this.gl.isContextLost()) { var ext = this.gl.getExtension("WEBGL_lose_context"); if (ext) ext.loseContext(); }
+    this.stopping = false;
     if (this.cv) this.cv.remove();
     this.gl = this.cv = null;
   };
   Depth.prototype.frame = function (force) {
-    if (!this.ready) return;
+    if (!this.ready || this.gl.isContextLost()) return;
     var r = this.el.getBoundingClientRect(), vh = innerHeight;
     var t = Math.min(1, Math.max(0, (vh - r.top) / (vh + r.height)));
     this.m[0] += (mouse[0] - this.m[0]) * .08; this.m[1] += (mouse[1] - this.m[1]) * .08;

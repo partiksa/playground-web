@@ -10,7 +10,7 @@ function load(src: string, module = false) {
   return new Promise<void>((ok, bad) => {
     const s = document.createElement("script");
     if (module) s.type = "module";
-    s.src = src;
+    s.src = src + "?v=" + process.env.PG_V;
     s.async = false;
     s.onload = () => ok();
     s.onerror = () => bad(new Error("Skript sa nenačítal: " + src));
@@ -23,7 +23,8 @@ export default function Scripts({ data, page = [], module }: { data?: string; pa
     if (started) return; // v režime vývoja React spúšťa efekt dvakrát
     started = true;
     (async () => {
-      for (const src of BASE) await load(src);
+      // všetky naraz: sťahujú sa súbežne, async=false zachová poradie spustenia (predtým jeden po druhom, na mobile pomalé)
+      await Promise.all(BASE.map((src) => load(src)));
       if (data) {
         const s = document.createElement("script");
         s.text = data;

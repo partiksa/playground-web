@@ -19,24 +19,37 @@
     });
     var um = el("mask", { id: id + "u", maskUnits: "userSpaceOnUse", x: 0, y: 0, width: D.w, height: D.h });
     var bar = el("rect", { x: 40, y: 95, width: 260, height: 40, fill: "#fff" });
-    bar.style.transformOrigin = "40px 0"; bar.style.transform = "scaleX(0)";
+    bar.setAttribute("transform", "translate(40 0) scale(0 1) translate(-40 0)");
     um.append(bar);
     svg.append(m, um,
       el("path", { d: D.d.slice(U).join(" "), fill: "currentColor", mask: "url(#" + id + ")" }),
       el("path", { d: D.d.slice(0, U).join(" "), fill: "currentColor", mask: "url(#" + id + "u)" }));
     host.append(svg);
+    // kreslenie po snímkach cez requestAnimationFrame a atribúty (nie Web Animations):
+    // Safari na iPhone animáciu obsahu <mask> cez Web Animations spoľahlivo neprekresľuje
     return function (T) {
       T = T || 1300;
-      if (!svg.animate) { ps.forEach(function (p) { p.style.strokeDashoffset = "0"; }); bar.style.transform = "none"; return Promise.resolve(); }
       var tot = D.l.slice(0, n).reduce(function (a, b) { return a + b; }, 0), t = 0;
-      var run = ps.map(function (p, i) {
-        var d = (D.l[i] / tot) * T;
-        var a = p.animate([{ strokeDashoffset: D.l[i] + 1 }, { strokeDashoffset: 0 }], { duration: d, delay: t, fill: "forwards", easing: "linear" });
-        t += d;
-        return a.finished;
+      var parts = ps.map(function (p, i) { var d = (D.l[i] / tot) * T, o = { p: p, len: D.l[i] + 1, t0: t, d: d }; t += d; return o; });
+      var b0 = t + 150, bd = T * .45;
+      return new Promise(function (done) {
+        var start = null;
+        function frame(now) {
+          if (start === null) start = now;
+          var e = now - start;
+          parts.forEach(function (o) {
+            var k = Math.min(1, Math.max(0, (e - o.t0) / o.d));
+            o.p.setAttribute("stroke-dashoffset", String(o.len * (1 - k)));
+            o.p.style.strokeDashoffset = String(o.len * (1 - k));
+          });
+          var kb = Math.min(1, Math.max(0, (e - b0) / bd));
+          kb = 1 - Math.pow(1 - kb, 3);
+          bar.setAttribute("transform", "translate(40 0) scale(" + kb + " 1) translate(-40 0)");
+          bar.style.transform = "";
+          if (e < b0 + bd) requestAnimationFrame(frame); else done();
+        }
+        requestAnimationFrame(frame);
       });
-      run.push(bar.animate([{ transform: "scaleX(0)" }, { transform: "scaleX(1)" }], { duration: T * .45, delay: t + 150, fill: "forwards", easing: "cubic-bezier(.3,.7,.1,1)" }).finished);
-      return Promise.all(run);
     };
   };
 })();

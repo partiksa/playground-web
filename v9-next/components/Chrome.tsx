@@ -59,7 +59,6 @@ export function Footer({ s }: { s: Site }) {
       <FooterBalls />
       <div className="ft-top">
         <div>
-          <a className="logo" href={P("home")} aria-label={m("common.logoLabel")}><i /></a>
           <p className="claim">{fmt(m("footer.claim"))}</p>
         </div>
         <div>

@@ -12,16 +12,17 @@ const seg = (p, a, b) => ease(clamp((p - a) / (b - a)));
 // skupiny podľa názvov objektov v Blenderi; posun pri rozložení v metroch (Y hore, Z k divákovi)
 const GROUPS = [
   { id: 'zaklad', parts: ['spodok', 'podlozka', 'rury_modra', 'rury_tyrkys', 'rury_stlp', 'rury_svetla', 'rury_fialova', 'pasky', 'snury', 'mriezka', 'mriezka_o'], off: [0, 0, 0] },
-  { id: 'plos', parts: ['podlaha_hore', 'podlaha_bleda', 'stupne_b', 'stupne_f', 'blok', 'blok_h', 'blok_n', 'fialovy_tram'], off: [0, 1.8, 0] },
-  { id: 'smyk', parts: ['smyk'], off: [3.4, 0.4, 1.6] },
+  { id: 'plos', parts: ['podlaha_hore', 'podlaha_bleda', 'stupne_b', 'stupne_f', 'blok', 'blok_h', 'blok_n', 'fialovy_tram'], off: [0, 1.8, 0], turn: true },
+  { id: 'smyk', parts: ['smyk'], off: [3.4, 0.4, 1.6], turn: true },
   { id: 'bazen', parts: ['bazen_vypln'], off: [0.6, 0, 3.8], balls: true },
   { id: 'prvky', parts: ['kruh', 'panel'], off: [1.4, 3.2, -1.6], isNew: true },
 ];
 
 // Výsledné farby podľa renderu vesmírneho ihriska (v5/frames/render/f_004.webp): modrá, tyrkysová, fialová.
 const NEW = { modra: '#2457c9', tyrkys: '#27a9a2', stlp: '#1d8c89', svetla: '#62c6bd', fialova: '#6a3cc0', podlaha: '#2a4fb0', bleda: '#cfd6ea', smyk: '#2f62d6', kruh: '#8754db', pasok: '#2b2d3a', snura: '#5b6070', cierna: '#22242c' };
-// staré ihrisko je poškodené: pena odpadnutá (diel leží na zemi alebo visí), po prerábke je všetko na mieste a lesklejšie
-const BROKEN = { blok_h: { drop: 1, rot: [1.25, 0, 0.35] }, fialovy_tram: { drop: 0.35, rot: [0, 0, 0.45] }, stupne_f: { drop: 0.6, rot: [0.5, 0.3, 0] } };
+// staré ihrisko je poskladané inak: plošiny a šmykľavka sú otočené o 180° okolo stredu konštrukcie (pôdorys je obdĺžnik, preto ostanú v ráme);
+// pri prerábke sa zdvihnú, otočia do nového poskladania a zložia
+const PIVOT = new THREE.Vector3(3.13, 0, -1.88);
 const OLD = { modra: [0.42, 0.3, 0.05], tyrkys: [0.3, 0.06, 0.04], stlp: [0.4, 0.28, 0.05], svetla: [0.1, 0.22, 0.06], fialova: [0.25, 0.05, 0.04], podlaha: [0.18, 0.13, 0.08], bleda: [0.2, 0.17, 0.1], smyk: [0.08, 0.2, 0.05], pasok: [0.08, 0.07, 0.06], snura: [0.12, 0.11, 0.1], cierna: [0.05, 0.05, 0.05] };
 const BALLS_NEW = ['#2457c9', '#27a9a2', '#f2efe6', '#6a3cc0', '#ffffff'];
 const BALLS_OLD = [[0.35, 0.3, 0.2], [0.3, 0.12, 0.08], [0.25, 0.25, 0.2]];
@@ -60,16 +61,6 @@ class Play3D {
       g.parts.forEach((n) => { const o = byName[n]; if (o) { o.updateWorldMatrix(true, false); const m = o.matrixWorld.clone(); node.add(o); o.matrix.copy(m); o.matrix.decompose(o.position, o.quaternion, o.scale); } });
       const center = new THREE.Box3().setFromObject(node).getCenter(new THREE.Vector3());
       return { ...g, node, mats: [], off: new THREE.Vector3(...g.off), center };
-    });
-    // poškodené diely: pôvodná poloha a poloha „odpadnutej“ peny
-    this.broken = [];
-    Object.entries(BROKEN).forEach(([n, b]) => {
-      const o = byName[n]; if (!o) return;
-      const box = new THREE.Box3().setFromObject(o);
-      const p0 = o.position.clone(), q0 = o.quaternion.clone();
-      const p1 = p0.clone(); p1.y -= Math.max(0, box.min.y) * b.drop;
-      const q1 = q0.clone().multiply(new THREE.Quaternion().setFromEuler(new THREE.Euler(...b.rot)));
-      this.broken.push({ o, p0, p1, q0, q1 });
     });
     // materiály: farba podľa názvu, staré a nové farby pre prerábku
     this.groups.forEach((g) => g.node.traverse((o) => {
@@ -137,10 +128,18 @@ class Play3D {
     const out = seg(p, 0.16, 0.4) * (1 - seg(p, 0.6, 0.84));
     const recolor = seg(p, 0.4, 0.6);
     const show = seg(p, 0.6, 0.84);
+    // časť 1 staré poskladanie, časť 2 otočenie do nového (počas rozloženia), časť 3 nové poskladanie
+    const turn = seg(p, 0.3, 0.7);
+    const q = new THREE.Quaternion(), up = new THREE.Vector3(0, 1, 0), v = new THREE.Vector3();
     this.groups.forEach((g, i) => {
       const k = clamp(out * 1.3 - i * 0.03);
       g.node.position.copy(g.off).multiplyScalar(ease(k) * 1.15);
       g.node.position.y += Math.sin(k * Math.PI) * 0.6;
+      if (g.turn) {
+        q.setFromAxisAngle(up, Math.PI * (1 - turn));
+        g.node.quaternion.copy(q);
+        g.node.position.add(v.copy(PIVOT).applyQuaternion(q).negate().add(PIVOT)); // otočenie okolo PIVOT, nie okolo počiatku
+      }
       if (g.isNew) {
         g.node.visible = show > 0;
         g.node.scale.setScalar(show);
@@ -151,9 +150,6 @@ class Play3D {
         m.roughness = 0.92 - recolor * 0.62; m.metalness = recolor * 0.08;
       });
     });
-    // odpadnutá pena sa vráti na miesto počas výmeny obalov
-    const fix = seg(p, 0.3, 0.6);
-    this.broken.forEach((b) => { b.o.position.lerpVectors(b.p1, b.p0, fix); b.o.quaternion.slerpQuaternions(b.q1, b.q0, fix); });
     if (this._rc !== recolor) {
       this._rc = recolor;
       const color = new THREE.Color();

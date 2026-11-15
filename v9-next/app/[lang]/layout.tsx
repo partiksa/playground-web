@@ -16,18 +16,20 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   icons: {
     icon: [
-      { url: "/favicon.ico?v=2", sizes: "48x48" },
-      { url: "/favicon.svg?v=2", type: "image/svg+xml" },
-      { url: "/favicon.png?v=2", type: "image/png", sizes: "32x32" },
+      { url: "/favicon.ico?v=3", sizes: "48x48" },
+      { url: "/favicon.svg?v=3", type: "image/svg+xml" },
+      { url: "/favicon.png?v=3", type: "image/png", sizes: "32x32" },
     ],
-    apple: "/apple-touch-icon.png?v=2",
+    apple: "/apple-touch-icon.png?v=3",
   },
 };
 export const viewport: Viewport = { themeColor: "#DEDDDB", width: "device-width", initialScale: 1 };
 
 /* Pred prvým vykreslením: načítanie s logom len na úvode, vždy (aj po kliknutí na logo).
    Na podstránkach sa neukazuje. Ukáže sa aj pri zapnutom „Obmedziť pohyb“ (rozhodnutia Patrika 2026-11-11). */
-const BOOT = `if(/^\\/(sk|cz|en|de)\\/?$/.test(location.pathname))document.documentElement.classList.add("ld-on")`;
+/* Stráž triedy ld-on: ak Safari alebo jeho rozšírenie zmení HTML pred hydratáciou, React stránku vykreslí nanovo a triedy na <html> zmaže
+   (chyba #418, loader potom len blikne). MutationObserver ju vráti ešte pred vykreslením; site.js stráž vypne (window.__pgLd = 0). */
+const BOOT = `if(/^\\/(sk|cz|en|de)\\/?$/.test(location.pathname)){var h=document.documentElement;h.classList.add("ld-on");window.__pgLd=1;new MutationObserver(function(){if(window.__pgLd&&!h.classList.contains("ld-on"))h.classList.add("ld-on")}).observe(h,{attributes:true,attributeFilter:["class"]})}`;
 
 export default async function LangLayout({ children, params }: { children: ReactNode; params: Promise<{ lang: string }> }) {
   const lang = toLang((await params).lang);

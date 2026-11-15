@@ -26,7 +26,7 @@ export default async function Realizacie({ params }: P) {
   ];
   const data = RZ.map(([slug], i) => {
     const it = rzItem(i);
-    const fs = listDir(`rz/${slug}`).filter((f) => f.endsWith(".webp") && !(EXCLUDED[slug] ?? []).includes(f)).sort();
+    const fs = listDir(`rz/${slug}`).filter((f) => f.endsWith(".webp") && !f.endsWith("-d.webp") && !(EXCLUDED[slug] ?? []).includes(f)).sort();
     return { s: slug, t: plain(it.t), p: it.p, y: it.y, d: it.d, f: fs.map((f) => [f, ...isize(`rz/${slug}/${f}`)]) };
   });
 

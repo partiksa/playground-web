@@ -1,7 +1,7 @@
 /* Kontakt: dopytový formulár bez servera. Zloží e-mail a otvorí ho v pošte (mailto). Texty sú v KT podľa jazyka. */
 (function () {
   var box = document.getElementById("f"), form = box.querySelector("form"), err = box.querySelector(".err");
-  var other = document.getElementById("other"), planBox = document.getElementById("planFile"), file = form.elements.plan_file, fileMsg = box.querySelector(".file-msg");
+  var other = document.getElementById("other"), otherTyp = document.getElementById("otherTyp"), planBox = document.getElementById("planFile"), file = form.elements.plan_file, fileMsg = box.querySelector(".file-msg");
   var body = "", fileBad = false;
   var reduce = false; /* Obmedziť pohyb sa ignoruje: animácie bežia vždy (rozhodnutie Patrika 2026-11-11) */
 
@@ -19,10 +19,11 @@
   }
   function sync() {
     reveal(other, (form.elements.co.value || "") === "ine");
+    reveal(otherTyp, (form.elements.typ.value || "") === "ine");
     reveal(planBox, (form.elements.plan.value || "") === "ano");
   }
   form.addEventListener("change", function (e) {
-    if (e.target.name === "co" || e.target.name === "plan") sync();
+    if (e.target.name === "co" || e.target.name === "typ" || e.target.name === "plan") sync();
     if (e.target === file) checkFile();
   });
   sync();
@@ -60,7 +61,7 @@
     var none = KT.none, plan = v("plan") === "ano";
     var lines = [
       KT.mService + ": " + (lab("co") || none) + (v("co") === "ine" ? " (" + v("co_ine") + ")" : ""),
-      KT.mType + ": " + (lab("typ") || none),
+      KT.mType + ": " + (lab("typ") || none) + (v("typ") === "ine" && v("typ_ine") ? " (" + v("typ_ine") + ")" : ""),
       KT.mWhen + ": " + (lab("kedy") || none),
       KT.mPlan + ": " + (plan ? KT.planYes : v("plan") === "nie" ? KT.planNo : none),
       "", KT.mName + ": " + v("meno"), KT.mEmail + ": " + v("email"), KT.mPhone + ": " + (v("tel") || none), KT.mCity + ": " + (v("mesto") || none),
