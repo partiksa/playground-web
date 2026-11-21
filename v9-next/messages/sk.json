@@ -17,6 +17,10 @@
       "title": "Revízie a servis ihrísk | Playground, Trnava",
       "description": "Ročné kontroly a servis interiérových ihrísk podľa noriem EN 1176 a EN 1177. Náhradné diely zo skladu."
     },
+    "nafukovacie-atrakcie": {
+      "title": "Nafukovacie atrakcie, prenájom aj predaj | Playground, Trnava",
+      "description": "Prenájom nafukovacích atrakcií s obsluhou na oslavy a podujatia. Predaj nafukovadiel z PVC Tarpaulin s 3-ročnou zárukou a výroba na zákazku. Trnava."
+    },
     "realizacie": {
       "title": "Realizácie interiérových ihrísk | Playground, Trnava",
       "description": "12 realizácií interiérových ihrísk na Slovensku a v Česku: nové ihriská, prerábky, presťahovania, tubingové dráhy a detské zóny."
@@ -44,6 +48,10 @@
       {
         "name": "Revízie a servis ihrísk",
         "description": "Ročné kontroly a servis interiérových ihrísk podľa noriem EN 1176 a EN 1177."
+      },
+      {
+        "name": "Nafukovacie atrakcie",
+        "description": "Prenájom nafukovacích atrakcií s obsluhou a predaj nafukovadiel z PVC Tarpaulin vrátane výroby na zákazku."
       }
     ]
   },
@@ -56,6 +64,7 @@
       "ihriska": "Ihriská na mieru",
       "prerabka": "Prerábka",
       "revizie": "Revízie",
+      "nafukovacie-atrakcie": "Nafukovacie atrakcie",
       "realizacie": "Realizácie",
       "o-nas": "O nás",
       "kontakt": "Kontakt"
@@ -269,6 +278,14 @@
         "p": "Na sklade máme konštrukčné trubky, spojky, siete, peny na obaľovanie konštrukcie a závesné moduly. Vymieňame aj ochranné návleky (obaly) konštrukcie."
       }
     ]
+  },
+  "nafukovacie-atrakcie": {
+    "eb": "Prenájom a predaj",
+    "h1": "Nafukovacie {A}trakcie",
+    "lead": "Skákacie hrady, šmykľavky a kombá na oslavy, firemné akcie a podujatia. Atrakcie prenajímame s obsluhou, predávame aj vyrábame na zákazku.",
+    "button": "Opýtať sa na termín",
+    "alt": "Nafukovacia šmykľavka s dinosaurom a palmami",
+    "cap": "Dino šmykľavka · Prenájom PLAYGROUND"
   },
   "realizacie": {
     "eb": "12 projektov, Slovensko a Česko",

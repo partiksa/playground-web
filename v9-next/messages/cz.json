@@ -17,6 +17,10 @@
       "title": "Revize a servis hřišť | Playground, Trnava",
       "description": "Roční kontroly a servis interiérových hřišť podle norem EN 1176 a EN 1177. Náhradní díly ze skladu."
     },
+    "nafukovacie-atrakcie": {
+      "title": "Nafukovací atrakce, pronájem i prodej | Playground, Trnava",
+      "description": "Pronájem nafukovacích atrakcí s obsluhou na oslavy a akce. Prodej nafukovadel z PVC Tarpaulin se zárukou 3 roky a výroba na zakázku."
+    },
     "realizacie": {
       "title": "Realizace interiérových hřišť | Playground, Trnava",
       "description": "12 realizací interiérových hřišť na Slovensku a v Česku: nová hřiště, přestavby, přestěhování, tubingové dráhy a dětské zóny."
@@ -44,6 +48,10 @@
       {
         "name": "Revize a servis hřišť",
         "description": "Roční kontroly a servis interiérových hřišť podle norem EN 1176 a EN 1177."
+      },
+      {
+        "name": "Nafukovací atrakce",
+        "description": "Pronájem nafukovacích atrakcí s obsluhou a prodej nafukovadel z PVC Tarpaulin včetně výroby na zakázku."
       }
     ]
   },
@@ -56,6 +64,7 @@
       "ihriska": "Hřiště na míru",
       "prerabka": "Přestavba",
       "revizie": "Revize",
+      "nafukovacie-atrakcie": "Nafukovací atrakce",
       "realizacie": "Realizace",
       "o-nas": "O nás",
       "kontakt": "Kontakt"
@@ -269,6 +278,14 @@
         "p": "Na skladě máme konstrukční trubky, spojky, sítě, pěny na obalování konstrukce a závěsné moduly. Vyměňujeme i ochranné návleky (obaly) konstrukce."
       }
     ]
+  },
+  "nafukovacie-atrakcie": {
+    "eb": "Pronájem a prodej",
+    "h1": "Nafukovací {A}trakce",
+    "lead": "Skákací hrady, skluzavky a komba na oslavy, firemní akce a události. Atrakce pronajímáme s obsluhou, prodáváme i vyrábíme na zakázku.",
+    "button": "Zeptat se na termín",
+    "alt": "Nafukovací skluzavka s dinosaurem a palmami",
+    "cap": "Dino skluzavka · Pronájem PLAYGROUND"
   },
   "realizacie": {
     "eb": "12 projektů, Slovensko a Česko",

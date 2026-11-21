@@ -12,9 +12,9 @@ export const DEFAULT_LANG: Lang = "sk";
 export const HREFLANG: Record<Lang, string> = { sk: "sk", cz: "cs", en: "en", de: "de" };
 export const OG_LOCALE: Record<Lang, string> = { sk: "sk_SK", cz: "cs_CZ", en: "en_US", de: "de_DE" };
 
-export const PAGES = ["home", "ihriska", "prerabka", "revizie", "realizacie", "o-nas", "kontakt"] as const;
+export const PAGES = ["home", "ihriska", "prerabka", "revizie", "nafukovacie-atrakcie", "realizacie", "o-nas", "kontakt"] as const;
 export type PageKey = (typeof PAGES)[number];
-export const MENU: PageKey[] = ["ihriska", "prerabka", "revizie", "realizacie", "o-nas", "kontakt"];
+export const MENU: PageKey[] = ["ihriska", "prerabka", "revizie", "nafukovacie-atrakcie", "realizacie", "o-nas", "kontakt"];
 
 export type Dict = typeof sk;
 /* Chýbajúce kľúče v preklade doplní slovenčina. */

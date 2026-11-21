@@ -17,6 +17,10 @@
       "title": "Inspektion und Service für Spielplätze | Playground, Trnava",
       "description": "Jährliche Prüfungen und Service von Indoor-Spielplätzen nach EN 1176 und EN 1177. Ersatzteile aus dem eigenen Lager."
     },
+    "nafukovacie-atrakcie": {
+      "title": "Hüpfburgen und Inflatables, Vermietung und Verkauf | Playground, Trnava",
+      "description": "Vermietung von Hüpfburgen und aufblasbaren Attraktionen mit Betreuung für Feiern und Events. Verkauf aus PVC-Plane mit 3 Jahren Garantie, Anfertigung nach Maß."
+    },
     "realizacie": {
       "title": "Referenzen Indoor-Spielplätze | Playground, Trnava",
       "description": "12 Indoor-Spielplatz-Projekte in der Slowakei und in Tschechien: neue Spielplätze, Umbauten, Umzüge, Tubing-Bahnen und Kinderbereiche."
@@ -44,6 +48,10 @@
       {
         "name": "Prüfung und Service von Spielplätzen",
         "description": "Jährliche Prüfungen und Service von Indoor-Spielplätzen nach EN 1176 und EN 1177."
+      },
+      {
+        "name": "Aufblasbare Attraktionen",
+        "description": "Vermietung aufblasbarer Attraktionen mit Betreuung und Verkauf von Hüpfburgen aus PVC-Plane, auch nach Maß."
       }
     ]
   },
@@ -56,6 +64,7 @@
       "ihriska": "Spielplätze nach Maß",
       "prerabka": "Umbau",
       "revizie": "Prüfung",
+      "nafukovacie-atrakcie": "Hüpfburgen",
       "realizacie": "Referenzen",
       "o-nas": "Über uns",
       "kontakt": "Kontakt"
@@ -269,6 +278,14 @@
         "p": "Am Lager haben wir Konstruktionsrohre, Verbinder, Netze, Schaumstoffe zur Umhüllung der Konstruktion und Hängemodule. Wir tauschen auch Schutzpolster der Konstruktion aus."
       }
     ]
+  },
+  "nafukovacie-atrakcie": {
+    "eb": "Vermietung und Verkauf",
+    "h1": "Hüpf{B}urgen",
+    "lead": "Hüpfburgen, Rutschen und Kombis für Feiern, Firmenevents und Veranstaltungen. Wir vermieten sie mit Betreuung, verkaufen sie und fertigen sie nach Maß.",
+    "button": "Termin anfragen",
+    "alt": "Aufblasbare Rutsche mit Dinosaurier und Palmen",
+    "cap": "Dino-Rutsche · Vermietung PLAYGROUND"
   },
   "realizacie": {
     "eb": "12 Projekte, Slowakei und Tschechien",

@@ -219,7 +219,13 @@ body:not(.ready) .js-hide { visibility: hidden; animation: fs-show 0s 5s forward
 /* prechod medzi stránkami */
 .leaving main, .leaving .ft { opacity: 0; transform: translateY(-10px); transition: opacity .26s cubic-bezier(.4, 0, 1, 1), transform .3s cubic-bezier(.4, 0, 1, 1); }
 
-@media (max-width: 1180px) { .hd .tel { display: none; } }
+/* hlavička: 7 položiek menu sa nelámu; telefón zmizne pod 1360 px, menu sa zbalí pod 1260 px (namerané v SK, CZ, EN, DE) */
+.nav a { white-space: nowrap; }
+@media (max-width: 1360px) { .hd .tel { display: none; } }
+@media (max-width: 1260px) {
+  .nav, .hd > .btn, .hd > .lang { display: none; }
+  .menu-btn { display: block; margin-left: auto; }
+}
 @media (max-width: 980px) {
   .nav, .hd > .btn { display: none; }
   .menu-btn { display: block; margin-left: auto; }

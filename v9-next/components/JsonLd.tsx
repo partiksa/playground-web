@@ -3,7 +3,7 @@ import { getPageSeo, getSeo } from "@/lib/content";
 import { absUrl, HREFLANG, LANGS, SITE, type PageKey } from "@/lib/i18n";
 import { plain, type QA, type Site } from "@/lib/v9";
 
-const SVC: Partial<Record<PageKey, number>> = { ihriska: 0, prerabka: 1, revizie: 2 };
+const SVC: Partial<Record<PageKey, number>> = { ihriska: 0, prerabka: 1, revizie: 2, "nafukovacie-atrakcie": 3 };
 
 export default function JsonLd({ s, page, faq }: { s: Site; page: PageKey; faq: QA[] }) {
   const { m, T, lang } = s;
