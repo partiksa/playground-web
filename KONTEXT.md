@@ -3,13 +3,23 @@ stav: rozpracovaný
 ---
 # loso (redizajn play-ground.sk)
 
-Posledná aktualizácia: 2026-11-06 18:00
+Posledná aktualizácia: 2026-11-21 11:38
 
 ## Cieľ
 Moderný web firmy PLAYGROUND (interiérové detské ihriská, Trnava) s 3D ihriskom, ktoré sa pri scrolle postaví. Identita zo starého webu: logo, farby, písmo Kanit.
 
 ## Stav
-- NAJNOVŠIE (2026-11-06, commit 9236700 na GitHube, vetva V6-verzia-2): v6 prerobená podľa poznámok Patrika. Nový úvod (hero s videom a voskovkovými kresbami, karty služieb, pás realizácií), loading s čiernym logom na papieri (intro.js, zmenší sa do hlavičky), Postup a Kde sa hodia s voskovkovými ilustráciami (v6/ill/crayon), Realizácie ako veľké riadky (5 najlepších fotiek veľko, 7 menších, filter zrušený), zoznam 3D vizualizácií (`VIZ` v build_v6.py), 3D rozloženie zjednodušené na 5 častí (siete ostávajú), reduced motion sa ignoruje, poistka proti prázdnej stránke (window.__ok, trieda fs). Akcenty: voskovkové podčiarknutia (`.mk`, ul-*.webp) a škvrny (dot-*.webp) v 7 farbách, žltá `--sun` #FFC93A, výzva na podstránkach v inej farbe (modrá, tyrkysová, fialová, oranžová, žltá), úvod červená. Skripty ilustrácií: tools/crayon, tools/crayon2 (strokes.py). Review server: `python3 tools/review_server.py` (8914, `?review`), telefón: tools/phone_server.py (8915).
+- AKTUÁLNE (2026-11-21): vetva `final` (nie `v9`) na GitHube, posledný commit 9d4da3f. Vo `v9-next/` pribudla stránka Nafukovacie atrakcie (nasadená), PHP admin pre realizácie a banner a banner na úvode (len v gite, NEnasadené). Na serveri chýba posledné kolo: číslo preč z lišty, opravené fotky atrakcií, admin, banner. Patrik nasadzuje sám: `cd v9-next`, `npm run admin:deploy`, `npm run rz:deploy` (SFTP mi blokuje systém povolení). Postup a stav adminu: `v9-next/ADMIN.md`.
+- AKTUÁLNE (2026-11-17): Hero vizuál je bez výsledku. Vyskúšané tri návrhy (`loso/hero-vizual/`: index, hala, vykres) Patrik zamietol a priečinok aj so súbormi zmazal. Návrhy neboli v gite, obnoviť sa nedajú. Web (`v9-next/`) sa kvôli nim nemenil.
+- AKTUÁLNE (2026-11-15): `v9-next/` je nasadená na playground.sarkozypatrik.sk (Hostzone, noindex) aj s opravami z 2026-11-14 (nemčina, pätička, formulár, fotky z ChatGPT, depth mapy, favicon, oprava loadera, poistka WebGL). Nič z 13. až 14. 11. nie je komitnuté. Rozpracovaná responzivita: automatická kontrola 560 stránok bez posunu do strany, chýb JS a neviditeľných prvkov; snímky (`/tmp/pgresp/sheets/`, 7 zariadení, SK) ešte neprezreté. Čaká sa na Patrika, či po Cmd+Shift+R zmizli pruhy na fotke `ihriska-prvky`.
+- AKTUÁLNE (2026-11-14): `v9-next/` má lokálne nekomitnuté zmeny (`app/globals.css`, `app/[lang]/layout.tsx`, `components/Scripts.tsx`, `next.config.ts`, `public/js/logo-write.js`, `public/js/prerabka-3d.js`, `public/js/site.js`). Na playground.sarkozypatrik.sk je nasadená Prerábka 3D s novým poskladaním (Patrik: „poskladanie je super“) a verzia loadera s diagnostikou `?dbg`. Posledná oprava loadera (stráž triedy `ld-on`) je zbuildovaná v `out/` a overená vo WebKite, ale NEnasadená, čaká na súhlas. Po 2026-11-12 pribudli commity 0d33f29 až 4af1bcd (favicon, SEO frázy, OG obrázok, adresa beta webu, pätička #FF2712, video stavby v hale pre „Ako vzniká ihrisko“, favicon ?v=2).
+- AKTUÁLNE (2026-11-12): kolo Patrikových pripomienok je vo `v9-next/` hotové, nasadené na https://playground.sarkozypatrik.sk/ (Hostzone, noindex) a pushnuté na GitHub, vetva `v9`, commit 97edefc. Nič z tohto kola Patrik ani ja nevideli v prehliadači (štýl fast, bez testov, len build a HTTP kontrola 200/404). Zmeny: bledšia červená `--red-ui` #FF4632 na tlačidlách a v pätičke, plynulé kapitoly hero (`home.js`: stará zmizne, nová nabehne po nej, obrys rámika až po podklade), zalomenia cez `|` (len široko) a `\n` v textoch, Slinkee na začiatku slova `.sl--start`, pätička s veľkým logom (max 560 px) a loptičkami (žltá, oranžová, biela, papier, tmavá) len po čiaru nad copyrightom, Ihriská (úvod vyššie, nové fotky, sekcia montáže s `video/montaz.mp4` ako cieľ odkazov „Ako ihrisko vzniká“, prvky bez čísel), Prerábka (bez fotky hore, 3D s odpadnutou penou a lesklým výsledkom vo farbách renderu f_004, nové FAQ, bez slova „čínske“), Revízie (fotka až za Rozsahom, nové FAQ), Realizácie (6 kariet hore, potom riadky po 4 podľa kategórií so scrollom do strany, šípka, drag, jemný snap, rovnako galéria v detaile), O nás (nové fotky), formulár (červený hover a výber, animácia odoslania), cookie lišta (`Cookies.tsx`, priesvitná karta, voľba v localStorage `pg-cookies`), 404 (`app/global-not-found.tsx`, experimentálne `globalNotFound` v `next.config.ts`), placeholder obrázkov (`ImgReady.tsx`, `app/extras.css`).
+- Predtým (2026-11-11 15:34): pracuje sa LEN vo `v9-next/` (Next.js 16, statický export). Je nasadená na https://playground.sarkozypatrik.sk/ (Hostzone, priečinok `/home2/hkjdxbcf/playground`, noindex) a pushnutá na GitHub, vetva `v9` (partiksa/playground-web, posledný commit 0ae6d22). Je 1:1 s v9 (pixelovo overené na 7 stránkach): stránky sú TSX (`lib/v9.tsx` = port `v9/_build/build.py`, `app/[lang]/*/page.tsx`, `components/Chrome.tsx`, `Shell.tsx`, `JsonLd.tsx`), štýly `app/globals.css` (= v9 site.css), správanie poháňajú skripty z v9 v `public/js/` (site.js, home.js, ihriska.js, realizacie.js, kontakt.js, prerabka-3d.js, gsap), ktoré spúšťa `components/Scripts.tsx` po hydratácii. Z pôvodnej v9-next ostali: červený loader s písaným logom (`public/js/logo-write.js`), loptičky v pätičke (`FooterBalls.tsx`), adresy `/sk/ /cz/ /en/ /de/`, robots pre AI, `llms.txt`. Build: `cd v9-next && npm run build`, náhľad: `cd v9-next/out && python3 -m http.server 8947 --bind 127.0.0.1` → http://127.0.0.1:8947/sk/. `v9/` je zmrazená (len história, generátor build.py už nepoužívať). Záloha starého kódu v9-next: `_zalohy/v9-next-2026-11-11/` (nie je v gite).
+- NAJNOVŠIE (2026-11-11, `v9/`, lokálne, nekomitnuté, nenasadené): statický web v 4 jazykoch (SK v koreni, `cz/`, `en/`, `de/`), 7 stránok, generuje ho `python3 v9/_build/build.py` (texty v `v9/_build/i18n/*.json` prevzaté z v9-next + nové texty v build.py cez `T()`). HTML sa ručne neupravuje. Úvod: render kaviarne `new render` (185 snímok `v9/kav/`, scroll 5 výšok okna), text v rámiku zo 4 čiar, priehľadná hlavička s prepínaním farby podľa jasu záberu, za príbehom služby, čísla, realizácie, FAQ. SEO: canonical, hreflang, OG (`og.jpg`), JSON-LD, `sitemap.xml`, `robots.txt`, favicon. Paleta chladná: papier #DEDDDB, ink #141310, akcent len #FF2712. Server: `cd ~/Desktop/AI/loso && python3 -m http.server 8932 --bind 127.0.0.1`, http://127.0.0.1:8932/v9/. Overené v prehliadači 1440, 2560x1080, tablet a 390 px; Safari a reálny telefón nie.
+- NAJNOVŠIE (2026-11-10, lokálne, nekomitnuté, nenasadené): `v9-next/` = v9 prepísaná do Next.js 16 (statický export do `out/`, 7 stránok × SK/CZ/EN/DE na `/sk/`, `/cz/`, `/en/`, `/de/`, hreflang `cs` pre CZ). Podľa stretnutia s klientom: červený loader #FF2712 s písaným logom (z v5), jemný červený akcent, formulár (Nafukovacie atrakcie, „Iné“ otvorí pole, otázka na pôdorys a pole na súbor bez backendu, mailto), O nás 15 rokov a 6 krajín (SK, CZ, FR, IT, EE, RO), FAQ, loptičky v pätičke. SEO: metadata, sitemap, robots (aj AI roboty), JSON-LD, `llms.txt`. Texty: `messages/*.json`, `content/seo-*.json`, `faq-*.json`, `content/SEO-POZNAMKY.md`. Build: `cd v9-next && npm run build`, náhľad: `cd out && python3 -m http.server 8947 --bind 127.0.0.1`. Hosting neskôr Webglobe (`public/.htaccess`). v9 nezmenená.
+- AKTUÁLNE (v6, 2026-11-09, lokálne, nekomitnuté): Patrik píše, že web v6 je hotový (úvod a 6 podstránok, rovnaký štýl a animácie, načítanie s logom). Prešiel 1440 a 390 px. Reálny telefón a Safari neskúšané. Opravy z jeho zoznamu sú v procese, súbory `v6/` sa od 2026-11-06 17:45 nezmenili.
+- NAJNOVŠIE (2026-11-09, lokálne, nekomitnuté): v8 `v8/hero-pismena/` (index.html, main.js, style.css), server `v8/server.py`, adresa http://127.0.0.1:8931/hero-pismena/. Úvod: logo sa samo napíše, vo vnútri ťahov beží video, pri scrolle sa zväčší do ťahu P a kamera sa oddiali na celé ihrisko. Nadpisy vychádzajú po riadkoch raz. Nad pätičkou bazén s loptičkami (chytiť, hodiť). Sekcia „Ako ihrisko vzniká“ používa render z Blenderu, 768 snímok (`v8/render/`), video pri scrolle, zastaví sa na konci kapitoly, štítok sa prepína, snap bez zotrvačnosti. Overené v prehliadači desktop aj mobil, konzola bez chýb. Video na scroll má 17 MB, zmenšuje sa.
+- Predchádzajúce (2026-11-06, commit 9236700 na GitHube, vetva V6-verzia-2): v6 prerobená podľa poznámok Patrika. Nový úvod (hero s videom a voskovkovými kresbami, karty služieb, pás realizácií), loading s čiernym logom na papieri (intro.js, zmenší sa do hlavičky), Postup a Kde sa hodia s voskovkovými ilustráciami (v6/ill/crayon), Realizácie ako veľké riadky (5 najlepších fotiek veľko, 7 menších, filter zrušený), zoznam 3D vizualizácií (`VIZ` v build_v6.py), 3D rozloženie zjednodušené na 5 častí (siete ostávajú), reduced motion sa ignoruje, poistka proti prázdnej stránke (window.__ok, trieda fs). Akcenty: voskovkové podčiarknutia (`.mk`, ul-*.webp) a škvrny (dot-*.webp) v 7 farbách, žltá `--sun` #FFC93A, výzva na podstránkach v inej farbe (modrá, tyrkysová, fialová, oranžová, žltá), úvod červená. Skripty ilustrácií: tools/crayon, tools/crayon2 (strokes.py). Review server: `python3 tools/review_server.py` (8914, `?review`), telefón: tools/phone_server.py (8915).
 - NENASADENÉ: na playground-v1.sarkozypatrik.sk je staršia verzia v6 z 2026-11-06 (bez poslednej série zmien). Nasadenie len po súhlase Patrika: `python3 tools/deploy_v6.py` (dist-v6), záloha je v zaloha-playground-v1/. Príčina, prečo stránka na doméne Patrikovi nefungovala, nie je známa (v Chrome ide), čaká na jeho prehliadač a zariadenie.
 - NAJNOVŠIE (2026-11-05): v6 má lokálne (nekomitnuté, nenasadené) 3D z Blendera na Ihriská na mieru a Prerábka, mriežku 12/8/4, 3 varianty červeného akcentu (A/B/C, čaká na výber), krok „Dokedy“ vo formulári, bez tlačidla Pauza, opravu sekania slov a ilustrácie (pop silkscreen, gouache). Na kontrolu beží `tools/review_server.py` (port 8914, `?review&grid`), poznámky idú do `poznamky.json`. Podstránky v6 už generuje `tools/build_v6.py` (7 HTML), bod nižšie o odkazoch na v5 je zastaraný. Mobil (2026-11-05, podľa Patrika overené): bez posunu do strany, formulár sa vojde pri 720 px výšky, 3D model zväčšený, popisy na mobile skryté. Všetko lokálne, nič nenasadené ani nekomitnuté.
 - AKTUÁLNE je v6 (priečinok `v6/`, štýl quality, Switzer a Cabinet Grotesk, bez kurzívy, paleta ink #141310, papier #F7F4EE, sivá #6B6659, jediný odvážny prvok červená #FF2712). Na GitHube je vetva `V6-verzia-2` (commit 4220d93 z 2026-11-04 12:58, predtým 823aedd, bez zmien na `main` a `web`). Starší obsah nižšie (v1 až v5, identita) je história.
@@ -32,6 +42,61 @@ Moderný web firmy PLAYGROUND (interiérové detské ihriská, Trnava) s 3D ihri
 Odpovede klienta z formulára a súhrn z druhého počítača sú v `KLIENT.md`. Riadime sa ním. Hlavné: SEO a prvá strana Google, SK/EN/DE, viac samostatných stránok, jednoduchý admin, zostáva len logo, AI vizuály povolené, bez konfigurátora pre zákazníka.
 
 ## Otvorené úlohy
+- [ ] v9-next: Patrik spustí `npm run admin:deploy` a `npm run rz:deploy`, potom overí `/admin/` (heslo v `~/.config/playground-admin/heslo.txt`) a banner na úvode. PHP 8 s cURL na Hostzone neoverené.
+- [ ] v9-next admin: DeepL API Free kľúč do `v9-next/admin/config.php` (`deepl_key`); bez neho CZ/EN/DE dostanú slovenský text.
+- [ ] v9-next admin: rozhodnúť automatické nasadenie realizácií (návrh: GitHub Actions build + SFTP po uložení v admine). Zatiaľ ručne `npm run rz:deploy`.
+- [ ] v9-next admin: pri presune na Webglobe preniesť `/admin`, `/data` a `config.php`.
+- [ ] Na serveri ostali nepoužívané `img/naf-hlavna.webp` a `img/naf-hlavna-d.webp`. Zmazať len so súhlasom.
+- [ ] Nafukovacie atrakcie: slabé fotky (Chobotnica záber zblízka, Gladiátor detail, Klasik 440 px). Patrik: zatiaľ neriešiť, len nech sa dobre zobrazujú. Potvrdiť s klientom texty (doprava, 3 roky záruky, certifikáty).
+- [ ] `TEST-2026-11-15.md` je nesledovaný; opravy z neho sú v commite 824424f.
+- [ ] Dočasné súbory mimo projektu z hero pokusov: klon `/tmp/antialg/repo` a snímky `/tmp/hero*.png`. Zmazať len so súhlasom Patrika.
+- [x] v9-next (824424f): opravy z testu 2026-11-15 commitnuté (Fold 5, cookie lišta na šírku, chyby formulára). Pôvodne: oprava nálezov z testu 2026-11-15 (Sonnet prešiel web v Chrome a WebKite, nič neopravil): zoznam v `v9-next/TEST-2026-11-15.md` (6 bodov + nepreverené). Opravuje Opus.
+- [ ] v9-next: Patrik overí na https://playground.sarkozypatrik.sk/sk/ihriska/ (Cmd+Shift+R), či zmizli vodorovné pruhy na fotke `ihriska-prvky` (depth WebGL). Chyba sa v Playwright Chromium ani WebKit nezopakovala; nasadená je len poistka (overená len HTTP kontrola, nie vizuálne). Ak pretrváva: zistiť prehliadač a počet kariet.
+- [ ] v9-next: pruhy na `ihriska-prvky` nie sú v obrázku ani v 360 (overené). Ďalší kandidát je video „Ako vzniká ihrisko“ (`video/stavba.mp4`, pridané v da49c95): pruhy pripomínajú zle dekódované video, preveriť kódovanie (kodek, profil, pixel formát).
+- [ ] v9-next responzivita (štýl medium, 7 stránok × 4 jazyky, lokálne, nasadiť až po kontrole Patrika): prezrieť snímky v `/tmp/pgresp/sheets/`; preveriť DE kartu Klatovy (text pretečie na iPad Pro a Nest Hub, `de/realizacie`), slovo „Playgrounds“ mimo obrazovky na Fold 5 (344 px, `en/ihriska`), cookie lištu na mobile na šírku (asi 40 % výšky) a veľké nadpisy na 1920 a 2560 px (pretečenie > 16 px, asi prečnievanie Slinkee).
+- [ ] Claude in Chrome: v tejto session nedostupné (`/chrome isn't available in this environment`). Skúsiť `claude --chrome` v novej session, inak ostáva Playwright.
+- [ ] Na serveri ostali nepoužívané súbory `img/samorin-*` a `img/projekt-06.webp` (SFTP nemaže). Zmazať len so súhlasom.
+- [x] v9-next: nasadiť opravu loadera (stráž `ld-on`), nasadené 2026-11-14.
+- [ ] v9-next: loader je nasadený (2026-11-14); Patrik overí na iPhone (iOS 26, Safari), či sa logo napíše.
+- [x] v9-next: zmeny z 13. a 14. 11. sú v commite a2d57e1. Pôvodne: commitnúť zmeny z 2026-11-13 a 14 do vetvy `v9` (len `v9-next/`, trailer JackClash99, bez Claude trailera), len po súhlase. `git status` ukazuje aj zmeny mimo v9-next (`v5/frames/render/*`, `tools/*/__pycache__`), tie do commitu nedávať.
+- [ ] v9-next: na iPhone niečo mení HTML pred hydratáciou (React chyba #418, stránka sa vykreslí nanovo). Pravdepodobne rozšírenie Safari; zistiť zo zoznamu rozšírení Patrika, ak bude treba.
+- [ ] v9-next: rozhodnúť o `Cache-Control: no-cache` pre HTML v serverovom `.htaccess` (aj `public/.htaccess`); Safari inak drží staré HTML heuristicky hodiny. Patrik zatiaľ neodpovedal.
+- [ ] v9-next: anglické texty podľa write-good (10 návrhov, napr. „How we build a custom playground“, „Venue type“, „to handle my inquiry“): Patrik povedal „kašľať na to“, odložené.
+- [ ] KONTEXT.md: Stav z 2026-11-12 uvádza pätičku #FF4632 a montáž `video/montaz.mp4`; commity 3c1153e a da49c95 to menia (pätička #FF2712, video stavby v hale). Potvrdiť s Patrikom.
+- [ ] v9-next: Patrik skontroluje nové kolo v prehliadači (nikto ho nevidel): hero prechody a obrys rámika, pätička (logo, loptičky), Realizácie (riadky, šípka, drag, snap, galéria v detaile), Prerábka 3D (odpadnutá pena, farby), formulár (animácia odoslania), cookie lišta, 404, zalomenia vo všetkých 4 jazykoch.
+- [ ] v9-next: alt texty pri nových fotkách (`ihriska-konstrukcia`, `ihriska-prvky`, `ihriska-sklad`, `prerabka-stahovanie`, `onas-hlavna`, `onas-zvnutra-1..3`) stále opisujú staré fotky (Pezinok, Trnava, Hlohovec, Šamorín), prepísať v `messages/*.json`.
+- [ ] v9-next: od klienta potvrdiť odhady vo FAQ (revízia trvá hodiny až deň, sťahovanie dni až 1 až 2 týždne) a vetu „používame len certifikované materiály a diely“ (rovnaká otázka ako certifikát EN 1176).
+- [ ] v9-next: cookie lišta zatiaľ právne netreba (web nemá analytiku), ostala podľa Patrika. Pri pridaní analytiky napojiť na `window.PG_COOKIES`; doplniť odkaz na ochranu súkromia, ak vznikne stránka.
+- [ ] v9-next: 404 používa experimentálne `globalNotFound` (Next 16); pri aktualizácii Next skontrolovať, že `out/404.html` vzniká.
+- [ ] v9-next: render montáže je 12 s video `public/video/montaz.mp4` (z v9); zdrojové snímky `~/Desktop/hrisko/stavba/` (240 JPG), blend `ihrisko-b-stavba.blend`.
+- [ ] v9-next: od klienta potvrdiť fakty v sekcii „Prečo PLAYGROUND“: 24 mesiacov záruky, dodanie 5 až 8 týždňov, certifikácia podľa EN 1176 (kto certifikát vydal). Pred nasadením na play-ground.sk.
+- [ ] v9-next: overiť na reálnom telefóne a v Safari (Patrik má zapnuté Obmedziť pohyb, web ho teraz ignoruje).
+- [ ] v9-next: optimalizácia médií (`out/` má asi 65 MB), kontrast bieleho textu na #FF2712.
+- [ ] v9-next: od klienta overiť rok založenia (odhad 2011), sociálne siete; preklady CZ, EN, DE dať skontrolovať rodenému hovoriacemu.
+- [ ] v9-next: `projekt-06.webp` po úprave v ChatGPT má na sebe ľudí (zatiaľ sa na webe nepoužíva); `projekt-05.webp` bol v zozname „do AI neposielať“.
+- [ ] v9-next: ostré nasadenie na play-ground.sk (Webglobe, `public/.htaccess`) a backend formulára; len po súhlase.
+- [ ] Rozhodnúť, či vetvu `v9` zlúčiť do `main` (push na main spúšťa GitHub Pages) a či odstrániť `v9/` z repozitára.
+- [x] v9: fotky z ChatGPT (projekt-01, 05, 06, 08, 12, samorin 4×) sú v `img/` aj v v9-next/public (2026-11-11, depth mapy pre ne nie sú).
+- [x] v9: rozhodnúť vzťah v9 a v9-next: ide sa len vo v9-next (2026-11-11).
+- [ ] v9: Patrik skontroluje web http://127.0.0.1:8932/v9/ (aj CZ/EN/DE).
+- [ ] v9: kontrola animácií (prebieha): po prescrollovaní sa musia zobraziť všetky animované prvky, nič nesmie ostať neviditeľné. Na 7 stránkach, SK aj CZ/EN/DE. Počítač a mobil prejdené, reálny telefón a Safari nie.
+- [ ] v9: fotky upraviť v ChatGPT podľa `v9/FOTKY-CHATGPT.md` (len svetlo, farby, perspektíva, neporiadok; deti do AI nie). Po úprave fotky v `img/` prerobiť depth mapu `-d.webp`.
+- [ ] v9: nové texty v CZ, EN, DE dať skontrolovať rodenému hovoriacemu.
+- [ ] v9: overiť Safari a reálny telefón.
+- [ ] v9: rozhodnúť vzťah v9 a v9-next (dve paralelné verzie s rovnakým obsahom).
+- [ ] v9: model v Prerábke má po prerobení farby tyrkysová, ružová, žltá; Patrik rozhodne, či prefarbiť na odtiene červenej.
+- [ ] v9: `index-stavba.html` (staré hero na porovnanie) pred nasadením zmazať (v robots.txt je zakázaný).
+- [x] v9 (hotové 2026-11-09): Slinkee „I“ vyzerá ako J („detI“). Patrik ho nahrádza iným písmenom, na úvode sú to veľké písmená a opravuje na veľké. Dorobiť a overiť.
+- [x] v9 (hotové 2026-11-09): spojka „a“ ostáva na konci riadku. Pevná medzera za „a“ vo všetkých stránkach v6.
+- [x] v9 (hotové 2026-11-09): video ako náhľad ukazuje prázdnu prvú snímku. Opraviť.
+- [x] v9 (hotové 2026-11-09): detail realizácie, fokus pri otvorení nepristál na „Zavrieť“. Opraviť.
+- [x] v9 (hotové 2026-11-09): detail realizácie, kláves šípky padá na udalosti bez cieľového prvku. Opraviť.
+- [x] v9 (hotové 2026-11-09): mobil, odsadenie riadkov. Opravuje Patrik, bez posunu do strany na všetkých 7 stránkach.
+- [ ] v6: overiť depth WebGL a formulár (Patrik overuje).
+- [ ] v6: overiť na reálnom telefóne a v Safari (Patrik neskúšal).
+- [ ] v8: zmenšené video na scroll (17 MB) dokončiť, overiť, že sa nezhorší plynulosť scrollu a kapitoly zostávajú čitateľné.
+- [ ] v8: overiť svetlý prechod pod kapitolami na živej verzii a na telefóne (Patrik).
+- [ ] v8: rozhodnúť, či sa render 768 snímok nasadí do v8 a kde (zatiaľ len lokálne, nasadenie len po súhlase).
 - [ ] v6: Patrik vyberie variant červeného akcentu A, B alebo C. Potom nechať jeden, prepínač a ostatné varianty odstrániť.
 - [ ] v6: prečítať `poznamky.json` (Patrikove poznámky z ?review), opraviť. Zmazať testovaciu poznámku id 72eb965f (zmazanie nástrojom bolo zablokované).
 - [ ] v6: overiť opravu sekania slov na živom webe (lokálne sa chyba nedala zopakovať) a 3D v Safari a na telefóne.
@@ -64,6 +129,38 @@ Odpovede klienta z formulára a súhrn z druhého počítača sú v `KLIENT.md`.
 Mimo v3: zvyšných 8 podstránok z menu, doladený mobil, deploy, nové detaily 3D modelu, fotogrametria, CMS.
 
 ## Rozhodnutia
+- Admin (Patrik, 2026-11-21, štýl medium, odpovede B/2 neskôr/A/A/A/A+B/A/A/A): PHP admin na Hostzone, jedno heslo, preklad DeepL Free pri uložení, preklad sa zverejní hneď a klient ho môže opraviť (ručná oprava sa neprepíše), realizácie pridať/upraviť/zmazať/poradie, banner s prednastavenými farbami aj vlastnou, text banneru sa prekladá, po scrolle zmizne a hore sa vráti. Automatické nasadenie realizácií sa rozhodne neskôr; na GitHube zapísané ako nedokončené.
+- Realizácie (2026-11-21): jediný zdroj `v9-next/content/realizacie.json` (slug, skupina, titulná fotka, galéria, texty SK/CZ/EN/DE). `RZ` v `lib/v9.tsx` a `realizacie.items` v `messages` zrušené. Fotky z adminu idú do `public/rz/<slug>/NN.webp`.
+- Banner (2026-11-21): web číta `/data/banner.json` za behu (bez buildu), len na úvode (`public/js/banner.js`). Farba textu podľa kontrastu WCAG (na červenej tmavý text).
+- Hlavička (2026-11-21): telefón v lište menu nie je (Patrik: vyzerá zle). Menu so 7 položkami sa zbalí do tlačidla pod 1260 px (predtým 980 px), texty menu sa nelámu.
+- Nafukovacie atrakcie (Patrik, 2026-11-20, štýl fast, odpovede AAAAA a ADAB): prenájom aj predaj, fotky a texty zo starého play-ground.sk bez úprav v ChatGPT, maľovanie na tvár ostáva, v menu za Revíziami. Adresa `/sk/nafukovacie-atrakcie/`, v menu SK „Nafukovacie atrakcie“, CZ „Nafukovací atrakce“, EN „Inflatables“, DE „Hüpfburgen“. Bez veľkej fotky hore (bola orezaná na pás).
+- Git (2026-11-21): commity idú na vetvu `final` s trailerom Co-authored-by JackClash99, bez Claude trailera.
+- Hero vizuál (Patrik, 2026-11-17): žiadny z troch návrhov sa nepoužije (`index.html`, `hala.html` so satelitným snímkom a `vykres.html` s 3D ihriskom z `ihrisko.glb`). Zmazané bez zálohy, lebo mimo gitu.
+- Fotky z ChatGPT (Patrik, 2026-11-14): všade len prerobená verzia, originály sa mažú (git ich drží v histórii). Prerobené verzie prepísali súbory v galériách `rz/` pod pôvodným názvom.
+- Depth mapy (Patrik, 2026-11-14): na všetkých fotkách podstránok vrátane kariet realizácií, nie v galérii po rozkliku. Generuje Depth Anything V2 Small (cache HF) cez `uv run --with torch --with transformers` skriptom `/tmp/pgdepth/run.py`, výstup `<foto>-d.webp` šírka 900. Galéria `realizacie` filtruje `-d.webp`.
+- Favicon (Patrik, 2026-11-14): čierne (ink #141310) P na červenej #FF2712, ťah hrubší obrysom 7 jednotiek (hrúbka 10 zalieva vnútro P). Verzia ikon `?v=3`. Ak Patrik chce čistú #000, zmeniť v `public/favicon.svg`.
+- Pätička (Patrik, 2026-11-14): len veľké logo, malé logo pri claime odstránené.
+- Slinkee nemá Ä, Ö, Ü, ß ani diakritiku: v `{X}` značkách používať len ASCII písmená (DE „Wän{D}en“).
+- WebGL depth (2026-11-14): pri `webglcontextlost` sa plátno odstráni a ostane fotka; MAXGL 6 (predtým 10).
+- Testovanie responzivity: Playwright WebKit aj Chromium v `/tmp/pwk`, skript `/tmp/pwk-scripts/resp.js` (20 zariadení podľa Chrome DevTools, `LANGS`, `DEVS`, `SHOT=1`, `OUT`), cookie voľba v localStorage `pg-cookies` = `necessary`.
+- Prerábka 3D (Patrik, 2026-11-13): pokazené diely (odpadnutá pena) úplne preč. Časť 1 staré ihrisko inak poskladané (plošiny a šmykľavka otočené o 180° okolo stredu konštrukcie `PIVOT`), časť 2 rozloženie, prefarbenie a otočenie do nového poskladania, časť 3 nové ihrisko.
+- Loader (2026-11-13): logo sa kreslí cez requestAnimationFrame a atribúty (nie Web Animations), skripty z `public/js` sa sťahujú súbežne a majú verziu buildu v adrese (`?v=PG_V` z `next.config.ts`), limit loadera 9 s, CSS poistka 10 s. Stráž triedy `ld-on` v inline skripte v `app/[lang]/layout.tsx` (`window.__pgLd`), lebo pri chybe hydratácie #418 React zmaže triedy na `<html>`.
+- Testovanie Safari bez iPhonu (Patrik, 2026-11-13: „vyrieš to bez iphone“): Playwright WebKit v `/tmp/pwk` (emulácia iPhone 15 Pro), skripty `/tmp/pwk-scripts/`. Web Inspector so Safari 27.2 na Macu iPhone v menu Vývoj nezobrazil.
+- Kolo 2026-11-11 večer (Patrik, štýl fast, bez testov): červená na tlačidlách a v pätičke len o kúsok bledšia (#FF4632, nie ružová), loader a bodky ostávajú #FF2712. Filter v Realizáciách zrušený, nahradený riadkami podľa kategórií. Pätička: veľké logo namiesto napísaného slova, loptičky padajú za textom od horného okraja po čiaru nad copyrightom. Slovo „čínske“ sa nepoužíva (je „nekvalitné“). Fotky z ChatGPT sa nasadzujú ako `public/img/<názov>.webp` (WebP q80, šírka 1800). Prerábka 3D: staré ihrisko má odpadnutú penu, výsledné farby podľa `v5/frames/render/f_004.webp`.
+- Model a delegovanie (Patrik, 2026-11-11): práca so Sonnetom 5 na ľahšie úlohy, Opus 5 len na naozaj zložité; usage bolo na 73 %, preto sa väčšina robila priamo bez subagentov (subagent len na cookies, 404, placeholder).
+- Len v9-next (Patrik, 2026-11-11): ďalej sa pracuje iba v Next.js verzii, v9 sa nemení. Adresy `/sk/`, `/cz/`, `/en/`, `/de/` (koreň presmeruje na /sk/). Prvky len z v9-next (červený loader s písaným logom, loptičky v pätičke) ostávajú.
+- Pätička červená #FF2712 s tmavým textom (Patrik, 2026-11-11), mení predchádzajúce „Pätička ink“. Loptičky v pätičke v papierovej, bielej a tmavej.
+- Loader (Patrik, 2026-11-11): len na úvode, vždy (aj po kliknutí na logo a pri obnovení), na podstránkach nikdy.
+- Obmedziť pohyb (prefers-reduced-motion) sa ignoruje (Patrik, 2026-11-11): loader, depth fotky, 3D Prerábky aj prechody bežia vždy. Patrik bol upozornený na prístupnosť.
+- Sekcia „Prečo PLAYGROUND“ (Patrik, 2026-11-11): 5 výhod s čiarovými ikonami (tmavá čiara, červená bodka) na úvode, v Ihriskách na mieru (sekcia 06) a v O nás. Vlastný text, nie prevzatý od konkurencie (interieroveihriska.sk = REATEK). Fakty podľa Patrika: 24 mesiacov záruky, 5 až 8 týždňov, „Certifikované produkty“ (EN 1176).
+- Testovacia subdoména playground.sarkozypatrik.sk má `X-Robots-Tag: noindex` len v nahranej kópii (`.htaccess`), lokálne súbory sú bez neho.
+- Kompozícia a responzivita (2026-11-11, štýl medium): menšie medzery sekcií, krátke zoznamy v 2 stĺpcoch, obsah max. 2000 px na širokom monitore s väčším písmom od 1600 px, iPad realizácie a karty v 2 až 3 stĺpcoch.
+- Farby v9 (Patrik, 2026-11-10): žiadna béžová, ostáva chladný papier #DEDDDB; akcent len červená #FF2712, odtiene len jej bledosť (napr. hover), nie iné farby ani tmavé červené plochy. Pätička ink, výzva bez farebného podkladu.
+- Hero v9 (Patrik, 2026-11-10): render kaviarne na celú obrazovku (cover, nikdy nenaťahovať), rýchlejší scroll (viac snímok na scroll), text v rámiku animovanom s textom, hlavička priehľadná bez podkladu.
+- Jazyky v9 (2026-11-11): SK, CZ, EN, DE ako v9-next; adresy podstránok slovenské vo všetkých jazykoch. Fakty zo stretnutia s klientom: 15 rokov, 180+ projektov, 6 krajín (SK, CZ, FR, IT, EE, RO).
+- Slinkee nemá písmená s diakritikou a „I“ vyzerá ako J; v prekladoch sú tieto nadpisy prepísané v `OVR` v build.py.
+- v6 načítanie (Patrik, 2026-11-09): logo v strede cez celú obrazovku, preletí na svoje miesto v hlavičke, pod ním sa odkryje stránka. Ukáže sa len pri prvej návšteve, pri prechode medzi stránkami sa neopakuje.
+- Slinkee „I“ (Patrik, 2026-11-09): vyzerá ako J, preto sa nahrádza iným písmenom. Tvar Patrik ešte doladí.
 - v6 mobil (Patrik, 2026-11-05): na mobile sa 3D model zväčší a popisy dielov sa skryjú, lebo sa prekrývali. Kroky pod modelom to vysvetľujú.
 - v6 mobil (Patrik, 2026-11-05): formulár sa overuje na výške 720 px a 1280x720 podľa snímky, výška stránky sa počíta aj s pätičkou.
 - v6 mobil (Patrik, 2026-11-05): mobil nesmie mať posun do strany. Je to záväzná podmienka pri každej ďalšej úprave.
@@ -99,6 +196,72 @@ Mimo v3: zvyšných 8 podstránok z menu, doladený mobil, deploy, nové detaily
 - Pôvodné rozhodnutia: model z jednoduchých tvarov podľa fotiek Šamorín, PBR textúry CC0, žiadne padanie dielov (fade a malý posun), logo biele SVG cez CSS mask, len lokálne.
 
 ## Posledné zmeny
+### 2026-11-21: admin pre realizácie a banner, číslo preč z lišty
+- PHP admin `v9-next/admin/` (prihlásenie, realizácie, banner, upload s kontrolou, CSRF, DeepL) a banner na úvode; overené lokálne cez `php -S` a agent-browser (API, upload, banner na 1280 a 390 px, galéria realizácií).
+- Realizácie presunuté do `content/realizacie.json`; počet projektov v nadpise sa počíta sám.
+- Zverejnenie `scripts/publish.mjs` (`npm run rz:publish`, `rz:deploy`, `admin:deploy`), depth mapy `scripts/depth.py`; postup v `v9-next/ADMIN.md`.
+- Telefón odstránený z lišty menu; Nafukovacie atrakcie: Dino fotka vymenená, Drak bez vodoznaku OPPO, bez veľkej fotky hore.
+- GitHub `final`: 4d59c9d, 9d4da3f. Na serveri nič z tohto dňa (SFTP zablokované systémom povolení, nasadí Patrik).
+
+### 2026-11-20: Nafukovacie atrakcie, deploy, menu 1260 px
+- Nová stránka `v9-next/app/[lang]/nafukovacie-atrakcie/` v 4 jazykoch: prenájom (11 kariet), predaj, FAQ, výzva; 12 fotiek zo starého webu (WebP, depth mapy), SEO, sitemap, JSON-LD, `llms.txt`.
+- Menu so 7 položkami sa lámalo; texty bez zalomenia, zbalenie pod 1260 px (namerané v 4 jazykoch).
+- Commity 824424f (opravy zo 16. 11.) a 97edefc na vetve `final`, pushnuté.
+- Deploy na playground.sarkozypatrik.sk (SFTP, 17 s), HTTP 200 pre 4 nové stránky, 404 pre neexistujúcu, noindex ostáva.
+
+### 2026-11-17: hero vizuál, tri pokusy zmazané
+- Pripravené tri hero návrhy v `loso/hero-vizual/`: `index.html`, `hala.html` (satelitný snímok, fluorescenčná farba, seed `seed.py visual`, bez región a prostredie zo seedu) a `vykres.html` (3D ihrisko z `ihrisko.glb` ako výkres, začína pôdorysom, prepínač Pôdorys a Axonometria).
+- Patrik všetky tri zamietol, priečinok zmazaný, server na porte 8951 zastavený. Ostatné súbory sa nemenili, `identita-hero.html` a `tools/gemini_hero_snimky.py` nie sú z tejto session.
+- Dočasné súbory mimo projektu (`/tmp/antialg/repo`, `/tmp/hero*.png`) ostali, čaká sa na súhlas na zmazanie.
+
+### 2026-11-15: pruhy na ihriska-prvky, poistka nasadená, kandidát video
+- Fotka `ihriska-prvky` aj jej depth mapa sú v poriadku, chyba je pri vykresľovaní WebGL efektu (reprodukcia na stránke Ihriská v prehliadači).
+- Vylúčená 360 vizualizácia (pruhy sa v nej nevyskytujú). Ďalší kandidát: video „Ako vzniká ihrisko“ (`video/stavba.mp4`, da49c95), pruhy pripomínajú zle dekódované video, kódovanie ešte nepreverené.
+- Poistka WebGL funguje: po strate kontextu sa plátno odstráni, ostane fotka a efekt sa znovu nespustí. Nasadená na playground.sarkozypatrik.sk (nový `site.js` na serveri), HTTP 200 pre stránky, 404 pre neexistujúcu adresu. Chyba sa nedala zopakovať, oprava nie je overená.
+- Rýchla kontrola, že nič nie je rozbité, nie je zaznamenaná. Overená je len HTTP kontrola po nasadení.
+### 2026-11-14: opravy kola, deploy, responzivita, poistka WebGL
+- Nemčina: „W{Ä}nden“ na „Wän{D}en“ (Slinkee nemá Ä). Pätička bez malého loga. Formulár: „Iné“ pri type prevádzky otvorí pole `typ_ine` (aj do e-mailu).
+- Fotky: 11 originálov v galériách a kartách (Pezinok, Karviná tubing, Trnava, Praha, Hlohovec, Šamorín ×4, `projekt-02`, `projekt-10`) nahradené verziami z ChatGPT; 9 nepoužitých kópií v `img/` zmazaných. 17 nových depth máp.
+- Favicon čierne hrubšie P na červenej (SVG, PNG, ICO, apple-touch), `?v=3`.
+- Deploy 2× na playground.sarkozypatrik.sk (SFTP dávka `/tmp/pg-sftp.txt`), HTTP 200/404 overené. Druhý deploy: poistka WebGL kvôli pruhom na `ihriska-prvky` v Patrikovom prehliadači (nezopakované).
+- Responzivita: automatická kontrola 20 zariadení × 7 stránok × 4 jazyky bez zásadných chýb; zoznam na preverenie v Otvorených úlohách.
+### 2026-11-13: Prerábka 3D nové poskladanie, oprava loadera na iPhone
+- Prerábka 3D: najprv jemnejšie pokazené diely (nasadené), potom pokazenie zrušené a nahradené iným poskladaním starého ihriska, ktoré sa v časti 2 preskladá na nové (nasadené, overené snímkami v 5 fázach).
+- Loader na iPhone (iOS 26, Safari): len bliknutie červenej. Opravy: rAF kreslenie, súbežné sťahovanie skriptov, verzia `?v=` v adrese, limity 9 s a 10 s (nasadené, nepomohlo).
+- Príčina reprodukovaná vo WebKite: zmena HTML pred hydratáciou spôsobí chybu React #418, React zmaže `ld-on`, loader sa preskočí. Oprava: stráž `ld-on` v inline skripte; diagnostika `?dbg` odstránená (zbuildované, nenasadené).
+- write-good (btford/write-good) na anglických textoch: 17 nálezov, 10 návrhov opráv, Patrik ich odložil.
+- Safari na Macu aktualizovaný na 27.2 (Patrik), Web Inspector iPhone nevidí.
+### 2026-11-12: kolo pripomienok, deploy a push (97edefc)
+- Všetky body z Patrikovho zoznamu implementované vo `v9-next/` (pozri Stav): červená, hero prechody, zalomenia, pätička, Ihriská, Prerábka, Revízie, Realizácie, O nás, formulár, cookies, 404, placeholder; texty a FAQ vo všetkých 4 jazykoch.
+- Deploy na playground.sarkozypatrik.sk cez SFTP: nahraté `_next _not-found 404 cz de en sk img js rz video` + koreňové súbory; `kav frames 360 models vendor fonts` a serverový `.htaccess` (noindex) bez zmeny. HTTP: stránky 200, neexistujúca adresa 404.
+- GitHub: commit 97edefc na vetve `v9` (len `v9-next/`, trailer Co-authored-by JackClash99), `main` bez zmeny.
+- Chyba: texty a zalomenia v CZ, EN, DE som nastavil v kóde, ale vizuálne neprešiel. Pri Cookies a 404 doplnil Sonnet experimentálnu voľbu `globalNotFound`.
+### 2026-11-11: v9-next 1:1 s v9, deploy na playground.sarkozypatrik.sk, GitHub vetva v9
+- Kompozícia (bez prázdnych miest) a responzivita (390, 820, 1180, 1440, 2560 px) vo v9; fotky z ChatGPT nasadené.
+- v9-next prepísaná 1:1 podľa v9 (TSX + skripty z v9), pixelovo porovnané; build bez chýb.
+- Deploy na Hostzone: nová subdoména playground.sarkozypatrik.sk (cPanel UAPI), najprv v9, potom nahradená v9-next. Staré HTML v9 zo servera zmazané.
+- Pridané: červená pätička, sekcia „Prečo PLAYGROUND“ (úvod, Ihriská, O nás), loader len na úvode a vždy, ignorovanie Obmedziť pohyb.
+- GitHub: vetva `v9` (commity 49ee390 až 0ae6d22) s v9 aj v9-next, `main` bez zmeny.
+
+### 2026-11-11: v9 jazyky, SEO, nové sekcie, render kaviarne (lokálne, nekomitnuté, nenasadené)
+- Generátor `v9/_build/build.py`, 28 stránok (SK, CZ, EN, DE), sitemap, robots, JSON-LD, OG, favicon. Záloha stavu pred generátorom: `v9/_build/snapshot-2026-11-10/`.
+- Úvod: render `new render` (185 snímok), rámik zo 4 čiar, priehľadná hlavička; nové sekcie služby, čísla, realizácie, FAQ.
+- Podstránky: Ihriská (postup, realizácie, FAQ), Prerábka (kedy sa oplatí, realizácie, FAQ, oprava import mapy 3D), Revízie (čo kontrolujeme, priebeh, FAQ), Realizácie (filter, popisy, otvorenie cez #slug), O nás (15 rokov, 6 krajín), Kontakt (nafukovacie atrakcie, „Iné“, pôdorys).
+- Paleta späť na chladnú, akcent #FF2712; Slinkee G v pätičke odsunuté od Y.
+- Chyba: generátor raz prepísal ručné úpravy inej relácie, obnovené zo zálohy a prenesené do build.py.
+### 2026-11-09: v6 finálne kolo, Patrikove pripomienky (lokálne, nekomitnuté)
+- Patrik: web v6 hotový (úvod a 6 podstránok), načítanie s logom funguje, 7 stránok prešiel na 1440 a 390 px.
+- Opravy v procese: Slinkee „I“, spojka „a“ na konci riadku, prázdna prvá snímka videa, fokus a šípky v detaile realizácie, odsadenie riadkov na mobile.
+- Overené Patrikom: detail realizácie. Overuje sa: depth WebGL, formulár, mobil.
+- Neskúšané: reálny telefón a Safari. Súbory `v6/` sa od 2026-11-06 17:45 nezmenili, opravy zatiaľ nie sú v kóde.
+
+### 2026-11-09: v8 hero-pismena (lokálne, nekomitnuté, nenasadené)
+- Nová stránka `v8/hero-pismena/`: úvod s písaným logom a videom vo vnútri ťahov, pri scrolle zväčšenie do ťahu P a oddialenie kamery.
+- Nadpisy po riadkoch raz pri prvom zobrazení. Nad pätičkou bazén s loptičkami (chytiť, hodiť, pri prvom zobrazení napadajú).
+- Sekcia „Ako ihrisko vzniká“: render 768 snímok hotový, spájaný do videa. Video sa zastaví na konci kapitoly, štítok sa prepína. Snap bez zotrvačnosti scrollu (vždy najbližšia kapitola). Pod kapitolami svetlý prechod kvôli čitateľnosti.
+- Overené v prehliadači desktop a mobil, konzola bez chýb. Stav videa 17 MB: zmenšenie v procese.
+- Poznámka: session zhrnutie malo dva údaje o renderi (snímka 460 zo 768 a hotových 768). Zapísaný je posledný stav (hotový).
+
 ### 2026-11-05: v6 mobil (lokálne, nekomitnuté, nenasadené)
 - Mobil nemá posun do strany. Podľa Patrika overené.
 - Formulár: pri 1280x720 sa vojde (výška stránky vrátane pätičky, overené na snímke). Pri 720 px výšky sa vojde tiež.
@@ -265,4 +428,4 @@ Mimo v3: zvyšných 8 podstránok z menu, doladený mobil, deploy, nové detaily
 - Assety z play-ground.sk: logo, fotky, farby, písmo Kanit.
 
 ## Ďalší krok
-Patrik prejde v6 na http://127.0.0.1:8914/index.html?review&grid, vyberie variant akcentu (A/B/C) a zapíše poznámky. Potom ich prečítať z `poznamky.json`, opraviť a po súhlase nasadiť na playground-v2.
+Počkať na výsledok Patrikovho nasadenia (`npm run admin:deploy`, `npm run rz:deploy`): ak admin ukáže chybu, preveriť verziu PHP v cPaneli; potom doplniť DeepL kľúč a rozhodnúť automatické nasadenie realizácií.
