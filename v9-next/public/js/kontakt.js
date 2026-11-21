@@ -7,7 +7,8 @@
 
   // predvyplnenie z odkazu (kontakt.html?co=prerabka)
   var co = new URLSearchParams(location.search).get("co");
-  if (co) { var r = form.querySelector('input[name="co"][value="' + co + '"]'); if (r) r.checked = true; }
+  // len známe hodnoty (písmená), iné by rozbili CSS selektor
+  if (co && /^[a-z]{1,20}$/.test(co)) { var r = form.querySelector('input[name="co"][value="' + co + '"]'); if (r) r.checked = true; }
 
   function reveal(el, on) {
     if (on === !el.hidden) return;
@@ -46,17 +47,17 @@
   }
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    var bad = [];
-    ["meno", "email"].forEach(function (n) {
-      var el = form.elements[n], ok = n === "email" ? /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim()) : !!el.value.trim();
-      el.setAttribute("aria-invalid", !ok);
-      if (!ok) bad.push(el);
-    });
-    var otherIn = form.elements.co_ine;
-    if (v("co") === "ine" && !v("co_ine")) { otherIn.setAttribute("aria-invalid", "true"); bad.push(otherIn); }
-    if (bad.length) { err.textContent = bad[0] === otherIn ? KT.errOther : KT.errContact; bad[0].focus(); return; }
-    if (v("plan") === "ano" && fileBad) { err.textContent = fileMsg.textContent; file.focus(); return; }
-    if (!form.elements.suhlas.checked) { err.textContent = KT.errConsent; form.elements.suhlas.focus(); return; }
+    // všetky chyby naraz: každé chybné pole sa zvýrazní, správy idú pod seba, fokus na prvé
+    var bad = [], msgs = [];
+    function mark(el, ok) { if (ok) el.removeAttribute("aria-invalid"); else { el.setAttribute("aria-invalid", "true"); bad.push(el); } return ok; }
+    var otherIn = form.elements.co_ine, consent = form.elements.suhlas;
+    if (!mark(otherIn, v("co") !== "ine" || !!v("co_ine"))) msgs.push(KT.errOther);
+    var okName = mark(form.elements.meno, !!v("meno"));
+    var okMail = mark(form.elements.email, /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v("email")));
+    if (!okName || !okMail) msgs.push(KT.errContact);
+    if (!mark(file, !(v("plan") === "ano" && fileBad))) msgs.push(fileMsg.textContent);
+    if (!mark(consent, consent.checked)) msgs.push(KT.errConsent);
+    if (bad.length) { err.textContent = msgs.join(" "); bad[0].focus(); return; }
     err.textContent = "";
     var none = KT.none, plan = v("plan") === "ano";
     var lines = [
@@ -84,7 +85,9 @@
       ScrollTrigger.refresh();
     }, 750);
   });
-  form.addEventListener("input", function (e) { if (e.target.getAttribute("aria-invalid") === "true") e.target.removeAttribute("aria-invalid"); });
+  function clearInvalid(e) { if (e.target.getAttribute("aria-invalid") === "true") e.target.removeAttribute("aria-invalid"); }
+  form.addEventListener("input", clearInvalid);
+  form.addEventListener("change", clearInvalid);
   document.getElementById("copy").addEventListener("click", function () {
     var b = this;
     navigator.clipboard.writeText(KT.to + ": info@play-ground.sk\n\n" + body).then(function () { b.textContent = KT.copied; });

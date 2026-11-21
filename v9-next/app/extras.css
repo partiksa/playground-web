@@ -29,7 +29,18 @@
 .ck-btn--main { background: rgba(20, 19, 16, .88); color: var(--paper); box-shadow: none; }
 .ck-btn--main:hover { background: var(--ink); box-shadow: none; }
 .ck-btn:active { transform: scale(.96); }
-@media (max-width: 420px) { .ck-b { flex-direction: column; } }
+@media (max-width: 360px) { .ck-b { flex-direction: column; } }
+/* desktop: vpravo, aby nezakrývala kartu úvodu vľavo dole */
+@media (min-width: 900px) { .ck { left: auto; right: var(--pad, 16px); transform-origin: 80% 100%; } }
+/* mobil na šírku: nízka lišta v jednom riadku vpravo */
+@media (max-height: 520px) and (orientation: landscape) {
+  .ck { left: auto; right: var(--pad, 16px); bottom: 10px; width: min(540px, calc(100vw - 2 * var(--pad, 16px)));
+    grid-template-columns: 1fr auto; align-items: center; gap: 12px; padding: 10px 10px 10px 16px; border-radius: 14px; }
+  .ck-h { display: none; }
+  .ck-t { font-size: .8125rem; line-height: 1.35; }
+  .ck-b { margin-top: 0; flex-direction: row; }
+  .ck-btn { height: 36px; padding: 0 12px; font-size: .8125rem; }
+}
 
 /* Placeholder obrázkov */
 .dp:not(.is-ld)::after {
