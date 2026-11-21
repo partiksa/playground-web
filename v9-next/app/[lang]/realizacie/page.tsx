@@ -1,18 +1,10 @@
 import Shell from "@/components/Shell";
 import { toLang } from "@/lib/i18n";
 import { pageMetadata } from "@/lib/meta";
-import { isize, listDir, plain, RZ, site } from "@/lib/v9";
+import { isize, plain, RZ, site } from "@/lib/v9";
 
 type P = { params: Promise<{ lang: string }> };
 export const generateMetadata = ({ params }: P) => pageMetadata(params, "realizacie");
-
-/* fotky, ktoré sa v galérii nezobrazia (úzke panorámy, deti, montáž) */
-const EXCLUDED: Record<string, string[]> = {
-  hlohovec: ["01.webp", "06.webp"],
-  "uhersky-brod": ["01.webp", "04.webp"],
-  oravice: ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp", "09.webp"],
-  pezinok: ["09.webp"],
-};
 
 export default async function Realizacie({ params }: P) {
   const s = site(toLang((await params).lang));
@@ -24,10 +16,10 @@ export default async function Realizacie({ params }: P) {
     ["prerabka", T("Prerábky a sťahovanie", "Přestavby a stěhování", "Rebuilds and relocations", "Umbauten und Umzüge")],
     ["obnova", T("Obnovy a doplnky", "Obnovy a doplňky", "Renovations and add-ons", "Renovierungen und Ergänzungen")],
   ];
-  const data = RZ.map(([slug], i) => {
+  // galéria: cesty k fotkám z admina (aj mimo priečinka rz/<slug>/), preto ide celá cesta
+  const data = RZ.map((r, i) => {
     const it = rzItem(i);
-    const fs = listDir(`rz/${slug}`).filter((f) => f.endsWith(".webp") && !f.endsWith("-d.webp") && !(EXCLUDED[slug] ?? []).includes(f)).sort();
-    return { s: slug, t: plain(it.t), p: it.p, y: it.y, d: it.d, f: fs.map((f) => [f, ...isize(`rz/${slug}/${f}`)]) };
+    return { s: r.slug, t: plain(it.t), p: it.p, y: it.y, d: it.d, f: r.photos.map((f) => ["/" + f, ...isize(f)]) };
   });
 
   const after = (
@@ -52,14 +44,14 @@ export default async function Realizacie({ params }: P) {
   return (
     <Shell s={s} page="realizacie" after={after} data={"var RZ = " + JSON.stringify(data) + ";"} scripts={["/js/realizacie.js"]}>
       <section className="ph">
-        <p className="eb rv" data-now="">{fmt(m("realizacie.eb"))}</p>
+        <p className="eb rv" data-now="">{fmt(m("realizacie.eb").replace("{n}", String(RZ.length)))}</p>
         <h1 className="h h1" data-split="now">{fmt(m("realizacie.h1"))}</h1>
         <p className="lead rv" data-now="" data-d=".15">{fmt(m("realizacie.lead"))}</p>
       </section>
 
       <section className="sec" aria-label={m("realizacie.listLabel")}>
         <ol className="rz-list">
-          {RZ.slice(0, 6).map(([slug, img, g], i) => {
+          {RZ.slice(0, 6).map(({ slug, cover: img, group: g }, i) => {
             const it = rzItem(i);
             const big = Math.floor(i / 2) % 2 === 0;
             const pos = (i % 2 === 0) === big ? "big" : "small";
@@ -85,7 +77,7 @@ export default async function Realizacie({ params }: P) {
           <div className="rz-cat-hd"><h2 className="h h3 rv">{t}</h2></div>
           <div className="hs">
             <ul className="hs-track">
-              {RZ.map(([slug, img, gg], i) => gg !== g ? null : (
+              {RZ.map(({ slug, cover: img, group: gg }, i) => gg !== g ? null : (
                 <li className="hs-item" id={i >= 6 ? slug : undefined} key={slug}>
                   <button className="rz-card" type="button" data-i={i} aria-haspopup="dialog">
                     {fig(img, rzItem(i).alt, "r43", false)}

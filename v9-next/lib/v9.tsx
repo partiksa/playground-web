@@ -11,6 +11,7 @@ import faqSk from "@/content/faq-sk.json";
 import faqCz from "@/content/faq-cz.json";
 import faqEn from "@/content/faq-en.json";
 import faqDe from "@/content/faq-de.json";
+import rzData from "@/content/realizacie.json";
 import { href, type Lang, type PageKey } from "@/lib/i18n";
 
 const PUB = path.join(process.cwd(), "public");
@@ -199,13 +200,17 @@ export function site(lang: Lang) {
     );
   }
 
-  const rzItem = (i: number) => m(`realizacie.items[${i}]`);
+  const rzItem = (i: number): RzText => RZ[i][lang];
+  /** alt text realizácie podľa slugu (realizáciu môže klient v admine zmazať) */
+  const rzAlt = (slug: string) => RZ.find((r) => r.slug === slug)?.[lang].alt ?? "";
 
   function pcard(slug: string, cls = "r43") {
-    const i = RZI[slug], it = rzItem(i);
+    const i = RZ.findIndex((r) => r.slug === slug);
+    if (i < 0) return null;
+    const it = rzItem(i);
     return (
       <a className="pc" href={P("realizacie") + "#" + slug} key={slug}>
-        {fig(RZ[i][1], it.alt, cls)}
+        {fig(RZ[i].cover, it.alt, cls)}
         <span className="pc-m rv"><span className="pc-pl">{fmt(it.p)} · {fmt(it.y)}</span><span className="pc-t">{fmt(it.t)}</span></span>
       </a>
     );
@@ -260,7 +265,7 @@ export function site(lang: Lang) {
     );
   }
 
-  return { lang, m, T, fmt, P, AR, fig, tel, btnDopyt, secHd, rows, faqBlock, faqSec, F, cta, rzItem, pcard, pcards, more, why };
+  return { lang, m, T, fmt, P, AR, fig, tel, btnDopyt, secHd, rows, faqBlock, faqSec, F, cta, rzItem, rzAlt, pcard, pcards, more, why };
 }
 
 export type Site = ReturnType<typeof site>;
@@ -288,19 +293,7 @@ export function plain(t: string) {
   return t.replace(/\{<?([^{}<>])>?\}/g, "$1");
 }
 
-/* ---------- realizácie (spoločné dáta) ---------- */
-export const RZ: [string, string, string][] = [ // slug, obálka, skupina
-  ["trnava", "img/projekt-04.webp", "nove"],
-  ["dunajska-luzna", "img/projekt-07.webp", "prerabka"],
-  ["klatovy", "rz/klatovy/02.webp", "obnova"],
-  ["samorin", "img/projekt-02.webp", "nove"],
-  ["hlohovec", "img/projekt-10.webp", "prerabka"],
-  ["pezinok", "img/projekt-05.webp", "nove"],
-  ["kraluv-dvur", "img/projekt-01.webp", "prerabka"],
-  ["karvina-stena", "img/projekt-11.webp", "obnova"],
-  ["karvina-tubing", "img/projekt-12.webp", "obnova"],
-  ["praha", "img/projekt-08.webp", "prerabka"],
-  ["uhersky-brod", "img/projekt-09.webp", "obnova"],
-  ["oravice", "rz/oravice/07.webp", "nove"],
-];
-export const RZI: Record<string, number> = Object.fromEntries(RZ.map(([s], i) => [s, i]));
+/* ---------- realizácie: content/realizacie.json (spravuje admin, pozri ADMIN.md) ---------- */
+export type RzText = { t: string; p: string; y: string; d: string; alt: string };
+export type RzItem = { slug: string; group: "nove" | "prerabka" | "obnova"; cover: string; photos: string[] } & Record<Lang, RzText>;
+export const RZ = rzData as RzItem[];

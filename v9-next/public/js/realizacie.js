@@ -1,10 +1,10 @@
 /* Realizácie: filter podľa typu, detail s galériou, otvorenie z odkazu (realizacie.html#slug) */
 (function () {
-  var ROOT = document.documentElement.dataset.root || "";
   var md = document.getElementById("md"), gal = md.querySelector(".md-gal"), root = document.documentElement;
   var el = { n: md.querySelector(".md-bar .n"), pl: md.querySelector(".md-txt .eb"), t: md.querySelector(".md-txt .h"), d: md.querySelector(".md-txt .p") };
   var PHOTO = md.dataset.photo || "fotka";
   var cur = -1, opener = null, open = false, tl;
+  function esc(x) { return String(x).replace(/[&<>"']/g, function (c) { return "&#" + c.charCodeAt(0) + ";"; }); }
 
   function fill(i) {
     var p = RZ[i]; cur = i;
@@ -13,7 +13,8 @@
     el.t.textContent = p.t;
     el.d.textContent = p.d;
     gal.innerHTML = p.f.map(function (f, k) {
-      return '<figure style="aspect-ratio:' + f[1] + "/" + f[2] + '"><img src="' + ROOT + "rz/" + p.s + "/" + f[0] + '" alt="' + p.t + ", " + p.p + ", " + PHOTO + " " + (k + 1) +
+      // f[0] = celá cesta (/rz/<slug>/01.webp); texty z admina sa escapujú
+      return '<figure style="aspect-ratio:' + f[1] + "/" + f[2] + '"><img src="' + esc(f[0]) + '" alt="' + esc(p.t + ", " + p.p + ", " + PHOTO + " " + (k + 1)) +
         '" width="' + f[1] + '" height="' + f[2] + '"' + (k > 1 ? ' loading="lazy"' : "") + ' decoding="async"></figure>';
     }).join("");
     gal.scrollLeft = 0; md.scrollTop = 0;

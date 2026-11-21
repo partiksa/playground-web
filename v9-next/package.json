@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "npx serve out",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "rz:publish": "node scripts/publish.mjs",
+    "rz:deploy": "node scripts/publish.mjs --deploy",
+    "admin:deploy": "node scripts/publish.mjs --admin"
   },
   "dependencies": {
     "next": "^16.4.6",

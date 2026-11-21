@@ -23,7 +23,7 @@
     },
     "realizacie": {
       "title": "Indoor Playground Projects | Playground, Trnava",
-      "description": "12 indoor playground projects in Slovakia and the Czech Republic: new playgrounds, rebuilds, relocations, tubing slides and kids' zones."
+      "description": "Indoor playground projects in Slovakia and the Czech Republic: new playgrounds, rebuilds, relocations, tubing slides and kids' zones."
     },
     "o-nas": {
       "title": "About Us | Playground, Trnava",
@@ -286,7 +286,7 @@
     "button": "Ask about a date"
   },
   "realizacie": {
-    "eb": "12 projects, Slovakia and the Czech Republic",
+    "eb": "{n} projects, Slovakia and the Czech Republic",
     "h1": "{P}rojects",
     "lead": "New playgrounds, rebuilds, relocations and renovations for family centers, schools, swimming pools and water parks.",
     "listLabel": "List of projects",
@@ -295,93 +295,7 @@
       "next": "Next",
       "close": "Close",
       "photo": "photo"
-    },
-    "items": [
-      {
-        "t": "New playground Kinder Club",
-        "p": "Trnava",
-        "y": "Dismantling and installation",
-        "d": "Dismantling of the original and installation of a new indoor playground at Kinder Club Trnava.",
-        "alt": "New playground Kinder Club, Trnava"
-      },
-      {
-        "t": "Playground rebuild",
-        "p": "Dunajská Lužná",
-        "y": "Rebuild",
-        "d": "Renovation and rebuild of an indoor playground in Dunajská Lužná.",
-        "alt": "Playground rebuild, Dunajská Lužná"
-      },
-      {
-        "t": "Renewal of structure covers",
-        "p": "Klatovy, CZ",
-        "y": "Renewal",
-        "d": "Renewal of the foam covers on the structure of an indoor playground.",
-        "alt": "Renewal of structure covers, Klatovy, CZ"
-      },
-      {
-        "t": "Custom indoor playground",
-        "p": "Šamorín",
-        "y": "New custom playground",
-        "d": "A custom indoor playground connected to an existing wall with openings.",
-        "alt": "Custom indoor playground, Šamorín"
-      },
-      {
-        "t": "Relocation and rebuild of a playground",
-        "p": "Hlohovec",
-        "y": "Relocation and rebuild",
-        "d": "Dismantling of a three-level indoor playground and rebuilding it as a new two-level playground in a primary school corridor.",
-        "alt": "Relocation and rebuild of a playground, Hlohovec"
-      },
-      {
-        "t": "New playground in Pezinok",
-        "p": "Pezinok",
-        "y": "Dismantling and installation",
-        "d": "Dismantling, installation and modification of a new indoor playground in Pezinok.",
-        "alt": "New playground in Pezinok, Pezinok"
-      },
-      {
-        "t": "Relocated and renewed playground",
-        "p": "Králův Dvůr, CZ",
-        "y": "Relocation and renewal",
-        "d": "A relocated and renewed indoor playground in Králův Dvůr near Beroun.",
-        "alt": "Relocated and renewed playground, Králův Dvůr, CZ"
-      },
-      {
-        "t": "Climbing wall for children",
-        "p": "Karviná, CZ",
-        "y": "Climbing wall",
-        "d": "A climbing wall is a good addition to a play center.",
-        "alt": "Climbing wall for children, Karviná, CZ"
-      },
-      {
-        "t": "Tubing slide",
-        "p": "Karviná, CZ",
-        "y": "Tubing slide",
-        "d": "A tubing slide built as a free-standing play element. Children spend the most time on it.",
-        "alt": "Tubing slide, Karviná, CZ"
-      },
-      {
-        "t": "Playground at a swimming pool",
-        "p": "Praha, CZ",
-        "y": "Installation",
-        "d": "Installation of a used indoor playground on the grounds of a swimming pool in Prague.",
-        "alt": "Playground at a swimming pool, Praha, CZ"
-      },
-      {
-        "t": "Playground and tubing slide extension",
-        "p": "Uherský Brod, CZ",
-        "y": "Extension",
-        "d": "An extension of an indoor playground and a tubing slide added to an existing indoor playground.",
-        "alt": "Playground and tubing slide extension, Uherský Brod, CZ"
-      },
-      {
-        "t": "Kids' zone in a water park",
-        "p": "Oravice, Meander",
-        "y": "New kids' zone",
-        "d": "Installation of a complete kids' zone with a modular indoor playground in the Meander Oravice water park.",
-        "alt": "Kids' zone in a water park, Oravice, Meander"
-      }
-    ]
+    }
   },
   "o-nas": {
     "eb": "PLAYGROUND, s.r.o., Trnava",

@@ -1,0 +1,493 @@
+[
+  {
+    "slug": "trnava",
+    "group": "nove",
+    "cover": "img/projekt-04.webp",
+    "photos": [
+      "rz/trnava/01.webp",
+      "rz/trnava/02.webp",
+      "rz/trnava/03.webp",
+      "rz/trnava/04.webp",
+      "rz/trnava/05.webp",
+      "rz/trnava/06.webp",
+      "rz/trnava/07.webp",
+      "rz/trnava/08.webp",
+      "rz/trnava/09.webp"
+    ],
+    "sk": {
+      "t": "Nové ihrisko Kinder Club",
+      "p": "Trnava",
+      "y": "Demontáž a montáž",
+      "d": "Demontáž pôvodného a montáž nového interiérového ihriska v Kinder Clube Trnava.",
+      "alt": "Nové ihrisko Kinder Club, Trnava"
+    },
+    "cz": {
+      "t": "Nové hřiště Kinder Club",
+      "p": "Trnava",
+      "y": "Demontáž a montáž",
+      "d": "Demontáž původního a montáž nového interiérového hřiště v Kinder Clubu Trnava.",
+      "alt": "Nové hřiště Kinder Club, Trnava"
+    },
+    "en": {
+      "t": "New playground Kinder Club",
+      "p": "Trnava",
+      "y": "Dismantling and installation",
+      "d": "Dismantling of the original and installation of a new indoor playground at Kinder Club Trnava.",
+      "alt": "New playground Kinder Club, Trnava"
+    },
+    "de": {
+      "t": "Neuer Spielplatz Kinder Club",
+      "p": "Trnava",
+      "y": "Demontage und Montage",
+      "d": "Demontage des ursprünglichen und Montage eines neuen Indoor-Spielplatzes im Kinder Club Trnava.",
+      "alt": "Neuer Spielplatz Kinder Club, Trnava"
+    }
+  },
+  {
+    "slug": "dunajska-luzna",
+    "group": "prerabka",
+    "cover": "img/projekt-07.webp",
+    "photos": [
+      "rz/dunajska-luzna/01.webp",
+      "rz/dunajska-luzna/02.webp",
+      "rz/dunajska-luzna/03.webp",
+      "rz/dunajska-luzna/04.webp",
+      "rz/dunajska-luzna/05.webp",
+      "rz/dunajska-luzna/06.webp"
+    ],
+    "sk": {
+      "t": "Prerábka ihriska",
+      "p": "Dunajská Lužná",
+      "y": "Prerábka",
+      "d": "Vynovenie a prerábka interiérového ihriska v Dunajskej Lužnej.",
+      "alt": "Prerábka ihriska, Dunajská Lužná"
+    },
+    "cz": {
+      "t": "Přestavba hřiště",
+      "p": "Dunajská Lužná",
+      "y": "Přestavba",
+      "d": "Obnova a přestavba interiérového hřiště v Dunajské Lužné.",
+      "alt": "Přestavba hřiště, Dunajská Lužná"
+    },
+    "en": {
+      "t": "Playground rebuild",
+      "p": "Dunajská Lužná",
+      "y": "Rebuild",
+      "d": "Renovation and rebuild of an indoor playground in Dunajská Lužná.",
+      "alt": "Playground rebuild, Dunajská Lužná"
+    },
+    "de": {
+      "t": "Umbau eines Spielplatzes",
+      "p": "Dunajská Lužná",
+      "y": "Umbau",
+      "d": "Erneuerung und Umbau eines Indoor-Spielplatzes in Dunajská Lužná.",
+      "alt": "Umbau eines Spielplatzes, Dunajská Lužná"
+    }
+  },
+  {
+    "slug": "klatovy",
+    "group": "obnova",
+    "cover": "rz/klatovy/02.webp",
+    "photos": [
+      "rz/klatovy/01.webp",
+      "rz/klatovy/02.webp",
+      "rz/klatovy/03.webp",
+      "rz/klatovy/04.webp",
+      "rz/klatovy/05.webp",
+      "rz/klatovy/06.webp"
+    ],
+    "sk": {
+      "t": "Obnova obalov konštrukcie",
+      "p": "Klatovy, CZ",
+      "y": "Obnova",
+      "d": "Obnova penových obalov konštrukcie interiérového ihriska.",
+      "alt": "Obnova obalov konštrukcie, Klatovy, CZ"
+    },
+    "cz": {
+      "t": "Obnova obalů konstrukce",
+      "p": "Klatovy, CZ",
+      "y": "Obnova",
+      "d": "Obnova pěnových obalů konstrukce interiérového hřiště.",
+      "alt": "Obnova obalů konstrukce, Klatovy, CZ"
+    },
+    "en": {
+      "t": "Renewal of structure covers",
+      "p": "Klatovy, CZ",
+      "y": "Renewal",
+      "d": "Renewal of the foam covers on the structure of an indoor playground.",
+      "alt": "Renewal of structure covers, Klatovy, CZ"
+    },
+    "de": {
+      "t": "Erneuerung der Konstruktionshüllen",
+      "p": "Klatovy, CZ",
+      "y": "Erneuerung",
+      "d": "Erneuerung der Schaumstoffhüllen der Konstruktion eines Indoor-Spielplatzes.",
+      "alt": "Erneuerung der Konstruktionshüllen, Klatovy, CZ"
+    }
+  },
+  {
+    "slug": "samorin",
+    "group": "nove",
+    "cover": "img/projekt-02.webp",
+    "photos": [
+      "rz/samorin/01.webp",
+      "rz/samorin/02.webp",
+      "rz/samorin/03.webp",
+      "rz/samorin/04.webp",
+      "rz/samorin/05.webp",
+      "rz/samorin/06.webp",
+      "rz/samorin/07.webp",
+      "rz/samorin/08.webp"
+    ],
+    "sk": {
+      "t": "Interiérové ihrisko na mieru",
+      "p": "Šamorín",
+      "y": "Nové ihrisko na mieru",
+      "d": "Interiérové ihrisko na mieru prepojené s existujúcou stenou s otvormi.",
+      "alt": "Interiérové ihrisko na mieru, Šamorín"
+    },
+    "cz": {
+      "t": "Interiérové hřiště na míru",
+      "p": "Šamorín",
+      "y": "Nové hřiště na míru",
+      "d": "Interiérové hřiště na míru propojené s existující stěnou s otvory.",
+      "alt": "Interiérové hřiště na míru, Šamorín"
+    },
+    "en": {
+      "t": "Custom indoor playground",
+      "p": "Šamorín",
+      "y": "New custom playground",
+      "d": "A custom indoor playground connected to an existing wall with openings.",
+      "alt": "Custom indoor playground, Šamorín"
+    },
+    "de": {
+      "t": "Indoor-Spielplatz nach Maß",
+      "p": "Šamorín",
+      "y": "Neuer Spielplatz nach Maß",
+      "d": "Ein Indoor-Spielplatz nach Maß, verbunden mit einer bestehenden Wand mit Öffnungen.",
+      "alt": "Indoor-Spielplatz nach Maß, Šamorín"
+    }
+  },
+  {
+    "slug": "hlohovec",
+    "group": "prerabka",
+    "cover": "img/projekt-10.webp",
+    "photos": [
+      "rz/hlohovec/02.webp",
+      "rz/hlohovec/03.webp",
+      "rz/hlohovec/04.webp",
+      "rz/hlohovec/05.webp",
+      "rz/hlohovec/07.webp",
+      "rz/hlohovec/08.webp",
+      "rz/hlohovec/09.webp"
+    ],
+    "sk": {
+      "t": "Presťahovanie a prerobenie ihriska",
+      "p": "Hlohovec",
+      "y": "Presťahovanie a prerábka",
+      "d": "Demontáž trojposchodového interiérového ihriska a úprava na nové ihrisko s dvomi poschodiami na chodbe základnej školy.",
+      "alt": "Presťahovanie a prerobenie ihriska, Hlohovec"
+    },
+    "cz": {
+      "t": "Přestěhování a přestavba hřiště",
+      "p": "Hlohovec",
+      "y": "Přestěhování a přestavba",
+      "d": "Demontáž třípatrového interiérového hřiště a úprava na nové hřiště se dvěma patry na chodbě základní školy.",
+      "alt": "Přestěhování a přestavba hřiště, Hlohovec"
+    },
+    "en": {
+      "t": "Relocation and rebuild of a playground",
+      "p": "Hlohovec",
+      "y": "Relocation and rebuild",
+      "d": "Dismantling of a three-level indoor playground and rebuilding it as a new two-level playground in a primary school corridor.",
+      "alt": "Relocation and rebuild of a playground, Hlohovec"
+    },
+    "de": {
+      "t": "Umzug und Umbau eines Spielplatzes",
+      "p": "Hlohovec",
+      "y": "Umzug und Umbau",
+      "d": "Demontage eines dreistöckigen Indoor-Spielplatzes und Umbau zu einem neuen Spielplatz mit zwei Etagen im Flur einer Grundschule.",
+      "alt": "Umzug und Umbau eines Spielplatzes, Hlohovec"
+    }
+  },
+  {
+    "slug": "pezinok",
+    "group": "nove",
+    "cover": "img/projekt-05.webp",
+    "photos": [
+      "rz/pezinok/01.webp",
+      "rz/pezinok/02.webp",
+      "rz/pezinok/03.webp",
+      "rz/pezinok/04.webp",
+      "rz/pezinok/05.webp",
+      "rz/pezinok/06.webp",
+      "rz/pezinok/07.webp",
+      "rz/pezinok/08.webp",
+      "rz/pezinok/10.webp"
+    ],
+    "sk": {
+      "t": "Nové ihrisko v Pezinku",
+      "p": "Pezinok",
+      "y": "Demontáž a montáž",
+      "d": "Demontáž, montáž a zmena nového interiérového ihriska v Pezinku.",
+      "alt": "Nové ihrisko v Pezinku, Pezinok"
+    },
+    "cz": {
+      "t": "Nové hřiště v Pezinku",
+      "p": "Pezinok",
+      "y": "Demontáž a montáž",
+      "d": "Demontáž, montáž a úprava nového interiérového hřiště v Pezinku.",
+      "alt": "Nové hřiště v Pezinku, Pezinok"
+    },
+    "en": {
+      "t": "New playground in Pezinok",
+      "p": "Pezinok",
+      "y": "Dismantling and installation",
+      "d": "Dismantling, installation and modification of a new indoor playground in Pezinok.",
+      "alt": "New playground in Pezinok, Pezinok"
+    },
+    "de": {
+      "t": "Neuer Spielplatz in Pezinok",
+      "p": "Pezinok",
+      "y": "Demontage und Montage",
+      "d": "Demontage, Montage und Anpassung eines neuen Indoor-Spielplatzes in Pezinok.",
+      "alt": "Neuer Spielplatz in Pezinok, Pezinok"
+    }
+  },
+  {
+    "slug": "kraluv-dvur",
+    "group": "prerabka",
+    "cover": "img/projekt-01.webp",
+    "photos": [
+      "rz/kraluv-dvur/01.webp",
+      "rz/kraluv-dvur/02.webp",
+      "rz/kraluv-dvur/03.webp",
+      "rz/kraluv-dvur/04.webp",
+      "rz/kraluv-dvur/05.webp",
+      "rz/kraluv-dvur/06.webp",
+      "rz/kraluv-dvur/07.webp",
+      "rz/kraluv-dvur/08.webp"
+    ],
+    "sk": {
+      "t": "Presťahované a obnovené ihrisko",
+      "p": "Králův Dvůr, CZ",
+      "y": "Presťahovanie a obnova",
+      "d": "Presťahované a obnovené interiérové ihrisko v Králově Dvore pri Beroune.",
+      "alt": "Presťahované a obnovené ihrisko, Králův Dvůr, CZ"
+    },
+    "cz": {
+      "t": "Přestěhované a obnovené hřiště",
+      "p": "Králův Dvůr, CZ",
+      "y": "Přestěhování a obnova",
+      "d": "Přestěhované a obnovené interiérové hřiště v Králově Dvoře u Berouna.",
+      "alt": "Přestěhované a obnovené hřiště, Králův Dvůr, CZ"
+    },
+    "en": {
+      "t": "Relocated and renewed playground",
+      "p": "Králův Dvůr, CZ",
+      "y": "Relocation and renewal",
+      "d": "A relocated and renewed indoor playground in Králův Dvůr near Beroun.",
+      "alt": "Relocated and renewed playground, Králův Dvůr, CZ"
+    },
+    "de": {
+      "t": "Versetzter und erneuerter Spielplatz",
+      "p": "Králův Dvůr, CZ",
+      "y": "Umzug und Erneuerung",
+      "d": "Ein versetzter und erneuerter Indoor-Spielplatz in Králův Dvůr bei Beroun.",
+      "alt": "Versetzter und erneuerter Spielplatz, Králův Dvůr, CZ"
+    }
+  },
+  {
+    "slug": "karvina-stena",
+    "group": "obnova",
+    "cover": "img/projekt-11.webp",
+    "photos": [
+      "rz/karvina-stena/01.webp",
+      "rz/karvina-stena/02.webp"
+    ],
+    "sk": {
+      "t": "Lezecká stena pre deti",
+      "p": "Karviná, CZ",
+      "y": "Lezecká stena",
+      "d": "Lezecká stena je dobrý doplnok do herní.",
+      "alt": "Lezecká stena pre deti, Karviná, CZ"
+    },
+    "cz": {
+      "t": "Lezecká stěna pro děti",
+      "p": "Karviná, CZ",
+      "y": "Lezecká stěna",
+      "d": "Lezecká stěna je dobrým doplňkem do heren.",
+      "alt": "Lezecká stěna pro děti, Karviná, CZ"
+    },
+    "en": {
+      "t": "Climbing wall for children",
+      "p": "Karviná, CZ",
+      "y": "Climbing wall",
+      "d": "A climbing wall is a good addition to a play center.",
+      "alt": "Climbing wall for children, Karviná, CZ"
+    },
+    "de": {
+      "t": "Kletterwand für Kinder",
+      "p": "Karviná, CZ",
+      "y": "Kletterwand",
+      "d": "Eine Kletterwand ist eine gute Ergänzung für Spielhallen.",
+      "alt": "Kletterwand für Kinder, Karviná, CZ"
+    }
+  },
+  {
+    "slug": "karvina-tubing",
+    "group": "obnova",
+    "cover": "img/projekt-12.webp",
+    "photos": [
+      "rz/karvina-tubing/01.webp",
+      "rz/karvina-tubing/02.webp",
+      "rz/karvina-tubing/03.webp",
+      "rz/karvina-tubing/04.webp"
+    ],
+    "sk": {
+      "t": "Tubingová dráha",
+      "p": "Karviná, CZ",
+      "y": "Tubingová dráha",
+      "d": "Tubingová dráha postavená ako samostatne stojaci herný prvok. Deti na nej trávia najviac času.",
+      "alt": "Tubingová dráha, Karviná, CZ"
+    },
+    "cz": {
+      "t": "Tubingová dráha",
+      "p": "Karviná, CZ",
+      "y": "Tubingová dráha",
+      "d": "Tubingová dráha postavená jako samostatně stojící herní prvek. Děti na ní tráví nejvíce času.",
+      "alt": "Tubingová dráha, Karviná, CZ"
+    },
+    "en": {
+      "t": "Tubing slide",
+      "p": "Karviná, CZ",
+      "y": "Tubing slide",
+      "d": "A tubing slide built as a free-standing play element. Children spend the most time on it.",
+      "alt": "Tubing slide, Karviná, CZ"
+    },
+    "de": {
+      "t": "Tubing-Bahn",
+      "p": "Karviná, CZ",
+      "y": "Tubing-Bahn",
+      "d": "Eine Tubing-Bahn, gebaut als freistehendes Spielelement. Die Kinder verbringen dort die meiste Zeit.",
+      "alt": "Tubing-Bahn, Karviná, CZ"
+    }
+  },
+  {
+    "slug": "praha",
+    "group": "prerabka",
+    "cover": "img/projekt-08.webp",
+    "photos": [
+      "rz/praha/01.webp",
+      "rz/praha/02.webp",
+      "rz/praha/03.webp",
+      "rz/praha/04.webp"
+    ],
+    "sk": {
+      "t": "Ihrisko na kúpalisku",
+      "p": "Praha, CZ",
+      "y": "Montáž",
+      "d": "Montáž používaného interiérového ihriska v areáli kúpaliska v Prahe.",
+      "alt": "Ihrisko na kúpalisku, Praha, CZ"
+    },
+    "cz": {
+      "t": "Hřiště na koupališti",
+      "p": "Praha, CZ",
+      "y": "Montáž",
+      "d": "Montáž použitého interiérového hřiště v areálu koupaliště v Praze.",
+      "alt": "Hřiště na koupališti, Praha, CZ"
+    },
+    "en": {
+      "t": "Playground at a swimming pool",
+      "p": "Praha, CZ",
+      "y": "Installation",
+      "d": "Installation of a used indoor playground on the grounds of a swimming pool in Prague.",
+      "alt": "Playground at a swimming pool, Praha, CZ"
+    },
+    "de": {
+      "t": "Spielplatz im Schwimmbad",
+      "p": "Praha, CZ",
+      "y": "Montage",
+      "d": "Montage eines gebrauchten Indoor-Spielplatzes auf dem Gelände eines Schwimmbads in Prag.",
+      "alt": "Spielplatz im Schwimmbad, Praha, CZ"
+    }
+  },
+  {
+    "slug": "uhersky-brod",
+    "group": "obnova",
+    "cover": "img/projekt-09.webp",
+    "photos": [
+      "rz/uhersky-brod/02.webp",
+      "rz/uhersky-brod/03.webp",
+      "rz/uhersky-brod/05.webp",
+      "rz/uhersky-brod/06.webp",
+      "rz/uhersky-brod/07.webp"
+    ],
+    "sk": {
+      "t": "Dorábka ihriska a tubingovej dráhy",
+      "p": "Uherský Brod, CZ",
+      "y": "Dorábka",
+      "d": "Dorábka interiérového ihriska a tubingovej dráhy k existujúcemu interiérovému ihrisku.",
+      "alt": "Dorábka ihriska a tubingovej dráhy, Uherský Brod, CZ"
+    },
+    "cz": {
+      "t": "Dostavba hřiště a tubingové dráhy",
+      "p": "Uherský Brod, CZ",
+      "y": "Dostavba",
+      "d": "Dostavba interiérového hřiště a tubingové dráhy k existujícímu interiérovému hřišti.",
+      "alt": "Dostavba hřiště a tubingové dráhy, Uherský Brod, CZ"
+    },
+    "en": {
+      "t": "Playground and tubing slide extension",
+      "p": "Uherský Brod, CZ",
+      "y": "Extension",
+      "d": "An extension of an indoor playground and a tubing slide added to an existing indoor playground.",
+      "alt": "Playground and tubing slide extension, Uherský Brod, CZ"
+    },
+    "de": {
+      "t": "Erweiterung von Spielplatz und Tubing-Bahn",
+      "p": "Uherský Brod, CZ",
+      "y": "Erweiterung",
+      "d": "Erweiterung eines Indoor-Spielplatzes und einer Tubing-Bahn an einen bestehenden Indoor-Spielplatz.",
+      "alt": "Erweiterung von Spielplatz und Tubing-Bahn, Uherský Brod, CZ"
+    }
+  },
+  {
+    "slug": "oravice",
+    "group": "nove",
+    "cover": "rz/oravice/07.webp",
+    "photos": [
+      "rz/oravice/06.webp",
+      "rz/oravice/07.webp",
+      "rz/oravice/08.webp"
+    ],
+    "sk": {
+      "t": "Detská zóna v aquaparku",
+      "p": "Oravice, Meander",
+      "y": "Nová detská zóna",
+      "d": "Montáž kompletnej detskej zóny s panelovým interiérovým ihriskom v aquaparku Meander Oravice.",
+      "alt": "Detská zóna v aquaparku, Oravice, Meander"
+    },
+    "cz": {
+      "t": "Dětská zóna v aquaparku",
+      "p": "Oravice, Meander",
+      "y": "Nová dětská zóna",
+      "d": "Montáž kompletní dětské zóny s panelovým interiérovým hřištěm v aquaparku Meander Oravice.",
+      "alt": "Dětská zóna v aquaparku, Oravice, Meander"
+    },
+    "en": {
+      "t": "Kids' zone in a water park",
+      "p": "Oravice, Meander",
+      "y": "New kids' zone",
+      "d": "Installation of a complete kids' zone with a modular indoor playground in the Meander Oravice water park.",
+      "alt": "Kids' zone in a water park, Oravice, Meander"
+    },
+    "de": {
+      "t": "Kinderbereich im Erlebnisbad",
+      "p": "Oravice, Meander",
+      "y": "Neuer Kinderbereich",
+      "d": "Montage eines kompletten Kinderbereichs mit modularem Indoor-Spielplatz im Erlebnisbad Meander Oravice.",
+      "alt": "Kinderbereich im Erlebnisbad, Oravice, Meander"
+    }
+  }
+]

@@ -12,29 +12,29 @@ const CH: [number, number][] = [[0, 20], [22, 46], [48, 66], [68, 98], [100, 148
 export default async function Home({ params }: P) {
   const s = site(toLang((await params).lang));
   preload("/kav/k000.webp", { as: "image", fetchPriority: "high" });
-  const { m, T, fmt, P, fig, tel, btnDopyt, secHd, pcards, more, faqSec, F, cta, rzItem, why } = s;
+  const { m, T, fmt, P, fig, tel, btnDopyt, secHd, pcards, more, faqSec, F, cta, rzAlt, why } = s;
 
   const svc: [Parameters<typeof P>[0], string, string, string, string][] = [
     ["ihriska", m("common.nav.ihriska"), T("Návrh, 3D vizualizácia, výroba a montáž na kľúč. Podľa noriem EN 1176 a EN 1177.",
       "Návrh, 3D vizualizace, výroba a montáž na klíč. Podle norem EN 1176 a EN 1177.",
       "Design, 3D visualization, manufacture and turnkey installation. To EN 1176 and EN 1177.",
       "Planung, 3D-Visualisierung, Fertigung und schlüsselfertige Montage. Nach EN 1176 und EN 1177."),
-      "img/projekt-04.webp", rzItem(0).alt],
+      "img/projekt-04.webp", rzAlt("trnava")],
     ["prerabka", T("Prerábka a sťahovanie", "Přestavba a stěhování", "Rebuild and relocation", "Umbau und Umzug"), m("prerabka.lead"),
-      "img/projekt-07.webp", rzItem(1).alt],
+      "img/projekt-07.webp", rzAlt("dunajska-luzna")],
     ["revizie", T("Revízie a servis", "Revize a servis", "Inspections and service", "Prüfung und Service"),
       T("Ročné kontroly podľa EN 1176 a EN 1177, opravy a náhradné diely z vlastného skladu.",
         "Roční kontroly podle EN 1176 a EN 1177, opravy a náhradní díly z vlastního skladu.",
         "Annual inspections to EN 1176 and EN 1177, repairs and spare parts from our own stock.",
         "Jährliche Prüfungen nach EN 1176 und EN 1177, Reparaturen und Ersatzteile aus eigenem Lager."),
-      "rz/klatovy/02.webp", rzItem(2).alt],
+      "rz/klatovy/02.webp", rzAlt("klatovy")],
   ];
   const st = [0, 1, 2].map((i) => m(`o-nas.stats[${i}]`));
   const labels = [st[0].label, st[1].label, T("krajín", "zemí", "countries", "Länder")];
   const faq = F(0, 1, 3, 10);
 
   return (
-    <Shell s={s} page="home" faq={faq} scripts={["/js/home.js"]}>
+    <Shell s={s} page="home" faq={faq} scripts={["/js/home.js", "/js/banner.js"]}>
       <section className="story" id="story" aria-label={m("home.storyLabel")}>
         <div className="stage">
           <canvas id="cv" aria-hidden="true" />

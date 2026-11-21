@@ -23,7 +23,7 @@
     },
     "realizacie": {
       "title": "Referenzen Indoor-Spielplätze | Playground, Trnava",
-      "description": "12 Indoor-Spielplatz-Projekte in der Slowakei und in Tschechien: neue Spielplätze, Umbauten, Umzüge, Tubing-Bahnen und Kinderbereiche."
+      "description": "Indoor-Spielplatz-Projekte in der Slowakei und in Tschechien: neue Spielplätze, Umbauten, Umzüge, Tubing-Bahnen und Kinderbereiche."
     },
     "o-nas": {
       "title": "Über uns | Playground, Trnava",
@@ -286,7 +286,7 @@
     "button": "Termin anfragen"
   },
   "realizacie": {
-    "eb": "12 Projekte, Slowakei und Tschechien",
+    "eb": "{n} Projekte, Slowakei und Tschechien",
     "h1": "{R}eferenzen",
     "lead": "Neue Spielplätze, Umbauten, Umzüge und Erneuerungen für Familienzentren, Schulen, Schwimmbäder und Erlebnisbäder.",
     "listLabel": "Liste der Referenzen",
@@ -295,93 +295,7 @@
       "next": "Weiter",
       "close": "Schließen",
       "photo": "Foto"
-    },
-    "items": [
-      {
-        "t": "Neuer Spielplatz Kinder Club",
-        "p": "Trnava",
-        "y": "Demontage und Montage",
-        "d": "Demontage des ursprünglichen und Montage eines neuen Indoor-Spielplatzes im Kinder Club Trnava.",
-        "alt": "Neuer Spielplatz Kinder Club, Trnava"
-      },
-      {
-        "t": "Umbau eines Spielplatzes",
-        "p": "Dunajská Lužná",
-        "y": "Umbau",
-        "d": "Erneuerung und Umbau eines Indoor-Spielplatzes in Dunajská Lužná.",
-        "alt": "Umbau eines Spielplatzes, Dunajská Lužná"
-      },
-      {
-        "t": "Erneuerung der Konstruktionshüllen",
-        "p": "Klatovy, CZ",
-        "y": "Erneuerung",
-        "d": "Erneuerung der Schaumstoffhüllen der Konstruktion eines Indoor-Spielplatzes.",
-        "alt": "Erneuerung der Konstruktionshüllen, Klatovy, CZ"
-      },
-      {
-        "t": "Indoor-Spielplatz nach Maß",
-        "p": "Šamorín",
-        "y": "Neuer Spielplatz nach Maß",
-        "d": "Ein Indoor-Spielplatz nach Maß, verbunden mit einer bestehenden Wand mit Öffnungen.",
-        "alt": "Indoor-Spielplatz nach Maß, Šamorín"
-      },
-      {
-        "t": "Umzug und Umbau eines Spielplatzes",
-        "p": "Hlohovec",
-        "y": "Umzug und Umbau",
-        "d": "Demontage eines dreistöckigen Indoor-Spielplatzes und Umbau zu einem neuen Spielplatz mit zwei Etagen im Flur einer Grundschule.",
-        "alt": "Umzug und Umbau eines Spielplatzes, Hlohovec"
-      },
-      {
-        "t": "Neuer Spielplatz in Pezinok",
-        "p": "Pezinok",
-        "y": "Demontage und Montage",
-        "d": "Demontage, Montage und Anpassung eines neuen Indoor-Spielplatzes in Pezinok.",
-        "alt": "Neuer Spielplatz in Pezinok, Pezinok"
-      },
-      {
-        "t": "Versetzter und erneuerter Spielplatz",
-        "p": "Králův Dvůr, CZ",
-        "y": "Umzug und Erneuerung",
-        "d": "Ein versetzter und erneuerter Indoor-Spielplatz in Králův Dvůr bei Beroun.",
-        "alt": "Versetzter und erneuerter Spielplatz, Králův Dvůr, CZ"
-      },
-      {
-        "t": "Kletterwand für Kinder",
-        "p": "Karviná, CZ",
-        "y": "Kletterwand",
-        "d": "Eine Kletterwand ist eine gute Ergänzung für Spielhallen.",
-        "alt": "Kletterwand für Kinder, Karviná, CZ"
-      },
-      {
-        "t": "Tubing-Bahn",
-        "p": "Karviná, CZ",
-        "y": "Tubing-Bahn",
-        "d": "Eine Tubing-Bahn, gebaut als freistehendes Spielelement. Die Kinder verbringen dort die meiste Zeit.",
-        "alt": "Tubing-Bahn, Karviná, CZ"
-      },
-      {
-        "t": "Spielplatz im Schwimmbad",
-        "p": "Praha, CZ",
-        "y": "Montage",
-        "d": "Montage eines gebrauchten Indoor-Spielplatzes auf dem Gelände eines Schwimmbads in Prag.",
-        "alt": "Spielplatz im Schwimmbad, Praha, CZ"
-      },
-      {
-        "t": "Erweiterung von Spielplatz und Tubing-Bahn",
-        "p": "Uherský Brod, CZ",
-        "y": "Erweiterung",
-        "d": "Erweiterung eines Indoor-Spielplatzes und einer Tubing-Bahn an einen bestehenden Indoor-Spielplatz.",
-        "alt": "Erweiterung von Spielplatz und Tubing-Bahn, Uherský Brod, CZ"
-      },
-      {
-        "t": "Kinderbereich im Erlebnisbad",
-        "p": "Oravice, Meander",
-        "y": "Neuer Kinderbereich",
-        "d": "Montage eines kompletten Kinderbereichs mit modularem Indoor-Spielplatz im Erlebnisbad Meander Oravice.",
-        "alt": "Kinderbereich im Erlebnisbad, Oravice, Meander"
-      }
-    ]
+    }
   },
   "o-nas": {
     "eb": "PLAYGROUND, s.r.o., Trnava",

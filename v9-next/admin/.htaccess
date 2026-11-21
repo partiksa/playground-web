@@ -1,0 +1,6 @@
+# Admin: nikdy do vyhľadávačov, pomocné súbory nie sú verejné
+Header set X-Robots-Tag "noindex, nofollow"
+Options -Indexes
+<FilesMatch "^(config|config\.example|lib)\.php$">
+  Require all denied
+</FilesMatch>

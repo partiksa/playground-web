@@ -23,7 +23,7 @@
     },
     "realizacie": {
       "title": "Realizace interiérových hřišť | Playground, Trnava",
-      "description": "12 realizací interiérových hřišť na Slovensku a v Česku: nová hřiště, přestavby, přestěhování, tubingové dráhy a dětské zóny."
+      "description": "Realizace interiérových hřišť na Slovensku a v Česku: nová hřiště, přestavby, přestěhování, tubingové dráhy a dětské zóny."
     },
     "o-nas": {
       "title": "O nás | Playground, Trnava",
@@ -286,7 +286,7 @@
     "button": "Zeptat se na termín"
   },
   "realizacie": {
-    "eb": "12 projektů, Slovensko a Česko",
+    "eb": "{n} projektů, Slovensko a Česko",
     "h1": "Reali{Z}ace",
     "lead": "Nová hřiště, přestavby, přestěhování a obnovy pro rodinná centra, školy, koupaliště a aquaparky.",
     "listLabel": "Seznam realizací",
@@ -295,93 +295,7 @@
       "next": "Další",
       "close": "Zavřít",
       "photo": "fotka"
-    },
-    "items": [
-      {
-        "t": "Nové hřiště Kinder Club",
-        "p": "Trnava",
-        "y": "Demontáž a montáž",
-        "d": "Demontáž původního a montáž nového interiérového hřiště v Kinder Clubu Trnava.",
-        "alt": "Nové hřiště Kinder Club, Trnava"
-      },
-      {
-        "t": "Přestavba hřiště",
-        "p": "Dunajská Lužná",
-        "y": "Přestavba",
-        "d": "Obnova a přestavba interiérového hřiště v Dunajské Lužné.",
-        "alt": "Přestavba hřiště, Dunajská Lužná"
-      },
-      {
-        "t": "Obnova obalů konstrukce",
-        "p": "Klatovy, CZ",
-        "y": "Obnova",
-        "d": "Obnova pěnových obalů konstrukce interiérového hřiště.",
-        "alt": "Obnova obalů konstrukce, Klatovy, CZ"
-      },
-      {
-        "t": "Interiérové hřiště na míru",
-        "p": "Šamorín",
-        "y": "Nové hřiště na míru",
-        "d": "Interiérové hřiště na míru propojené s existující stěnou s otvory.",
-        "alt": "Interiérové hřiště na míru, Šamorín"
-      },
-      {
-        "t": "Přestěhování a přestavba hřiště",
-        "p": "Hlohovec",
-        "y": "Přestěhování a přestavba",
-        "d": "Demontáž třípatrového interiérového hřiště a úprava na nové hřiště se dvěma patry na chodbě základní školy.",
-        "alt": "Přestěhování a přestavba hřiště, Hlohovec"
-      },
-      {
-        "t": "Nové hřiště v Pezinku",
-        "p": "Pezinok",
-        "y": "Demontáž a montáž",
-        "d": "Demontáž, montáž a úprava nového interiérového hřiště v Pezinku.",
-        "alt": "Nové hřiště v Pezinku, Pezinok"
-      },
-      {
-        "t": "Přestěhované a obnovené hřiště",
-        "p": "Králův Dvůr, CZ",
-        "y": "Přestěhování a obnova",
-        "d": "Přestěhované a obnovené interiérové hřiště v Králově Dvoře u Berouna.",
-        "alt": "Přestěhované a obnovené hřiště, Králův Dvůr, CZ"
-      },
-      {
-        "t": "Lezecká stěna pro děti",
-        "p": "Karviná, CZ",
-        "y": "Lezecká stěna",
-        "d": "Lezecká stěna je dobrým doplňkem do heren.",
-        "alt": "Lezecká stěna pro děti, Karviná, CZ"
-      },
-      {
-        "t": "Tubingová dráha",
-        "p": "Karviná, CZ",
-        "y": "Tubingová dráha",
-        "d": "Tubingová dráha postavená jako samostatně stojící herní prvek. Děti na ní tráví nejvíce času.",
-        "alt": "Tubingová dráha, Karviná, CZ"
-      },
-      {
-        "t": "Hřiště na koupališti",
-        "p": "Praha, CZ",
-        "y": "Montáž",
-        "d": "Montáž použitého interiérového hřiště v areálu koupaliště v Praze.",
-        "alt": "Hřiště na koupališti, Praha, CZ"
-      },
-      {
-        "t": "Dostavba hřiště a tubingové dráhy",
-        "p": "Uherský Brod, CZ",
-        "y": "Dostavba",
-        "d": "Dostavba interiérového hřiště a tubingové dráhy k existujícímu interiérovému hřišti.",
-        "alt": "Dostavba hřiště a tubingové dráhy, Uherský Brod, CZ"
-      },
-      {
-        "t": "Dětská zóna v aquaparku",
-        "p": "Oravice, Meander",
-        "y": "Nová dětská zóna",
-        "d": "Montáž kompletní dětské zóny s panelovým interiérovým hřištěm v aquaparku Meander Oravice.",
-        "alt": "Dětská zóna v aquaparku, Oravice, Meander"
-      }
-    ]
+    }
   },
   "o-nas": {
     "eb": "PLAYGROUND, s.r.o., Trnava",
