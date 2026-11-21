@@ -18,7 +18,7 @@ function LangSwitch({ s, page }: { s: Site; page: PageKey }) {
 }
 
 export function Header({ s, page }: { s: Site; page: PageKey }) {
-  const { m, fmt, P, tel } = s;
+  const { m, fmt, P } = s;
   return (
     <>
       <a className="skip" href="#main">{m("common.skip")}</a>
@@ -31,7 +31,6 @@ export function Header({ s, page }: { s: Site; page: PageKey }) {
             {MENU.map((p) => <li key={p}><a href={P(p)} aria-current={p === page ? "page" : undefined}>{fmt(m(`common.nav.${p}`))}</a></li>)}
           </ul>
         </nav>
-        {tel()}
         <LangSwitch s={s} page={page} />
         <a className="btn" href={P("kontakt")}>{m("common.cta")}</a>
         <button className="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="sheet" data-open={m("common.menu")} data-close={m("common.close")}>{m("common.menu")}</button>

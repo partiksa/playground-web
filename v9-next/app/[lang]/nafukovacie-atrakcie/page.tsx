@@ -85,11 +85,6 @@ export default async function Nafukovacie({ params }: P) {
       </section>
 
       <section className="sec">
-        <div className="full">{fig("img/naf-hlavna.webp", m(`${K}.alt`), "r21", true, true)}</div>
-        <p className="cap rv">{fmt(m(`${K}.cap`))}</p>
-      </section>
-
-      <section className="sec">
         {secHd(T("Prenájom", "Pronájem", "Rental", "Vermietung"), T("Atrakcie na {P}renájom", "Atrakce k {P}ronájmu", "Attractions for {R}ent", "Attraktionen zur {M}iete"), undefined, "01")}
         <p className="p rv" style={{ marginBottom: "clamp(32px,4vw,56px)", maxWidth: "52ch" }}>
           {fmt(T("V cene prenájmu je obsluha. Dopravu dohodneme podľa miesta akcie.",
