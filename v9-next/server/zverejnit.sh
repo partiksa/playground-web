@@ -6,7 +6,7 @@
 # www/data (admin dáta a fotky), www/admin a www/api sa pri rsync nemažú.
 set -euo pipefail
 
-SITE_DIR="${SITE_DIR:-$HOME/play-ground.sk}"
+SITE_DIR="${SITE_DIR:-$(cd "$(dirname "$0")/../.." && pwd)}"
 APP="$SITE_DIR/v9-next"
 WWW="$SITE_DIR/www"
 DATA="$WWW/data"
@@ -44,7 +44,7 @@ rsync -a --delete --exclude=/data/ --exclude=/admin/ --exclude=/api/ --exclude=/
 
 # admin a API formulára
 rsync -a --delete --exclude=config.php --exclude=config.example.php --exclude=data.htaccess --exclude=.htaccess admin/ "$WWW/admin/"
-php -r '$c = require getenv("HOME")."/pg-config.php"; file_put_contents(getenv("HOME")."/play-ground.sk/www/admin/config.php", "<?php\nreturn " . var_export(["password_hash" => $c["admin_hash"], "deepl_key" => $c["deepl_key"] ?? "", "data_dir" => getenv("HOME")."/play-ground.sk/www/data"], true) . ";\n");'
+WWW="$WWW" php -r '$c = require getenv("HOME")."/pg-config.php"; $w = getenv("WWW"); file_put_contents("$w/admin/config.php", "<?php\nreturn " . var_export(["password_hash" => $c["admin_hash"], "deepl_key" => $c["deepl_key"] ?? "", "data_dir" => "$w/data"], true) . ";\n");'
 chmod 640 "$WWW/admin/config.php"
 rsync -a --delete server/api/ "$WWW/api/"
 
