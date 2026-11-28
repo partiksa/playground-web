@@ -1,11 +1,11 @@
 import type { MetadataRoute } from "next";
-import { absUrl, LANGS, languages, PAGES } from "@/lib/i18n";
+import { absUrl, HREFLANG, LANGS, languages, PAGES, SITE } from "@/lib/i18n";
 
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  return LANGS.flatMap((lang) =>
+  const list: MetadataRoute.Sitemap = LANGS.flatMap((lang) =>
     PAGES.map((page) => ({
       url: absUrl(lang, page),
       lastModified: now,
@@ -14,4 +14,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: { languages: languages(page) },
     })),
   );
+  return list.concat(LANGS.map((lang) => ({
+    url: `${SITE}/${lang}/ochrana-udajov/`,
+    lastModified: now,
+    changeFrequency: "yearly" as const,
+    priority: 0.2,
+    alternates: { languages: Object.fromEntries(LANGS.map((l) => [HREFLANG[l], `${SITE}/${l}/ochrana-udajov/`])) },
+  })));
 }

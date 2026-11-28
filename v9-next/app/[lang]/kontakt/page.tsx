@@ -1,4 +1,5 @@
 import Shell from "@/components/Shell";
+import { GDPR_LINK } from "@/lib/gdpr";
 import { toLang } from "@/lib/i18n";
 import { pageMetadata } from "@/lib/meta";
 import { site } from "@/lib/v9";
@@ -97,7 +98,7 @@ export default async function Kontakt({ params }: P) {
                   <label className="fld wide"><span>{fmt(f("contact.message"))}</span><textarea name="sprava" placeholder={f("contact.messagePlaceholder")} /></label>
                 </div>
               </fieldset>
-              <label className="ok"><input type="checkbox" name="suhlas" required /><span>{fmt(f("consent"))}</span></label>
+              <label className="ok"><input type="checkbox" name="suhlas" required /><span>{fmt(f("consent"))} <a href={`/${lang}/ochrana-udajov/`} target="_blank" rel="noopener">{GDPR_LINK[lang]}</a></span></label>
               <button className="btn btn--red btn--send" type="submit">{f("submit")} {AR}</button>
               <p className="err" role="alert" />
             </form>

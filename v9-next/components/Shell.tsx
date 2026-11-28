@@ -15,16 +15,17 @@ type Props = {
   data?: string;          // dáta pre skript stránky (var RZ = ..., var KT = ...)
   scripts?: string[];     // skripty stránky (po site.js)
   module?: string;        // ES modul (Prerábka 3D)
+  path?: string;          // stránka mimo PAGES (napr. ochrana-udajov): jazykové odkazy na /<lang>/<path>/, bez JSON-LD stránky
 };
 
-export default function Shell({ s, page, children, faq = [], after, data, scripts = [], module }: Props) {
+export default function Shell({ s, page, children, faq = [], after, data, scripts = [], module, path }: Props) {
   return (
     <>
-      <Header s={s} page={page} />
+      <Header s={s} page={page} path={path} />
       <main className={page === "home" ? undefined : "page"} id="main">{children}</main>
       {after}
       <Footer s={s} />
-      <JsonLd s={s} page={page} faq={faq} />
+      {!path && <JsonLd s={s} page={page} faq={faq} />}
       <Scripts data={data} page={scripts} module={module} />
     </>
   );

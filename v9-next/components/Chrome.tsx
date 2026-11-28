@@ -2,14 +2,15 @@
 import FooterBalls from "@/components/FooterBalls";
 import { getDict, HREFLANG, href, LANGS, MENU, type Lang, type PageKey } from "@/lib/i18n";
 import type { Site } from "@/lib/v9";
+import { GDPR_LINK } from "@/lib/gdpr";
 
-function LangSwitch({ s, page }: { s: Site; page: PageKey }) {
+function LangSwitch({ s, page, path }: { s: Site; page: PageKey; path?: string }) {
   return (
     <div className="lang" role="group" aria-label={s.m("common.langLabel")}>
       {LANGS.map((L) => {
         const c = getDict(L).common;
         return (
-          <a key={L} href={href(L, page)} hrefLang={HREFLANG[L]} lang={HREFLANG[L]} title={c.langNames[L]}
+          <a key={L} href={path ? `/${L}/${path}/` : href(L, page)} hrefLang={HREFLANG[L]} lang={HREFLANG[L]} title={c.langNames[L]}
             aria-current={L === s.lang ? "true" : undefined}>{c.langShort[L]}</a>
         );
       })}
@@ -17,7 +18,7 @@ function LangSwitch({ s, page }: { s: Site; page: PageKey }) {
   );
 }
 
-export function Header({ s, page }: { s: Site; page: PageKey }) {
+export function Header({ s, page, path }: { s: Site; page: PageKey; path?: string }) {
   const { m, fmt, P } = s;
   return (
     <>
@@ -31,7 +32,7 @@ export function Header({ s, page }: { s: Site; page: PageKey }) {
             {MENU.map((p) => <li key={p}><a href={P(p)} aria-current={p === page ? "page" : undefined}>{fmt(m(`common.nav.${p}`))}</a></li>)}
           </ul>
         </nav>
-        <LangSwitch s={s} page={page} />
+        <LangSwitch s={s} page={page} path={path} />
         <a className="btn" href={P("kontakt")}>{m("common.cta")}</a>
         <button className="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="sheet" data-open={m("common.menu")} data-close={m("common.close")}>{m("common.menu")}</button>
       </header>
@@ -43,7 +44,7 @@ export function Header({ s, page }: { s: Site; page: PageKey }) {
         <div className="meta">
           <a href={`tel:${m("common.phoneHref")}`}>{m("common.phone")}</a>
           <a href={`mailto:${m("common.email")}`}>{m("common.email")}</a>
-          <LangSwitch s={s} page={page} />
+          <LangSwitch s={s} page={page} path={path} />
         </div>
       </div>
     </>
@@ -80,7 +81,7 @@ export function Footer({ s }: { s: Site }) {
       <div className="ft-logo" aria-hidden="true"><i /></div>
       </div>
       <div className="ft-bot">
-        <span>{m("footer.copyright")}</span>
+        <span>{m("footer.copyright")} · <a href={`/${s.lang}/ochrana-udajov/`}>{GDPR_LINK[s.lang]}</a></span>
         <span>{m("footer.place")}</span>
       </div>
     </footer>
