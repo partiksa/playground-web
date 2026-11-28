@@ -114,7 +114,7 @@
 
   /* ---------- zoznam realizácií ---------- */
   function viewList() {
-    var notes = [h("p", { cls: "note", text: "Zmeny v realizáciách sa na webe ukážu po zverejnení. Zverejnenie zatiaľ spúšťa správca webu." })];
+    var notes = [h("p", { cls: "note", text: "Zmeny v realizáciách sa na webe ukážu samy do 2 až 3 minút po uložení." })];
     if (!S.deepl) notes.push(h("p", { cls: "note warn", text: "Automatický preklad nie je nastavený. CZ, EN a DE dostanú slovenský text." }));
     return h("section", { cls: "wrap" },
       h("div", { cls: "bar" }, h("h1", { text: "Realizácie" }), h("span", { cls: "count", text: S.items.length + "" }),
@@ -139,7 +139,7 @@
     post("reorder", { slugs: S.items.map(function (r) { return r.slug; }) }).catch(function (e) { toast(e.message, true); load(); });
   }
   function del(r) {
-    if (!confirm("Zmazať realizáciu „" + r.sk.t + "“? Z webu zmizne pri ďalšom zverejnení.")) return;
+    if (!confirm("Zmazať realizáciu „" + r.sk.t + "“? Z webu zmizne do 2 až 3 minút.")) return;
     post("deleteItem", { slug: r.slug }).then(function () {
       S.items = S.items.filter(function (x) { return x.slug !== r.slug; }); render(); toast("Zmazané.");
     }).catch(function (e) { toast(e.message, true); });
@@ -207,7 +207,7 @@
         var i = S.items.findIndex(function (x) { return x.slug === d.item.slug; });
         if (i < 0) S.items.unshift(d.item); else S.items[i] = d.item;
         S.edit = clone(d.item); S.edit.manual = S.edit.manual || {};
-        render(); toast(isNew ? "Realizácia pridaná." : "Uložené."); warnMissing(d.untranslated);
+        render(); toast(isNew ? "Realizácia pridaná. Na webe bude do 2 až 3 minút." : "Uložené. Na webe bude do 2 až 3 minút."); warnMissing(d.untranslated);
       }).catch(function (x) { toast(x.message, true); btns.forEach(function (b) { b.disabled = false; }); });
     }
     return h("section", { cls: "wrap edit" },

@@ -116,3 +116,10 @@ function clean(string $s, int $max): string
   $s = trim(preg_replace('/[\x00-\x09\x0B-\x1F\x7F]/u', '', $s));
   return mb_substr($s, 0, $max);
 }
+
+/* príznak pre server: realizácie sa zmenili, web treba prebuildovať (spracuje server/zverejnit.sh cez cron) */
+function mark_publish(): void
+{
+  @touch(data_path('.zverejnit'));
+}
+

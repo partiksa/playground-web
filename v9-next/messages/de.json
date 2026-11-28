@@ -434,7 +434,8 @@
         "open": "E-Mail öffnen",
         "copy": "Text kopieren",
         "copied": "Kopiert",
-        "to": "An"
+        "to": "An",
+        "sentText": "Wir haben Ihre Anfrage erhalten und melden uns so schnell wie möglich."
       },
       "mail": {
         "subject": "Anfrage von der Website: {name}",

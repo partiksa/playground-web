@@ -93,6 +93,7 @@ switch ($act) {
       $row['manual'] = (object)($force ? [] : array_filter(array_map('boolval', $manual)));
       if ($old === null) array_unshift($items, $row); else $items[$idx] = $row;
       write_json('realizacie.json', $items);
+      mark_publish();
       return ['item' => $row, 'untranslated' => $miss];
     });
     out($res);
@@ -102,6 +103,7 @@ switch ($act) {
     with_lock(function () use ($slug) {
       $items = array_values(array_filter(read_json('realizacie.json', []), fn($r) => $r['slug'] !== $slug));
       write_json('realizacie.json', $items);
+      mark_publish();
     });
     out(['ok' => true]);
 
@@ -112,6 +114,7 @@ switch ($act) {
       $pos = array_flip($order);
       usort($items, fn($a, $b) => ($pos[$a['slug']] ?? PHP_INT_MAX) <=> ($pos[$b['slug']] ?? PHP_INT_MAX));
       write_json('realizacie.json', $items);
+      mark_publish();
     });
     out(['ok' => true]);
 

@@ -7,7 +7,8 @@ type P = { params: Promise<{ lang: string }> };
 export const generateMetadata = ({ params }: P) => pageMetadata(params, "kontakt");
 
 export default async function Kontakt({ params }: P) {
-  const s = site(toLang((await params).lang));
+  const lang = toLang((await params).lang);
+  const s = site(lang);
   const { m, T, fmt, AR } = s;
   const f = (k: string) => m("kontakt.form." + k);
 
@@ -30,7 +31,7 @@ export default async function Kontakt({ params }: P) {
     chosen: f("plan.fileChosen"), none: f("mail.none"), mService: f("mail.service"), mType: f("mail.type"), mWhen: f("mail.when"),
     mPlan: f("mail.plan"), planYes: f("mail.planYes"), planNo: f("mail.planNo"), mName: f("mail.name"), mEmail: f("mail.email"),
     mPhone: f("mail.phone"), mCity: f("mail.city"), subject: f("mail.subject"), doneText: f("done.text"), doneTextPlan: f("done.textPlan"),
-    to: f("done.to"), copied: f("done.copied"),
+    to: f("done.to"), copied: f("done.copied"), sentText: f("done.sentText"), lang,
   };
   const br = (t: string) => t.split("\n").flatMap((x, i) => (i ? [<br key={i} />, x] : [x]));
 

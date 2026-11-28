@@ -434,7 +434,8 @@
         "open": "Otvoriť e-mail",
         "copy": "Skopírovať text",
         "copied": "Skopírované",
-        "to": "Komu"
+        "to": "Komu",
+        "sentText": "Dopyt sme prijali a ozveme sa vám čo najskôr."
       },
       "mail": {
         "subject": "Dopyt z webu: {name}",

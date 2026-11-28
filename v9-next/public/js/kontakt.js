@@ -1,4 +1,4 @@
-/* Kontakt: dopytový formulár bez servera. Zloží e-mail a otvorí ho v pošte (mailto). Texty sú v KT podľa jazyka. */
+/* Kontakt: dopytový formulár. Pošle dopyt na /api/kontakt.php; ak server nie je dostupný, zloží e-mail a otvorí ho v pošte (mailto). Texty sú v KT podľa jazyka. */
 (function () {
   var box = document.getElementById("f"), form = box.querySelector("form"), err = box.querySelector(".err");
   var other = document.getElementById("other"), otherTyp = document.getElementById("otherTyp"), planBox = document.getElementById("planFile"), file = form.elements.plan_file, fileMsg = box.querySelector(".file-msg");
@@ -74,17 +74,43 @@
     box.querySelector(".done .p").textContent = plan ? KT.doneTextPlan : KT.doneText;
     // odoslanie: šípka vyletí, tlačidlo sa stlačí a rozvlní, potom sa ukáže poďakovanie
     var sb = form.querySelector('button[type="submit"]');
+    if (sb.disabled) return;
+    sb.disabled = true;
     sb.classList.remove("fly"); void sb.offsetWidth; sb.classList.add("fly");
-    setTimeout(function () {
-      location.href = href;
+
+    // dopyt ide na server (/api/kontakt.php → e-mail firme); ak server zlyhá, otvorí sa e-mail ako doteraz
+    var fd = new FormData();
+    fd.append("lang", KT.lang); fd.append("meno", v("meno")); fd.append("email", v("email"));
+    fd.append("predmet", KT.subject.replace("{name}", v("meno"))); fd.append("text", body);
+    fd.append("web", v("web")); fd.append("t0", String(T0));
+    if (plan && file.files && file.files[0]) fd.append("subor", file.files[0]);
+    var wait = new Promise(function (r) { setTimeout(r, 750); });
+    var send = fetch("/api/kontakt.php", { method: "POST", body: fd })
+      .then(function (r) { return r.ok ? r.json() : { ok: false }; })
+      .catch(function () { return { ok: false }; });
+    Promise.all([send, wait]).then(function (res) {
+      var ok = res[0] && res[0].ok;
+      if (ok) {
+        box.querySelector(".done .p").textContent = KT.sentText;
+        box.querySelector(".done .acts").hidden = true;
+      } else {
+        location.href = href;
+      }
       box.classList.add("sent");
       sb.classList.remove("fly");
+      sb.disabled = false;
       var done = box.querySelector(".done");
       gsap.from(done.children, { autoAlpha: 0, y: 18, duration: .8, ease: "power3.out", stagger: .06 });
       done.focus({ preventScroll: true });
       ScrollTrigger.refresh();
-    }, 750);
+    });
   });
+  // ochrana proti robotom: skryté pole (vyplní ho len robot) a čas od načítania
+  var T0 = Date.now();
+  var hp = document.createElement("input");
+  hp.type = "text"; hp.name = "web"; hp.tabIndex = -1; hp.autocomplete = "off"; hp.setAttribute("aria-hidden", "true");
+  hp.style.cssText = "position:absolute;left:-9999px;width:1px;height:1px;opacity:0";
+  form.appendChild(hp);
   function clearInvalid(e) { if (e.target.getAttribute("aria-invalid") === "true") e.target.removeAttribute("aria-invalid"); }
   form.addEventListener("input", clearInvalid);
   form.addEventListener("change", clearInvalid);
