@@ -28,6 +28,8 @@ cd "$APP"
 
 # prvé spustenie: počiatočné dáta realizácií z gitu
 [[ -f "$DATA/realizacie.json" ]] || cp content/realizacie.json "$DATA/realizacie.json"
+# vypnutý banner, kým ho klient nezapne v admine (inak úvod hlási 404 na /data/banner.json)
+[[ -f "$DATA/banner.json" ]] || echo '{"on":false,"color":"#FF2712","text":{"sk":"","cz":"","en":"","de":""},"images":[],"manual":{}}' > "$DATA/banner.json"
 
 php "$SITE_DIR/v9-next/server/prevod.php" "$DATA" "$APP/public" "$APP/content/realizacie.json"
 rsync -a "$DATA/rz-web/" "$APP/public/rz/"
