@@ -19,7 +19,7 @@ if ! flock -n 9; then echo "Build už beží." >&2; exit 0; fi
 if [[ "${1:-}" == "--cron" ]]; then
   [[ -f "$DATA/.zverejnit" ]] || exit 0
   exec >>"$LOG" 2>&1
-  echo "=== $(date -Is) zverejnenie z adminu"
+  echo "=== $(date "+%F %T") zverejnenie z adminu"
 fi
 rm -f "$DATA/.zverejnit"
 
@@ -43,7 +43,7 @@ PG_SITE="$(php -r '$c = require getenv("HOME")."/pg-config.php"; echo $c["site"]
 rsync -a --delete --exclude=/data/ --exclude=/admin/ --exclude=/api/ --exclude=/.well-known/ out/ "$WWW/"
 
 # admin a API formulára
-rsync -a --delete --exclude=config.php --exclude=data.htaccess --exclude=.htaccess admin/ "$WWW/admin/"
+rsync -a --delete --exclude=config.php --exclude=config.example.php --exclude=data.htaccess --exclude=.htaccess admin/ "$WWW/admin/"
 php -r '$c = require getenv("HOME")."/pg-config.php"; file_put_contents(getenv("HOME")."/play-ground.sk/www/admin/config.php", "<?php\nreturn " . var_export(["password_hash" => $c["admin_hash"], "deepl_key" => $c["deepl_key"] ?? "", "data_dir" => getenv("HOME")."/play-ground.sk/www/data"], true) . ";\n");'
 chmod 640 "$WWW/admin/config.php"
 rsync -a --delete server/api/ "$WWW/api/"
@@ -51,4 +51,4 @@ rsync -a --delete server/api/ "$WWW/api/"
 # web ostal pôvodný obsah v gite (prevod.php ho prepisuje), aby git pull nenarazil
 git -C "$SITE_DIR" checkout -- v9-next/content/realizacie.json
 
-echo "Hotovo $(date -Is)"
+echo "Hotovo $(date "+%F %T")"
